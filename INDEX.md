@@ -17,13 +17,15 @@ Catálogo de todo el contenido del repositorio. Se actualiza en cada ingesta. Ve
 | [[Private Endpoints]] | networking, security | Stub |
 | [[Terraform vs Bicep]] | devops, iac | Stub |
 | [[Azure Virtual Desktop]] | compute, end-user-computing | Stub |
+| [[Azure Cloud Shell]] | devops, tools | Stub |
+| [[ARM Templates]] | devops, iac | Stub |
 
 ## Certifications
 
 | Cert | INDEX.md | Habilidades medidas (oficial) | Progreso |
 |---|---|---|---|
 | [AZ-900](certifications/AZ-900/INDEX.md) | ✅ | ✅ | En curso (piloto) |
-| [AZ-104](certifications/AZ-104/INDEX.md) | ✅ | ✅ | No iniciado |
+| [AZ-104](certifications/AZ-104/INDEX.md) | ✅ | ✅ | **En curso** — [roadmap](notes/AZ-104/roadmap.md) |
 | [AZ-500](certifications/AZ-500/INDEX.md) | ✅ | ✅ | No iniciado |
 | [AZ-140](certifications/AZ-140/INDEX.md) | ✅ | ✅ | No iniciado |
 | [AZ-305](certifications/AZ-305/INDEX.md) | ✅ | ✅ | No iniciado |

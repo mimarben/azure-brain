@@ -2,7 +2,7 @@
 title: AZ-104 — Administrador de Microsoft Azure
 tags: [certification]
 certification: [AZ-104]
-updated: 2026-07-07
+updated: 2026-07-31
 sources:
   - https://learn.microsoft.com/es-es/credentials/certifications/resources/study-guides/az-104
 ---
@@ -63,11 +63,11 @@ Familiaridad con sistemas operativos, redes, servidores y virtualización, más 
 
 ## Progreso
 
-Estado: **no iniciado**.
+Estado: **en curso** — [roadmap de estudio](../../notes/AZ-104/roadmap.md) (autoestudio gratuito: 6 rutas oficiales de Microsoft Learn + labs de Microsoft + evaluación de práctica).
 
 ## Laboratorios
 
-Ninguno todavía. Añadir en `certifications/AZ-104/labs/`.
+Índice y resultados en [`labs/AZ-104/`](../../labs/AZ-104/) (carpeta de primer nivel). Labs oficiales: [MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator](https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator).
 
 ## Conceptos relacionados
 
@@ -76,8 +76,10 @@ Ninguno todavía. Añadir en `certifications/AZ-104/labs/`.
 - [[Azure Networking]]
 - [[Private Endpoints]]
 - [[Terraform vs Bicep]]
+- [[ARM Templates]]
 - [[AKS]]
 - [[Managed Identities]]
+- [[Azure Cloud Shell]]
 
 ## Ejemplos
 

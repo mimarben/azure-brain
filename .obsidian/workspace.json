@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "certifications/AI-200/INDEX.md",
+                "file": "examples/azure-cli/README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "INDEX"
+              "title": "README"
             }
           }
         ]
@@ -41,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -185,6 +187,46 @@
   },
   "active": "a6623e23861f991a",
   "lastOpenFiles": [
-    "README.md"
+    "knowledge/arm-templates.md",
+    "assets/images/AZ-104/Screenshot From 2026-07-31 13-10-13.png",
+    "knowledge/azure-cloud-shell.md",
+    "notes/AZ-104/roadmap.md",
+    "log.md.tmp.289061.dabba2709505",
+    "notes/AZ-104/roadmap.md.tmp.289061.ed9d337f10df",
+    "notes/AZ-104/roadmap.md.tmp.289061.0d3a8fa5ae61",
+    "certifications/AZ-104/INDEX.md.tmp.289061.70bf52fc8eed",
+    "INDEX.md.tmp.289061.ea2c0040c530",
+    "knowledge/arm-templates.md.tmp.289061.f49f0318b3ff",
+    "certifications/AZ-104/INDEX.md",
+    "raw/architecture-center/docs/guide/iot/media/fabric-solution-architecture.png",
+    "raw/architecture-center/docs/guide/iot/media/dynamics-iot-alerts.png",
+    "raw/architecture-center/docs/guide/iot/media/dataspaces-solution-architecture.png",
+    "raw/architecture-center/docs/guide/iot/media/databricks-solution-architecture.png",
+    "raw/architecture-center/docs/guide/iot/media/connection-logic-app.png",
+    "raw/architecture-center/docs/guide/iot/media/add-get-url.png",
+    "raw/architecture-center/docs/guide/iot/media/add-asset-name.png",
+    "raw/architecture-center/docs/guide/iot/media/add-alert-details.png",
+    "raw/architecture-center/docs/guide/iot/iot-industrial-solution-architecture.md",
+    "raw/architecture-center/docs/guide/iot/import-opc-ua-information-models-from-ua-cloud-library.md",
+    "raw/architecture-center/docs/guide/iot/how-to-enable-industrial-dataspaces.md",
+    "raw/architecture-center/docs/guide/iot/how-to-connect-power-bi-to-the-solution.md",
+    "raw/architecture-center/docs/guide/iot/how-to-connect-on-premises-sap-to-the-solution.md",
+    "raw/architecture-center/docs/guide/iot/how-to-connect-grafana-to-solution.md",
+    "raw/architecture-center/docs/guide/iot/how-to-connect-dynamics-field-service-to-the-solution.md",
+    "raw/architecture-center/docs/guide/iot/how-to-connect-azure-data-explorer-to-solution.md",
+    "raw/architecture-center/docs/guide/iot/agentic-ai-for-the-solution.md",
+    "raw/architecture-center/docs/example-scenario/apps/media/sap-oracle-disaster-recovery.svg",
+    "notes/AZ-104/roadmap.md.tmp.289061.37bcd760194e",
+    "notes/AZ-104/roadmap.md.tmp.289061.e53e22c316cb",
+    "log.md.tmp.289061.c2302c5ff989",
+    "certifications/AZ-104/INDEX.md.tmp.289061.ed096d54bbe4",
+    "log.md",
+    "README.md",
+    "ROADMAP.md",
+    "TODO.md",
+    "INDEX.md",
+    "CLAUDE.md",
+    "raw/azure-docs/articles/virtual-network/service-tags-overview.md",
+    "certifications/AI-200/INDEX.md"
   ]
 }

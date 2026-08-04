@@ -38,7 +38,8 @@ Todas las skills outline se importaron desde las guías de estudio oficiales de 
 
 ## Raw sources
 
+- `raw/repos.txt` — manifiesto de repositorios descargables
+- `raw/setup-raw.sh` / `raw/setup-raw.ps1` — scripts para clonar o actualizar `raw/`
 - `raw/azure-docs/` — MicrosoftDocs/azure-docs
 - `raw/architecture-center/` — Azure Architecture Center
 - `raw/well-architected/` — Well-Architected Framework
-- `raw/courses-list.txt` — lista personal de cursos de referencia

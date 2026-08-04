@@ -6,6 +6,7 @@ Para el detalle de qué ejemplo usar en qué concepto de AI-200, ver [notes/AI-2
 
 ## Por tecnología
 
+- [entra/](entra/README.md) — ejemplo práctico de registro de aplicación en Microsoft Entra ID y autenticación de una app
 - [python/](python/README.md) — Azure SDK for Python (`raw/github/azure-sdk-for-python`)
 - [azure-cli/](azure-cli/README.md) — Azure CLI (`raw/github/azure-cli`)
 - [bicep/](bicep/README.md) — lenguaje Bicep (`raw/github/bicep`) y plantillas oficiales (`raw/github/azure-quickstart-templates`)

@@ -13,10 +13,11 @@ Filosofía base: [karpathy.txt](karpathy.txt) (patrón "LLM Wiki"). Este documen
 Documentación oficial de Microsoft, repos clonados, cursos, transcripciones, PDFs. **Nunca se edita.** Es la fuente de verdad que se cita, no se modifica.
 
 Contenido actual:
+- `raw/repos.txt` — manifiesto de repositorios que se pueden clonar o actualizar bajo `raw/`
+- `raw/setup-raw.sh` / `raw/setup-raw.ps1` — scripts para sincronizar los repos listados en `raw/repos.txt`
 - `raw/azure-docs/` — clon de [MicrosoftDocs/azure-docs](https://github.com/MicrosoftDocs/azure-docs)
 - `raw/architecture-center/` — clon de architecture-center
 - `raw/well-architected/` — clon de well-architected framework
-- `raw/courses-list.txt` — lista personal de cursos/certificaciones de referencia
 
 Estos clones tienen su propio `.git` y están en `.gitignore` (son grandes y externos; no se versionan dentro de este repo). Al ingerir, cita la ruta del archivo fuente en el frontmatter (`sources:`).
 

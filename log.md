@@ -2,6 +2,22 @@
 
 Registro cronológico de ingestas, consultas y lints. Formato: `## [YYYY-MM-DD] tipo | Título`.
 
+## [2026-08-03] maintenance | Guard de estado local en raw setup
+Fuente: petición del usuario
+Páginas actualizadas: raw/setup-raw.sh, raw/setup-raw.ps1, log.md
+Notas: antes de hacer `pull --ff-only` sobre un repo ya clonado en `raw/`, los scripts comprueban cambios locales; si el repo no está limpio, muestran `git status` y saltan la actualización de ese repo.
+
+## [2026-08-03] example | Aplicación con Microsoft Entra ID
+Fuente: https://learn.microsoft.com/es-es/azure/app-service/quickstart-nodejs?tabs=windows&pivots=development-environment-vscode + documentación base de App Service authentication con Microsoft Entra.
+Páginas creadas: examples/entra/README.md
+Páginas actualizadas: examples/README.md, knowledge/entra-id.md, certifications/AZ-104/INDEX.md
+
+## [2026-08-03] maintenance | Raw repo bootstrap
+Fuente: petición del usuario
+Páginas creadas: raw/setup-raw.sh, raw/setup-raw.ps1, raw/repos.txt
+Páginas actualizadas: .gitignore, INDEX.md, CLAUDE.md
+Notas: `raw/` queda preparado para versionar solo los scripts y el manifiesto; los repos clonados siguen ignorados.
+
 ## [2026-07-07] setup | Arquitectura inicial del cerebro
 Se define la filosofía (adaptación de karpathy.txt a Azure) en CLAUDE.md: capas raw/knowledge/certifications, frontmatter, convenciones de enlace, flujo de ingesta/consulta/lint.
 Se mueve azure.txt → raw/courses-list.txt (fuente, no contenido de wiki).

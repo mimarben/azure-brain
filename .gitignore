@@ -1,5 +1,8 @@
 # Originales descargados
-raw/
+raw/*
+!raw/setup-raw.ps1
+!raw/setup-raw.sh
+!raw/repos.txt
 
 # Archivos temporales
 *.tmp
@@ -7,6 +10,7 @@ raw/
 *.swp
 *.log
 
+node_modules/
 # Python
 __pycache__/
 *.pyc

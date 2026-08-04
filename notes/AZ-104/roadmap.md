@@ -5,14 +5,14 @@ certification: [AZ-104]
 updated: 2026-07-31
 sources:
   - https://learn.microsoft.com/es-es/credentials/certifications/azure-administrator/
-  - https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-104
-  - https://learn.microsoft.com/en-us/training/courses/az-104t00
-  - https://learn.microsoft.com/en-us/training/paths/az-104-administrator-prerequisites/
-  - https://learn.microsoft.com/en-us/training/paths/az-104-manage-identities-governance/
-  - https://learn.microsoft.com/en-us/training/paths/az-104-manage-storage/
-  - https://learn.microsoft.com/en-us/training/paths/az-104-manage-compute-resources/
-  - https://learn.microsoft.com/en-us/training/paths/az-104-manage-virtual-networks/
-  - https://learn.microsoft.com/en-us/training/paths/az-104-monitor-backup-resources/
+  - https://learn.microsoft.com/es-es/credentials/certifications/resources/study-guides/az-104
+  - https://learn.microsoft.com/es-es/training/courses/az-104t00
+  - https://learn.microsoft.com/es-es/training/paths/az-104-administrator-prerequisites/
+  - https://learn.microsoft.com/es-es/training/paths/az-104-manage-identities-governance/
+  - https://learn.microsoft.com/es-es/training/paths/az-104-manage-storage/
+  - https://learn.microsoft.com/es-es/training/paths/az-104-manage-compute-resources/
+  - https://learn.microsoft.com/es-es/training/paths/az-104-manage-virtual-networks/
+  - https://learn.microsoft.com/es-es/training/paths/az-104-monitor-backup-resources/
 ---
 
 # Roadmap de estudio — AZ-104
@@ -30,7 +30,7 @@ Plan de estudio para AZ-104 por **autoestudio gratuito**: las 6 rutas de aprendi
 ## Progreso general
 
 - [x] Bloque 0 — Prerrequisitos (opcional, recomendado si AZ-900 no está fresco)
-- [ ] Bloque 1 — Identidad y gobernanza (20–25%)
+- [X] Bloque 1 — Identidad y gobernanza (20–25%)
 - [ ] Bloque 2 — Almacenamiento (15–20%)
 - [ ] Bloque 3 — Cómputo (20–25%)
 - [ ] Bloque 4 — Redes virtuales (15–20%)
@@ -46,7 +46,7 @@ Plan de estudio para AZ-104 por **autoestudio gratuito**: las 6 rutas de aprendi
 ### 0.1 [AZ-104: Prerequisites for Azure administrators](https://learn.microsoft.com/en-us/training/paths/az-104-administrator-prerequisites/)
 
 Módulos:
-- [ ] [Introduction to Azure Cloud Shell](https://learn.microsoft.com/es-es/training/modules/intro-to-azure-cloud-shell/) — shell autenticado en el navegador (Bash/PowerShell) → [[Azure Cloud Shell]]
+- [x] [Introduction to Azure Cloud Shell](https://learn.microsoft.com/es-es/training/modules/intro-to-azure-cloud-shell/) — shell autenticado en el navegador (Bash/PowerShell) → [[Azure Cloud Shell]]
 
 Repaso de fundamentos (portales, CLI/PowerShell, ARM, suscripciones/RGs). Si AZ-900 te sigue fresco, puedes saltártelo y entrar por el Bloque 1.
 
@@ -58,7 +58,7 @@ Repaso de fundamentos (portales, CLI/PowerShell, ARM, suscripciones/RGs). Si AZ-
 
 ### 1.1 [AZ-104: Manage identities and governance in Azure](https://learn.microsoft.com/en-us/training/paths/az-104-manage-identities-governance/) (6 módulos)
 
-- [ ] [Understand Microsoft Entra ID](https://learn.microsoft.com/en-us/training/modules/understand-azure-active-directory/) — Entra ID vs ADDS, P1/P2, Domain Services
+- [ ] [Understand Microsoft Entra ID](https://learn.microsoft.com/en-us/training/modules/understand-azure-active-directory/) — Entra ID vs ADDS, P1/P2, Domain Services → [[Understand Microsoft Entra ID]] · [[Entra ID]]
 - [ ] [Create, configure, and manage identities](https://learn.microsoft.com/en-us/training/modules/create-configure-manage-identities/) — usuarios, grupos, licencias, usuarios externos
 - [ ] [Describe the core architectural components of Azure](https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/) — suscripciones, RGs, regiones, management groups
 - [ ] [Azure Policy initiatives](https://learn.microsoft.com/en-us/training/modules/sovereignty-policy-initiatives/) — aplicar estándares y evaluar compliance

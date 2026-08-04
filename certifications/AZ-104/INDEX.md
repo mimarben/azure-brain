@@ -83,4 +83,5 @@ Estado: **en curso** — [roadmap de estudio](../../notes/AZ-104/roadmap.md) (au
 
 ## Ejemplos
 
-Ninguno todavía. Candidatos: plantilla Bicep de VM + VNet, script CLI de creación de storage account con redundancia GRS.
+- [Registro de aplicación en Entra ID](../../examples/entra/README.md)
+- Candidatos: plantilla Bicep de VM + VNet, script CLI de creación de storage account con redundancia GRS.

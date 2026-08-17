@@ -2,9 +2,10 @@
 title: AZ-700 — Diseño e implementación de soluciones de redes de Microsoft Azure
 tags: [certification]
 certification: [AZ-700]
-updated: 2026-07-07
+updated: 2026-08-17
 sources:
   - https://learn.microsoft.com/es-es/credentials/certifications/resources/study-guides/az-700
+  - raw/savill-cert-materials/whiteboards/AZ-700-Whiteboard.png
 ---
 
 # AZ-700: Diseño e implementación de soluciones de redes de Microsoft Azure
@@ -65,6 +66,8 @@ Experiencia creando y administrando recursos de cómputo, almacenamiento y redes
 ## Progreso
 
 Estado: **no iniciado**.
+
+Material de apoyo: [whiteboard de ámbito del examen](../../raw/savill-cert-materials/whiteboards/AZ-700-Whiteboard.png) de John Savill (MVP).
 
 ## Laboratorios
 

@@ -21,6 +21,8 @@ Plan de estudio para AZ-104 por **autoestudio gratuito**: las 6 rutas de aprendi
 
 **Cómo usar este documento**: marca los checkboxes según avances. Cada bloque tiene un apartado *Notas propias* — ahí vuelcas tus apuntes del portal, cosas que te hayan costado o fallos de laboratorio; no lo toco yo al actualizar el repositorio salvo que me pidas fusionarlo con `knowledge/`.
 
+**Mapa del examen**: [whiteboard de John Savill (MVP)](../../raw/savill-cert-materials/whiteboards/AZ-104-Whiteboard-v2.png) — todo el ámbito del examen en una imagen; útil como visión de conjunto antes de empezar cada bloque y como repaso final.
+
 **Workflow por concepto** (la cadencia del brain): módulo de MS Learn → apuntes en *Notas propias* → crear/ampliar la página en [`knowledge/`](../../knowledge/) → tachar el checkbox del [INDEX](../../certifications/AZ-104/INDEX.md) → hacer el lab en [`labs/AZ-104/`](../../labs/AZ-104/) → guardar snippets de CLI/PowerShell/Bicep en [`examples/`](../../examples/).
 
 > **El vídeo de preparación del examen.** `aka.ms/AZ104-ExamPrep` (sesión oficial de Microsoft Learn, *"Prepare for Microsoft Certification Exam AZ-104"*) **no es un curso**: trata de estrategia de examen (qué esperar, dónde fijarse, cómo abordar las preguntas). **Ahora** míralo en modo panorama (10–20 min) solo para calibrar; **en serio** lo ves entero 1–2 semanas antes de programar el examen (está listado más abajo en *Antes del examen*).

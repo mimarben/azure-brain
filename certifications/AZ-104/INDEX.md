@@ -2,9 +2,10 @@
 title: AZ-104 — Administrador de Microsoft Azure
 tags: [certification]
 certification: [AZ-104]
-updated: 2026-07-31
+updated: 2026-08-17
 sources:
   - https://learn.microsoft.com/es-es/credentials/certifications/resources/study-guides/az-104
+  - raw/savill-cert-materials/whiteboards/AZ-104-Whiteboard-v2.png
 ---
 
 # AZ-104: Administrador de Microsoft Azure
@@ -64,6 +65,8 @@ Familiaridad con sistemas operativos, redes, servidores y virtualización, más 
 ## Progreso
 
 Estado: **en curso** — [roadmap de estudio](../../notes/AZ-104/roadmap.md) (autoestudio gratuito: 6 rutas oficiales de Microsoft Learn + labs de Microsoft + evaluación de práctica).
+
+Material de apoyo: [whiteboard de ámbito del examen](../../raw/savill-cert-materials/whiteboards/AZ-104-Whiteboard-v2.png) de John Savill (MVP) — visión de conjunto para antes de cada bloque y repaso final.
 
 ## Laboratorios
 

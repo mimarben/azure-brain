@@ -42,6 +42,12 @@ AZ-2008         https://github.com/MicrosoftLearning/AZ-2008_DevOps_Foundations_
 AZ-1004         https://github.com/MicrosoftLearning/AZ-1004-deploy-configure-azure-monitor
 AZ-305T00       https://github.com/MicrosoftLearning/AZ-305-DesigningMicrosoftAzureInfrastructureSolutions
 
+# --- Comunidad (no oficial) ---
+# John Savill (MVP de Azure): whiteboards de ámbito de examen + handouts de estudio.
+# Verificado 2026-08-17 (~44 MB, activo). Sin licencia explícita: uso privado, citar sin copiar.
+# Cobertura: AZ-900 (whiteboard + handout), AZ-104 (v2), AZ-500, AZ-700, AZ-305. No hay para AZ-140/AZ-400/GH-900/AI-200.
+savill-cert-materials  https://github.com/johnthebrit/CertificationMaterials
+
 # --- Documentos sueltos (PDFs, vídeos, slides, etc.) ---
 # Descomenta y rellena para añadir material no-git a raw/. Ejemplos:
 #file  AZ-104/az-104-study-guide.pdf  https://download.microsoft.com/.../az-104.pdf

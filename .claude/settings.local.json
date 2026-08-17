@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(command -v git)",
+      "Bash(echo \"--- git: $\\(command -v git || echo NO\\)\")",
+      "Bash(command -v curl)",
+      "Bash(echo \"--- curl: $\\(command -v curl || echo NO\\)\")",
+      "Bash(command -v wget)",
+      "Bash(bash --version)",
+      "Bash(git -C raw/azure-docs status --porcelain)",
+      "Bash(bash -n raw/setup-raw.sh)",
+      "Bash(bash raw/setup-raw.sh --help)",
+      "Bash(bash raw/setup-raw.sh --dry-run)",
+      "Bash(bash raw/setup-raw.sh --dry-run --only AZ-104)",
+      "Bash(curl --version)",
+      "Bash(curl --help all)",
+      "Bash(curl -sSI \"https://raw.githubusercontent.com/MicrosoftDocs/azure-docs/main/README.md\")",
+      "Bash(curl -sSI \"https://download.microsoft.com/download/A/3/8/A38EE519-9F87-4A1F-AF6B-3F3C3F3C3F3C/test\")",
+      "Bash(bash raw/setup-raw.sh --dry-run --reclone --only azure-docs)",
+      "Bash(bash raw/setup-raw.sh --only azure-docs)",
+      "Bash(./raw/setup-raw.sh --reclone)",
+      "Bash(./raw/setup-raw.sh)",
+      "Bash(./raw/setup-raw.sh --only savill-cert-materials)",
+      "WebSearch"
+    ]
+  }
+}

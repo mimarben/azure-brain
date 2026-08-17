@@ -2,9 +2,10 @@
 title: AZ-500 — Tecnologías de seguridad de Microsoft Azure
 tags: [certification]
 certification: [AZ-500]
-updated: 2026-07-07
+updated: 2026-08-17
 sources:
   - https://learn.microsoft.com/es-es/credentials/certifications/resources/study-guides/az-500
+  - raw/savill-cert-materials/whiteboards/AZ-500-Whiteboard.png
 ---
 
 # AZ-500: Tecnologías de seguridad de Microsoft Azure
@@ -64,6 +65,8 @@ Requiere experiencia práctica con entornos Azure/híbridos y conocimientos sól
 ## Progreso
 
 Estado: **no iniciado**.
+
+Material de apoyo: [whiteboard de ámbito del examen](../../raw/savill-cert-materials/whiteboards/AZ-500-Whiteboard.png) de John Savill (MVP).
 
 ## Laboratorios
 

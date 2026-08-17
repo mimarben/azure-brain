@@ -80,3 +80,28 @@ Fuente: https://learn.microsoft.com/es-es/training/modules/create-azure-resource
 Página creada: knowledge/arm-templates.md (stub con frontmatter + `## Relacionado` a [[Terraform vs Bicep]] y [[Azure Cloud Shell]]; pendiente de contenido).
 Páginas actualizadas: INDEX.md (fila en catálogo), certifications/AZ-104/INDEX.md (Conceptos relacionados), notes/AZ-104/roadmap.md (módulo bajo Bloque 3.1 + enlace en Relacionado).
 Mantenimiento: creado assets/ (faltaba) para imágenes embebidas como `![[...]]`.
+
+## [2026-08-17] create | Roadmap global de certificaciones
+Fuente: síntesis propia sobre los INDEX.md de las 9 certificaciones activas (niveles y prerrequisitos según Microsoft Learn).
+Páginas creadas: certifications/ROADMAP.md — vista de básico a experto (Fundamentals → Associate → Specialty → Expert) con diagrama Mermaid de dependencias, secuencia recomendada y estado actual.
+Páginas actualizadas: INDEX.md (enlace al roadmap global en la sección Certificaciones).
+Hallazgo: AZ-500 se retira el 31/08/2026 (ya anotado en su INDEX) — destacado en el roadmap: no da tiempo a prepararla de cero, verificar sucesor en Microsoft Learn.
+
+## [2026-08-17] ingest | CertificationMaterials de John Savill en raw/
+Fuente: https://github.com/johnthebrit/CertificationMaterials (verificado vía GitHub API: ~44 MB packed / 76 MB en disco, última actualización 2026-05-18, sin licencia explícita — uso privado, citar sin copiar).
+Páginas actualizadas: raw/repos.txt (fuente savill-cert-materials), certifications/AZ-900/INDEX.md (whiteboard + handout), certifications/AZ-104/INDEX.md (whiteboard v2), certifications/AZ-500/INDEX.md, certifications/AZ-700/INDEX.md, certifications/AZ-305/INDEX.md (whiteboard), notes/AZ-104/roadmap.md (mapa del examen), certifications/ROADMAP.md (nota), INDEX.md (Raw sources).
+Clon: raw/savill-cert-materials/ vía ./raw/setup-raw.sh --only savill-cert-materials (shallow).
+Hallazgo: cobertura de whiteboards — AZ-900, AZ-104 (v2 y v1), AZ-500, AZ-700, AZ-305; NO hay para AZ-140, AZ-400, GH-900 ni AI-200 (solo AI-900/AI-901/AI-102, no activas).
+
+## [2026-08-17] ingest | Roadmap de estudio AZ-900
+Fuente: learn.microsoft.com — curso az-900t00 + las 4 rutas de la serie "Introducción a la infraestructura en la nube" (microsoft-azure-fundamentals-describe-cloud-concepts, azure-fundamentals-describe-azure-architecture-services, describe-azure-management-governance, introduction-cloud-infrastructure-apply-azure-skills-guided-projects), slugs verificados uno a uno.
+Páginas creadas: notes/AZ-900/roadmap.md — 12 módulos oficiales mapeados 1:1 a las 3 áreas de la skills outline (vigente 20/07/2026), con checkboxes, objetivos del examen por bloque, "Notas propias", Bloque 4 opcional (8 proyectos guiados con sandbox), plan de sesiones y checklist pre-examen. labs/AZ-900/README.md — índice de laboratorios (vía práctica: proyectos guiados; la subcarpeta de la certificación activa ya existe).
+Páginas actualizadas: certifications/AZ-900/INDEX.md (enlace al roadmap; punteros corregidos de certifications/AZ-900/labs|examples/ a labs/AZ-900/ y examples/), INDEX.md raíz (AZ-900 → en curso con roadmap).
+Hallazgo: la serie pasó de 3 a 4 partes (~2026-08): nueva ruta de 8 proyectos guiados con sandbox gratuito, aún no listada en la página del curso AZ-900T00 (actualizada 31/03/2026). La ruta 2 pasó además de 4 a 5 módulos (split: servicios de proceso vs servicios de red).
+Pendiente: desarrollar los stubs de knowledge/ conforme avance el estudio; registrar proyectos guiados completados en labs/AZ-900/.
+
+## [2026-08-17] ingest | AZ-900 — checklist Learn × vídeos de Savill (12 módulos)
+Fuente: las 3 rutas de Learn del curso az-900t00 verificadas sin caché el 17/08/2026 (títulos y slugs módulo a módulo) + "Video Table of Contents" del handout PDF de John Savill (johnthebrit/AZ900CertCourse, abril 2025; playlist del Full Course: PLlVtbbG169nED0_vMEniWBQjSoxTsBYS3).
+Páginas creadas: knowledge/_template-az900.md (plantilla de nota por módulo: Concepto / Resumen en mis palabras / Por qué importa para el examen / Enlaces relacionados), knowledge/az900-*.md (12 fichas de estudio vacías — solo estructura y enlaces, el contenido lo rellena quien estudia), assets/images/AZ-900/AZ-900-Whiteboard.png (copia local de raw/savill-cert-materials/whiteboards/).
+Páginas actualizadas: certifications/AZ-900/INDEX.md (sección Módulos → checklist secuencial 12 módulos con Learn + vídeo de Savill @duración + nota; nueva sección Repaso final con Study Cram, whiteboard embebida, handout y evaluación de práctica), INDEX.md raíz (nota sobre las fichas az900-*).
+Hallazgo: la ruta 2 tiene de nuevo 5 módulos (proceso y red separados; ruta actualizada 2026-08-10, módulo de redes re-publicado 2026-08-09) — una lectura con caché devolvía el estado fusionado de 2025 (4 módulos). El "Full Course" de Savill no es un único vídeo con timestamps sino una playlist de vídeos cortos por tema: el [mm:ss] del handout es la duración de cada vídeo, así que el INDEX enlaza vídeo+@duración por tema en vez de &t=Xs. El handout (abril 2025) sigue la estructura antigua del examen (6 dominios); el cruce con los 12 módulos actuales es por tema, no por sección.

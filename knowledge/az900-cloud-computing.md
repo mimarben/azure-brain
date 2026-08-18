@@ -74,12 +74,12 @@ ___
 
 ![Cloud Models](../assets/images/AZ-900/cloud-deployment-models.png)
 
-| Nube pública | Nube privada | Nube híbrida |
-|---|---|---|
-| No hay gastos de capital para escalar verticalmente. | Tiene control total sobre los recursos y la seguridad. | Proporciona la máxima flexibilidad. |
-| Las aplicaciones pueden aprovisionarse y desaprovisionarse rápidamente. | Los datos no se intercalan con los datos de otros inquilinos | Determine dónde ejecutar las aplicaciones. |
-| Solo pagas por lo que usas | Debe adquirirse hardware para la puesta en funcionamiento y el mantenimiento. | Tú controlas los requisitos de seguridad, cumplimiento o legales |
-| No tiene control total sobre los recursos y la seguridad | Usted es responsable del mantenimiento y las actualizaciones de hardware |  |	
+| Nube pública                                                            | Nube privada                                                                  | Nube híbrida                                                     |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| No hay gastos de capital para escalar verticalmente.                    | Tiene control total sobre los recursos y la seguridad.                        | Proporciona la máxima flexibilidad.                              |
+| Las aplicaciones pueden aprovisionarse y desaprovisionarse rápidamente. | Los datos no se intercalan con los datos de otros inquilinos                  | Determine dónde ejecutar las aplicaciones.                       |
+| Solo pagas por lo que usas                                              | Debe adquirirse hardware para la puesta en funcionamiento y el mantenimiento. | Tú controlas los requisitos de seguridad, cumplimiento o legales |
+| No tiene control total sobre los recursos y la seguridad                | Usted es responsable del mantenimiento y las actualizaciones de hardware      |                                                                  |
 
 
 

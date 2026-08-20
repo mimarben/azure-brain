@@ -1,0 +1,236 @@
+{
+  "main": {
+    "id": "06e79e45396f626a",
+    "type": "split",
+    "children": [
+      {
+        "id": "09749ad515b2b365",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b79c05cc317f0eb5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "labs/AZ-900/costes-proteccion/protection-cost.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "protection-cost"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "842612bf5e35d5dc",
+    "type": "split",
+    "children": [
+      {
+        "id": "ea64540017affc16",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cfc2ba7ae169a062",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "867d16fcd0444b70",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "19d73641f73a50b3",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "2ec09512367d7562",
+    "type": "split",
+    "children": [
+      {
+        "id": "047b463952bca37f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cbf78c3005be1b7b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "certifications/AI-200/INDEX.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for INDEX"
+            }
+          },
+          {
+            "id": "795f20130b2f8540",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "certifications/AI-200/INDEX.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from INDEX"
+            }
+          },
+          {
+            "id": "6699ca9a9c190cc6",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "bd66b1f8903d571a",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "c9bde323efd5d5c2",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "certifications/AI-200/INDEX.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of INDEX"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "b79c05cc317f0eb5",
+  "lastOpenFiles": [
+    "labs/AZ-900/costes-proteccion/cost.png",
+    "labs/AZ-900/costes-proteccion/protection-cost.md",
+    "labs/AZ-900/costes-proteccion/protection.md",
+    "labs/AZ-900/costes-proteccion",
+    "labs/AZ-900/proteccion/cost.png",
+    "labs/AZ-900/proteccion/Unconfirmed 398607.crdownload",
+    "labs/AZ-900/compartir-ficheros/cost.png",
+    "labs/AZ-900/compartir-ficheros/Unconfirmed 829589.crdownload",
+    "labs/AZ-900/proteccion/protection.md",
+    "labs/AZ-900/proteccion",
+    "labs/AZ-900/compartir-ficheros/share-files.md",
+    "labs/AZ-900/Entra/entra.md",
+    "labs/AZ-900/compartir-ficheros/overview-architecture.png",
+    "labs/AZ-900/compartir-ficheros/overview-architecture (1).png",
+    "labs/AZ-900/compartir-ficheros/Unconfirmed 162060.crdownload",
+    "labs/AZ-900/compartir-ficheros",
+    "labs/AZ-900/Entra/overview-architecture.png",
+    "labs/AZ-900/web-sencillo-Azure/web-sencillo-Azure.md",
+    "labs/AZ-900/Entra/Unconfirmed 592664.crdownload",
+    "labs/AZ-900/Entra",
+    "labs/AZ-900/web-sencillo-Azure/http_endpoint.png",
+    "labs/AZ-900/etiquetas-bloqueos/etiquetas-bloqueos.md",
+    "labs/AZ-900/web-sencillo-Azure /web-sencillo-Azure.md",
+    "labs/AZ-900/web-sencillo-Azure",
+    "labs/AZ-900/web-sencillo-Azure /http_endpoint.png",
+    "labs/AZ-900/web-sencillo-Azure /http_endpoiint.png",
+    "labs/AZ-900/web-sencillo-Azure /Pasted image 20260820081655.png",
+    "labs/AZ-900/web-sencillo-Azure ",
+    "notes/AZ-104/understand-microsoft-entra-id.md",
+    "labs/AZ-900/sitio-web/sitio-web.md",
+    "labs/AZ-900/almacenamiento.md",
+    "labs/AZ-900/sitio-web/almacenamiento.md",
+    "certifications/AZ-900/notes/az900-monitoring-tools.md",
+    "notes/AZ-900/az900-monitoring-tools.md",
+    "labs/AZ-900/az900-lab.md",
+    "certifications/AZ-900/labs/az900-lab.md",
+    "certifications/AZ-900/labs/az900-examples.md",
+    "certifications/AZ-900/examples/az900-examples.md",
+    "knowledge/az900-monitoring-tools.md",
+    "knowledge/az900-management-tools.md",
+    "knowledge/az900-governance-compliance.md",
+    "knowledge/az900-cost-management.md",
+    "knowledge/az900-azure-identity.md",
+    "knowledge/az900-azure-storage.md",
+    "knowledge/az900-cloud-computing.md"
+  ]
+}

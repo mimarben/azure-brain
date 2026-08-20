@@ -1,0 +1,55 @@
+# repos.txt — manifiesto de fuentes para raw/
+# Script: raw/setup-raw.sh (ver --help).  Ejecutar:  ./raw/setup-raw.sh
+#
+# Formato (una fuente por línea; las líneas que empiezan por # se ignoran):
+#
+#   git  <carpeta> <url> [rama]          clona/actualiza un repo git
+#   file <ruta>   <url> [sha256]         descarga un archivo; re-descarga si cambia
+#
+# Compatibilidad: si el primer token NO es 'git' ni 'file', se asume 'git'.
+#
+# 'file' es para PDFs, vídeos, slides... que no viven en git. Solo re-descarga
+# si el servidor reporta cambios (HTTP 304 = sin cambios). El sha256 opcional
+# verifica la integridad del archivo una vez bajado.
+
+# --- Azure Docs oficiales ---
+azure-docs          https://github.com/MicrosoftDocs/azure-docs
+architecture-center https://github.com/MicrosoftDocs/architecture-center
+well-architected    https://github.com/MicrosoftDocs/well-architected
+
+# --- Azure Administrator Associate ---
+AZ-104T00       https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator
+AZ-500T00       https://github.com/MicrosoftLearning/AZ500-AzureSecurityTechnologies
+AZ-140T00       https://github.com/MicrosoftLearning/AZ-140-Configuring-and-Operating-Microsoft-Azure-Virtual-Desktop
+# AZ-1007 no tiene repo público en MicrosoftLearning (módulo Learn sin labs de git).
+
+# --- Azure Developer Associate / DevOps / GitHub ---
+# Los cursos GH-* (GitHub) no están publicados en la org MicrosoftLearning.
+# AI-200, AZ-1002, AZ-2001, DP-3020 son módulos Learn sin repo de labs propio.
+# AI-200T00     https://github.com/MicrosoftLearning/AI-200-Develop-AI-cloud-solutions-on-Azure
+# GH-100T00     https://github.com/MicrosoftLearning/GH-100T00-GitHub-Administration-Basics
+# GH-200T00     https://github.com/MicrosoftLearning/GH-200T00-Automate-your-workflow-with-GitHub-Actions
+# GH-900T00     https://github.com/MicrosoftLearning/GH-900T00A-GitHub-Foundations
+AZ-2010         https://github.com/MicrosoftLearning/AZ-2010-Designing-and-Implementing-Platform-Engineering
+AZ-400T00       https://github.com/MicrosoftLearning/AZ400-DesigningandImplementingMicrosoftDevOpsSolutions
+AZ-700T00       https://github.com/MicrosoftLearning/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions
+AZ-2003         https://github.com/MicrosoftLearning/az-2003-deploy-cloud-native-applications-using-azure-container-apps
+AZ-2006         https://github.com/MicrosoftLearning/AZ-2006-automate-azure-loadtesting-github-actions
+AZ-2007         https://github.com/MicrosoftLearning/AZ-2007-Accelerate-app-development-by-using-GitHub-Copilot
+AZ-2008         https://github.com/MicrosoftLearning/AZ-2008_DevOps_Foundations_Core_Principles_Practices
+
+# --- Azure Solutions Architect Expert ---
+AZ-1004         https://github.com/MicrosoftLearning/AZ-1004-deploy-configure-azure-monitor
+AZ-305T00       https://github.com/MicrosoftLearning/AZ-305-DesigningMicrosoftAzureInfrastructureSolutions
+
+# --- Comunidad (no oficial) ---
+# John Savill (MVP de Azure): whiteboards de ámbito de examen + handouts de estudio.
+# Verificado 2026-08-17 (~44 MB, activo). Sin licencia explícita: uso privado, citar sin copiar.
+# Cobertura: AZ-900 (whiteboard + handout), AZ-104 (v2), AZ-500, AZ-700, AZ-305. No hay para AZ-140/AZ-400/GH-900/AI-200.
+savill-cert-materials  https://github.com/johnthebrit/CertificationMaterials
+
+# --- Documentos sueltos (PDFs, vídeos, slides, etc.) ---
+# Descomenta y rellena para añadir material no-git a raw/. Ejemplos:
+#file  AZ-104/az-104-study-guide.pdf  https://download.microsoft.com/.../az-104.pdf
+#file  slides/hub-spoke.pdf           https://example.com/hub-spoke.pdf  9f86d081884c7d659a0fecc55885d05130657
+#file  videos/aks-deep-dive.mp4       https://example.com/aks-deep-dive.mp4

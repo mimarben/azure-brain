@@ -235,3 +235,6 @@ Check Application Insights for records of your function invocations. The time sp
 
 
 https://func-gp-endpoint-mm-01-bcd9ddebe6ehhwh8.spaincentral-01.azurewebsites.net/api/getstatus?code=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX_notvalid
+
+
+'---

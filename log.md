@@ -2,6 +2,11 @@
 
 Registro cronológico de ingestas, consultas y lints. Formato: `## [YYYY-MM-DD] tipo | Título`.
 
+## [2026-08-21] maintenance | Enlazado de los laboratorios AZ-900
+Fuente: petición del usuario
+Páginas actualizadas: labs/AZ-900/README.md, notes/AZ-900/roadmap.md, certifications/AZ-900/INDEX.md, knowledge/az900-azure-storage.md, knowledge/az900-azure-compute.md, knowledge/az900-azure-identity.md, knowledge/az900-cost-management.md, knowledge/az900-governance-compliance.md, knowledge/az900-management-tools.md, knowledge/az900-monitoring-tools.md
+Notas: los 8 proyectos guiados del Bloque 4 ya tenían resultado en labs/AZ-900/ pero sin ninguna referencia entrante (el README de labs decía "ninguno todavía"). Cada proyecto queda enlazado desde el roadmap (Bloque 4) y desde la nota del módulo correspondiente en knowledge/ (sección Relacionado).
+
 ## [2026-08-03] maintenance | Guard de estado local en raw setup
 Fuente: petición del usuario
 Páginas actualizadas: raw/setup-raw.sh, raw/setup-raw.ps1, log.md

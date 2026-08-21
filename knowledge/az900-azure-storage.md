@@ -38,6 +38,7 @@ Ventajas de Azure Storage, tipos de cuenta, niveles de acceso, redundancia (LRS/
 ## Relacionado
 
 - [Índice AZ-900](../certifications/AZ-900/INDEX.md)
+- Laboratorios: [sitio web estático en Blob Storage](../labs/AZ-900/sitio-web/sitio-web.md) · [compartir archivos con SAS](../labs/AZ-900/compartir-ficheros/share-files.md)
 
 
 ## Descripción de las cuentas de almacenamiento de Azure.

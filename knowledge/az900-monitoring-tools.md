@@ -38,6 +38,7 @@ Azure Advisor (recomendaciones), Azure Service Health (estado del servicio) y Az
 ## Relacionado
 
 - [Índice AZ-900](../certifications/AZ-900/INDEX.md)
+- Laboratorio: [alertas del registro de actividad y Service Health](../labs/AZ-900/alertas/alerts.md)
 
 ## Describir el propósito de Azure Advisor.
 

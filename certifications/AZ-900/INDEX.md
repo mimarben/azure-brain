@@ -86,7 +86,7 @@ Plan de estudio: [notes/AZ-900/roadmap.md](../../notes/AZ-900/roadmap.md) — lo
 
 ## Laboratorios
 
-En [labs/AZ-900/](../../labs/AZ-900/README.md) — vía principal: los 8 proyectos guiados oficiales de Microsoft Learn con sandbox gratuito.
+En [labs/AZ-900/](../../labs/AZ-900/README.md) — vía principal: los 8 proyectos guiados oficiales de Microsoft Learn con sandbox gratuito. **Completados los 8** — resultados enlazados desde el [roadmap](../../notes/AZ-900/roadmap.md) (Bloque 4) y desde la sección *Relacionado* de cada nota de módulo.
 
 ## Conceptos relacionados
 

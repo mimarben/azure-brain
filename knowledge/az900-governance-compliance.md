@@ -50,6 +50,7 @@ Azure Policy (iniciativas, efectos), bloqueos de recursos ( ReadOnly / CanNotDel
 ## Relacionado
 
 - [Índice AZ-900](../certifications/AZ-900/INDEX.md)
+- Laboratorio: [organización y protección con etiquetas y bloqueos](../labs/AZ-900/etiquetas-bloqueos/etiquetas-bloqueos.md)
 
 ## Descripción del propósito de Microsoft Purview.
 

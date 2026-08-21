@@ -41,6 +41,7 @@ Azure Portal, [[Azure Cloud Shell]], Azure CLI y Azure PowerShell, Azure Arc (re
 ## Relacionado
 
 - [Índice AZ-900](../certifications/AZ-900/INDEX.md)
+- Laboratorio: [gestión de recursos con Cloud Shell y CLI](../labs/AZ-900/cloud-shell/cloud-shell.md) · [setup local de la CLI](../labs/AZ-900/az900-lab.md)
 
 ## Descripción de las herramientas para interactuar con Azure.
 

@@ -44,6 +44,7 @@ Factores que afectan al coste, formas de reducirlo, calculadoras de precios y TC
 ## Relacionado
 
 - [Índice AZ-900](../certifications/AZ-900/INDEX.md)
+- Laboratorio: [límites de protección de costos](../labs/AZ-900/costes-proteccion/protection-cost.md)
 
 ## Describir factores que pueden afectar a los costos en Azure.
 

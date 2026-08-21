@@ -55,6 +55,7 @@ Servicios de directorio ([[Entra ID]] y Entra Domain Services), autenticación (
 ## Relacionado
 
 - [Índice AZ-900](../certifications/AZ-900/INDEX.md)
+- Laboratorio: [acceso de empleados con Entra ID y RBAC](../labs/AZ-900/Entra/entra.md)
 
 ## Descripción de los servicios de directorio de Azure.
 

@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "09749ad515b2b365",
+        "id": "aafb537e5d7752bf",
         "type": "tabs",
         "children": [
           {
-            "id": "b79c05cc317f0eb5",
+            "id": "09494bde56f378f8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "labs/AZ-900/costes-proteccion/protection-cost.md",
+                "file": "labs/AZ-900/cloud-shell/cloud-shell.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "protection-cost"
+              "title": "cloud-shell"
             }
           }
         ]
@@ -185,10 +185,22 @@
       "bases:Create new base": false
     }
   },
-  "active": "b79c05cc317f0eb5",
+  "active": "09494bde56f378f8",
   "lastOpenFiles": [
-    "labs/AZ-900/costes-proteccion/cost.png",
+    "labs/AZ-900/cloud-shell/cloud-shell.png",
+    "labs/AZ-900/cloud-shell/cloud-shell.md",
+    "labs/AZ-900/cloud-shell/Pasted image 20260821103202.png",
+    "Pasted image 20260821103202.png",
+    "labs/AZ-900/alertas/alerts.md",
+    "labs/AZ-900/alertas/health-service.png",
+    "labs/AZ-900/alertas/Pasted image 20260821100041.png",
+    "labs/AZ-900/cloud-shell/cloud-sheel.md",
+    "labs/AZ-900/cloud-shell",
+    "Pasted image 20260821100041.png",
+    "labs/AZ-900/alertas/Untitled.md",
+    "labs/AZ-900/alertas.md",
     "labs/AZ-900/costes-proteccion/protection-cost.md",
+    "labs/AZ-900/costes-proteccion/cost.png",
     "labs/AZ-900/costes-proteccion/protection.md",
     "labs/AZ-900/costes-proteccion",
     "labs/AZ-900/proteccion/cost.png",
@@ -200,21 +212,14 @@
     "labs/AZ-900/compartir-ficheros/share-files.md",
     "labs/AZ-900/Entra/entra.md",
     "labs/AZ-900/compartir-ficheros/overview-architecture.png",
-    "labs/AZ-900/compartir-ficheros/overview-architecture (1).png",
     "labs/AZ-900/compartir-ficheros/Unconfirmed 162060.crdownload",
     "labs/AZ-900/compartir-ficheros",
-    "labs/AZ-900/Entra/overview-architecture.png",
     "labs/AZ-900/web-sencillo-Azure/web-sencillo-Azure.md",
     "labs/AZ-900/Entra/Unconfirmed 592664.crdownload",
     "labs/AZ-900/Entra",
-    "labs/AZ-900/web-sencillo-Azure/http_endpoint.png",
     "labs/AZ-900/etiquetas-bloqueos/etiquetas-bloqueos.md",
     "labs/AZ-900/web-sencillo-Azure /web-sencillo-Azure.md",
     "labs/AZ-900/web-sencillo-Azure",
-    "labs/AZ-900/web-sencillo-Azure /http_endpoint.png",
-    "labs/AZ-900/web-sencillo-Azure /http_endpoiint.png",
-    "labs/AZ-900/web-sencillo-Azure /Pasted image 20260820081655.png",
-    "labs/AZ-900/web-sencillo-Azure ",
     "notes/AZ-104/understand-microsoft-entra-id.md",
     "labs/AZ-900/sitio-web/sitio-web.md",
     "labs/AZ-900/almacenamiento.md",
@@ -226,11 +231,6 @@
     "certifications/AZ-900/labs/az900-examples.md",
     "certifications/AZ-900/examples/az900-examples.md",
     "knowledge/az900-monitoring-tools.md",
-    "knowledge/az900-management-tools.md",
-    "knowledge/az900-governance-compliance.md",
-    "knowledge/az900-cost-management.md",
-    "knowledge/az900-azure-identity.md",
-    "knowledge/az900-azure-storage.md",
-    "knowledge/az900-cloud-computing.md"
+    "knowledge/az900-management-tools.md"
   ]
 }

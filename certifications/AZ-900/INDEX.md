@@ -62,6 +62,7 @@ Los vídeos provienen del *Video Table of Contents* del [handout de John Savill]
 
 - [X] 09 · Administración de costos — [Learn](https://learn.microsoft.com/es-es/training/modules/describe-cost-management-azure/) — [Factores de coste @06:32](https://youtu.be/fMShW_RGcxY) · [Reducir coste @15:29](https://youtu.be/B5yiKE2DLH8) · [Calculadoras @07:26](https://youtu.be/pE-bf8i5blU) · [Cost Management @05:48](https://youtu.be/FoBjC9CAF08) · [Tags @05:06](https://youtu.be/eaf63hE_6SQ) — [Mi nota](../../knowledge/az900-cost-management.md)
 
+<<<<<<< HEAD
 - [ ] 10 · Gobernanza y cumplimiento — [Learn](https://learn.microsoft.com/es-es/training/modules/describe-features-tools-azure-for-governance-compliance/) — [Policy @10:50](https://youtu.be/z7WMqHE3R8g) · [Bloqueos @06:16](https://youtu.be/eF_KilJRxbE) · [Purview @10:47](https://youtu.be/mXjXcBr1ajY) · [Jerarquía de gobernanza @06:13](https://youtu.be/ge8r_Z0LKxM) — [Mi nota](../../knowledge/az900-governance-compliance.md)
 
 - [ ] 11 · Herramientas de administración e implementación — [Learn](https://learn.microsoft.com/es-es/training/modules/describe-features-tools-manage-deploy-azure-resources/) — [Portal/CLI/PowerShell @09:23](https://youtu.be/6xp-K60ChAk) · [ARM @09:57](https://youtu.be/g4u0NL2-3XM) · [Arc @07:23](https://youtu.be/cW6_rvDYSHg) · [Plantillas ARM @06:41](https://youtu.be/loxcA5MUf-I) — [Mi nota](../../knowledge/az900-management-tools.md)
@@ -70,6 +71,17 @@ Los vídeos provienen del *Video Table of Contents* del [handout de John Savill]
 ### Repaso final
 
 - [ ] Ver el [AZ-900 Study Cram](https://youtu.be/tQp1YkB2Tgs) de Savill (~3,5 h, edición 2022 — mapea bien con el ámbito vigente)
+=======
+- [X] 10 · Gobernanza y cumplimiento — [Learn](https://learn.microsoft.com/es-es/training/modules/describe-features-tools-azure-for-governance-compliance/) — [Policy @10:50](https://youtu.be/z7WMqHE3R8g) · [Bloqueos @06:16](https://youtu.be/eF_KilJRxbE) · [Purview @10:47](https://youtu.be/mXjXcBr1ajY) · [Jerarquía de gobernanza @06:13](https://youtu.be/ge8r_Z0LKxM) — [Mi nota](../../knowledge/az900-governance-compliance.md)
+
+- [X] 11 · Herramientas de administración e implementación — [Learn](https://learn.microsoft.com/es-es/training/modules/describe-features-tools-manage-deploy-azure-resources/) — [Portal/CLI/PowerShell @09:23](https://youtu.be/6xp-K60ChAk) · [ARM @09:57](https://youtu.be/g4u0NL2-3XM) · [Arc @07:23](https://youtu.be/cW6_rvDYSHg) · [Plantillas ARM @06:41](https://youtu.be/loxcA5MUf-I) — [Mi nota](../../knowledge/az900-management-tools.md)
+
+- [X] 12 · Herramientas de supervisión — [Learn](https://learn.microsoft.com/es-es/training/modules/describe-monitoring-tools-azure/) — [Advisor @03:22](https://youtu.be/nqH4NboyEl0) · [Monitor @10:20](https://youtu.be/v68jL-l9Fww) · [Service Health @02:58](https://youtu.be/M1xPK4T4Vls) — [Mi nota](../../knowledge/az900-monitoring-tools.md)
+
+### Repaso final
+
+- [X] Ver el [AZ-900 Study Cram](https://youtu.be/tQp1YkB2Tgs) de Savill (~3,5 h, edición 2022 — mapea bien con el ámbito vigente)
+>>>>>>> 04f9f9db7582f5740ed26a74a230697d4e045d25
 - [ ] Repasar la whiteboard de ámbito del examen (copia local; original en `raw/savill-cert-materials/`):
 
 ![Whiteboard AZ-900 de John Savill](../../assets/images/AZ-900/AZ-900-Whiteboard.png)
@@ -85,7 +97,11 @@ Plan de estudio: [notes/AZ-900/roadmap.md](../../notes/AZ-900/roadmap.md) — lo
 
 ## Laboratorios
 
+<<<<<<< HEAD
 En [labs/AZ-900/](../../labs/AZ-900/README.md) — vía principal: los 8 proyectos guiados oficiales de Microsoft Learn con sandbox gratuito.
+=======
+En [labs/AZ-900/](../../labs/AZ-900/README.md) — vía principal: los 8 proyectos guiados oficiales de Microsoft Learn con sandbox gratuito. **Completados los 8** — resultados enlazados desde el [roadmap](../../notes/AZ-900/roadmap.md) (Bloque 4) y desde la sección *Relacionado* de cada nota de módulo.
+>>>>>>> 04f9f9db7582f5740ed26a74a230697d4e045d25
 
 ## Conceptos relacionados
 

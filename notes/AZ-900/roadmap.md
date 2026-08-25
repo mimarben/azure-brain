@@ -2,7 +2,11 @@
 title: AZ-900 — Roadmap de estudio
 tags: [certification, roadmap]
 certification: [AZ-900]
+<<<<<<< HEAD
 updated: 2026-08-17
+=======
+updated: 2026-08-21
+>>>>>>> 04f9f9db7582f5740ed26a74a230697d4e045d25
 sources:
   - https://learn.microsoft.com/es-es/training/courses/az-900t00
   - https://learn.microsoft.com/es-es/training/paths/microsoft-azure-fundamentals-describe-cloud-concepts/
@@ -27,11 +31,19 @@ Plan de estudio por **autoestudio gratuito**: las 3 rutas de aprendizaje oficial
 
 ## Progreso general
 
+<<<<<<< HEAD
 - [ ] Bloque 1 — Descripción de los conceptos de la nube (25–30%)
 - [ ] Bloque 2 — Descripción de la arquitectura y los servicios de Azure (35–40%)
 - [ ] Bloque 3 — Descripción de la administración y la gobernanza de Azure (30–35%)
 - [ ] Bloque 4 — Proyectos guiados (opcional, recomendado)
 - [ ] Evaluación de práctica gratuita superada
+=======
+- [X] Bloque 1 — Descripción de los conceptos de la nube (25–30%)
+- [X] Bloque 2 — Descripción de la arquitectura y los servicios de Azure (35–40%)
+- [X] Bloque 3 — Descripción de la administración y la gobernanza de Azure (30–35%)
+- [X] Bloque 4 — Proyectos guiados (opcional, recomendado)
+- [X] Evaluación de práctica gratuita superada
+>>>>>>> 04f9f9db7582f5740ed26a74a230697d4e045d25
 - [ ] Examen AZ-900 programado
 - [ ] Examen AZ-900 aprobado (fecha: _pendiente_)
 
@@ -94,6 +106,7 @@ Docs: local en `raw/azure-docs/articles/` — `governance/`, `cost-management-bi
 
 ### 4.1 [Aplicación de aptitudes de Azure en proyectos guiados](https://learn.microsoft.com/es-es/training/paths/introduction-cloud-infrastructure-apply-azure-skills-guided-projects/) (8 proyectos)
 
+<<<<<<< HEAD
 Práctica real con sandbox gratuito, guiada paso a paso. Cada proyecto consolida un área del examen — haz al menos 3–4, priorizando tus puntos débiles. Resultado de cada uno → anotarlo en [`labs/AZ-900/`](../../labs/AZ-900/).
 
 - [ ] [Implementación de un sitio web estático con Azure Blob Storage](https://learn.microsoft.com/es-es/training/modules/guided-project-deploy-static-website-blob-storage/) — hospedaje web en Blob Storage (Bloques 2–3)
@@ -104,6 +117,24 @@ Práctica real con sandbox gratuito, guiada paso a paso. Cada proyecto consolida
 - [ ] [Configuración de límites de protección de costos en Azure](https://learn.microsoft.com/es-es/training/modules/guided-project-cost-guardrails/) — presupuestos y alertas (Bloque 3)
 - [ ] [Supervisión de Azure con alertas del registro de actividad y estado del servicio](https://learn.microsoft.com/es-es/training/modules/guided-project-monitor-service-health-activity-alerts/) — línea base de supervisión gratuita (Bloque 3)
 - [ ] [Administración de recursos de Azure con Cloud Shell y la CLI de Azure](https://learn.microsoft.com/es-es/training/modules/guided-project-manage-resources-cloud-shell-cli/) — CLI desde línea de comandos (Bloque 3)
+=======
+Práctica real con sandbox gratuito, guiada paso a paso. Cada proyecto consolida un área del examen — haz al menos 3–4, priorizando tus puntos débiles. Resultado de cada uno → anotarlo en [`labs/AZ-900/`](../../labs/AZ-900/README.md) (los 8 completados, enlazados abajo).
+
+- [X] [Implementación de un sitio web estático con Azure Blob Storage](https://learn.microsoft.com/es-es/training/modules/guided-project-deploy-static-website-blob-storage/) — hospedaje web en Blob Storage (Bloques 2–3) · [resultado](../../labs/AZ-900/sitio-web/sitio-web.md)
+
+- [X] [Organización y protección de recursos con etiquetas y bloqueos](https://learn.microsoft.com/es-es/training/modules/guided-project-organize-resources-tags-locks/) — tags + locks (Bloque 3) · [resultado](../../labs/AZ-900/etiquetas-bloqueos/etiquetas-bloqueos.md)
+
+- [X] [Creación de un punto de conexión de sitio web sencillo con Azure Functions](https://learn.microsoft.com/es-es/training/modules/guided-project-build-basic-website-endpoint-with-functions/) — serverless (Bloque 2) · [resultado](../../labs/AZ-900/web-sencillo-Azure/web-sencillo-Azure.md)
+- [X] [Configurar el nuevo acceso de los empleados (Id. de Entra y RBAC)](https://learn.microsoft.com/es-es/training/modules/guided-project-new-employee-access/) — privilegio mínimo (Bloque 2) · [resultado](../../labs/AZ-900/Entra/entra.md)
+
+- [X] [Compartir archivos de forma segura](https://learn.microsoft.com/es-es/training/modules/guided-project-share-files-securely/) — blobs + directivas de acceso almacenadas + SAS (Bloques 2–3) · [resultado](../../labs/AZ-900/compartir-ficheros/share-files.md)
+
+- [X] [Configuración de límites de protección de costos en Azure](https://learn.microsoft.com/es-es/training/modules/guided-project-cost-guardrails/) — presupuestos y alertas (Bloque 3) · [resultado](../../labs/AZ-900/costes-proteccion/protection-cost.md)
+
+- [X] [Supervisión de Azure con alertas del registro de actividad y estado del servicio](https://learn.microsoft.com/es-es/training/modules/guided-project-monitor-service-health-activity-alerts/) — línea base de supervisión gratuita (Bloque 3) · [resultado](../../labs/AZ-900/alertas/alerts.md)
+
+- [X] [Administración de recursos de Azure con Cloud Shell y la CLI de Azure](https://learn.microsoft.com/es-es/training/modules/guided-project-manage-resources-cloud-shell-cli/) — CLI desde línea de comandos (Bloque 3) · [resultado](../../labs/AZ-900/cloud-shell/cloud-shell.md)
+>>>>>>> 04f9f9db7582f5740ed26a74a230697d4e045d25
 
 > **Nota:** esta ruta existe desde agosto de 2026 y la página del curso AZ-900T00 aún no la lista (seguía en 3 partes a 31/03/2026) — es oficial y parte de la misma serie.
 

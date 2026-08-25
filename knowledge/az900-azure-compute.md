@@ -115,3 +115,7 @@ Azure Kubernetes Service (AKS) es un servicio de orquestación de contenedores. 
 ## Relacionado
 
 - [Índice AZ-900](../certifications/AZ-900/INDEX.md)
+<<<<<<< HEAD
+=======
+- Laboratorio: [endpoint HTTP con Azure Functions](../labs/AZ-900/web-sencillo-Azure/web-sencillo-Azure.md)
+>>>>>>> 04f9f9db7582f5740ed26a74a230697d4e045d25

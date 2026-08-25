@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "2fb496ae322aa4bc",
+        "id": "1566405dd54ed589",
         "type": "tabs",
         "children": [
           {
-            "id": "d82d978e2a4393c7",
+            "id": "29d6981c2bfb636a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "knowledge/az900-governance-compliance.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "az900-governance-compliance"
+              "title": "New tab"
             }
           }
         ]
@@ -185,8 +181,15 @@
       "bases:Create new base": false
     }
   },
-  "active": "d82d978e2a4393c7",
+  "active": "29d6981c2bfb636a",
   "lastOpenFiles": [
+    "notes/AZ-900/11-Conceptos de la nube.md",
+    "labs/AZ-900/README.md",
+    "knowledge/az900-azure-compute.md",
+    "knowledge/az900-azure-architecture.md",
+    "knowledge/az900-azure-networking.md",
+    "knowledge/az900-management-tools.md",
+    "knowledge/az900-governance-compliance.md",
     "assets/images/AZ-900/service-trust-portal.png",
     "assets/images/AZ-900/Unconfirmed 406970.crdownload",
     "knowledge/az900-cost-management.md",
@@ -208,7 +211,6 @@
     "assets/images/AZ-900/consumption-pricing-options.png",
     "assets/images/AZ-900/Unconfirmed 454105.crdownload",
     "assets/images/AZ-900/cost-factors-overview.png",
-    "assets/images/AZ-900/assess-secure-defend-option-pillars.png",
     "assets/images/AZ-900/Unconfirmed 847884.crdownload",
     "knowledge/az900-azure-storage.md",
     "knowledge/az900-cloud-computing.md",
@@ -226,12 +228,6 @@
     "raw/architecture-center/docs/guide/iot/how-to-connect-power-bi-to-the-solution.md",
     "raw/architecture-center/docs/guide/iot/how-to-connect-on-premises-sap-to-the-solution.md",
     "raw/architecture-center/docs/guide/iot/how-to-connect-grafana-to-solution.md",
-    "raw/architecture-center/docs/guide/iot/how-to-connect-dynamics-field-service-to-the-solution.md",
-    "raw/architecture-center/docs/guide/iot/how-to-connect-azure-data-explorer-to-solution.md",
-    "raw/architecture-center/docs/guide/iot/agentic-ai-for-the-solution.md",
-    "log.md",
-    "ROADMAP.md",
-    "TODO.md",
-    "INDEX.md"
+    "raw/architecture-center/docs/guide/iot/how-to-connect-dynamics-field-service-to-the-solution.md"
   ]
 }

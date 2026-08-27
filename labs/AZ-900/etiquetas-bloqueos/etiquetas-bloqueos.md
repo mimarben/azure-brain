@@ -1,6 +1,6 @@
 # Introducción a la infraestructura en la nube: Aplicación de aptitudes de Azure en proyectos guiados
 
-[Link](https://learn.microsoft.com/es-es/training/modules/guided-project-organize-resources-tags-locks/)
+[Link](https://learn.microsoft.com/en-us/training/modules/guided-project-organize-resources-tags-locks/)
 
 ## Escenario.
 

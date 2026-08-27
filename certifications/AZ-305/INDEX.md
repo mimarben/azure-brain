@@ -4,7 +4,7 @@ tags: [certification]
 certification: [AZ-305]
 updated: 2026-08-17
 sources:
-  - https://learn.microsoft.com/es-es/credentials/certifications/resources/study-guides/az-305
+  - https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-305
   - raw/savill-cert-materials/whiteboards/AZ-305-Whiteboard.png
 ---
 

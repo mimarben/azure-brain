@@ -5,12 +5,12 @@ tags: [fundamentals]
 certification: [AZ-900]
 updated: 2026-08-17
 sources:
-  - https://learn.microsoft.com/es-es/training/modules/describe-cloud-service-types/
+  - https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/
 ---
 
 # AZ-900 — Tipos de servicio en la nube
 
-Módulo 03 del [AZ-900T00](https://learn.microsoft.com/es-es/training/courses/az-900t00) · Ruta 1 · Área: Descripción de los conceptos de la nube (25–30%).
+Módulo 03 del [AZ-900T00](https://learn.microsoft.com/en-us/training/courses/az-900t00) · Ruta 1 · Área: Descripción de los conceptos de la nube (25–30%).
 
 ## Concepto
 
@@ -26,7 +26,7 @@ IaaS, PaaS y SaaS: qué gestiona el proveedor y qué el cliente en cada categor�
 
 ## Enlaces relacionados
 
-**Módulo de Learn**: [Descripción de los tipos de servicio en la nube](https://learn.microsoft.com/es-es/training/modules/describe-cloud-service-types/)
+**Módulo de Learn**: [Descripción de los tipos de servicio en la nube](https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/)
 
 **AZ-900 Full Course de Savill** (vídeo por tema, @duración):
 - [Differences Between Cloud Service Categories — 15:16](https://youtu.be/IqQC1EOQqeU)

@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "Bash(xargs sed -i 's|/es-es/|/en-us/|g')",
+      "Bash(mv \"knowledge/az104-Azure Cloud Shell.md\" knowledge/az104-azure-cloud-shell.md)",
+      "Bash(sed -i 's#az104-Azure%20Cloud%20Shell.md#az104-azure-cloud-shell.md#g; s#\\\\[\\\\[az104-Azure Cloud Shell\\\\]\\\\]##g' notes/AZ-104/roadmap.md)",
+      "Bash(git clone *)",
+      "Bash(python3 -)"
+    ]
+  }
+}

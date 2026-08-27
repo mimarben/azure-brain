@@ -64,7 +64,7 @@ sources:
 ```
 
 - `title` — nombre legible del concepto (Title Case).
-- `aliases` — igual al título. Necesario porque los ficheros usan kebab-case (`azure-rbac.md`) pero los enlaces de Obsidian usan Title Case (`[[Azure RBAC]]`); el alias es lo que hace que el enlace resuelva al fichero correcto.
+- `aliases` — igual al título. Útil para que Obsidian muestre nombres alternativos, aunque los enlaces van por ruta relativa (ver abajo).
 - `tags` — categorías libres en minúscula (identity, networking, compute, security, governance, containers, storage, devops, ai, monitoring...).
 - `certification` — qué certificaciones tocan este concepto (puede estar vacío).
 - `updated` — fecha ISO de la última edición sustancial.
@@ -73,8 +73,8 @@ sources:
 ## Nombres de fichero y enlaces
 
 - Ficheros: kebab-case, sin espacios (`private-endpoints.md`, `hub-spoke.md`).
-- Enlaces internos: siempre wikilinks en Title Case apoyados en el alias (`[[Azure RBAC]]`, `[[Managed Identities]]`), nunca rutas largas ni `.md` explícito.
-- Cada página de `knowledge/` debe tener una sección `## Relacionado` con wikilinks a conceptos conectados. Los enlaces deben ser bidireccionales cuando tenga sentido: si A enlaza a B, revisa si B debería enlazar de vuelta a A.
+- Enlaces internos: siempre Markdown estándar `[Texto](ruta/relativa.md)` con la ruta relativa al fichero que enlaza y `.md` explícito — el único formato que resuelven tanto Obsidian como VSCode (los wikilinks `[[...]]` no son clicables en VSCode). Carpetas sin `.md`. Espacios en la ruta: `%20` (mejor aún, evita nombres con espacios — ver regla kebab-case). Ejemplo desde `notes/AZ-104/`: `[Azure RBAC](../../knowledge/azure-rbac.md)`.
+- Cada página de `knowledge/` debe tener una sección `## Relacionado` con enlaces Markdown a conceptos conectados. Los enlaces deben ser bidireccionales cuando tenga sentido: si A enlaza a B, revisa si B debería enlazar de vuelta a A.
 
 ## Plantilla de `certifications/<CERT>/INDEX.md`
 
@@ -108,7 +108,7 @@ Estado actual: no iniciado / en curso / listo para examen / aprobado (con fecha)
 Enlaces a `labs/<CERT>/` (carpeta de primer nivel).
 
 ## Conceptos relacionados
-Wikilinks a páginas de `knowledge/` relevantes.
+Enlaces Markdown a páginas de `knowledge/` relevantes.
 
 ## Ejemplos
 Enlaces a `examples/` relevantes (organizado por tecnología, no por certificación).

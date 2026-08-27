@@ -4,7 +4,7 @@ tags: [certification]
 certification: [AI-200]
 updated: 2026-07-07
 sources:
-  - https://learn.microsoft.com/es-es/credentials/certifications/resources/study-guides/ai-200
+  - https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-200
 ---
 
 # AI-200: Desarrollo de soluciones en la nube de IA en Azure

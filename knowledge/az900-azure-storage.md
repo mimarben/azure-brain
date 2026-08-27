@@ -5,12 +5,12 @@ tags: [fundamentals, storage]
 certification: [AZ-900]
 updated: 2026-08-17
 sources:
-  - https://learn.microsoft.com/es-es/training/modules/describe-azure-storage-services/
+  - https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/
 ---
 
 # AZ-900 — Servicios de almacenamiento de Azure
 
-Módulo 07 del [AZ-900T00](https://learn.microsoft.com/es-es/training/courses/az-900t00) · Ruta 2 · Área: Descripción de la arquitectura y los servicios de Azure (35–40%).
+Módulo 07 del [AZ-900T00](https://learn.microsoft.com/en-us/training/courses/az-900t00) · Ruta 2 · Área: Descripción de la arquitectura y los servicios de Azure (35–40%).
 
 ## Concepto
 
@@ -26,22 +26,19 @@ Ventajas de Azure Storage, tipos de cuenta, niveles de acceso, redundancia (LRS/
 
 ## Enlaces relacionados
 
-**Módulo de Learn**: [Descripción de los servicios de almacenamiento de Azure](https://learn.microsoft.com/es-es/training/modules/describe-azure-storage-services/)
+**Módulo de Learn**: [Descripción de los servicios de almacenamiento de Azure](https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/)
 
 **AZ-900 Full Course de Savill** (vídeo por tema, @duración):
 - [Benefits and Usage of Storage Account Resources — 18:04](https://youtu.be/b8BrfsxLSx8)
 - [Benefits and Usage of Database Resources — 13:29](https://youtu.be/4sQOF9fSOAU)
 - [Data Movement and Migration Options — 11:47](https://youtu.be/jNBcXnMTo9s)
 
-**Proyectos guiados**: [Implementación de un sitio web estático con Azure Blob Storage](https://learn.microsoft.com/es-es/training/modules/guided-project-deploy-static-website-blob-storage/) · [Compartir archivos de forma segura](https://learn.microsoft.com/es-es/training/modules/guided-project-share-files-securely/)
+**Proyectos guiados**: [Implementación de un sitio web estático con Azure Blob Storage](https://learn.microsoft.com/en-us/training/modules/guided-project-deploy-static-website-blob-storage/) · [Compartir archivos de forma segura](https://learn.microsoft.com/en-us/training/modules/guided-project-share-files-securely/)
 
 ## Relacionado
 
 - [Índice AZ-900](../certifications/AZ-900/INDEX.md)
-<<<<<<< HEAD
-=======
 - Laboratorios: [sitio web estático en Blob Storage](../labs/AZ-900/sitio-web/sitio-web.md) · [compartir archivos con SAS](../labs/AZ-900/compartir-ficheros/share-files.md)
->>>>>>> 04f9f9db7582f5740ed26a74a230697d4e045d25
 
 
 ## Descripción de las cuentas de almacenamiento de Azure.

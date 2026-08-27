@@ -4,7 +4,7 @@ tags: [certification]
 certification: [AZ-400]
 updated: 2026-07-07
 sources:
-  - https://learn.microsoft.com/es-es/credentials/certifications/resources/study-guides/az-400
+  - https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-400
 ---
 
 # AZ-400: Diseño e implementación de soluciones de Microsoft DevOps

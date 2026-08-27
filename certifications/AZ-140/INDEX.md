@@ -4,7 +4,7 @@ tags: [certification]
 certification: [AZ-140]
 updated: 2026-07-07
 sources:
-  - https://learn.microsoft.com/es-es/credentials/certifications/resources/study-guides/az-140
+  - https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-140
 ---
 
 # AZ-140: Configuración y funcionamiento de Microsoft Azure Virtual Desktop

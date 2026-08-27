@@ -4,7 +4,7 @@ tags: [certification]
 certification: [AZ-700]
 updated: 2026-08-17
 sources:
-  - https://learn.microsoft.com/es-es/credentials/certifications/resources/study-guides/az-700
+  - https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-700
   - raw/savill-cert-materials/whiteboards/AZ-700-Whiteboard.png
 ---
 

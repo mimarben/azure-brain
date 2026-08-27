@@ -2,26 +2,28 @@
 title: AZ-104 — Roadmap de estudio
 tags: [certification, roadmap]
 certification: [AZ-104]
-updated: 2026-07-31
+updated: 2026-08-27
 sources:
-  - https://learn.microsoft.com/es-es/credentials/certifications/azure-administrator/
-  - https://learn.microsoft.com/es-es/credentials/certifications/resources/study-guides/az-104
-  - https://learn.microsoft.com/es-es/training/courses/az-104t00
-  - https://learn.microsoft.com/es-es/training/paths/az-104-administrator-prerequisites/
-  - https://learn.microsoft.com/es-es/training/paths/az-104-manage-identities-governance/
-  - https://learn.microsoft.com/es-es/training/paths/az-104-manage-storage/
-  - https://learn.microsoft.com/es-es/training/paths/az-104-manage-compute-resources/
-  - https://learn.microsoft.com/es-es/training/paths/az-104-manage-virtual-networks/
-  - https://learn.microsoft.com/es-es/training/paths/az-104-monitor-backup-resources/
+  - https://learn.microsoft.com/en-us/credentials/certifications/azure-administrator/
+  - https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-104
+  - https://learn.microsoft.com/en-us/training/courses/az-104t00
+  - https://learn.microsoft.com/en-us/training/paths/az-104-administrator-prerequisites/
+  - https://learn.microsoft.com/en-us/training/paths/az-104-manage-identities-governance/
+  - https://learn.microsoft.com/en-us/training/paths/az-104-manage-storage/
+  - https://learn.microsoft.com/en-us/training/paths/az-104-manage-compute-resources/
+  - https://learn.microsoft.com/en-us/training/paths/az-104-manage-virtual-networks/
+  - https://learn.microsoft.com/en-us/training/paths/az-104-monitor-backup-resources/
+  - https://www.youtube.com/watch?v=0Knf9nub4-k
+  - https://www.youtube.com/playlist?list=PLlVtbbG169nGlGPWs9xaLKT1KfwqREHbs
 ---
 
 # Roadmap de estudio — AZ-104
 
-Plan de estudio para AZ-104 por **autoestudio gratuito**: las 6 rutas de aprendizaje oficiales de Microsoft Learn (la opción gratuita de las "two ways to prepare"), que mapean con las 5 áreas de la skills outline vigente desde el **17 de abril de 2026** (ver [INDEX.md](../../certifications/AZ-104/INDEX.md)). Sin curso de pago: la preparación se complementa con los **labs oficiales** de Microsoft (`MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator`) y la **evaluación de práctica gratuita**.
+Plan de estudio para AZ-104 por **autoestudio gratuito**: las 6 rutas de aprendizaje oficiales de Microsoft Learn (la opción gratuita de las "two ways to prepare" — **28 módulos**, composición verificada en Learn el 26/08/2026), que mapean con las 5 áreas de la skills outline vigente desde el **17 de abril de 2026** (ver [INDEX.md](../../certifications/AZ-104/INDEX.md)). Sin curso de pago: la preparación se complementa con los **labs oficiales** de Microsoft (`MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator`) y la **evaluación de práctica gratuita**.
 
 **Cómo usar este documento**: marca los checkboxes según avances. Cada bloque tiene un apartado *Notas propias* — ahí vuelcas tus apuntes del portal, cosas que te hayan costado o fallos de laboratorio; no lo toco yo al actualizar el repositorio salvo que me pidas fusionarlo con `knowledge/`.
 
-**Mapa del examen**: [whiteboard de John Savill (MVP)](../../raw/savill-cert-materials/whiteboards/AZ-104-Whiteboard-v2.png) — todo el ámbito del examen en una imagen; útil como visión de conjunto antes de empezar cada bloque y como repaso final.
+**Mapa del examen**: [whiteboard de John Savill (MVP)](../../raw/savill-cert-materials/whiteboards/AZ-104-Whiteboard-v2.png) — todo el ámbito del examen en una imagen; útil como visión de conjunto antes de empezar cada bloque y como repaso final. Vídeo de repaso global: [AZ-104 Study Cram v2](https://www.youtube.com/watch?v=0Knf9nub4-k) (~4 h); tema a tema, la [playlist AZ-104 de Savill](https://www.youtube.com/playlist?list=PLlVtbbG169nGlGPWs9xaLKT1KfwqREHbs) (~20 h, buscar por tema — a diferencia de AZ-900 no hay mapeo por módulo).
 
 **Workflow por concepto** (la cadencia del brain): módulo de MS Learn → apuntes en *Notas propias* → crear/ampliar la página en [`knowledge/`](../../knowledge/) → tachar el checkbox del [INDEX](../../certifications/AZ-104/INDEX.md) → hacer el lab en [`labs/AZ-104/`](../../labs/AZ-104/) → guardar snippets de CLI/PowerShell/Bicep en [`examples/`](../../examples/).
 
@@ -31,8 +33,8 @@ Plan de estudio para AZ-104 por **autoestudio gratuito**: las 6 rutas de aprendi
 
 ## Progreso general
 
-- [x] Bloque 0 — Prerrequisitos (opcional, recomendado si AZ-900 no está fresco)
-- [X] Bloque 1 — Identidad y gobernanza (20–25%)
+- [x] Bloque 0 — Prerrequisitos (2 módulos: Cloud Shell ya hecho; falta el de plantillas ARM JSON, incorporado a la ruta oficial en 2026)
+- [ ] Bloque 1 — Identidad y gobernanza (20–25%) — módulos 03–08
 - [ ] Bloque 2 — Almacenamiento (15–20%)
 - [ ] Bloque 3 — Cómputo (20–25%)
 - [ ] Bloque 4 — Redes virtuales (15–20%)
@@ -45,12 +47,14 @@ Plan de estudio para AZ-104 por **autoestudio gratuito**: las 6 rutas de aprendi
 
 ## Bloque 0 — Prerrequisitos (opcional)
 
-### 0.1 [AZ-104: Prerequisites for Azure administrators](https://learn.microsoft.com/en-us/training/paths/az-104-administrator-prerequisites/)
+### 0.1 [AZ-104: Prerequisites for Azure administrators](https://learn.microsoft.com/en-us/training/paths/az-104-administrator-prerequisites/) (2 módulos)
 
-Módulos:
-- [x] [Introduction to Azure Cloud Shell](https://learn.microsoft.com/es-es/training/modules/intro-to-azure-cloud-shell/) — shell autenticado en el navegador (Bash/PowerShell) → [[Azure Cloud Shell]]
+- [x] [Introduction to Azure Cloud Shell](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-cloud-shell/) — shell autenticado en el navegador (Bash/PowerShell) → [az104-Azure Cloud Shell](../../knowledge/az104-azure-cloud-shell.md)
+- [x] [Implementación de la infraestructura de Azure mediante plantillas de ARM de JSON](https://learn.microsoft.com/en-us/training/modules/create-azure-resource-manager-template-vs-code/) — plantillas ARM con VS Code → [Implementación de la infraestructura de Azure mediante plantillas de ARM de JSON (AZ-104)](../../knowledge/az104-arm-templates.md)
 
-Repaso de fundamentos (portales, CLI/PowerShell, ARM, suscripciones/RGs). Si AZ-900 te sigue fresco, puedes saltártelo y entrar por el Bloque 1.
+Repaso de fundamentos (portales, CLI/PowerShell, ARM, suscripciones/RGs). Con AZ-900 recién acabado, Cloud Shell ya está cubierto; el módulo de plantillas ARM **se incorporó a la ruta oficial en 2026** (antes era refuerzo suelto del Bloque 3) — hazlo antes de llegar al Bloque 3, donde el examen exige ARM/Bicep en profundidad.
+
+**Lab:** [03b — Manage Azure Resources by Using ARM Templates](../../raw/AZ-104T00/Instructions/Labs/LAB_03b-Manage_Azure_Resources_by_Using_ARM_Templates.md) (también refuerzo del Bloque 3)
 
 > **Notas propias:**
 
@@ -60,17 +64,19 @@ Repaso de fundamentos (portales, CLI/PowerShell, ARM, suscripciones/RGs). Si AZ-
 
 ### 1.1 [AZ-104: Manage identities and governance in Azure](https://learn.microsoft.com/en-us/training/paths/az-104-manage-identities-governance/) (6 módulos)
 
-- [ ] [Understand Microsoft Entra ID](https://learn.microsoft.com/en-us/training/modules/understand-azure-active-directory/) — Entra ID vs ADDS, P1/P2, Domain Services → [[Understand Microsoft Entra ID]] · [[Entra ID]]
-- [ ] [Create, configure, and manage identities](https://learn.microsoft.com/en-us/training/modules/create-configure-manage-identities/) — usuarios, grupos, licencias, usuarios externos
-- [ ] [Describe the core architectural components of Azure](https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/) — suscripciones, RGs, regiones, management groups
-- [ ] [Azure Policy initiatives](https://learn.microsoft.com/en-us/training/modules/sovereignty-policy-initiatives/) — aplicar estándares y evaluar compliance
-- [ ] [Secure your Azure resources with Azure RBAC](https://learn.microsoft.com/en-us/training/modules/secure-azure-resources-with-rbac/) — roles integrados, asignación por ámbito
-- [ ] [Allow users to reset their password with SSPR](https://learn.microsoft.com/en-us/training/modules/allow-users-reset-their-password/) — autoservicio de restablecimiento
+- [X] [Understand Microsoft Entra ID](https://learn.microsoft.com/en-us/training/modules/understand-azure-active-directory/) — Entra ID vs ADDS, P1/P2, Domain Services → [Entender Microsoft Entra ID (AZ-104)](../../knowledge/az104-entra-id.md) · [Entra ID](../../knowledge/entra-id.md)
+- [x] [Create, configure, and manage identities](https://learn.microsoft.com/en-us/training/modules/create-configure-manage-identities/) — usuarios, grupos, licencias, usuarios externos → [Crear, configurar y administrar identidades (AZ-104)](../../knowledge/az104-identities.md)
+- [X] [Describe the core architectural components of Azure](https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/) — suscripciones, RGs, regiones, management groups *(mismo módulo que el 04 de AZ-900)* → [Componentes arquitectónicos de Azure (AZ-900)](../../knowledge/az900-azure-architecture.md)
+- [ ] [Azure Policy initiatives](https://learn.microsoft.com/en-us/training/modules/sovereignty-policy-initiatives/) — aplicar estándares y evaluar compliance → [Iniciativas de Azure Policy (AZ-104)](../../knowledge/az104-azure-policy.md)
+- [ ] [Secure your Azure resources with Azure RBAC](https://learn.microsoft.com/en-us/training/modules/secure-azure-resources-with-rbac/) — roles integrados, asignación por ámbito → [Protección de los recursos de Azure con Azure RBAC (AZ-104)](../../knowledge/az104-azure-rbac.md) · [Azure RBAC](../../knowledge/azure-rbac.md)
+- [ ] [Allow users to reset their password with SSPR](https://learn.microsoft.com/en-us/training/modules/allow-users-reset-their-password/) — autoservicio de restablecimiento → [Restablecimiento de contraseñas con SSPR (AZ-104)](../../knowledge/az104-sspr.md)
+
+**Labs:** [01 — Manage Entra ID Identities](../../raw/AZ-104T00/Instructions/Labs/LAB_01-Manage_Entra_ID_Identities.md) · [02a — Manage Subscriptions and RBAC](../../raw/AZ-104T00/Instructions/Labs/LAB_02a_Manage_Subscriptions_and_RBAC_Entra.md) · [02b — Manage Governance via Azure Policy](../../raw/AZ-104T00/Instructions/Labs/LAB_02b-Manage_Governance_via_Azure_Policy.md)
 
 **Objetivos del examen:** usuarios/grupos y propiedades · licencias · usuarios externos · SSPR · roles integrados y asignación por ámbito · interpretar asignaciones · Azure Policy · bloqueos · etiquetas · RGs/suscripciones/management groups · costes con alertas, presupuestos y Advisor.
 
-Conceptos del repo: [[Entra ID]] (stub) · [[Azure RBAC]] (stub).
-Docs: [Microsoft Entra ID](https://learn.microsoft.com/es-es/azure/active-directory/) · [Azure Policy](https://learn.microsoft.com/es-es/azure/governance/policy/) — local: `raw/azure-docs/articles/governance/`, `role-based-access-control/`, `cost-management-billing/`. Entra ID sin copia local.
+Conceptos del repo: [Entra ID](../../knowledge/entra-id.md) (stub) · [Azure RBAC](../../knowledge/azure-rbac.md) (stub).
+Docs: [Microsoft Entra ID](https://learn.microsoft.com/en-us/azure/active-directory/) · [Azure Policy](https://learn.microsoft.com/en-us/azure/governance/policy/) — local: `raw/azure-docs/articles/governance/`, `role-based-access-control/`, `cost-management-billing/`. Entra ID sin copia local.
 
 > **Notas propias:**
 
@@ -80,14 +86,16 @@ Docs: [Microsoft Entra ID](https://learn.microsoft.com/es-es/azure/active-direct
 
 ### 2.1 [AZ-104: Implement and manage storage in Azure](https://learn.microsoft.com/en-us/training/paths/az-104-manage-storage/) (4 módulos)
 
-- [ ] [Configure storage accounts](https://learn.microsoft.com/en-us/training/modules/configure-storage-accounts/) — creación, redundancia (LRS/GRS/GZRS...), endpoints
-- [ ] [Configure Azure Blob Storage](https://learn.microsoft.com/en-us/training/modules/configure-blob-storage/) — tiers, replicación de objetos, ciclo de vida, versionado
-- [ ] [Configure Azure Storage security](https://learn.microsoft.com/en-us/training/modules/configure-storage-security/) — SAS tokens, directivas de acceso almacenadas, claves, firewalls/vNet
-- [ ] [Configure Azure Files](https://learn.microsoft.com/en-us/training/modules/configure-azure-files-file-sync/) — file shares, Azure File Sync, acceso basado en identidad
+- [ ] [Configure storage accounts](https://learn.microsoft.com/en-us/training/modules/configure-storage-accounts/) — creación, redundancia (LRS/GRS/GZRS...), endpoints → [Configuración de cuentas de almacenamiento (AZ-104)](../../knowledge/az104-storage-accounts.md)
+- [ ] [Configure Azure Blob Storage](https://learn.microsoft.com/en-us/training/modules/configure-blob-storage/) — tiers, replicación de objetos, ciclo de vida, versionado → [Configuración de Azure Blob Storage (AZ-104)](../../knowledge/az104-blob-storage.md)
+- [ ] [Configure Azure Storage security](https://learn.microsoft.com/en-us/training/modules/configure-storage-security/) — SAS tokens, directivas de acceso almacenadas, claves, firewalls/vNet → [Configurar la seguridad de Azure Storage (AZ-104)](../../knowledge/az104-storage-security.md)
+- [ ] [Configure Azure Files](https://learn.microsoft.com/en-us/training/modules/configure-azure-files-file-sync/) — file shares, Azure File Sync, acceso basado en identidad → [Configuración de Azure Files (AZ-104)](../../knowledge/az104-azure-files.md)
+
+**Lab:** [07 — Manage Azure Storage](../../raw/AZ-104T00/Instructions/Labs/LAB_07-Manage_Azure_Storage.md)
 
 **Objetivos del examen:** firewalls y redes virtuales de Storage · SAS tokens · directivas de acceso almacenadas · claves de acceso · acceso basado en identidad para Azure Files · redundancia y replicación de objetos · cifrado · Storage Explorer y AzCopy · tiers · eliminación suave (blobs/contenedores/files) · instantáneas · ciclo de vida · versionado.
 
-Docs: [Azure Storage](https://learn.microsoft.com/es-es/azure/storage/) · [Blob Storage](https://learn.microsoft.com/es-es/azure/storage/blobs/) — local: `raw/azure-docs/articles/storage/` (y `storage-actions/`, `storage-mover/`, `storage-discovery/`).
+Docs: [Azure Storage](https://learn.microsoft.com/en-us/azure/storage/) · [Blob Storage](https://learn.microsoft.com/en-us/azure/storage/blobs/) — local: `raw/azure-docs/articles/storage/` (y `storage-actions/`, `storage-mover/`, `storage-discovery/`).
 
 > **Notas propias:**
 
@@ -97,17 +105,20 @@ Docs: [Azure Storage](https://learn.microsoft.com/es-es/azure/storage/) · [Blob
 
 ### 3.1 [AZ-104: Deploy and manage Azure compute resources](https://learn.microsoft.com/en-us/training/paths/az-104-manage-compute-resources/) (5 módulos)
 
-- [ ] [Introduction to Azure virtual machines](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-virtual-machines/) — decisiones previas, creación, extensiones
-- [ ] [Configure virtual machine availability](https://learn.microsoft.com/en-us/training/modules/configure-virtual-machine-availability/) — availability sets/zones, escalado vertical y horizontal, VMSS
-- [ ] [Configure Azure App Service plans](https://learn.microsoft.com/en-us/training/modules/configure-app-service-plans/) — pricing tiers y escalado
-- [ ] [Configure Azure App Service](https://learn.microsoft.com/en-us/training/modules/configure-azure-app-services/) — config, monitoring, deployment slots
-- [ ] [Configure Azure Container Instances](https://learn.microsoft.com/en-us/training/modules/configure-azure-container-instances/) — container groups, ACI
-- [ ] [Author Azure Resource Manager templates by using VS Code](https://learn.microsoft.com/es-es/training/modules/create-azure-resource-manager-template-vs-code/) — refuerzo del gap ARM/Bicep (fuera de la ruta oficial) → [[ARM Templates]]
+- [ ] [Introduction to Azure virtual machines](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-virtual-machines/) — decisiones previas, creación, extensiones → [Introducción a Azure Virtual Machines (AZ-104)](../../knowledge/az104-virtual-machines.md)
+- [ ] [Configure virtual machine availability](https://learn.microsoft.com/en-us/training/modules/configure-virtual-machine-availability/) — availability sets/zones, escalado vertical y horizontal, VMSS → [Configuración de la disponibilidad de las máquinas virtuales (AZ-104)](../../knowledge/az104-vm-availability.md)
+- [ ] [Configure Azure App Service plans](https://learn.microsoft.com/en-us/training/modules/configure-app-service-plans/) — pricing tiers y escalado → [Configuración de planes de Azure App Service (AZ-104)](../../knowledge/az104-app-service-plans.md)
+- [ ] [Configure Azure App Service](https://learn.microsoft.com/en-us/training/modules/configure-azure-app-services/) — config, monitoring, deployment slots → [Configuración de Azure App Service (AZ-104)](../../knowledge/az104-app-service.md)
+- [ ] [Configure Azure Container Instances](https://learn.microsoft.com/en-us/training/modules/configure-azure-container-instances/) — container groups, ACI → [Configuración de Azure Container Instances (AZ-104)](../../knowledge/az104-container-instances.md)
+
+**Labs:** [08 — Manage Virtual Machines](../../raw/AZ-104T00/Instructions/Labs/LAB_08-Manage_Virtual_Machines.md) · [09a — Implement Web Apps](../../raw/AZ-104T00/Instructions/Labs/LAB_09a-Implement_Web_Apps.md) · [09b — Implement Azure Container Instances](../../raw/AZ-104T00/Instructions/Labs/LAB_09b-Implement_Azure_Container_Instances.md) · [09c — Implement Azure Container Apps](../../raw/AZ-104T00/Instructions/Labs/LAB_09c-Implement-Azure-Container-Apps.md)
+
+> El módulo de plantillas ARM que antes figuraba aquí como refuerzo suelto se trasladó al **Bloque 0** al incorporarse a la ruta oficial de prerrequisitos (verificado 26/08/2026).
 
 **Objetivos del examen (la ruta es más ligera que el examen — ver *Gaps* abajo):** ARM/Bicep: interpretar/modificar/desplegar/exportar/convertir plantillas · VMs: creación, cifrado en el host, mover entre RG/suscripción/región, tamaños, discos, availability zones/sets, VMSS · contenedores: ACR, ACI, **Container Apps**, escalado · App Service: plan y escalado, certificados/TLS, DNS personalizado, backup, red, deployment slots.
 
-Concepto del repo: [[Terraform vs Bicep]] (stub).
-Docs: [App Service](https://learn.microsoft.com/es-es/azure/app-service/) · [Container Instances](https://learn.microsoft.com/es-es/azure/container-instances/) · [Container Apps](https://learn.microsoft.com/es-es/azure/container-apps/) · [VMs](https://learn.microsoft.com/es-es/azure/virtual-machines/) · [ARM templates](https://learn.microsoft.com/es-es/azure/azure-resource-manager/templates/) — local: `raw/azure-docs/articles/app-service/`, `container-apps/`, `containers/`, `azure-resource-manager/`. Sin copia local de `virtual-machines`.
+Concepto del repo: [Terraform vs Bicep](../../knowledge/terraform-vs-bicep.md) (stub).
+Docs: [App Service](https://learn.microsoft.com/en-us/azure/app-service/) · [Container Instances](https://learn.microsoft.com/en-us/azure/container-instances/) · [Container Apps](https://learn.microsoft.com/en-us/azure/container-apps/) · [VMs](https://learn.microsoft.com/en-us/azure/virtual-machines/) · [ARM templates](https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/) — local: `raw/azure-docs/articles/app-service/`, `container-apps/`, `containers/`, `azure-resource-manager/`. Sin copia local de `virtual-machines`.
 
 > **Notas propias:**
 
@@ -117,19 +128,21 @@ Docs: [App Service](https://learn.microsoft.com/es-es/azure/app-service/) · [Co
 
 ### 4.1 [AZ-104: Configure and manage virtual networks for Azure administrators](https://learn.microsoft.com/en-us/training/paths/az-104-manage-virtual-networks/) (8 módulos)
 
-- [ ] [Configure virtual networks](https://learn.microsoft.com/en-us/training/modules/configure-virtual-networks/) — VNets, subnets, direccionamiento IP
-- [ ] [Configure network security groups](https://learn.microsoft.com/en-us/training/modules/configure-network-security-groups/) — NSG/ASG, reglas efectivas
-- [ ] [Host your domain on Azure DNS](https://learn.microsoft.com/en-us/training/modules/host-domain-azure-dns/) — zonas y registros DNS
-- [ ] [Configure Azure Virtual Network peering](https://learn.microsoft.com/en-us/training/modules/configure-vnet-peering/) — peering, tránsito, conectividad
-- [ ] [Manage and control traffic flow with routes](https://learn.microsoft.com/en-us/training/modules/control-network-traffic-flow-with-routes/) — UDR (rutas definidas por el usuario)
-- [ ] [Introduction to Azure Load Balancer](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-load-balancer/) — LB interno/público
-- [ ] [Introduction to Azure Application Gateway](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-application-gateway/) — Application Gateway (cuándo elegirlo)
-- [ ] [Introduction to Azure Network Watcher](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-network-watcher/) — diagnóstico y monitoring de red
+- [ ] [Configure virtual networks](https://learn.microsoft.com/en-us/training/modules/configure-virtual-networks/) — VNets, subnets, direccionamiento IP → [Configuración de redes virtuales (AZ-104)](../../knowledge/az104-virtual-networks.md)
+- [ ] [Configure network security groups](https://learn.microsoft.com/en-us/training/modules/configure-network-security-groups/) — NSG/ASG, reglas efectivas → [Configuración de grupos de seguridad de red (AZ-104)](../../knowledge/az104-network-security-groups.md)
+- [ ] [Host your domain on Azure DNS](https://learn.microsoft.com/en-us/training/modules/host-domain-azure-dns/) — zonas y registros DNS → [Hospedaje de su dominio en Azure DNS (AZ-104)](../../knowledge/az104-azure-dns.md)
+- [ ] [Configure Azure Virtual Network peering](https://learn.microsoft.com/en-us/training/modules/configure-vnet-peering/) — peering, tránsito, conectividad → [Configuración del emparejamiento de Azure Virtual Network (AZ-104)](../../knowledge/az104-vnet-peering.md)
+- [ ] [Manage and control traffic flow with routes](https://learn.microsoft.com/en-us/training/modules/control-network-traffic-flow-with-routes/) — UDR (rutas definidas por el usuario) → [Administración y control del flujo de tráfico con rutas (AZ-104)](../../knowledge/az104-user-defined-routes.md)
+- [ ] [Introduction to Azure Load Balancer](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-load-balancer/) — LB interno/público → [Introducción a Azure Load Balancer (AZ-104)](../../knowledge/az104-load-balancer.md)
+- [ ] [Introduction to Azure Application Gateway](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-application-gateway/) — Application Gateway (cuándo elegirlo) → [Introducción a Azure Application Gateway (AZ-104)](../../knowledge/az104-application-gateway.md)
+- [ ] [Introduction to Azure Network Watcher](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-network-watcher/) — diagnóstico y monitoring de red → [Introducción a Azure Network Watcher (AZ-104)](../../knowledge/az104-network-watcher.md)
+
+**Labs:** [04 — Implement Virtual Networking](../../raw/AZ-104T00/Instructions/Labs/LAB_04-Implement_Virtual_Networking.md) · [05 — Implement Intersite Connectivity](../../raw/AZ-104T00/Instructions/Labs/LAB_05-Implement_Intersite_Connectivity.md) · [06 — Implement Network Traffic Management](../../raw/AZ-104T00/Instructions/Labs/LAB_06-Implement_Network_Traffic_Management.md)
 
 **Objetivos del examen:** VNets/subnets · peering · IPs públicas · UDR · troubleshooting de conectividad · NSG/ASG y reglas efectivas · Azure Bastion · service endpoints · **private endpoints** para PaaS · Azure DNS · load balancer interno/público · troubleshooting de balanceo.
 
-Conceptos del repo: [[Azure Networking]] (stub) · [[Private Endpoints]] (stub) · [[Hub-Spoke]] (stub).
-Docs: [Virtual Network](https://learn.microsoft.com/es-es/azure/virtual-network/) · [DNS](https://learn.microsoft.com/es-es/azure/dns/) · [Bastion](https://learn.microsoft.com/es-es/azure/bastion/) · [Application Gateway](https://learn.microsoft.com/es-es/azure/application-gateway/) · [Load Balancer](https://learn.microsoft.com/es-es/azure/load-balancer/) — local: `raw/azure-docs/articles/virtual-network/` (y `virtual-network-manager/`), `dns/`, `bastion/`, `application-gateway/`, `load-balancer/`. Sin copia local de `network-watcher`.
+Conceptos del repo: [Azure Networking](../../knowledge/azure-networking.md) (stub) · [Private Endpoints](../../knowledge/private-endpoints.md) (stub) · [Hub-Spoke](../../knowledge/hub-spoke.md) (stub).
+Docs: [Virtual Network](https://learn.microsoft.com/en-us/azure/virtual-network/) · [DNS](https://learn.microsoft.com/en-us/azure/dns/) · [Bastion](https://learn.microsoft.com/en-us/azure/bastion/) · [Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/) · [Load Balancer](https://learn.microsoft.com/en-us/azure/load-balancer/) — local: `raw/azure-docs/articles/virtual-network/` (y `virtual-network-manager/`), `dns/`, `bastion/`, `application-gateway/`, `load-balancer/`. Sin copia local de `network-watcher`.
 
 > **Notas propias:**
 
@@ -139,13 +152,15 @@ Docs: [Virtual Network](https://learn.microsoft.com/es-es/azure/virtual-network/
 
 ### 5.1 [AZ-104: Monitor and back up Azure resources](https://learn.microsoft.com/en-us/training/paths/az-104-monitor-backup-resources/) (3 módulos)
 
-- [ ] [Introduction to Azure Backup](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-backup/) — Recovery Services vault vs Backup vault, políticas
-- [ ] [Protect your virtual machines by using Azure Backup](https://learn.microsoft.com/en-us/training/modules/protect-virtual-machines-with-azure-backup/) — backup/restore de VMs y otros workloads
-- [ ] [Monitor your Azure virtual machines with Azure Monitor](https://learn.microsoft.com/en-us/training/modules/monitor-azure-vm-using-diagnostic-data/) — métricas y logs de VM host/cliente
+- [ ] [Introduction to Azure Backup](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-backup/) — Recovery Services vault vs Backup vault, políticas → [Introducción a Azure Backup (AZ-104)](../../knowledge/az104-azure-backup.md)
+- [ ] [Protect your virtual machines by using Azure Backup](https://learn.microsoft.com/en-us/training/modules/protect-virtual-machines-with-azure-backup/) — backup/restore de VMs y otros workloads → [Protección de las máquinas virtuales con Azure Backup (AZ-104)](../../knowledge/az104-vm-backup.md)
+- [ ] [Monitor your Azure virtual machines with Azure Monitor](https://learn.microsoft.com/en-us/training/modules/monitor-azure-vm-using-diagnostic-data/) — métricas y logs de VM host/cliente → [Supervisión de las máquinas virtuales de Azure con Azure Monitor (AZ-104)](../../knowledge/az104-vm-monitoring.md)
+
+**Labs:** [10 — Implement Data Protection](../../raw/AZ-104T00/Instructions/Labs/LAB_10-Implement_Data_Protection.md) · [11 — Implement Monitoring](../../raw/AZ-104T00/Instructions/Labs/LAB_11-Implement_Monitoring.md)
 
 **Objetivos del examen (la ruta es la más ligera frente al examen — ver *Gaps*):** métricas en Azure Monitor · configurar logs · consultar y analizar logs (KQL) · reglas de alertas, action groups y alert processing rules · Insights de VMs/storage/redes · Network Watcher y Connection Monitor · Recovery Services vault · Backup vault · políticas de backup · backup/restore · Azure Site Recovery · failover a región secundaria · informes y alertas de backups.
 
-Docs: [Azure Monitor](https://learn.microsoft.com/es-es/azure/azure-monitor/) · [Azure Backup](https://learn.microsoft.com/es-es/azure/backup/) · [Site Recovery](https://learn.microsoft.com/es-es/azure/site-recovery/) · [Network Watcher](https://learn.microsoft.com/es-es/azure/network-watcher/) — local: `raw/azure-docs/articles/backup/`, `site-recovery/`. Sin copia local de `azure-monitor`.
+Docs: [Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/) · [Azure Backup](https://learn.microsoft.com/en-us/azure/backup/) · [Site Recovery](https://learn.microsoft.com/en-us/azure/site-recovery/) · [Network Watcher](https://learn.microsoft.com/en-us/azure/network-watcher/) — local: `raw/azure-docs/articles/backup/`, `site-recovery/`. Sin copia local de `azure-monitor`.
 
 > **Notas propias:**
 
@@ -155,12 +170,12 @@ Docs: [Azure Monitor](https://learn.microsoft.com/es-es/azure/azure-monitor/) ·
 
 Las rutas de Microsoft Learn son nivel *Beginner* y **no cubren todo lo que entra en el examen**. Lo que falta, cubrirlo con labs + docs oficiales (no ampliar las rutas, que no lo contemplan):
 
-- [ ] **ARM/Bicep en profundidad** — interpretar/modificar plantillas, exportar deploy como plantilla, convertir ARM → Bicep (la ruta de cómputo apenas lo roza). Refuerzo: [`examples/bicep/`](../../examples/bicep/) y [ARM templates docs](https://learn.microsoft.com/es-es/azure/azure-resource-manager/templates/).
-- [ ] **Azure Container Registry (ACR)** y **Azure Container Apps** — geo-replicación, tareas, escalado con KEDA. Docs: [ACR](https://learn.microsoft.com/es-es/azure/container-registry/), [Container Apps](https://learn.microsoft.com/es-es/azure/container-apps/).
+- [ ] **ARM/Bicep en profundidad** — interpretar/modificar plantillas, exportar deploy como plantilla, convertir ARM → Bicep (el módulo base está en el Bloque 0; el examen pide más de lo que cubre). Refuerzo: [`examples/bicep/`](../../examples/bicep/) y [ARM templates docs](https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/).
+- [ ] **Azure Container Registry (ACR)** y **Azure Container Apps** — geo-replicación, tareas, escalado con KEDA. Docs: [ACR](https://learn.microsoft.com/en-us/azure/container-registry/), [Container Apps](https://learn.microsoft.com/en-us/azure/container-apps/).
 - [ ] **Application Gateway** — routing HTTP/S, WAF, listeners (la ruta es solo intro).
 - [ ] **Azure Site Recovery** — configurar, failover a región secundaria, informes.
 - [ ] **Network Watcher / Connection Monitor** — troubleshooting de conectividad, IP flow verify, next hop.
-- [ ] **Private endpoints** para PaaS — el examen los pide explícitamente; desarrollar la página [[Private Endpoints]].
+- [ ] **Private endpoints** para PaaS — el examen los pide explícitamente; desarrollar la página [Private Endpoints](../../knowledge/private-endpoints.md).
 
 Estos son además los mejores candidatos para desarrollar stubs de `knowledge/` y crear ejemplos en `examples/` mientras estudias.
 
@@ -168,7 +183,7 @@ Estos son además los mejores candidatos para desarrollar stubs de `knowledge/` 
 
 ## Laboratorios oficiales
 
-Microsoft publica los labs prácticos alineados con AZ-104 en **[MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator](https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator)** (carpeta `Instructions/Labs`). Son la mejor forma de cubrir lo que las rutas dejan corto. Cada lab que hagas → anota resultado/comandos en [`labs/AZ-104/`](../../labs/AZ-104/).
+Microsoft publica los labs prácticos alineados con AZ-104 en **[MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator](https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator)** (carpeta `Instructions/Labs`). Son la mejor forma de cubrir lo que las rutas dejan corto. El repo está clonado en `raw/AZ-104T00/` — los enlaces **Labs:** de cada bloque del roadmap abren la instrucción del lab directamente desde el clon local. Cada lab que hagas → anota resultado/comandos en la [tabla de seguimiento de labs/AZ-104](../../labs/AZ-104/README.md).
 
 ---
 
@@ -195,13 +210,14 @@ Distribución orientativa (la ruta oficial son ~4 días de instructor-led; en au
 
 ## Antes del examen
 
-- [ ] Completar la [evaluación de práctica gratuita](https://learn.microsoft.com/es-es/credentials/certifications/exams/az-104/practice/assessment?assessment-type=practice&assessmentId=21) (assessmentId 21) y repasar donde falle
+- [ ] Completar la [evaluación de práctica gratuita](https://learn.microsoft.com/en-us/credentials/certifications/exams/az-104/practice/assessment?assessment-type=practice&assessmentId=21) (assessmentId 21) y repasar donde falle
+- [ ] Ver el [AZ-104 Study Cram v2](https://www.youtube.com/watch?v=0Knf9nub4-k) de Savill (~4 h) como repaso global
 - [ ] Ver entero el **[vídeo de preparación del examen](https://aka.ms/AZ104-ExamPrep)** (`aka.ms/AZ104-ExamPrep`, ~1–2 semanas antes)
 - [ ] Revisar que la skills outline en [INDEX.md](../../certifications/AZ-104/INDEX.md) sigue vigente (Microsoft actualiza las guías periódicamente; nota de cambio vigente: 17/04/2026)
-- [ ] Repasar los stubs de `knowledge/` completados durante el estudio ([[Entra ID]], [[Azure RBAC]], [[Azure Networking]], [[Private Endpoints]], [[Terraform vs Bicep]])
-- [ ] Programar el examen desde [tu perfil de Microsoft Learn](https://learn.microsoft.com/es-es/users) (usa una cuenta personal MSA para no perder los registros)
+- [ ] Repasar los stubs de `knowledge/` completados durante el estudio ([Entra ID](../../knowledge/entra-id.md), [Azure RBAC](../../knowledge/azure-rbac.md), [Azure Networking](../../knowledge/azure-networking.md), [Private Endpoints](../../knowledge/private-endpoints.md), [Terraform vs Bicep](../../knowledge/terraform-vs-bicep.md))
+- [ ] Programar el examen desde [tu perfil de Microsoft Learn](https://learn.microsoft.com/en-us/users) (usa una cuenta personal MSA para no perder los registros)
 
 ## Relacionado
 
 - [Índice de la certificación](../../certifications/AZ-104/INDEX.md) — resumen y skills outline oficial
-- [[Entra ID]] · [[Azure RBAC]] · [[Azure Networking]] · [[Private Endpoints]] · [[Hub-Spoke]] · [[Terraform vs Bicep]] · [[ARM Templates]] · [[Managed Identities]] · [[Key Vault]] · [[Azure Cloud Shell]]
+- [Entra ID](../../knowledge/entra-id.md) · [Azure RBAC](../../knowledge/azure-rbac.md) · [Azure Networking](../../knowledge/azure-networking.md) · [Private Endpoints](../../knowledge/private-endpoints.md) · [Hub-Spoke](../../knowledge/hub-spoke.md) · [Terraform vs Bicep](../../knowledge/terraform-vs-bicep.md) · [ARM Templates](../../knowledge/az104-arm-templates.md) · [Managed Identities](../../knowledge/managed-identities.md) · [Key Vault](../../knowledge/key-vault.md) · [az104-Azure Cloud Shell](../../knowledge/az104-azure-cloud-shell.md)

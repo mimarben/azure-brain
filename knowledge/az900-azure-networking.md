@@ -5,12 +5,12 @@ tags: [fundamentals, networking]
 certification: [AZ-900]
 updated: 2026-08-17
 sources:
-  - https://learn.microsoft.com/es-es/training/modules/describe-azure-networking-services/
+  - https://learn.microsoft.com/en-us/training/modules/describe-azure-networking-services/
 ---
 
 # AZ-900 — Servicios de red de Azure
 
-Módulo 06 del [AZ-900T00](https://learn.microsoft.com/es-es/training/courses/az-900t00) · Ruta 2 · Área: Descripción de la arquitectura y los servicios de Azure (35–40%). Módulo separado de nuevo desde ~2026-03 (antes estaba fusionado con el de proceso).
+Módulo 06 del [AZ-900T00](https://learn.microsoft.com/en-us/training/courses/az-900t00) · Ruta 2 · Área: Descripción de la arquitectura y los servicios de Azure (35–40%). Módulo separado de nuevo desde ~2026-03 (antes estaba fusionado con el de proceso).
 
 ## Concepto
 
@@ -26,7 +26,7 @@ En este módulo se presentan las funcionalidades de red de Azure para una comuni
 
 ## Enlaces relacionados
 
-**Módulo de Learn**: [Descripción de los servicios de red de Azure](https://learn.microsoft.com/es-es/training/modules/describe-azure-networking-services/)
+**Módulo de Learn**: [Descripción de los servicios de red de Azure](https://learn.microsoft.com/en-us/training/modules/describe-azure-networking-services/)
 
 **AZ-900 Full Course de Savill** (vídeo por tema, @duración):
 - [Benefits and Usage of Core Network Resources — 22:04](https://youtu.be/aNK0C9Oj2sg)

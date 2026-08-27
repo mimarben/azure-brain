@@ -5,12 +5,12 @@ tags: [fundamentals, governance]
 certification: [AZ-900]
 updated: 2026-08-17
 sources:
-  - https://learn.microsoft.com/es-es/training/modules/describe-features-tools-azure-for-governance-compliance/
+  - https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/
 ---
 
 # AZ-900 — Gobernanza y cumplimiento en Azure
 
-Módulo 10 del [AZ-900T00](https://learn.microsoft.com/es-es/training/courses/az-900t00) · Ruta 3 · Área: Descripción de la administración y la gobernanza de Azure (30–35%).
+Módulo 10 del [AZ-900T00](https://learn.microsoft.com/en-us/training/courses/az-900t00) · Ruta 3 · Área: Descripción de la administración y la gobernanza de Azure (30–35%).
 
 ## Concepto
 
@@ -35,7 +35,7 @@ Azure Policy (iniciativas, efectos), bloqueos de recursos ( ReadOnly / CanNotDel
 
 ## Enlaces relacionados
 
-**Módulo de Learn**: [Descripción de las características y herramientas de Azure para la gobernanza y el cumplimiento](https://learn.microsoft.com/es-es/training/modules/describe-features-tools-azure-for-governance-compliance/)
+**Módulo de Learn**: [Descripción de las características y herramientas de Azure para la gobernanza y el cumplimiento](https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/)
 
 **AZ-900 Full Course de Savill** (vídeo por tema, @duración):
 - [Functionality and Usage of Azure Policy — 10:50](https://youtu.be/z7WMqHE3R8g)
@@ -45,15 +45,12 @@ Azure Policy (iniciativas, efectos), bloqueos de recursos ( ReadOnly / CanNotDel
 
 **Páginas de `knowledge/`**: [[Componentes arquitectónicos de Azure (AZ-900)]] (la jerarquía que gobiernan estas herramientas)
 
-**Proyecto guiado**: [Organización y protección de recursos con etiquetas y bloqueos](https://learn.microsoft.com/es-es/training/modules/guided-project-organize-resources-tags-locks/)
+**Proyecto guiado**: [Organización y protección de recursos con etiquetas y bloqueos](https://learn.microsoft.com/en-us/training/modules/guided-project-organize-resources-tags-locks/)
 
 ## Relacionado
 
 - [Índice AZ-900](../certifications/AZ-900/INDEX.md)
-<<<<<<< HEAD
-=======
 - Laboratorio: [organización y protección con etiquetas y bloqueos](../labs/AZ-900/etiquetas-bloqueos/etiquetas-bloqueos.md)
->>>>>>> 04f9f9db7582f5740ed26a74a230697d4e045d25
 
 ## Descripción del propósito de Microsoft Purview.
 

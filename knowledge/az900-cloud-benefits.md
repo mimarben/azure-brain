@@ -5,12 +5,12 @@ tags: [fundamentals]
 certification: [AZ-900]
 updated: 2026-08-17
 sources:
-  - https://learn.microsoft.com/es-es/training/modules/describe-benefits-use-cloud-services/
+  - https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/
 ---
 
 # AZ-900 — Ventajas de los servicios en la nube
 
-Módulo 02 del [AZ-900T00](https://learn.microsoft.com/es-es/training/courses/az-900t00) · Ruta 1 · Área: Descripción de los conceptos de la nube (25–30%).
+Módulo 02 del [AZ-900T00](https://learn.microsoft.com/en-us/training/courses/az-900t00) · Ruta 1 · Área: Descripción de los conceptos de la nube (25–30%).
 
 ## Concepto
 
@@ -26,7 +26,7 @@ Las ventajas de la nube agrupadas por el examen: alta disponibilidad y escalabil
 
 ## Enlaces relacionados
 
-**Módulo de Learn**: [Descripción de las ventajas de usar servicios en la nube](https://learn.microsoft.com/es-es/training/modules/describe-benefits-use-cloud-services/)
+**Módulo de Learn**: [Descripción de las ventajas de usar servicios en la nube](https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/)
 
 **AZ-900 Full Course de Savill** (vídeo por tema, @duración):
 - [Benefits of High Availability and Scalability — 15:24](https://youtu.be/JRbhGzGzoOA)

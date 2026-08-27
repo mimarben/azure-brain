@@ -3,9 +3,9 @@ title: Roadmap de certificaciones — de básico a experto
 aliases: [Roadmap de certificaciones]
 tags: [certification, roadmap]
 certification: [AZ-900, GH-900, AZ-104, AZ-500, AZ-700, AI-200, AZ-140, AZ-305, AZ-400]
-updated: 2026-08-17
+updated: 2026-08-26
 sources:
-  - https://learn.microsoft.com/es-es/credentials/certifications/
+  - https://learn.microsoft.com/en-us/credentials/certifications/
 ---
 
 # Roadmap de certificaciones — de básico a experto
@@ -55,7 +55,7 @@ Puerta de entrada. No prueban habilidad práctica: miden vocabulario y comprensi
 
 | Cert | Nombre oficial | Papel en la ruta | Estado |
 |---|---|---|---|
-| [AZ-900](AZ-900/INDEX.md) | Microsoft Azure Fundamentals | **El punto de partida obligatorio**: conceptos de servicios, facturación, gobernanza, SLAs. Todo lo demás asume este vocabulario. | En curso (piloto del repo) |
+| [AZ-900](AZ-900/INDEX.md) | Microsoft Azure Fundamentals | **El punto de partida obligatorio**: conceptos de servicios, facturación, gobernanza, SLAs. Todo lo demás asume este vocabulario. | Estudio completado — examen pendiente de programar |
 | [GH-900](GH-900/INDEX.md) | GitHub Foundations | Paralela y corta. Base de Git/GitHub Actions que AZ-400 (DevOps) da por sabida. Se puede hacer en cualquier momento como descanso entre bloques. | No iniciado |
 
 ## Nivel 2 — Associate
@@ -98,16 +98,16 @@ Orden lineal de ataque, con las ramas en paralelo donde no chocan:
 8. **AZ-400** — segundo experto; requiere la credencial AZ-104 ya en mano (la ruta ya la incluye).
 9. **AZ-140** — especialidad oportunista: hacerla cuando el rol laboral la pida, no por plan.
 
-## Estado actual (2026-08-17)
+## Estado actual (2026-08-26)
 
 | Cert | Estado |
 |---|---|
-| AZ-900 | En curso (piloto del repo, iniciado 2026-07-07) |
-| AZ-104 | En curso — [roadmap](../notes/AZ-104/roadmap.md) |
+| AZ-900 | Estudio completado (módulos, labs y evaluación de práctica) — examen pendiente de programar |
+| AZ-104 | En curso — bloques 0–1 completados · [roadmap](../notes/AZ-104/roadmap.md) |
 | AI-200 | En curso — [roadmap](../notes/AI-200/roadmap.md) |
 | AZ-500, AZ-700, AZ-140, AZ-305, AZ-400, GH-900 | No iniciados |
 
-Próximo hito natural: **cerrar AZ-900** para dejar la fase de fundamentos completa y consolidar AZ-104 como única prioridad.
+Próximo hito natural: **programar y aprobar el examen AZ-900** (el estudio ya está cerrado) mientras avanza AZ-104 — siguiente parada: Bloque 2 (almacenamiento).
 
 ## Relacionado
 

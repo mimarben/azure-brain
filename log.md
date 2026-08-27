@@ -2,21 +2,29 @@
 
 Registro cronológico de ingestas, consultas y lints. Formato: `## [YYYY-MM-DD] tipo | Título`.
 
-<<<<<<< HEAD
-=======
+## [2026-08-26] maintenance | URLs de Microsoft Learn a en-us en todo el repo
+Fuente: petición del usuario ("todas las direcciones las quiero en inglés")
+Páginas actualizadas: 63 ficheros de knowledge/, certifications/, notes/, labs/, examples/, INDEX.md y ROADMAP.md — todas las URLs `/es-es/` → `/en-us/`
+Notas: se excluyen `raw/` (capa inmutable) y las entradas históricas de `log.md` (registran las fuentes tal como se usaron en su momento). La preferencia queda como convención del repo: los enlaces a Microsoft Learn van en en-us. De paso: renombrado manual por el usuario de knowledge/azure-cloud-shell.md → az900-azure-cloud-shell.md (el alias `[[Azure Cloud Shell]]` sigue resolviendo); corregida la fila correspondiente del INDEX raíz que apuntaba a un alias inexistente.
+
+## [2026-08-26] maintenance | AZ-104 al nivel del AZ-900 + resolución de conflictos de merge
+Fuente: petición del usuario (AZ-900 acabado; revisar AZ-104 "en todos sus puntos" y igualarlo al patrón AZ-900)
+Páginas creadas: knowledge/_template-az104.md, knowledge/_template-az900.md, 26 fichas knowledge/az104-*.md, labs/AZ-104/README.md
+Páginas actualizadas: certifications/AZ-104/INDEX.md (reescrito: checklist de 28 módulos con "Mi nota" + repaso final), notes/AZ-104/roadmap.md, INDEX.md, certifications/ROADMAP.md, certifications/AZ-900/INDEX.md, log.md
+Notas: (1) Verificado contra Learn el 26/08/2026: skills outline AZ-104 sin cambios (vigente desde 17/04/2026) y composición de las 6 rutas estable — salvo que la ruta de prerrequisitos pasó de 1 a 2 módulos (el de plantillas ARM JSON pasó de refuerzo suelto a oficial, movido al Bloque 0). (2) Labs oficiales verificados contra el repo MicrosoftLearning/AZ-104 (Lab 01–11, tabla por bloque en labs/AZ-104/README.md); necesitan suscripción propia, no sandbox. (3) Resueltos los marcadores de conflicto del merge 4727622 en 11 ficheros (roadmap AZ-900, INDEX AZ-900, log.md, labs/AZ-900/README.md y 7 fichas az900-*), quedando el lado entrante (04f9f9d "az-900 ended"). (4) AZ-900 pasa a "estudio completado — examen pendiente de programar"; AZ-104 marca los módulos 03–08 como hechos (bloques 0–1, según progreso registrado) y la ficha del módulo de arquitectura apunta a la nota AZ-900 (mismo módulo, sin duplicar).
+
 ## [2026-08-21] maintenance | Enlazado de los laboratorios AZ-900
 Fuente: petición del usuario
 Páginas actualizadas: labs/AZ-900/README.md, notes/AZ-900/roadmap.md, certifications/AZ-900/INDEX.md, knowledge/az900-azure-storage.md, knowledge/az900-azure-compute.md, knowledge/az900-azure-identity.md, knowledge/az900-cost-management.md, knowledge/az900-governance-compliance.md, knowledge/az900-management-tools.md, knowledge/az900-monitoring-tools.md
 Notas: los 8 proyectos guiados del Bloque 4 ya tenían resultado en labs/AZ-900/ pero sin ninguna referencia entrante (el README de labs decía "ninguno todavía"). Cada proyecto queda enlazado desde el roadmap (Bloque 4) y desde la nota del módulo correspondiente en knowledge/ (sección Relacionado).
 
->>>>>>> 04f9f9db7582f5740ed26a74a230697d4e045d25
 ## [2026-08-03] maintenance | Guard de estado local en raw setup
 Fuente: petición del usuario
 Páginas actualizadas: raw/setup-raw.sh, raw/setup-raw.ps1, log.md
 Notas: antes de hacer `pull --ff-only` sobre un repo ya clonado en `raw/`, los scripts comprueban cambios locales; si el repo no está limpio, muestran `git status` y saltan la actualización de ese repo.
 
 ## [2026-08-03] example | Aplicación con Microsoft Entra ID
-Fuente: https://learn.microsoft.com/es-es/azure/app-service/quickstart-nodejs?tabs=windows&pivots=development-environment-vscode + documentación base de App Service authentication con Microsoft Entra.
+Fuente: https://learn.microsoft.com/en-us/azure/app-service/quickstart-nodejs?tabs=windows&pivots=development-environment-vscode + documentación base de App Service authentication con Microsoft Entra.
 Páginas creadas: examples/entra/README.md
 Páginas actualizadas: examples/README.md, knowledge/entra-id.md, certifications/AZ-104/INDEX.md
 
@@ -39,7 +47,7 @@ Páginas actualizadas (stubs con frontmatter + enlace de vuelta): knowledge/azur
 Certificación creada: certifications/AZ-900/ (no existía, elegida por el usuario como piloto)
 
 ## [2026-07-07] ingest | Guías de estudio oficiales (AI-200 + 8 certificaciones)
-Fuente: learn.microsoft.com/es-es/credentials/certifications/resources/study-guides/{ai-200,az-104,az-500,az-140,az-305,az-400,az-700,gh-900,az-900}
+Fuente: learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/{ai-200,az-104,az-500,az-140,az-305,az-400,az-700,gh-900,az-900}
 Motivo: el usuario aportó la URL de la guía oficial de AI-200; se detectó el patrón de URL y se aplicó al resto de certificaciones activas para reemplazar estructura genérica por la skills outline real.
 Páginas creadas: certifications/AI-200/INDEX.md, certifications/AZ-104/INDEX.md, certifications/AZ-500/INDEX.md, certifications/AZ-140/INDEX.md, certifications/AZ-305/INDEX.md, certifications/AZ-400/INDEX.md, certifications/AZ-700/INDEX.md, certifications/GH-900/INDEX.md
 Página reemplazada: certifications/AZ-900/INDEX.md (el borrador manual del piloto anterior se sustituyó por la skills outline oficial)
@@ -79,13 +87,13 @@ Hallazgo: raw/azure-docs/articles/ cubre la mayoría de temas de AZ-104 (storage
 Pendiente: desarrollar el contenido real de knowledge/ (los stubs siguen sin desarrollar) y añadir labs y ejemplos conforme avance el estudio.
 
 ## [2026-07-31] ingest | Azure Cloud Shell (stub, primer módulo de AZ-104)
-Fuente: https://learn.microsoft.com/es-es/training/modules/intro-to-azure-cloud-shell/ (ruta de prerrequisitos de AZ-104, Bloque 0).
+Fuente: https://learn.microsoft.com/en-us/training/modules/intro-to-azure-cloud-shell/ (ruta de prerrequisitos de AZ-104, Bloque 0).
 Página creada: knowledge/azure-cloud-shell.md (stub con frontmatter + `## Relacionado`; pendiente de contenido — lo rellena el usuario al estudiar).
 Páginas actualizadas: INDEX.md (fila en catálogo), certifications/AZ-104/INDEX.md (Conceptos relacionados), notes/AZ-104/roadmap.md (módulo bajo Bloque 0 + enlace en Relacionado).
 
 ## [2026-07-31] ingest | ARM Templates (stub, refuerzo del gap ARM/Bicep de AZ-104)
-Fuente: https://learn.microsoft.com/es-es/training/modules/create-azure-resource-manager-template-vs-code/ (módulo fuera de la ruta oficial de cómputo; cubre el gap ARM/Bicep del Bloque 3).
-Página creada: knowledge/arm-templates.md (stub con frontmatter + `## Relacionado` a [[Terraform vs Bicep]] y [[Azure Cloud Shell]]; pendiente de contenido).
+Fuente: https://learn.microsoft.com/en-us/training/modules/create-azure-resource-manager-template-vs-code/ (módulo fuera de la ruta oficial de cómputo; cubre el gap ARM/Bicep del Bloque 3).
+Página creada: knowledge/arm-templates.md (stub con frontmatter + `## Relacionado` a [[Terraform vs Bicep]] y [[az104-Azure Cloud Shell]]; pendiente de contenido).
 Páginas actualizadas: INDEX.md (fila en catálogo), certifications/AZ-104/INDEX.md (Conceptos relacionados), notes/AZ-104/roadmap.md (módulo bajo Bloque 3.1 + enlace en Relacionado).
 Mantenimiento: creado assets/ (faltaba) para imágenes embebidas como `![[...]]`.
 

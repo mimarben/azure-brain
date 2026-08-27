@@ -4,7 +4,7 @@ tags: [certification]
 certification: [GH-900]
 updated: 2026-07-07
 sources:
-  - https://learn.microsoft.com/es-es/credentials/certifications/resources/study-guides/gh-900
+  - https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-900
 ---
 
 # GH-900: GitHub Foundations

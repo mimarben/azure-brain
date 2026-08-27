@@ -5,12 +5,12 @@ tags: [fundamentals, compute]
 certification: [AZ-900]
 updated: 2026-08-17
 sources:
-  - https://learn.microsoft.com/es-es/training/modules/describe-azure-compute-networking-services/
+  - https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/
 ---
 
 # AZ-900 — Servicios de proceso de Azure
 
-Módulo 05 del [AZ-900T00](https://learn.microsoft.com/es-es/training/courses/az-900t00) · Ruta 2 · Área: Descripción de la arquitectura y los servicios de Azure (35–40%). El slug del módulo mantiene el nombre histórico `describe-azure-compute-networking-services` aunque el título actual es solo de proceso (el de redes volvió a ser módulo aparte).
+Módulo 05 del [AZ-900T00](https://learn.microsoft.com/en-us/training/courses/az-900t00) · Ruta 2 · Área: Descripción de la arquitectura y los servicios de Azure (35–40%). El slug del módulo mantiene el nombre histórico `describe-azure-compute-networking-services` aunque el título actual es solo de proceso (el de redes volvió a ser módulo aparte).
 
 ## Concepto
 
@@ -26,7 +26,7 @@ Opciones de cómputo y cuándo usar cada una: máquinas virtuales y sus recursos
 
 ## Enlaces relacionados
 
-**Módulo de Learn**: [Descripción de los servicios de proceso de Azure](https://learn.microsoft.com/es-es/training/modules/describe-azure-compute-networking-services/)
+**Módulo de Learn**: [Descripción de los servicios de proceso de Azure](https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/)
 
 **AZ-900 Full Course de Savill** (vídeo por tema, @duración):
 - [Describe the Resources Required for Virtual Machines — 06:17](https://youtu.be/PP5BWZ0cAJo)
@@ -110,12 +110,9 @@ Azure Kubernetes Service (AKS) es un servicio de orquestación de contenedores. 
 
 ![Contenedores de Azure](../assets/images/AZ-900/containers-azure-container-services.png)
 
-**Proyecto guiado**: [Creación de un punto de conexión de sitio web sencillo con Azure Functions](https://learn.microsoft.com/es-es/training/modules/guided-project-build-basic-website-endpoint-with-functions/)
+**Proyecto guiado**: [Creación de un punto de conexión de sitio web sencillo con Azure Functions](https://learn.microsoft.com/en-us/training/modules/guided-project-build-basic-website-endpoint-with-functions/)
 
 ## Relacionado
 
 - [Índice AZ-900](../certifications/AZ-900/INDEX.md)
-<<<<<<< HEAD
-=======
 - Laboratorio: [endpoint HTTP con Azure Functions](../labs/AZ-900/web-sencillo-Azure/web-sencillo-Azure.md)
->>>>>>> 04f9f9db7582f5740ed26a74a230697d4e045d25

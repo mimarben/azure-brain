@@ -5,12 +5,12 @@ tags: [fundamentals]
 certification: [AZ-900]
 updated: 2026-08-17
 sources:
-  - https://learn.microsoft.com/es-es/training/modules/describe-cloud-compute/
+  - https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/
 ---
 
 # AZ-900 — Informática en la nube
 
-Módulo 01 del [AZ-900T00](https://learn.microsoft.com/es-es/training/courses/az-900t00) · Ruta 1 · Área: Descripción de los conceptos de la nube (25–30%).
+Módulo 01 del [AZ-900T00](https://learn.microsoft.com/en-us/training/courses/az-900t00) · Ruta 1 · Área: Descripción de los conceptos de la nube (25–30%).
 
 ## Concepto
 
@@ -26,7 +26,7 @@ Definición de informática en la nube, [[Shared Responsibility Model|responsabi
 
 ## Enlaces relacionados
 
-**Módulo de Learn**: [Descripción de la informática en la nube](https://learn.microsoft.com/es-es/training/modules/describe-cloud-compute/)
+**Módulo de Learn**: [Descripción de la informática en la nube](https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/)
 
 **AZ-900 Full Course de Savill** (vídeo por tema, @duración):
 - [CapEx, OpEx and Consumption-based — 07:13](https://youtu.be/WiwV9wb0GMo)

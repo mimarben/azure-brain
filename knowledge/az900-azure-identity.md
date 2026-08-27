@@ -5,12 +5,12 @@ tags: [fundamentals, identity, security]
 certification: [AZ-900]
 updated: 2026-08-17
 sources:
-  - https://learn.microsoft.com/es-es/training/modules/describe-azure-identity-access-security/
+  - https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/
 ---
 
 # AZ-900 — Identidad, acceso y seguridad en Azure
 
-Módulo 08 del [AZ-900T00](https://learn.microsoft.com/es-es/training/courses/az-900t00) · Ruta 2 · Área: Descripción de la arquitectura y los servicios de Azure (35–40%). Es el módulo con más vídeos de Savill asignados (9).
+Módulo 08 del [AZ-900T00](https://learn.microsoft.com/en-us/training/courses/az-900t00) · Ruta 2 · Área: Descripción de la arquitectura y los servicios de Azure (35–40%). Es el módulo con más vídeos de Savill asignados (9).
 
 ## Concepto
 
@@ -35,7 +35,7 @@ Servicios de directorio ([[Entra ID]] y Entra Domain Services), autenticación (
 
 ## Enlaces relacionados
 
-**Módulo de Learn**: [Descripción de la identidad, el acceso y la seguridad de Azure](https://learn.microsoft.com/es-es/training/modules/describe-azure-identity-access-security/)
+**Módulo de Learn**: [Descripción de la identidad, el acceso y la seguridad de Azure](https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/)
 
 **AZ-900 Full Course de Savill** (vídeo por tema, @duración):
 - [Overview of Microsoft Entra — 11:34](https://youtu.be/bSIF_GjaCmo)
@@ -50,15 +50,12 @@ Servicios de directorio ([[Entra ID]] y Entra Domain Services), autenticación (
 
 **Páginas de `knowledge/`**: [[Entra ID]] · [[Azure RBAC]] · [[Managed Identities]] · [[Key Vault]]
 
-**Proyecto guiado**: [Configurar el nuevo acceso de los empleados (Id. de Entra y RBAC)](https://learn.microsoft.com/es-es/training/modules/guided-project-new-employee-access/)
+**Proyecto guiado**: [Configurar el nuevo acceso de los empleados (Id. de Entra y RBAC)](https://learn.microsoft.com/en-us/training/modules/guided-project-new-employee-access/)
 
 ## Relacionado
 
 - [Índice AZ-900](../certifications/AZ-900/INDEX.md)
-<<<<<<< HEAD
-=======
 - Laboratorio: [acceso de empleados con Entra ID y RBAC](../labs/AZ-900/Entra/entra.md)
->>>>>>> 04f9f9db7582f5740ed26a74a230697d4e045d25
 
 ## Descripción de los servicios de directorio de Azure.
 

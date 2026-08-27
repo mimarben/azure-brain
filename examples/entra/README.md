@@ -4,8 +4,8 @@ Ejemplo practico para seguir un video sobre registro de una aplicacion en Micros
 
 ## Fuente
 
-- Video / quickstart seguido: [Crear una aplicación Node.js en Azure App Service](https://learn.microsoft.com/es-es/azure/app-service/quickstart-nodejs?tabs=windows&pivots=development-environment-vscode)
-- Documentacion base: [Configurar una aplicacion de App Service o Azure Functions para usar el inicio de sesion de Microsoft Entra](https://learn.microsoft.com/es-es/azure/app-service/scenario-secure-app-authentication-app-service?tabs=workforce-configuration)
+- Video / quickstart seguido: [Crear una aplicación Node.js en Azure App Service](https://learn.microsoft.com/en-us/azure/app-service/quickstart-nodejs?tabs=windows&pivots=development-environment-vscode)
+- Documentacion base: [Configurar una aplicacion de App Service o Azure Functions para usar el inicio de sesion de Microsoft Entra](https://learn.microsoft.com/en-us/azure/app-service/scenario-secure-app-authentication-app-service?tabs=workforce-configuration)
 
 ## Objetivo
 

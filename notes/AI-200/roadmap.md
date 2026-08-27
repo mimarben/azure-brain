@@ -43,7 +43,7 @@ Plan de estudio para AI-200 basado en el curso oficial **AI-200T00: Develop AI c
 - [ ] [Store and manage containers in Azure Container Registry](https://learn.microsoft.com/en-us/training/modules/store-manage-containers-azure-container-registry/)
 - [ ] [Deploy containers to Azure App Service](https://learn.microsoft.com/en-us/training/modules/deploy-containers-azure-app-service/)
 
-Docs: [Azure Container Registry](https://learn.microsoft.com/es-es/azure/container-registry/) · [App Service](https://learn.microsoft.com/es-es/azure/app-service/) · local: `raw/azure-docs/articles/app-service/`
+Docs: [Azure Container Registry](https://learn.microsoft.com/en-us/azure/container-registry/) · [App Service](https://learn.microsoft.com/en-us/azure/app-service/) · local: `raw/azure-docs/articles/app-service/`
 
 > **Notas propias:**
 
@@ -77,7 +77,7 @@ Concepto relacionado en el repo: [[AKS]] (stub — buen candidato para desarroll
 - [ ] [Implement vector search on Azure Cosmos DB for NoSQL](https://learn.microsoft.com/en-us/training/modules/implement-vector-search-azure-cosmos-db/) (VectorDistance, hybrid search, change feed)
 - [ ] [Optimize query performance for Azure Cosmos DB for NoSQL](https://learn.microsoft.com/en-us/training/modules/optimize-query-performance-azure-cosmos-db/) (índices, niveles de coherencia)
 
-Docs: [Azure Cosmos DB](https://learn.microsoft.com/es-es/azure/cosmos-db/) (no hay copia local en `raw/`)
+Docs: [Azure Cosmos DB](https://learn.microsoft.com/en-us/azure/cosmos-db/) (no hay copia local en `raw/`)
 
 > **Notas propias:**
 
@@ -97,7 +97,7 @@ Docs: no hay copia local en `raw/`; usar Microsoft Learn directamente.
 - [ ] [Implement event messaging with Azure Managed Redis](https://learn.microsoft.com/en-us/training/modules/implement-event-messaging-azure-managed-redis/) (pub/sub, Streams)
 - [ ] [Implement vector storage in Azure Managed Redis](https://learn.microsoft.com/en-us/training/modules/implement-vector-storage-azure-managed-redis/)
 
-Docs: [Azure Cache for Redis](https://learn.microsoft.com/es-es/azure/azure-cache-for-redis/) · local: `raw/azure-docs/articles/azure-cache-for-redis/`
+Docs: [Azure Cache for Redis](https://learn.microsoft.com/en-us/azure/azure-cache-for-redis/) · local: `raw/azure-docs/articles/azure-cache-for-redis/`
 
 > **Notas propias:**
 
@@ -111,7 +111,7 @@ Docs: [Azure Cache for Redis](https://learn.microsoft.com/es-es/azure/azure-cach
 - [ ] [Develop event-driven AI workflows with Azure Event Grid](https://learn.microsoft.com/en-us/training/modules/event-driven-workflows-event-grid/)
 - [ ] [Build serverless AI backends with Azure Functions](https://learn.microsoft.com/en-us/training/modules/build-backends-azure-functions/)
 
-Docs: [Service Bus](https://learn.microsoft.com/es-es/azure/service-bus-messaging/) · [Event Grid](https://learn.microsoft.com/es-es/azure/event-grid/) · [Azure Functions](https://learn.microsoft.com/es-es/azure/azure-functions/) — todas con copia local en `raw/azure-docs/articles/{service-bus-messaging,event-grid,azure-functions}/`
+Docs: [Service Bus](https://learn.microsoft.com/en-us/azure/service-bus-messaging/) · [Event Grid](https://learn.microsoft.com/en-us/azure/event-grid/) · [Azure Functions](https://learn.microsoft.com/en-us/azure/azure-functions/) — todas con copia local en `raw/azure-docs/articles/{service-bus-messaging,event-grid,azure-functions}/`
 
 > **Notas propias:**
 
@@ -125,7 +125,7 @@ Docs: [Service Bus](https://learn.microsoft.com/es-es/azure/service-bus-messagin
 - [ ] [Manage application settings with Azure App Configuration](https://learn.microsoft.com/en-us/training/modules/manage-app-settings-app-config/) — feature flags, referencias a Key Vault
 
 Concepto relacionado en el repo: [[Key Vault]] (stub — este es el módulo ideal para desarrollarlo).
-Docs: [Azure App Configuration](https://learn.microsoft.com/es-es/azure/azure-app-configuration/) — local en `raw/azure-docs/articles/azure-app-configuration/`. Key Vault sin copia local.
+Docs: [Azure App Configuration](https://learn.microsoft.com/en-us/azure/azure-app-configuration/) — local en `raw/azure-docs/articles/azure-app-configuration/`. Key Vault sin copia local.
 
 > **Notas propias:**
 
@@ -157,10 +157,10 @@ El curso oficial dura 5 días (120h en formato self-paced). Una posible distribu
 
 ## Antes del examen
 
-- [ ] Completar la [evaluación de práctica gratuita](https://learn.microsoft.com/es-es/credentials/certifications/resources/study-guides/ai-200)
+- [ ] Completar la [evaluación de práctica gratuita](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-200)
 - [ ] Revisar que la skills outline en [INDEX.md](../../certifications/AI-200/INDEX.md) sigue vigente (Microsoft actualiza las guías periódicamente)
 - [ ] Repasar los stubs de `knowledge/` que se hayan ido completando durante el estudio ([[AKS]], [[Key Vault]], [[Managed Identities]])
-- [ ] Programar el examen desde [tu perfil de Microsoft Learn](https://learn.microsoft.com/es-es/users)
+- [ ] Programar el examen desde [tu perfil de Microsoft Learn](https://learn.microsoft.com/en-us/users)
 
 ## Relacionado
 

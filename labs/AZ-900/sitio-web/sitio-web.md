@@ -1,6 +1,6 @@
 ## Ejercicio: Creación de una cuenta de almacenamiento y habilitación del hospedaje
 
-[Índice](https://learn.microsoft.com/es-es/training/paths/introduction-cloud-infrastructure-apply-azure-skills-guided-projects/)
+[Índice](https://learn.microsoft.com/en-us/training/paths/introduction-cloud-infrastructure-apply-azure-skills-guided-projects/)
 
 Este proyecto guiado consta de los siguientes ejercicios:
 

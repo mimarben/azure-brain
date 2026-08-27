@@ -5,8 +5,8 @@ tags: [identity]
 certification: [AZ-104, AZ-500, AZ-140, AZ-305, AZ-900]
 updated: 2026-08-03
 sources:
-	- https://learn.microsoft.com/es-es/azure/app-service/scenario-secure-app-authentication-app-service?tabs=workforce-configuration
-	- https://learn.microsoft.com/es-es/azure/app-service/quickstart-nodejs?tabs=windows&pivots=development-environment-vscode
+	- https://learn.microsoft.com/en-us/azure/app-service/scenario-secure-app-authentication-app-service?tabs=workforce-configuration
+	- https://learn.microsoft.com/en-us/azure/app-service/quickstart-nodejs?tabs=windows&pivots=development-environment-vscode
 ---
 
 # Entra ID
@@ -16,7 +16,7 @@ sources:
 # Configuración de una aplicación de App Service o Azure Functions para usar el inicio de sesión de Microsoft Entra
 
 Entramos en la web [entra](https://entra.microsoft.com/).
-Seguimos las instrucciones de [Autenticación](https://learn.microsoft.com/es-es/azure/app-service/scenario-secure-app-authentication-app-service?tabs=workforce-configuration)
+Seguimos las instrucciones de [Autenticación](https://learn.microsoft.com/en-us/azure/app-service/scenario-secure-app-authentication-app-service?tabs=workforce-configuration)
 
 1. Entramos en App Registrations.
 2. New registration.
@@ -25,7 +25,7 @@ Seguimos las instrucciones de [Autenticación](https://learn.microsoft.com/es-es
 ![No access](../assets/images/AZ-104/not_access.png)
 
 Aqui tenemos ejemplos como implementarlo en la aplicación creada:
-[Ejemplos creación apps](https://learn.microsoft.com/es-es/azure/app-service/quickstart-nodejs?tabs=windows&pivots=development-environment-vscode)
+[Ejemplos creación apps](https://learn.microsoft.com/en-us/azure/app-service/quickstart-nodejs?tabs=windows&pivots=development-environment-vscode)
 
 ## Ejemplos
 

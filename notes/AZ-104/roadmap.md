@@ -16,7 +16,7 @@ sources:
   - https://www.youtube.com/watch?v=0Knf9nub4-k
   - https://www.youtube.com/playlist?list=PLlVtbbG169nGlGPWs9xaLKT1KfwqREHbs
 ---
-
+x
 # Roadmap de estudio — AZ-104
 
 Plan de estudio para AZ-104 por **autoestudio gratuito**: las 6 rutas de aprendizaje oficiales de Microsoft Learn (la opción gratuita de las "two ways to prepare" — **28 módulos**, composición verificada en Learn el 26/08/2026), que mapean con las 5 áreas de la skills outline vigente desde el **17 de abril de 2026** (ver [INDEX.md](../../certifications/AZ-104/INDEX.md)). Sin curso de pago: la preparación se complementa con los **labs oficiales** de Microsoft (`MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator`) y la **evaluación de práctica gratuita**.
@@ -65,17 +65,22 @@ Repaso de fundamentos (portales, CLI/PowerShell, ARM, suscripciones/RGs). Con AZ
 ### 1.1 [AZ-104: Manage identities and governance in Azure](https://learn.microsoft.com/en-us/training/paths/az-104-manage-identities-governance/) (6 módulos)
 
 - [X] [Understand Microsoft Entra ID](https://learn.microsoft.com/en-us/training/modules/understand-azure-active-directory/) — Entra ID vs ADDS, P1/P2, Domain Services → [Entender Microsoft Entra ID (AZ-104)](../../knowledge/az104-entra-id.md) · [Entra ID](../../knowledge/entra-id.md)
+
 - [x] [Create, configure, and manage identities](https://learn.microsoft.com/en-us/training/modules/create-configure-manage-identities/) — usuarios, grupos, licencias, usuarios externos → [Crear, configurar y administrar identidades (AZ-104)](../../knowledge/az104-identities.md)
+
 - [X] [Describe the core architectural components of Azure](https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/) — suscripciones, RGs, regiones, management groups *(mismo módulo que el 04 de AZ-900)* → [Componentes arquitectónicos de Azure (AZ-900)](../../knowledge/az900-azure-architecture.md)
-- [ ] [Azure Policy initiatives](https://learn.microsoft.com/en-us/training/modules/sovereignty-policy-initiatives/) — aplicar estándares y evaluar compliance → [Iniciativas de Azure Policy (AZ-104)](../../knowledge/az104-azure-policy.md)
-- [ ] [Secure your Azure resources with Azure RBAC](https://learn.microsoft.com/en-us/training/modules/secure-azure-resources-with-rbac/) — roles integrados, asignación por ámbito → [Protección de los recursos de Azure con Azure RBAC (AZ-104)](../../knowledge/az104-azure-rbac.md) · [Azure RBAC](../../knowledge/azure-rbac.md)
+
+- [X] [Azure Policy initiatives](https://learn.microsoft.com/en-us/training/modules/sovereignty-policy-initiatives/) — aplicar estándares y evaluar compliance → [Iniciativas de Azure Policy (AZ-104)](../../knowledge/az104-azure-policy.md)
+
+- [X] [Secure your Azure resources with Azure RBAC](https://learn.microsoft.com/en-us/training/modules/secure-azure-resources-with-rbac/) — roles integrados, asignación por ámbito → [Protección de los recursos de Azure con Azure RBAC (AZ-104)](../../knowledge/az104-azure-rbac.md) 
+
 - [ ] [Allow users to reset their password with SSPR](https://learn.microsoft.com/en-us/training/modules/allow-users-reset-their-password/) — autoservicio de restablecimiento → [Restablecimiento de contraseñas con SSPR (AZ-104)](../../knowledge/az104-sspr.md)
 
 **Labs:** [01 — Manage Entra ID Identities](../../raw/AZ-104T00/Instructions/Labs/LAB_01-Manage_Entra_ID_Identities.md) · [02a — Manage Subscriptions and RBAC](../../raw/AZ-104T00/Instructions/Labs/LAB_02a_Manage_Subscriptions_and_RBAC_Entra.md) · [02b — Manage Governance via Azure Policy](../../raw/AZ-104T00/Instructions/Labs/LAB_02b-Manage_Governance_via_Azure_Policy.md)
 
 **Objetivos del examen:** usuarios/grupos y propiedades · licencias · usuarios externos · SSPR · roles integrados y asignación por ámbito · interpretar asignaciones · Azure Policy · bloqueos · etiquetas · RGs/suscripciones/management groups · costes con alertas, presupuestos y Advisor.
 
-Conceptos del repo: [Entra ID](../../knowledge/entra-id.md) (stub) · [Azure RBAC](../../knowledge/azure-rbac.md) (stub).
+Conceptos del repo: [Entra ID](../../knowledge/entra-id.md) (stub) · [Azure RBAC](../../knowledge/az104-azure-rbac.md) (stub).
 Docs: [Microsoft Entra ID](https://learn.microsoft.com/en-us/azure/active-directory/) · [Azure Policy](https://learn.microsoft.com/en-us/azure/governance/policy/) — local: `raw/azure-docs/articles/governance/`, `role-based-access-control/`, `cost-management-billing/`. Entra ID sin copia local.
 
 > **Notas propias:**

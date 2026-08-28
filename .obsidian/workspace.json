@@ -4,39 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "d384330abadd8676",
+        "id": "33150b2fabd69f7c",
         "type": "tabs",
         "children": [
           {
-            "id": "c1268e3077f991f6",
+            "id": "2d46c7b8a885c31a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/AZ-104/roadmap.md",
+                "file": "labs/AZ-104/SSPR.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "roadmap"
-            }
-          },
-          {
-            "id": "6ce3d425cb30314c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "knowledge/az104-azure-policy.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "az104-azure-policy"
+              "title": "SSPR"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -203,37 +188,42 @@
       "bases:Create new base": false
     }
   },
-  "active": "6ce3d425cb30314c",
+  "active": "2d46c7b8a885c31a",
   "lastOpenFiles": [
-    "assets/images/AZ-104/microsoft-caf-for-azure.png",
-    "assets/images/AZ-104/Unconfirmed 410488.crdownload",
+    "knowledge/az104-sspr.md",
+    "labs/AZ-104/SSPR.md",
     "notes/AZ-104/roadmap.md",
+    "labs/AZ-104/RBAC/Role..md",
+    "assets/images/AZ-104/4-roles-list.png",
+    "assets/images/AZ-104/Unconfirmed 277783.crdownload",
+    "assets/images/AZ-104/4-resource-group-role-assignment.png",
+    "assets/images/AZ-104/Unconfirmed 904041.crdownload",
+    "assets/images/AZ-104/4-resource-groups.png",
+    "assets/images/AZ-104/4-resource-group-access-control.png",
+    "assets/images/AZ-104/Unconfirmed 103403.crdownload",
+    "assets/images/AZ-104/Unconfirmed 380163.crdownload",
+    "assets/images/AZ-104/4-my-permissions-pane.png",
+    "assets/images/AZ-104/Unconfirmed 72055.crdownload",
+    "assets/images/AZ-104/4-my-permissions-menu.png",
+    "assets/images/AZ-104/Unconfirmed 722490.crdownload",
+    "labs/AZ-104/RBAC",
+    "certifications/AZ-104/INDEX.md",
+    "notes/AZ-104/azure-RBAC.md",
+    "notes/AZ-104/Untitled.md",
+    "knowledge/az104-azure-rbac.md",
+    "assets/images/AZ-104/2-rbac-overview.png",
+    "assets/images/AZ-104/Unconfirmed 221490.crdownload",
+    "assets/images/AZ-104/2-resource-group-access-control.png",
+    "assets/images/AZ-104/Unconfirmed 817151.crdownload",
+    "assets/images/AZ-104/2-azuread-and-azure-roles.png",
+    "assets/images/AZ-104/Unconfirmed 689945.crdownload",
+    "knowledge/az104-azure-policy.md",
+    "assets/images/AZ-104/reacting-to-policy-changes.png",
     "knowledge/az900-azure-architecture.md",
-    "assets/images/AZ-104/management-group-hierarchy.png",
-    "assets/images/AZ-104/Unconfirmed 298165.crdownload",
-    "assets/images/AZ-104/subscription-boundaries.png",
-    "assets/images/AZ-104/Unconfirmed 119898.crdownload",
-    "assets/images/AZ-104/resource-group-rules.png",
-    "assets/images/AZ-104/Unconfirmed 255465.crdownload",
-    "assets/images/AZ-104/region-pairs.png",
-    "assets/images/AZ-104/Unconfirmed 710804.crdownload",
     "knowledge/az104-application-gateway.md",
     "knowledge/az104-app-service-plans.md",
     "knowledge/az104-app-service.md",
-    "assets/images/AZ-104/availability-zone-service-categories.png",
-    "assets/images/AZ-104/availability-zones.png",
-    "knowledge/az104-azure-policy.md",
-    "assets/images/AZ-104/Unconfirmed 147833.crdownload",
-    "assets/images/AZ-104/Unconfirmed 798873.crdownload",
-    "assets/images/AZ-104/azure-infrastructure-hierarchy.png",
-    "assets/images/AZ-104/Unconfirmed 309685.crdownload",
-    "assets/images/AZ-104/account-scope-levels.png",
-    "assets/images/AZ-104/Unconfirmed 629551.crdownload",
-    "assets/images/AZ-104/azure-service-categories.png",
-    "assets/images/AZ-104/Unconfirmed 840082.crdownload",
-    "certifications/AZ-104/INDEX.md",
     "knowledge/az104-identities.md",
-    "assets/images/AZ-104/automatic-user-provisioning.png",
     "knowledge/az104-entra-id.md",
     "raw/savill-cert-materials/README.md",
     "knowledge/az104-azure-cloud-shell.md",
@@ -245,8 +235,6 @@
     "knowledge/az104-Azure Cloud Shell.md",
     "certifications/ROADMAP.md",
     "knowledge/az900-azure-cloud-shell.md",
-    "notes/AZ-104/understand-microsoft-entra-id.md",
-    "certifications/AZ-900/INDEX.md",
-    "labs/AZ-104/README.md"
+    "notes/AZ-104/understand-microsoft-entra-id.md"
   ]
 }

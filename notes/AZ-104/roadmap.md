@@ -74,7 +74,7 @@ Repaso de fundamentos (portales, CLI/PowerShell, ARM, suscripciones/RGs). Con AZ
 
 - [X] [Secure your Azure resources with Azure RBAC](https://learn.microsoft.com/en-us/training/modules/secure-azure-resources-with-rbac/) — roles integrados, asignación por ámbito → [Protección de los recursos de Azure con Azure RBAC (AZ-104)](../../knowledge/az104-azure-rbac.md) 
 
-- [ ] [Allow users to reset their password with SSPR](https://learn.microsoft.com/en-us/training/modules/allow-users-reset-their-password/) — autoservicio de restablecimiento → [Restablecimiento de contraseñas con SSPR (AZ-104)](../../knowledge/az104-sspr.md)
+- [X] [Allow users to reset their password with SSPR](https://learn.microsoft.com/en-us/training/modules/allow-users-reset-their-password/) — autoservicio de restablecimiento → [Restablecimiento de contraseñas con SSPR (AZ-104)](../../knowledge/az104-sspr.md)
 
 **Labs:** [01 — Manage Entra ID Identities](../../raw/AZ-104T00/Instructions/Labs/LAB_01-Manage_Entra_ID_Identities.md) · [02a — Manage Subscriptions and RBAC](../../raw/AZ-104T00/Instructions/Labs/LAB_02a_Manage_Subscriptions_and_RBAC_Entra.md) · [02b — Manage Governance via Azure Policy](../../raw/AZ-104T00/Instructions/Labs/LAB_02b-Manage_Governance_via_Azure_Policy.md)
 
@@ -92,8 +92,11 @@ Docs: [Microsoft Entra ID](https://learn.microsoft.com/en-us/azure/active-direct
 ### 2.1 [AZ-104: Implement and manage storage in Azure](https://learn.microsoft.com/en-us/training/paths/az-104-manage-storage/) (4 módulos)
 
 - [ ] [Configure storage accounts](https://learn.microsoft.com/en-us/training/modules/configure-storage-accounts/) — creación, redundancia (LRS/GRS/GZRS...), endpoints → [Configuración de cuentas de almacenamiento (AZ-104)](../../knowledge/az104-storage-accounts.md)
+
 - [ ] [Configure Azure Blob Storage](https://learn.microsoft.com/en-us/training/modules/configure-blob-storage/) — tiers, replicación de objetos, ciclo de vida, versionado → [Configuración de Azure Blob Storage (AZ-104)](../../knowledge/az104-blob-storage.md)
+
 - [ ] [Configure Azure Storage security](https://learn.microsoft.com/en-us/training/modules/configure-storage-security/) — SAS tokens, directivas de acceso almacenadas, claves, firewalls/vNet → [Configurar la seguridad de Azure Storage (AZ-104)](../../knowledge/az104-storage-security.md)
+
 - [ ] [Configure Azure Files](https://learn.microsoft.com/en-us/training/modules/configure-azure-files-file-sync/) — file shares, Azure File Sync, acceso basado en identidad → [Configuración de Azure Files (AZ-104)](../../knowledge/az104-azure-files.md)
 
 **Lab:** [07 — Manage Azure Storage](../../raw/AZ-104T00/Instructions/Labs/LAB_07-Manage_Azure_Storage.md)

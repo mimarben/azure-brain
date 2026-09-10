@@ -34,7 +34,7 @@ Plan de estudio para AZ-104 por **autoestudio gratuito**: las 6 rutas de aprendi
 ## Progreso general
 
 - [x] Bloque 0 — Prerrequisitos (2 módulos: Cloud Shell ya hecho; falta el de plantillas ARM JSON, incorporado a la ruta oficial en 2026)
-- [ ] Bloque 1 — Identidad y gobernanza (20–25%) — módulos 03–08
+- [X] Bloque 1 — Identidad y gobernanza (20–25%) — módulos 03–08
 - [ ] Bloque 2 — Almacenamiento (15–20%)
 - [ ] Bloque 3 — Cómputo (20–25%)
 - [ ] Bloque 4 — Redes virtuales (15–20%)
@@ -91,7 +91,7 @@ Docs: [Microsoft Entra ID](https://learn.microsoft.com/en-us/azure/active-direct
 
 ### 2.1 [AZ-104: Implement and manage storage in Azure](https://learn.microsoft.com/en-us/training/paths/az-104-manage-storage/) (4 módulos)
 
-- [ ] [Configure storage accounts](https://learn.microsoft.com/en-us/training/modules/configure-storage-accounts/) — creación, redundancia (LRS/GRS/GZRS...), endpoints → [Configuración de cuentas de almacenamiento (AZ-104)](../../knowledge/az104-storage-accounts.md)
+- [X] [Configure storage accounts](https://learn.microsoft.com/en-us/training/modules/configure-storage-accounts/) — creación, redundancia (LRS/GRS/GZRS...), endpoints → [Configuración de cuentas de almacenamiento (AZ-104)](../../knowledge/az104-storage-accounts.md)
 
 - [ ] [Configure Azure Blob Storage](https://learn.microsoft.com/en-us/training/modules/configure-blob-storage/) — tiers, replicación de objetos, ciclo de vida, versionado → [Configuración de Azure Blob Storage (AZ-104)](../../knowledge/az104-blob-storage.md)
 

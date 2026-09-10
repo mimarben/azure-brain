@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "33150b2fabd69f7c",
+        "id": "88e3ad29ac168f15",
         "type": "tabs",
         "children": [
           {
-            "id": "2d46c7b8a885c31a",
+            "id": "d8e0d713788a06f2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "knowledge/az104-storage-accounts.md",
+                "file": "labs/AZ-104/Blob-Storage/Secure-storage-for-Azure-Files-and-Azure-Blob-Storage..md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "az104-storage-accounts"
+              "title": "Secure-storage-for-Azure-Files-and-Azure-Blob-Storage."
             }
           }
         ]
@@ -188,40 +188,41 @@
       "bases:Create new base": false
     }
   },
-  "active": "2d46c7b8a885c31a",
+  "active": "d8e0d713788a06f2",
   "lastOpenFiles": [
-    "assets/images/AZ-104/storage-types.png",
-    "assets/images/AZ-104/Unconfirmed 189953.crdownload",
+    "notes/AZ-104/roadmap.md",
+    "labs/AZ-104/Blob-Storage/Secure-storage-for-Azure-Files-and-Azure-Blob-Storage..md",
+    "labs/AZ-104/Blob-Storage/task-2.png",
+    "labs/AZ-104/Blob-Storage/Unconfirmed 302162.crdownload",
+    "task-2.png",
+    "Unconfirmed 452581.crdownload",
     "knowledge/az104-blob-storage.md",
+    "labs/AZ-104/Blob-Storage",
+    "assets/images/AZ-104/blob-pricing.png",
+    "assets/images/AZ-104/Unconfirmed 605762.crdownload",
+    "assets/images/AZ-104/upload-blobs-7ad73d30.png",
+    "assets/images/AZ-104/Unconfirmed 981608.crdownload",
+    "assets/images/AZ-104/blob-object-replication-21fd3c07.png",
+    "assets/images/AZ-104/Unconfirmed 321673.crdownload",
+    "assets/images/AZ-104/blob-lifecycle-2854d812.png",
+    "assets/images/AZ-104/Unconfirmed 948733.crdownload",
+    "assets/images/AZ-104/blob-containers-a243a2b9.png",
+    "assets/images/AZ-104/Unconfirmed 413959.crdownload",
+    "assets/images/AZ-104/blob-storage-94fb52b8.png",
+    "assets/images/AZ-104/Unconfirmed 852367.crdownload",
+    "knowledge/az104-storage-accounts.md",
+    "assets/images/AZ-104/service-endpoints-portal-lrg.png",
+    "assets/images/AZ-104/Unconfirmed 914148.crdownload",
+    "assets/images/AZ-104/secure-storage-access-d32868ef.png",
     "knowledge/az900-azure-storage.md",
     "labs/AZ-104/SSPR.md",
     "knowledge/az104-sspr.md",
-    "notes/AZ-104/roadmap.md",
     "labs/AZ-104/RBAC/Role..md",
-    "assets/images/AZ-104/4-roles-list.png",
-    "assets/images/AZ-104/Unconfirmed 277783.crdownload",
-    "assets/images/AZ-104/4-resource-group-role-assignment.png",
-    "assets/images/AZ-104/Unconfirmed 904041.crdownload",
-    "assets/images/AZ-104/4-resource-groups.png",
-    "assets/images/AZ-104/4-resource-group-access-control.png",
-    "assets/images/AZ-104/Unconfirmed 103403.crdownload",
-    "assets/images/AZ-104/Unconfirmed 380163.crdownload",
-    "assets/images/AZ-104/4-my-permissions-pane.png",
-    "assets/images/AZ-104/Unconfirmed 72055.crdownload",
-    "assets/images/AZ-104/4-my-permissions-menu.png",
-    "assets/images/AZ-104/Unconfirmed 722490.crdownload",
-    "labs/AZ-104/RBAC",
     "certifications/AZ-104/INDEX.md",
     "notes/AZ-104/azure-RBAC.md",
     "notes/AZ-104/Untitled.md",
     "knowledge/az104-azure-rbac.md",
-    "assets/images/AZ-104/2-rbac-overview.png",
-    "assets/images/AZ-104/Unconfirmed 221490.crdownload",
-    "assets/images/AZ-104/2-resource-group-access-control.png",
-    "assets/images/AZ-104/Unconfirmed 817151.crdownload",
-    "assets/images/AZ-104/2-azuread-and-azure-roles.png",
     "knowledge/az104-azure-policy.md",
-    "assets/images/AZ-104/reacting-to-policy-changes.png",
     "knowledge/az900-azure-architecture.md",
     "knowledge/az104-application-gateway.md",
     "knowledge/az104-app-service-plans.md",
@@ -233,8 +234,6 @@
     "knowledge/az104-entraid.md",
     "Entra ID.md",
     "knowledge/az104-arm-templates.md",
-    "ARM Templates.md",
-    "Implementación de la infraestructura de Azure mediante plantillas de ARM de JSON (AZ-104).md",
-    "knowledge/az104-Azure Cloud Shell.md"
+    "ARM Templates.md"
   ]
 }

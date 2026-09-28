@@ -7,7 +7,7 @@ updated: 2026-08-26
 sources:
   - https://learn.microsoft.com/en-us/training/modules/create-configure-manage-identities/
 ---
-![[sc300-dynamic-groups.png]]![[sc300-dynamic-groups.png]]
+
 # AZ-104 — Crear, configurar y administrar identidades
 
 Módulo 04 del [AZ-104T00](https://learn.microsoft.com/en-us/training/courses/az-104t00) ([ES](https://learn.microsoft.com/es-es/training/courses/az-104t00)) · Ruta 1 — Administración de identidades y gobernanza · Área: Administración de identidades y gobernanza en Azure (20–25%).
@@ -18,7 +18,7 @@ Control centralizado del acceso con una identidad definitiva para cada usuario y
 
 ## Resumen en mis palabras
 
-> *(pendiente — rellenar al estudiar el módulo)*
+> *La transición de las cargas de trabajo a la nube conlleva algo más que mover servidores, sitios web y datos. Las empresas deben pensar en cómo proteger esos recursos mediante la definición de usuarios autorizados.*
 
 ## Por qué importa para el examen
 
@@ -42,122 +42,146 @@ Control centralizado del acceso con una identidad definitiva para cada usuario y
 - [Índice AZ-104](../certifications/AZ-104/INDEX.md)
 - [[Entra ID]]
 
-# Introduction.
+# # Introduction.
 
-Transitioning workloads to the cloud involves more than just moving servers, websites, and data.
+La transición de las cargas de trabajo a la nube conlleva algo más que mover servidores, sitios web y datos. Las empresas deben pensar en cómo proteger esos recursos mediante la definición de usuarios autorizados. A continuación, las empresas deben asegurarse de que los usuarios solo tienen acceso a los datos que necesitan, que la autorización de usuario solo está limitada a los servicios disponibles para ellos y que los usuarios solo realizan operaciones autorizadas para que realicen. El acceso a las cargas de trabajo basadas en la nube se controla de forma centralizada de dos maneras. En primer lugar, proporcione una identidad definitiva para cada usuario que use para cada servicio. En segundo lugar, garantiza que los empleados y proveedores tengan acceso suficiente para realizar sus trabajos.
 
-## Learning objectives
+## Objetivos de aprendizaje
 
-In this module, you'll:
+En este módulo, descubrirá lo siguiente:
 
-- Create, configure, and manage users
-- Create, configure, and manage groups
-- Manage licenses
-- Configure and manage device registration
-- Explore custom security attributes and automatic provisioning
+- Creación, configuración y administración de usuarios
+- Creación, configuración y administración de grupos
+- Administración de licencias
+- Configuración y administración del registro de dispositivos
+- Exploración de atributos de seguridad personalizados y aprovisionamiento automático
 
-# Create, configure, and manage users.
+# Creación, configuración y administración de usuarios
 
-You use the **Microsoft Entra admin center** to work with user objects. Keep in mind that you can only work with a single directory at a time. You can use the **Directory + Subscription** panel to switch directories. The admin center also has a **Switch directory** button in the toolbar, which makes it easy to switch to another available directory.![[all-users-dialog.png]]
+Cada usuario que necesita acceso a los recursos necesita una cuenta de usuario en el identificador de Microsoft Entra. Una cuenta de usuario contiene toda la información necesaria para autenticar al usuario durante el proceso de inicio de sesión. Una vez autenticado, el identificador de Microsoft Entra crea un token de acceso para autorizar al usuario y determinar a qué recursos pueden acceder y a qué pueden hacer con esos recursos.
 
-Typically, Microsoft Entra ID defines users in three ways:
+El Centro de **administración de Microsoft Entra** se usa para trabajar con objetos de usuario. Tenga en cuenta que solo puede trabajar con un único directorio a la vez. Puede usar el panel **Directorio y suscripción** para cambiar de directorio. El centro de administración también tiene un botón **Cambiar directorio** en la barra de herramientas, lo que facilita el cambio a otro directorio disponible.
 
-- **Cloud identities** - These users exist only in Microsoft Entra ID. Examples are administrator accounts and users that you manage yourself. Their source is **Microsoft Entra ID** or **External Microsoft Entra directory** if the user is defined in another Microsoft Entra instance but needs access to subscription resources controlled by this directory. When these accounts are removed from the primary directory, they're deleted.
-- **Directory-synchronized identities** - These users exist in an on-premises Active Directory. A synchronization activity brings these users into Microsoft Entra ID. **Microsoft Entra Cloud Sync** is the recommended synchronization tool for most organizations—it uses a lightweight cloud-managed agent and supports multiple disconnected forests. **Microsoft Entra Connect Sync** remains available for complex scenarios such as device synchronization or groups with more than 50,000 members. Their source is **Windows Server AD**.
-- **Guest users** - These users exist outside your organization. Examples are accounts from other cloud providers and Microsoft accounts. Their source is **Invited user**. This type of account is useful when external vendors or contractors need access to your organization's resources. Once their help is no longer necessary, you can remove the account and all of their access.
-# Exercise - assign licenses to users
-## Create a security group in Microsoft Entra ID
+## Visualización de usuarios
 
-**Exercise environment needs** - this lab assumes you have a basic Microsoft Entra tenant with at least User Administrator rights to complete it. You can get a free trial subscription for at [Try Azure for Free](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn_890c111e-2f36-0437-2672-3ab1ae612709).
+Para ver los usuarios de Microsoft Entra, seleccione la entrada **Usuarios** en **Identidad** y, a continuación, abra la vista **Todos los usuarios** .
+![[all-users-dialog.png]]
 
-## Create a new user in Microsoft Entra ID
+Normalmente, Microsoft Entra ID define a los usuarios de tres maneras:
 
-You can skip creating this user if you created the same user in the earlier module.
+- **Identidades en la nube** : estos usuarios solo existen en el identificador de Microsoft Entra. Algunos ejemplos son las cuentas de administrador y los usuarios que usted mismo administra. Su origen es **El identificador de Microsoft Entra** o el **directorio externo de Microsoft Entra** si el usuario está definido en otra instancia de Microsoft Entra, pero necesita acceso a los recursos de suscripción controlados por este directorio. Cuando estas cuentas se quitan del directorio principal, se eliminan.
+- **Identidades sincronizadas por directorios** : estos usuarios existen en una instancia local de Active Directory. Una actividad de sincronización lleva a estos usuarios a Microsoft Entra ID. **Microsoft Entra Cloud Sync** es la herramienta de sincronización recomendada para la mayoría de las organizaciones: usa un agente administrado en la nube ligero y admite varios bosques desconectados. **Microsoft Entra Connect Sync** sigue estando disponible para escenarios complejos, como la sincronización de dispositivos o grupos con más de 50 000 miembros. Su origen es **Windows Server AD**.
+- **Usuarios invitados** : estos usuarios existen fuera de la organización. Algunos ejemplos son cuentas de otros proveedores de nube y cuentas de Microsoft. Su origen es **Usuario invitado**. Este tipo de cuenta es útil cuando los proveedores externos o contratistas necesitan acceso a los recursos de la organización. Una vez que se puede prescindir de ellos, la cuenta correspondiente y todo el acceso del que disfrutan se puede quitar.
 
-1. Browse to the Identity menu in the [Microsoft Entra admin center](https://entra.microsoft.com/).
+
+
+## Creación de un nuevo usuario en microsoft Entra ID
+
+Puede omitir la creación de este usuario si creó el mismo usuario en el módulo anterior.
+
+1. Vaya al menú Identidad del [Centro de administración de Microsoft Entra](https://entra.microsoft.com/).
     
-2. In the left navigation, under select **Users**, then **All Users.**
+2. En el panel de navegación izquierdo, en Seleccione **Usuarios** y, a continuación, **Todos los usuarios.**
     
-3. Within the Users page, on the menu, select + **New user** and **Create new user**.
+3. En la página Usuarios, en el menú, seleccione + **Nuevo usuario** y **Crear nuevo usuario**.
     
-4. Create a user using the following information:
+4. Cree un usuario con esta información:
+    
+| **Setting**                 | **Value**                  |
+| --------------------------- | -------------------------- |
+| Nombre principal de usuario | ChrisG                     |
+| Name                        | Chris Green                |
+| Nombre                      | Chris                      |
+| Apellido                    | Green                      |
+| Password                    | crear una contraseña única |
+    
+5. Cuando haya finalizado, compruebe que la cuenta de Chris Green se muestra en la lista **Todos los usuarios** .
+    
 
-| **Setting**         | **Value**   |
-| ------------------- | ----------- |
-| User principal name | ChrisG      |
-| Name                | Chris Green |
-| First name          | Chris       |
-| Last name           | Green       |
-| Password            | Kaho589256  |
+## Creación de un grupo de seguridad en Microsoft Entra ID
 
-5. Browse to the Microsoft Entra admin center screen.    
-6. In the left navigation, under **Identity**, select **Groups** and then **All groups**.    
-7. In the Groups screen, on the menu, select **New group**.    
-8. Create a group using the following information:
-9. When complete, verify the account for Chris Green is shown in the **All users** list.
-## Assign a license to a group
+1. Vaya a la pantalla del centro de administración de Microsoft Entra.
+    
+2. En el panel de navegación izquierdo, en **Identidad**, seleccione **Grupos** y, a continuación, **Todos los grupos**.
+    
+3. En la pantalla Grupos, en el menú, seleccione **Nuevo grupo**.
+    
+4. Cree un grupo con esta información:
 
-License assignment to groups is managed through the Microsoft 365 admin center.
+| **Setting**         | **Value**                                                           |
+| ------------------- | ------------------------------------------------------------------- |
+| Tipo de grupo       | Security                                                            |
+| Nombre del grupo    | Marketing                                                           |
+| Tipo de pertenencia | Assigned                                                            |
+| Owners              | Asigne su propia cuenta de administrador como propietario del grupo |
+| Members             | Chris Green                                                         |
 
-1. Go to the Microsoft 365 admin center at [https://admin.microsoft.com](https://admin.microsoft.com/).
-2. Select **Billing** from the menu on the left.
-3. Select **Licenses**.
-4. From the list of licenses you have available, select one.
-5. Select **Groups** from the list near the top of the screen.
-6. On the Groups page, select **+ Assign license**.
-7. Search for and select the **Marketing** group you created earlier.
-8. Select the **Assign** button at the bottom of the dialog.
-9. You should get a message that licenses were successfully assigned.
-# Create, configure, and manage groups.
+## Asignación de una licencia a un grupo
 
-A Microsoft Entra group helps organize users, which makes it easier to manage permissions. Using groups lets the resource owner (or Microsoft Entra directory owner), assign a set of access permissions to all the members of the group, instead of having to provide the rights one-by-one.
+La asignación de licencias a grupos se administra a través del Centro de administración de Microsoft 365.
 
-Microsoft Entra ID allows you to define two different types of groups.
+1. Vaya al Centro de administración de Microsoft 365 en [https://admin.microsoft.com](https://admin.microsoft.com/).
+2. Seleccione **Facturación** en el menú de la izquierda.
+3. Seleccione **Licencias**.
+4. En la lista de licencias que tiene disponibles, seleccione una.
+5. Seleccione **Grupos** en la lista cerca de la parte superior de la pantalla.
+6. En la página Grupos, seleccione **+ Asignar licencia**.
+7. Busque y seleccione el grupo **marketing** que creó anteriormente.
+8. Seleccione el botón **Asignar** situado en la parte inferior del cuadro de diálogo.
+9. Debería recibir un mensaje que indica que las licencias se asignaron correctamente.
+# Creación, configuración y administración de grupos
 
-- **Security groups** - the most common type of groups and are used to manage access to shared resources. Members of a security group can include users, devices, and service principals. For example, you can create a security group for a specific security policy. By doing it this way, you can give a set of permissions to all the members at once, instead of having to add permissions to each member individually. This option requires a Microsoft Entra administrator.
+Un grupo de Microsoft Entra ayuda a organizar a los usuarios, lo que facilita la administración de permisos. El uso de grupos permite al propietario del recurso (o al propietario del directorio de Microsoft Entra), asignar un conjunto de permisos de acceso a todos los miembros del grupo, en lugar de tener que proporcionar los derechos uno a uno. Los grupos le permiten definir un límite de seguridad y, a continuación, agregar y quitar usuarios específicos para conceder o denegar el acceso con una cantidad mínima de esfuerzo. Aún mejor, el identificador de Entra de Microsoft admite la capacidad de definir la pertenencia en función de las reglas, como el departamento en el que trabaja un usuario o el puesto de trabajo que tienen.
 
-- **Microsoft 365 groups** - provide collaboration opportunities by giving members access to a shared mailbox, calendar, files, SharePoint site, and more. This option also lets you give people outside of your organization access to the group. This option is available to users and admins.
+Microsoft Entra ID permite definir dos tipos diferentes de grupos.
 
-## View available groups.
+- **Grupos de seguridad:** el tipo de grupos más común y se usan para administrar el acceso a los recursos compartidos. Los miembros de un grupo de seguridad pueden incluir usuarios, dispositivos y entidades de servicio. Por ejemplo, puede crear un grupo de seguridad relativo a una directiva de seguridad específica. Al hacerlo de esta manera, puede conceder un conjunto de permisos a todos los miembros a la vez, en lugar de tener que agregar permisos a cada miembro individualmente. Esta opción requiere un administrador de Microsoft Entra.
+- **Grupos de Microsoft 365** : proporcionan oportunidades de colaboración al conceder a los miembros acceso a un buzón compartido, calendario, archivos, sitio de SharePoint, etc. Esta opción también le permite conceder a las personas fuera de su organización acceso al grupo. Esta opción está disponible para los usuarios y administradores.
 
-You can view all groups through the **Groups** item under **Identity** in the Microsoft Entra admin center. A new Microsoft Entra ID deployment has no groups defined.
+## Visualización de grupos disponibles
+
+Puede ver todos los grupos a través del elemento **Grupos** en **Identidad** en el Centro de administración de Microsoft Entra. Una nueva implementación de Microsoft Entra ID no tiene ningún grupo definido.
 
 ![[groups-1.png]]
 
 
 
-The second characteristic of a group that you need to be aware of is the **Membership Type**. This specifies how individual members are added to the group. The three types are:
+La segunda característica de un grupo que debe tener en cuenta es el Tipo de **pertenencia**. Esto especifica cómo se agregan miembros individuales al grupo. Los tres tipos son:
 
-- **Assigned** - members are added and maintained manually.
-- **Dynamic User** - users are added and removed automatically based on rules that evaluate user attributes such as department, job title, or location.
-- **Dynamic Device** - devices are added and removed automatically based on rules that evaluate device attributes. Applies to security groups only; Microsoft 365 groups support dynamic users but not dynamic devices.
+- **Asignado** - los miembros se agregan y mantienen manualmente.
+- **Usuario dinámico:** los usuarios se agregan y quitan automáticamente en función de las reglas que evalúan atributos de usuario como departamento, puesto o ubicación.
+- **Dispositivo dinámico** : los dispositivos se agregan y quitan automáticamente en función de las reglas que evalúan los atributos del dispositivo. Solo se aplica a los grupos de seguridad; Los grupos de Microsoft 365 admiten usuarios dinámicos, pero no dispositivos dinámicos.
 
-## Dynamic groups
+## Grupos dinámicos
 
-With dynamic membership, Microsoft Entra ID automatically adds or removes users or devices from a group based on rules you define. When a member's attributes change—for example, a user moves to a different department—all dynamic membership rules in the tenant are reevaluated, and the user is added to or removed from groups accordingly.
+Con la pertenencia dinámica, Microsoft Entra ID agrega o quita automáticamente usuarios o dispositivos de un grupo en función de las reglas que defina. Cuando cambian los atributos de un miembro (por ejemplo, un usuario se mueve a otro departamento), se vuelven a evaluar todas las reglas de pertenencia dinámica del inquilino y el usuario se agrega o quita de grupos en consecuencia.
 
-Dynamic membership requires a **Microsoft Entra ID P1** license (or Intune for Education for device-based rules).
+La pertenencia dinámica requiere una licencia **de Microsoft Entra ID P1** (o Intune for Education para reglas basadas en dispositivos).
+
+![[Pasted image 20260928195138.png]]
+
+
 
 ![[groups-1.png]]
 
 
-# Exercise - add groups in Microsoft Entra ID
+# E# Agregar grupos en Microsoft Entra ID
 
-Completed100 XP
+Completado100 XP
 
-- 2 minutes
+- 2 minutos
 
-**Exercise environment needs** - this lab assumes you have a basic Microsoft Entra tenant with at least User Administrator rights to complete it. You can get a free trial subscription at [Try Microsoft Azure for free](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn_2e0d0210-b96e-28e6-c403-6ee0e3ff4ca4).
+**Necesidades del entorno del ejercicio**: este laboratorio supone que tiene un inquilino básico de Microsoft Entra con al menos derechos de administrador de usuarios para completarlo. Puede obtener una suscripción de evaluación gratuita en [Probar Microsoft Azure de forma gratuita](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn_2e0d0210-b96e-28e6-c403-6ee0e3ff4ca4).
 
-## Create a Microsoft 365 group in Microsoft Entra ID
+## Creación de un grupo de Microsoft 365 en el identificador de Entra de Microsoft
 
-1. Browse to the [Microsoft Entra admin center](https://entra.microsoft.com/).
+1. Vaya al [Centro de administración de Microsoft Entra](https://entra.microsoft.com/).
     
-2. In the left navigation, under **Identity**, select **Groups**.
+2. En el panel de navegación izquierdo, en **Identidad**, seleccione **Grupos**.
     
-3. In the Groups page, on the menu, select **New group**.
+3. En la página Grupos, en el menú, selecciona **Nuevo grupo**.
     
-4. Create a group using the following information:
+4. Cree un grupo con esta información:
 
 |**Setting**|**Value**|
 |---|---|
@@ -168,20 +192,25 @@ Completed100 XP
 |Members|Assign a member of this group|
 ![[create-office-365-group.png]]
 
-5. When complete, verify the group named **Northwest sales** is shown in the **All groups** list.
+5. Cuando termine, compruebe que el grupo denominado **Northwest Sales** aparece en la lista **Todos los grupos**.
     
-6. You have to refresh the **All groups** a couple of times for the new group to show up.
+6. Tiene que actualizar **todos los grupos** un par de veces para que aparezca el nuevo grupo.
 
-# Configure and manage device registration.
+# Configuración y administración del registro de dispositivos
 
-With the proliferation of devices of all shapes and sizes and the proliferation of bring-your-own-device (BYOD), IT professionals are faced with two somewhat opposing goals:
+Con la proliferación de dispositivos de todas las formas y tamaños y la proliferación de bring-your-own-device (BYOD), los profesionales de TI se enfrentan a dos objetivos algo opuestos:
 
-- Allow end users to be productive wherever and whenever and on any device
-- Protect the organization's assets
+- Permitir que los usuarios finales sean productivos siempre y cuando y en cualquier dispositivo
+- Protección de los recursos de la organización
 
-## Microsoft Entra registered devices
+Para proteger estos recursos, el personal de TI debe administrar primero las identidades del dispositivo. El personal de TI puede basarse en la identidad del dispositivo con herramientas como Microsoft Intune para garantizar que se cumplen los estándares de seguridad y cumplimiento. Microsoft Entra ID permite el inicio de sesión único en dispositivos, aplicaciones y servicios desde cualquier lugar a través de estos dispositivos.
 
-The goal of Microsoft Entra registered devices is to provide your users with support for the BYOD or mobile device scenarios. In these scenarios, a user can access your organization’s Microsoft Entra ID controlled resources using a personal device.
+- Los usuarios obtienen acceso a los recursos de su organización que necesitan.
+- El personal de TI obtiene los controles que necesitan para proteger su organización.
+
+## Dispositivos registrados en Microsoft Entra
+
+El objetivo de los dispositivos registrados de Microsoft Entra es proporcionar a los usuarios compatibilidad con los escenarios byOD o de dispositivos móviles. En estos escenarios, un usuario puede acceder a los recursos controlados de Microsoft Entra ID de su organización mediante un dispositivo personal.
 
 |**Microsoft Entra registered**|**Description**|
 |---|---|
@@ -196,6 +225,21 @@ The goal of Microsoft Entra registered devices is to provide your users with sup
 
 
 [Enable passwordless security key](https://learn.microsoft.com/en-us/entra/identity/authentication/howto-authentication-passwordless-security-key-on-premises) ([ES](https://learn.microsoft.com/es-es/entra/identity/authentication/howto-authentication-passwordless-security-key-on-premises))
+Los dispositivos registrados por Microsoft Entra inician sesión para usar una cuenta local como una cuenta de Microsoft en un dispositivo Windows 10 o más reciente, pero además tienen una cuenta de Microsoft Entra asociada para acceder a los recursos de la organización. El acceso a los recursos de la organización se puede limitar aún más en función de esa cuenta de Microsoft Entra y las directivas de acceso condicional aplicadas a la identidad del dispositivo.
+
+Los administradores pueden proteger y controlar aún más estos dispositivos registrados de Microsoft Entra mediante herramientas de administración de dispositivos móviles (MDM), como Microsoft Intune. MDM proporciona una manera de aplicar las configuraciones que requiere la organización, como el cifrado del almacenamiento, la complejidad de las contraseñas y que el software de seguridad siempre esté actualizado.
+
+El registro de id. de Entra de Microsoft se puede realizar al acceder a una aplicación de trabajo por primera vez o manualmente mediante el menú Configuración de Windows 10 o Windows 11.
+
+### Escenarios para dispositivos registrados
+
+Un usuario de su organización quiere acceder a las herramientas para el correo electrónico, notificar el tiempo de espera y beneficiarse de la inscripción desde su equipo doméstico. Su organización tiene estas herramientas detrás de una directiva de acceso condicional que requiere acceso desde un dispositivo compatible con Intune. El usuario agrega su cuenta de organización y registra su PC doméstico con Microsoft Entra ID, y se aplican las directivas de Intune necesarias, lo que proporciona al usuario acceso a sus recursos.
+
+Otro usuario quiere acceder a su correo electrónico organizacional en su teléfono Android personal, que está infectado con un rootkit. Su empresa requiere un dispositivo compatible y ha creado una directiva de cumplimiento de Intune para bloquear los dispositivos rooteados. El empleado no puede acceder a los recursos de la organización con este dispositivo.
+
+## Dispositivos unidos a Microsoft Entra
+
+La unión a Microsoft Entra está pensada para aquellas organizaciones que quieran estar primero en la nube o solo en la nube. Cualquier organización puede implementar dispositivos unidos a Microsoft Entra, sin importar su tamaño ni su sector. La unión a Microsoft Entra permite el acceso tanto a aplicaciones en la nube como a los recursos locales.
 
 # Manage licenses.
 

@@ -16,7 +16,7 @@ sources:
   - https://www.youtube.com/watch?v=0Knf9nub4-k
   - https://www.youtube.com/playlist?list=PLlVtbbG169nGlGPWs9xaLKT1KfwqREHbs
 ---
-x
+
 # Roadmap de estudio — AZ-104
 
 Plan de estudio para AZ-104 por **autoestudio gratuito**: las 6 rutas de aprendizaje oficiales de Microsoft Learn (la opción gratuita de las "two ways to prepare" — **28 módulos**, composición verificada en Learn el 26/08/2026), que mapean con las 5 áreas de la skills outline vigente desde el **17 de abril de 2026** (ver [INDEX.md](../../certifications/AZ-104/INDEX.md)). Sin curso de pago: la preparación se complementa con los **labs oficiales** de Microsoft (`MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator`) y la **evaluación de práctica gratuita**.
@@ -66,7 +66,7 @@ Al reiniciar el curso, repasa los fundamentos (portales, CLI/PowerShell, ARM, su
 
 ### 1.1 [AZ-104: Manage identities and governance in Azure](https://learn.microsoft.com/en-us/training/paths/az-104-manage-identities-governance/) ([ES](https://learn.microsoft.com/es-es/training/paths/az-104-manage-identities-governance/)) (6 módulos)
 
-- [ ] [Understand Microsoft Entra ID](https://learn.microsoft.com/en-us/training/modules/understand-azure-active-directory/) ([ES](https://learn.microsoft.com/es-es/training/modules/understand-azure-active-directory/)) — Entra ID vs ADDS, P1/P2, Domain Services → [Entender Microsoft Entra ID (AZ-104)](../../knowledge/az104-entra-id.md) · [Entra ID](../../knowledge/entra-id.md)
+- [x] [Understand Microsoft Entra ID](https://learn.microsoft.com/en-us/training/modules/understand-azure-active-directory/) ([ES](https://learn.microsoft.com/es-es/training/modules/understand-azure-active-directory/)) — Entra ID vs ADDS, P1/P2, Domain Services → [Entender Microsoft Entra ID (AZ-104)](../../knowledge/az104-entra-id.md) · [Entra ID](../../knowledge/entra-id.md)
 
 - [ ] [Create, configure, and manage identities](https://learn.microsoft.com/en-us/training/modules/create-configure-manage-identities/) ([ES](https://learn.microsoft.com/es-es/training/modules/create-configure-manage-identities/)) — usuarios, grupos, licencias, usuarios externos → [Crear, configurar y administrar identidades (AZ-104)](../../knowledge/az104-identities.md)
 

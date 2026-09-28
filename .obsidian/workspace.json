@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "33150b2fabd69f7c",
+        "id": "c8fb5d4eb733baa6",
         "type": "tabs",
         "children": [
           {
-            "id": "f5ea24b679fc6857",
+            "id": "ae6b7b4fd8689a90",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -22,17 +22,17 @@
             }
           },
           {
-            "id": "5e26474e01176e4a",
+            "id": "b9e95e033894a3d0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "knowledge/az104-entra-id.md",
+                "file": "knowledge/az104-identities.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "az104-entra-id"
+              "title": "az104-identities"
             }
           }
         ],
@@ -114,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "knowledge/az104-arm-templates.md",
+                "file": "knowledge/az104-identities.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -189,8 +189,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -200,56 +199,57 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5e26474e01176e4a",
+  "active": "89565bfea75dc085",
   "lastOpenFiles": [
+    "assets/images/AZ-104/Pasted image 20260928195138.png",
     "notes/AZ-104/roadmap.md",
+    "knowledge/az104-identities.md",
+    "knowledge/entra-id.md",
     "knowledge/az104-entra-id.md",
-    "knowledge/az104-arm-templates.md",
-    "notes/AZ-104/Pasted image 20260928142914.png",
-    "log.md.tmp.26124.f9297c4e5193",
-    "notes/AZ-104/roadmap.md.tmp.26124.51540f25fe2f",
-    "labs/AZ-104/arm-templates/parameters/README.md",
-    "log.md.tmp.26124.a3b5b627f2f5",
-    "knowledge/az104-arm-templates.md.tmp.26124.27d8d51bcf39",
-    "labs/AZ-104/arm-templates/parameters/commands.sh",
+    "assets/images/AZ-104/sc300-dynamic-groups.png",
+    "assets/images/AZ-104/Pasted image 20260928142914.png",
+    "assets/images/AZ-104/Pasted image 20260928130218.png",
     "labs/AZ-104/arm-templates/parameters/prod.parameters.json",
-    "labs/AZ-104/arm-templates/parameters/prod.parameters.json.tmp.26124.0822dcaa65b7",
     "labs/AZ-104/arm-templates/parameters/dev.parameters.json",
-    "labs/AZ-104/arm-templates/parameters/dev.parameters.json.tmp.26124.9332b078dc15",
+    "labs/AZ-104/arm-templates/parameters/commands.sh",
     "labs/AZ-104/arm-templates/parameters/azuredeploy.json",
-    "labs/AZ-104/arm-templates/bicep-parameters/README.md",
-    "knowledge/az104-azure-cloud-shell.md",
-    "notes/AZ-104/Pasted image 20260928130218.png",
-    "knowledge/az104-app-service.md",
-    "labs/AZ-104/Blob-Storage/task-2.png",
+    "labs/AZ-104/arm-templates/parameters/README.md",
+    "labs/AZ-104/arm-templates/parameters",
+    "Untitled.base",
     "labs/AZ-104/Blob-Storage/Secure-storage-for-Azure-Files-and-Azure-Blob-Storage..md",
+    "labs/AZ-104/Blob-Storage/task-2.png",
+    "labs/AZ-104/Blob-Storage/Unconfirmed 302162.crdownload",
+    "task-2.png",
+    "Unconfirmed 452581.crdownload",
+    "knowledge/az104-blob-storage.md",
+    "labs/AZ-104/Blob-Storage",
+    "assets/images/AZ-104/blob-pricing.png",
+    "assets/images/AZ-104/Unconfirmed 605762.crdownload",
+    "assets/images/AZ-104/upload-blobs-7ad73d30.png",
+    "assets/images/AZ-104/blob-object-replication-21fd3c07.png",
     "assets/images/AZ-104/blob-lifecycle-2854d812.png",
     "assets/images/AZ-104/blob-containers-a243a2b9.png",
-    "assets/images/AZ-104/azure-storage-types.png",
-    "CLAUDE.md",
-    "knowledge/az104-azure-backup.md",
-    "knowledge/az104-application-gateway.md",
-    "knowledge/az104-app-service-plans.md",
-    "certifications/AZ-140/INDEX.md",
-    "labs/AZ-104/RBAC/Role..md",
-    "examples/azure-cli/README.md",
-    "labs/AZ-900/cloud-shell/cloud-shell.md",
-    "knowledge/az900-azure-compute.md",
-    "knowledge/az900-azure-cloud-shell.md",
-    "knowledge/az104-sspr.md",
     "knowledge/az104-storage-accounts.md",
+    "knowledge/az900-azure-storage.md",
     "labs/AZ-104/SSPR.md",
-    "assets/images/AZ-104/4-roles-list.png",
-    "assets/images/AZ-104/4-resource-group-role-assignment.png",
-    "assets/images/AZ-104/4-resource-groups.png",
-    "assets/images/AZ-104/4-resource-group-access-control.png",
+    "knowledge/az104-sspr.md",
+    "labs/AZ-104/RBAC/Role..md",
     "certifications/AZ-104/INDEX.md",
     "notes/AZ-104/azure-RBAC.md",
     "notes/AZ-104/Untitled.md",
     "knowledge/az104-azure-rbac.md",
-    "knowledge/az104-azure-policy.md"
+    "knowledge/az104-azure-policy.md",
+    "knowledge/az900-azure-architecture.md",
+    "knowledge/az104-application-gateway.md",
+    "knowledge/az104-app-service-plans.md",
+    "knowledge/az104-app-service.md",
+    "raw/savill-cert-materials/README.md",
+    "knowledge/az104-azure-cloud-shell.md",
+    "knowledge/az104-entraid.md",
+    "Entra ID.md"
   ]
 }

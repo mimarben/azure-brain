@@ -10,7 +10,7 @@ sources:
 
 # AZ-104 — Introducción a Azure Load Balancer
 
-Módulo 23 del [AZ-104T00](https://learn.microsoft.com/en-us/training/courses/az-104t00) · Ruta 4 — Configuración y administración de redes virtuales · Área: Implementación y administración de redes virtuales (15–20%).
+Módulo 23 del [AZ-104T00](https://learn.microsoft.com/en-us/training/courses/az-104t00) ([ES](https://learn.microsoft.com/es-es/training/courses/az-104t00)) · Ruta 4 — Configuración y administración de redes virtuales · Área: Implementación y administración de redes virtuales (15–20%).
 
 ## Concepto
 
@@ -27,7 +27,7 @@ Qué hace Azure Load Balancer (LB de capa 4), cómo funciona y cuándo usarlo: i
 
 ## Enlaces relacionados
 
-**Módulo de Learn**: [Introducción a Azure Load Balancer](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-load-balancer/)
+**Módulo de Learn**: [Introducción a Azure Load Balancer](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-load-balancer/) ([ES](https://learn.microsoft.com/es-es/training/modules/intro-to-azure-load-balancer/))
 
 **Savill**: buscar "load balancer" en la [playlist AZ-104](https://www.youtube.com/playlist?list=PLlVtbbG169nGlGPWs9xaLKT1KfwqREHbs) · repaso final con el [Study Cram v2](https://www.youtube.com/watch?v=0Knf9nub4-k)
 

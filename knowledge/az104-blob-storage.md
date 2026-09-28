@@ -10,7 +10,7 @@ sources:
 ![[blob-lifecycle-2854d812.png]]![[blob-storage-94fb52b8.png]]
 # AZ-104 — Configuración de Azure Blob Storage
 
-Módulo 10 del [AZ-104T00](https://learn.microsoft.com/en-us/training/courses/az-104t00) · Ruta 2 — Implementación y administración del almacenamiento · Área: Implementación y administración del almacenamiento (15–20%).
+Módulo 10 del [AZ-104T00](https://learn.microsoft.com/en-us/training/courses/az-104t00) ([ES](https://learn.microsoft.com/es-es/training/courses/az-104t00)) · Ruta 2 — Implementación y administración del almacenamiento · Área: Implementación y administración del almacenamiento (15–20%).
 
 ## Concepto
 
@@ -30,7 +30,7 @@ Configuración de Azure Blob Storage, incluidos los niveles de acceso (tiers) y 
 
 ## Enlaces relacionados
 
-**Módulo de Learn**: [Configuración de Azure Blob Storage](https://learn.microsoft.com/en-us/training/modules/configure-blob-storage/)
+**Módulo de Learn**: [Configuración de Azure Blob Storage](https://learn.microsoft.com/en-us/training/modules/configure-blob-storage/) ([ES](https://learn.microsoft.com/es-es/training/modules/configure-blob-storage/))
 
 **Savill**: buscar "blob" en la [playlist AZ-104](https://www.youtube.com/playlist?list=PLlVtbbG169nGlGPWs9xaLKT1KfwqREHbs) · repaso final con el [Study Cram v2](https://www.youtube.com/watch?v=0Knf9nub4-k)
 
@@ -106,7 +106,7 @@ In the Azure portal, you configure settings to create a container for an Azure s
 
 # Assign blob access tiers.
 
-Azure Storage supports several [access tiers](https://learn.microsoft.com/en-us/azure/storage/blobs/access-tiers-overview) for blob data. These tiers include Hot, Cool, Cold, and Archive. Each access tier is optimized to support a particular pattern of data usage.
+Azure Storage supports several [access tiers](https://learn.microsoft.com/en-us/azure/storage/blobs/access-tiers-overview) ([ES](https://learn.microsoft.com/es-es/azure/storage/blobs/access-tiers-overview)) for blob data. These tiers include Hot, Cool, Cold, and Archive. Each access tier is optimized to support a particular pattern of data usage.
 
 #### Hot tier
 
@@ -136,7 +136,7 @@ To access the blob's content, you can rehydrate it to the hot, cool, or cold tie
 
 Every data set has a unique lifecycle. Early in the lifecycle, users tend to access some of the data in the set, but not all of the data. As the data set ages, access to all of the data in the set tends to dramatically reduce. Some data set stays idle in the cloud and is rarely accessed. Some data expires within a few days or months after creation. Other data is actively read and modified throughout the data set lifetime.
 
-Azure Blob Storage supports [lifecycle management](https://learn.microsoft.com/en-us/azure/storage/blobs/lifecycle-management-policy-configure) for data sets. It offers a rich rule-based policy for GPv2 accounts and Premium block blob accounts. Legacy Blob Storage accounts are also supported, but GPv2 is recommended for new deployments. You can use lifecycle policy rules to transition your data to the appropriate access tiers, and set expiration times for the end of a data set's lifecycle.
+Azure Blob Storage supports [lifecycle management](https://learn.microsoft.com/en-us/azure/storage/blobs/lifecycle-management-policy-configure) ([ES](https://learn.microsoft.com/es-es/azure/storage/blobs/lifecycle-management-policy-configure)) for data sets. It offers a rich rule-based policy for GPv2 accounts and Premium block blob accounts. Legacy Blob Storage accounts are also supported, but GPv2 is recommended for new deployments. You can use lifecycle policy rules to transition your data to the appropriate access tiers, and set expiration times for the end of a data set's lifecycle.
 
 
 ### Things to know about lifecycle management
@@ -171,7 +171,7 @@ In the Azure portal, you create lifecycle management policy rules for your Azure
     - **Delete the blob**: The blob data is deleted.
 
 > [!NOTE] Tip
-> Expand your knowledge in the [Manage the Azure Blob storage lifecycle](https://learn.microsoft.com/en-us/training/modules/manage-azure-blob-storage-lifecycle/) training module.
+> Expand your knowledge in the [Manage the Azure Blob storage lifecycle](https://learn.microsoft.com/en-us/training/modules/manage-azure-blob-storage-lifecycle/) ([ES](https://learn.microsoft.com/es-es/training/modules/manage-azure-blob-storage-lifecycle/)) training module.
 
 # Determine blob object replication.
 
@@ -181,7 +181,7 @@ In the Azure portal, you create lifecycle management policy rules for your Azure
 
 There are several considerations to keep in mind when planning your configuration for blob object replication.
 
-- Object replication requires that [Blob versioning](https://learn.microsoft.com/en-us/azure/storage/blobs/versioning-overview) is enabled on both the source and destination accounts. When blob versioning is enabled, you can access earlier versions of a blob. This access lets you recover your modified or deleted data.
+- Object replication requires that [Blob versioning](https://learn.microsoft.com/en-us/azure/storage/blobs/versioning-overview) ([ES](https://learn.microsoft.com/es-es/azure/storage/blobs/versioning-overview)) is enabled on both the source and destination accounts. When blob versioning is enabled, you can access earlier versions of a blob. This access lets you recover your modified or deleted data.
     
 - Object replication doesn't support blob snapshots. Any snapshots on a blob in the source account aren't replicated to the destination account.
     
@@ -226,7 +226,7 @@ You can use the portal to upload and manage blobs. This option is good for a few
 
 For larger numbers of files, it's best to use a tool. Review the following options and consider which tools would suit your configuration needs.
 
-- [**Azure Storage Explorer**](https://learn.microsoft.com/en-us/azure/storage/storage-explorer/vs-azure-tools-storage-manage-with-storage-explorer). Upload, download, and manage blobs, files, queues, and tables, as well as Azure Data Lake Storage entities and managed disks. You can also view, edit, and manage resources, preview data, and configure storage permissions and access controls.
+- [**Azure Storage Explorer**](https://learn.microsoft.com/en-us/azure/storage/storage-explorer/vs-azure-tools-storage-manage-with-storage-explorer) ([ES](https://learn.microsoft.com/es-es/azure/storage/storage-explorer/vs-azure-tools-storage-manage-with-storage-explorer)). Upload, download, and manage blobs, files, queues, and tables, as well as Azure Data Lake Storage entities and managed disks. You can also view, edit, and manage resources, preview data, and configure storage permissions and access controls.
 # Determine Blob Storage pricing
 
 Understanding your access patterns and correlating them with your durability and availability needs helps you to best manage your Azure Blob Storage costs. The primary tool for estimating these costs is the Azure pricing calculator. The pricing tool can calculate migration, monthly estimates, and future pricing estimates based on the workload-driven input that you specify. In general, the cost of block blob storage depends on:

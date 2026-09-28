@@ -10,7 +10,7 @@ sources:
 
 # AZ-104 — Administración y control del flujo de tráfico con rutas
 
-Módulo 22 del [AZ-104T00](https://learn.microsoft.com/en-us/training/courses/az-104t00) · Ruta 4 — Configuración y administración de redes virtuales · Área: Implementación y administración de redes virtuales (15–20%).
+Módulo 22 del [AZ-104T00](https://learn.microsoft.com/en-us/training/courses/az-104t00) ([ES](https://learn.microsoft.com/es-es/training/courses/az-104t00)) · Ruta 4 — Configuración y administración de redes virtuales · Área: Implementación y administración de redes virtuales (15–20%).
 
 ## Concepto
 
@@ -27,7 +27,7 @@ Controlar el tráfico de red virtual implementando rutas personalizadas: rutas d
 
 ## Enlaces relacionados
 
-**Módulo de Learn**: [Administración y control del flujo de tráfico en la implementación de Azure con rutas](https://learn.microsoft.com/en-us/training/modules/control-network-traffic-flow-with-routes/)
+**Módulo de Learn**: [Administración y control del flujo de tráfico en la implementación de Azure con rutas](https://learn.microsoft.com/en-us/training/modules/control-network-traffic-flow-with-routes/) ([ES](https://learn.microsoft.com/es-es/training/modules/control-network-traffic-flow-with-routes/))
 
 **Savill**: buscar "route" / "UDR" en la [playlist AZ-104](https://www.youtube.com/playlist?list=PLlVtbbG169nGlGPWs9xaLKT1KfwqREHbs) · repaso final con el [Study Cram v2](https://www.youtube.com/watch?v=0Knf9nub4-k)
 

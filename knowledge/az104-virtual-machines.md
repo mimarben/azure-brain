@@ -10,7 +10,7 @@ sources:
 
 # AZ-104 — Introducción a Azure Virtual Machines
 
-Módulo 13 del [AZ-104T00](https://learn.microsoft.com/en-us/training/courses/az-104t00) · Ruta 3 — Implementación y administración de recursos de procesos de Azure · Área: Implementación y administración de recursos de procesos de Azure (20–25%).
+Módulo 13 del [AZ-104T00](https://learn.microsoft.com/en-us/training/courses/az-104t00) ([ES](https://learn.microsoft.com/es-es/training/courses/az-104t00)) · Ruta 3 — Implementación y administración de recursos de procesos de Azure · Área: Implementación y administración de recursos de procesos de Azure (20–25%).
 
 ## Concepto
 
@@ -29,7 +29,7 @@ Decisiones previas a crear una VM, opciones de creación y administración, exte
 
 ## Enlaces relacionados
 
-**Módulo de Learn**: [Introducción a Azure Virtual Machines](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-virtual-machines/)
+**Módulo de Learn**: [Introducción a Azure Virtual Machines](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-virtual-machines/) ([ES](https://learn.microsoft.com/es-es/training/modules/intro-to-azure-virtual-machines/))
 
 **Savill**: buscar "VM" en la [playlist AZ-104](https://www.youtube.com/playlist?list=PLlVtbbG169nGlGPWs9xaLKT1KfwqREHbs) · repaso final con el [Study Cram v2](https://www.youtube.com/watch?v=0Knf9nub4-k)
 

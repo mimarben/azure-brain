@@ -10,7 +10,7 @@ sources:
 
 # AZ-104 — Implementación de la infraestructura de Azure mediante plantillas de ARM de JSON
 
-Módulo 02 del [AZ-104T00](https://learn.microsoft.com/en-us/training/courses/az-104t00) · Ruta 0 — Prerrequisitos · Sustenta el área: Implementación y administración de recursos de procesos de Azure (20–25%).
+Módulo 02 del [AZ-104T00](https://learn.microsoft.com/en-us/training/courses/az-104t00) ([ES](https://learn.microsoft.com/es-es/training/courses/az-104t00)) · Ruta 0 — Prerrequisitos · Sustenta el área: Implementación y administración de recursos de procesos de Azure (20–25%).
 
 ## Concepto
 
@@ -29,7 +29,7 @@ Creación de plantillas de Azure Resource Manager (ARM) con JSON usando Visual S
 
 ## Enlaces relacionados
 
-**Módulo de Learn**: [Implementación de la infraestructura de Azure mediante plantillas de ARM de JSON](https://learn.microsoft.com/en-us/training/modules/create-azure-resource-manager-template-vs-code/)
+**Módulo de Learn**: [Implementación de la infraestructura de Azure mediante plantillas de ARM de JSON](https://learn.microsoft.com/en-us/training/modules/create-azure-resource-manager-template-vs-code/) ([ES](https://learn.microsoft.com/es-es/training/modules/create-azure-resource-manager-template-vs-code/))
 
 **Savill**: buscar "ARM" / "Bicep" en la [playlist AZ-104](https://www.youtube.com/playlist?list=PLlVtbbG169nGlGPWs9xaLKT1KfwqREHbs) · repaso final con el [Study Cram v2](https://www.youtube.com/watch?v=0Knf9nub4-k)
 
@@ -58,7 +58,7 @@ When you're writing an ARM template, you need to understand all the parts that m
 |**apiProfile**|An optional section that defines a collection of API versions for resource types. You can use this value to avoid having to specify API versions for each resource in the template.|
 |**parameters**|An optional section where you define values that are provided during deployment. You can provide these values in a parameter file, by command-line parameters, or in the Azure portal.|
 |**variables**|An optional section where you define values that are used to simplify template language expressions.|
-|**functions**|An optional section where you can define [user-defined functions](https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/template-user-defined-functions) that are available within the template. User-defined functions can simplify your template when complicated expressions are used repeatedly in your template.|
+|**functions**|An optional section where you can define [user-defined functions](https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/template-user-defined-functions) ([ES](https://learn.microsoft.com/es-es/azure/azure-resource-manager/templates/template-user-defined-functions)) that are available within the template. User-defined functions can simplify your template when complicated expressions are used repeatedly in your template.|
 |**resources**|A required section that defines the actual items you want to deploy or update in a resource group or a subscription.|
 |**output**|An optional section where you specify the values that are returned at the end of the deployment.|
 ## Deploy an ARM template to Azure

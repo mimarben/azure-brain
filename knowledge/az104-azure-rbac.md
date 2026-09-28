@@ -10,7 +10,7 @@ sources:
 
 # AZ-104 — Protección de los recursos de Azure con Azure RBAC
 
-Módulo 07 del [AZ-104T00](https://learn.microsoft.com/en-us/training/courses/az-104t00) · Ruta 1 — Administración de identidades y gobernanza · Área: Administración de identidades y gobernanza en Azure (20–25%).
+Módulo 07 del [AZ-104T00](https://learn.microsoft.com/en-us/training/courses/az-104t00) ([ES](https://learn.microsoft.com/es-es/training/courses/az-104t00)) · Ruta 1 — Administración de identidades y gobernanza · Área: Administración de identidades y gobernanza en Azure (20–25%).
 
 ## Concepto
 
@@ -28,7 +28,7 @@ Uso del control de acceso basado en roles (RBAC) de Azure para administrar el ac
 
 ## Enlaces relacionados
 
-**Módulo de Learn**: [Protección de los recursos de Azure con el control de acceso basado en roles de Azure (Azure RBAC)](https://learn.microsoft.com/en-us/training/modules/secure-azure-resources-with-rbac/)
+**Módulo de Learn**: [Protección de los recursos de Azure con el control de acceso basado en roles de Azure (Azure RBAC)](https://learn.microsoft.com/en-us/training/modules/secure-azure-resources-with-rbac/) ([ES](https://learn.microsoft.com/es-es/training/modules/secure-azure-resources-with-rbac/))
 
 **Savill**: buscar "RBAC" en la [playlist AZ-104](https://www.youtube.com/playlist?list=PLlVtbbG169nGlGPWs9xaLKT1KfwqREHbs) · repaso final con el [Study Cram v2](https://www.youtube.com/watch?v=0Knf9nub4-k)
 

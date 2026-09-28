@@ -10,7 +10,7 @@ sources:
 
 # AZ-104 — Configuración de redes virtuales
 
-Módulo 18 del [AZ-104T00](https://learn.microsoft.com/en-us/training/courses/az-104t00) · Ruta 4 — Configuración y administración de redes virtuales · Área: Implementación y administración de redes virtuales (15–20%).
+Módulo 18 del [AZ-104T00](https://learn.microsoft.com/en-us/training/courses/az-104t00) ([ES](https://learn.microsoft.com/es-es/training/courses/az-104t00)) · Ruta 4 — Configuración y administración de redes virtuales · Área: Implementación y administración de redes virtuales (15–20%).
 
 ## Concepto
 
@@ -29,7 +29,7 @@ Configuración de redes y subredes virtuales, incluido el direccionamiento IP (e
 
 ## Enlaces relacionados
 
-**Módulo de Learn**: [Configuración de redes virtuales](https://learn.microsoft.com/en-us/training/modules/configure-virtual-networks/)
+**Módulo de Learn**: [Configuración de redes virtuales](https://learn.microsoft.com/en-us/training/modules/configure-virtual-networks/) ([ES](https://learn.microsoft.com/es-es/training/modules/configure-virtual-networks/))
 
 **Savill**: buscar "VNet" / "virtual network" en la [playlist AZ-104](https://www.youtube.com/playlist?list=PLlVtbbG169nGlGPWs9xaLKT1KfwqREHbs) · repaso final con el [Study Cram v2](https://www.youtube.com/watch?v=0Knf9nub4-k)
 

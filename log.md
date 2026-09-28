@@ -2,6 +2,11 @@
 
 Registro cronológico de ingestas, consultas y lints. Formato: `## [YYYY-MM-DD] tipo | Título`.
 
+## [2026-09-28] maintenance | Reinicio del seguimiento del curso AZ-104
+Fuente: petición del usuario (reiniciar el curso AZ-104)
+Páginas actualizadas: certifications/AZ-104/INDEX.md, notes/AZ-104/roadmap.md, log.md
+Notas: progreso reabierto desde el módulo 01 (Azure Cloud Shell) y checklists alineados; se conservan las notas y páginas de conocimiento existentes.
+
 ## [2026-08-26] maintenance | URLs de Microsoft Learn a en-us en todo el repo
 Fuente: petición del usuario ("todas las direcciones las quiero en inglés")
 Páginas actualizadas: 63 ficheros de knowledge/, certifications/, notes/, labs/, examples/, INDEX.md y ROADMAP.md — todas las URLs `/es-es/` → `/en-us/`

@@ -10,7 +10,7 @@ sources:
 ![[sc300-dynamic-groups.png]]![[sc300-dynamic-groups.png]]
 # AZ-104 — Crear, configurar y administrar identidades
 
-Módulo 04 del [AZ-104T00](https://learn.microsoft.com/en-us/training/courses/az-104t00) · Ruta 1 — Administración de identidades y gobernanza · Área: Administración de identidades y gobernanza en Azure (20–25%).
+Módulo 04 del [AZ-104T00](https://learn.microsoft.com/en-us/training/courses/az-104t00) ([ES](https://learn.microsoft.com/es-es/training/courses/az-104t00)) · Ruta 1 — Administración de identidades y gobernanza · Área: Administración de identidades y gobernanza en Azure (20–25%).
 
 ## Concepto
 
@@ -29,7 +29,7 @@ Control centralizado del acceso con una identidad definitiva para cada usuario y
 
 ## Enlaces relacionados
 
-**Módulo de Learn**: [Crear, configurar y administrar identidades](https://learn.microsoft.com/en-us/training/modules/create-configure-manage-identities/)
+**Módulo de Learn**: [Crear, configurar y administrar identidades](https://learn.microsoft.com/en-us/training/modules/create-configure-manage-identities/) ([ES](https://learn.microsoft.com/es-es/training/modules/create-configure-manage-identities/))
 
 **Savill**: buscar "users" / "groups" en la [playlist AZ-104](https://www.youtube.com/playlist?list=PLlVtbbG169nGlGPWs9xaLKT1KfwqREHbs) · repaso final con el [Study Cram v2](https://www.youtube.com/watch?v=0Knf9nub4-k)
 
@@ -195,7 +195,7 @@ The goal of Microsoft Entra registered devices is to provide your users with sup
 ![[azure-active-directory-registered-device.png]]
 
 
-[Enable passwordless security key](https://learn.microsoft.com/en-us/entra/identity/authentication/howto-authentication-passwordless-security-key-on-premises)
+[Enable passwordless security key](https://learn.microsoft.com/en-us/entra/identity/authentication/howto-authentication-passwordless-security-key-on-premises) ([ES](https://learn.microsoft.com/es-es/entra/identity/authentication/howto-authentication-passwordless-security-key-on-premises))
 
 # Manage licenses.
 

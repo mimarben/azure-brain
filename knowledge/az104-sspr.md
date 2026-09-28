@@ -10,7 +10,7 @@ sources:
 
 # AZ-104 — Restablecimiento de contraseñas con SSPR
 
-Módulo 08 del [AZ-104T00](https://learn.microsoft.com/en-us/training/courses/az-104t00) · Ruta 1 — Administración de identidades y gobernanza · Área: Administración de identidades y gobernanza en Azure (20–25%).
+Módulo 08 del [AZ-104T00](https://learn.microsoft.com/en-us/training/courses/az-104t00) ([ES](https://learn.microsoft.com/es-es/training/courses/az-104t00)) · Ruta 1 — Administración de identidades y gobernanza · Área: Administración de identidades y gobernanza en Azure (20–25%).
 
 ## Concepto
 
@@ -27,7 +27,7 @@ Evaluar el autoservicio de restablecimiento de contraseña (SSPR) para que los u
 
 ## Enlaces relacionados
 
-**Módulo de Learn**: [Permitir que los usuarios restablezcan sus contraseñas con el autoservicio de restablecimiento de contraseña de Microsoft Entra](https://learn.microsoft.com/en-us/training/modules/allow-users-reset-their-password/)
+**Módulo de Learn**: [Permitir que los usuarios restablezcan sus contraseñas con el autoservicio de restablecimiento de contraseña de Microsoft Entra](https://learn.microsoft.com/en-us/training/modules/allow-users-reset-their-password/) ([ES](https://learn.microsoft.com/es-es/training/modules/allow-users-reset-their-password/))
 
 **Savill**: buscar "SSPR" / "password" en la [playlist AZ-104](https://www.youtube.com/playlist?list=PLlVtbbG169nGlGPWs9xaLKT1KfwqREHbs) · repaso final con el [Study Cram v2](https://www.youtube.com/watch?v=0Knf9nub4-k)
 
@@ -118,9 +118,9 @@ In a hybrid situation, where you have Active Directory on-premises and Microsoft
 
 ## SSPR deployment options
 
-You can deploy SSPR with password writeback by using [Microsoft Entra Connect](https://learn.microsoft.com/en-us/entra/identity/authentication/tutorial-enable-sspr-writeback/) or [cloud sync](https://learn.microsoft.com/en-us/entra/identity/authentication/tutorial-enable-cloud-sync-sspr-writeback/), depending on user needs. You can deploy each option side-by-side in different domains to target different sets of users. This helps existing users on-premises to write back password changes, while adding an option for users in disconnected domains because of a company merger or split. Users from an existing on-premises domain can use Microsoft Entra Connect, while new users from a merger can use cloud sync in another domain.
+You can deploy SSPR with password writeback by using [Microsoft Entra Connect](https://learn.microsoft.com/en-us/entra/identity/authentication/tutorial-enable-sspr-writeback/) ([ES](https://learn.microsoft.com/es-es/entra/identity/authentication/tutorial-enable-sspr-writeback/)) or [cloud sync](https://learn.microsoft.com/en-us/entra/identity/authentication/tutorial-enable-cloud-sync-sspr-writeback/) ([ES](https://learn.microsoft.com/es-es/entra/identity/authentication/tutorial-enable-cloud-sync-sspr-writeback/)), depending on user needs. You can deploy each option side-by-side in different domains to target different sets of users. This helps existing users on-premises to write back password changes, while adding an option for users in disconnected domains because of a company merger or split. Users from an existing on-premises domain can use Microsoft Entra Connect, while new users from a merger can use cloud sync in another domain.
 
-Cloud sync can also provide higher availability, because it doesn't rely on a single instance of Microsoft Entra Connect. For a feature comparison between the two deployment options, see [Comparison between Microsoft Entra Connect and cloud sync](https://learn.microsoft.com/en-us/entra/identity/hybrid/cloud-sync/what-is-cloud-sync#how-is-azure-ad-connect-cloud-sync-different-from-azure-ad-connect-sync/).
+Cloud sync can also provide higher availability, because it doesn't rely on a single instance of Microsoft Entra Connect. For a feature comparison between the two deployment options, see [Comparison between Microsoft Entra Connect and cloud sync](https://learn.microsoft.com/en-us/entra/identity/hybrid/cloud-sync/what-is-cloud-sync#how-is-azure-ad-connect-cloud-sync-different-from-azure-ad-connect-sync/) ([ES](https://learn.microsoft.com/es-es/entra/identity/hybrid/cloud-sync/what-is-cloud-sync#how-is-azure-ad-connect-cloud-sync-different-from-azure-ad-connect-sync/)).
 
 
 # Implement Microsoft Entra self-service password reset

@@ -10,7 +10,7 @@ sources:
 ![[steps-for-cloud-governance.svg]]
 # AZ-104 — Iniciativas de Azure Policy
 
-Módulo 06 del [AZ-104T00](https://learn.microsoft.com/en-us/training/courses/az-104t00) · Ruta 1 — Administración de identidades y gobernanza · Área: Administración de identidades y gobernanza en Azure (20–25%).
+Módulo 06 del [AZ-104T00](https://learn.microsoft.com/en-us/training/courses/az-104t00) ([ES](https://learn.microsoft.com/es-es/training/courses/az-104t00)) · Ruta 1 — Administración de identidades y gobernanza · Área: Administración de identidades y gobernanza en Azure (20–25%).
 
 ## Concepto
 
@@ -27,7 +27,7 @@ Uso de iniciativas de Azure Policy para aplicar estándares de la organización,
 
 ## Enlaces relacionados
 
-**Módulo de Learn**: [Iniciativas de Azure Policy](https://learn.microsoft.com/en-us/training/modules/sovereignty-policy-initiatives/)
+**Módulo de Learn**: [Iniciativas de Azure Policy](https://learn.microsoft.com/en-us/training/modules/sovereignty-policy-initiatives/) ([ES](https://learn.microsoft.com/es-es/training/modules/sovereignty-policy-initiatives/))
 
 **Savill**: buscar "Policy" en la [playlist AZ-104](https://www.youtube.com/playlist?list=PLlVtbbG169nGlGPWs9xaLKT1KfwqREHbs) · repaso final con el [Study Cram v2](https://www.youtube.com/watch?v=0Knf9nub4-k)
 
@@ -80,7 +80,7 @@ The five core disciplines of cloud governance are as follows:
 - **Deployment acceleration** – Accelerates the deployment of policies through centralization, consistency, and standardization across deployment templates.
 ## Cloud governance with Azure Policy
 
-Azure's primary governance tool is [Azure Policy](https://learn.microsoft.com/en-us/azure/governance/policy/overview). Azure Policy facilitates the governance of all resources, including current and forthcoming resources. It helps to enforce organizational standards and to assess compliance at scale by establishing guardrails across various resources.
+Azure's primary governance tool is [Azure Policy](https://learn.microsoft.com/en-us/azure/governance/policy/overview) ([ES](https://learn.microsoft.com/es-es/azure/governance/policy/overview)). Azure Policy facilitates the governance of all resources, including current and forthcoming resources. It helps to enforce organizational standards and to assess compliance at scale by establishing guardrails across various resources.
 
 # Azure Policy design principles
 
@@ -160,8 +160,8 @@ Policies and initiatives are assigned to a specific scope (management group, sub
 - _Noncompliance messages_ can be defined.
 - _Parameters_ can be assigned values.
 - If you have a policy with the _deployIfNotExists_ effect type, a _managed identity_ can be assigned (system-assigned or user-assigned) to turn on remediation actions. An assignment has several properties that set a scope. The use of these properties determines which resource for Azure Policy to evaluate and which resources count toward compliance. These properties map to the following concepts:
-    - **Inclusion** - For more information, see [Azure Policy assignment structure](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/assignment-structure).
-    - **Exclusion** - For more information, see [Azure Policy assignment structure excluded scopes](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/assignment-structure#excluded-scopes).
+    - **Inclusion** - For more information, see [Azure Policy assignment structure](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/assignment-structure) ([ES](https://learn.microsoft.com/es-es/azure/governance/policy/concepts/assignment-structure)).
+    - **Exclusion** - For more information, see [Azure Policy assignment structure excluded scopes](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/assignment-structure#excluded-scopes) ([ES](https://learn.microsoft.com/es-es/azure/governance/policy/concepts/assignment-structure#excluded-scopes)).
 
 ## Exemptions
 
@@ -172,19 +172,19 @@ Policy exemptions aren't created during assignment time, but after, and the effe
 - **Mitigated** - The exemption is granted because the policy intent is met through another method.
 - **Waiver** - The exemption is granted because the noncompliance state of the resource is temporarily accepted.
 
-For more information about policy exemption, see [Azure Policy exemption structure](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/exemption-structure).
+For more information about policy exemption, see [Azure Policy exemption structure](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/exemption-structure) ([ES](https://learn.microsoft.com/es-es/azure/governance/policy/concepts/exemption-structure)).
 
 ## Attestations
 
-Policy attestations are used by Azure Policy to set compliance states of resources or scopes targeted by [manual policies](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/effect-manual). Each applicable resource requires one attestation for each manual policy assignment. For ease of management, manual policies should be designed to target the scope that defines the boundary of resources whose compliance state needs to be attested.
+Policy attestations are used by Azure Policy to set compliance states of resources or scopes targeted by [manual policies](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/effect-manual) ([ES](https://learn.microsoft.com/es-es/azure/governance/policy/concepts/effect-manual)). Each applicable resource requires one attestation for each manual policy assignment. For ease of management, manual policies should be designed to target the scope that defines the boundary of resources whose compliance state needs to be attested.
 
-For more information, see [Azure Policy attestation structure](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/attestation-structure).
+For more information, see [Azure Policy attestation structure](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/attestation-structure) ([ES](https://learn.microsoft.com/es-es/azure/governance/policy/concepts/attestation-structure)).
 
 ## Remediations
 
 The policy remediation task feature is used to bring resources into compliance based on a definition and assignment. Resources that are noncompliant to a _modify_ or _deployIfNotExists_ definition assignment can be brought into compliance by using a remediation task. Resources that are newly created or updated that are applicable to a _deployIfNotExists_ or _modify_ definition assignment are automatically remediated.
 
-For more information, see [Azure Policy remediation task structure](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/remediation-structure).
+For more information, see [Azure Policy remediation task structure](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/remediation-structure) ([ES](https://learn.microsoft.com/es-es/azure/governance/policy/concepts/remediation-structure)).
 
 
 # Azure Policy definitions
@@ -323,7 +323,7 @@ Properties like fields, values, or counts can be evaluated within a condition.
 |**Fields**|Conditions that evaluate whether the values of properties in the resource request payload meet certain criteria can be formed by using a field expression.|Name, fullName, kind, type, location, ID, identity.type, tags, tags['tagName'], property aliases|
 |**Value**|Conditions that evaluate whether a value meets certain criteria can be formed by using a value expression.||
 |**Count**|Conditions that count how many members of an array meet certain criteria can be formed by using a count expression.|● Field count, value count  <br>● The current () function returns the value of the array member that's being evaluated|
-he condition in an Azure Policy assesses whether the evaluated values for the properties, such as Fields, Value, or Count, meets certain criteria. If the result of a function is an error, the policy results in a deny effect. This result can be avoided while testing by disabling _enforcementMode_ in the assignment. For more information, see [Enforcement Mode](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/assignment-structure#enforcement-mode).
+he condition in an Azure Policy assesses whether the evaluated values for the properties, such as Fields, Value, or Count, meets certain criteria. If the result of a function is an error, the policy results in a deny effect. This result can be avoided while testing by disabling _enforcementMode_ in the assignment. For more information, see [Enforcement Mode](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/assignment-structure#enforcement-mode) ([ES](https://learn.microsoft.com/es-es/azure/governance/policy/concepts/assignment-structure#enforcement-mode)).
 
 |Evaluation criteria|Value type|
 |---|---|
@@ -387,7 +387,7 @@ he condition in an Azure Policy assesses whether the evaluated values for the pr
 
 Functions can be used to introduce extra logic into a policy rule. They're resolved in the policy rule of a policy definition and in the parameter values that are assigned to the policy definitions in an initiative.
 
-The Resource Manager template functions are available to use in a policy rule except a [few policy functions and user-defined functions](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/definition-structure-policy-rule#policy-functions).
+The Resource Manager template functions are available to use in a policy rule except a [few policy functions and user-defined functions](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/definition-structure-policy-rule#policy-functions) ([ES](https://learn.microsoft.com/es-es/azure/governance/policy/concepts/definition-structure-policy-rule#policy-functions)).
 
 The _utcNow()_ function is available to use in a policy rule but differs from use in an Azure Resource Manager template (ARM template). Unlike an ARM template, this function can be used outside _defaultValue_. It returns a string set to the current date and time in Universal ISO 8601 DateTime format `yyyy-MM-ddTHH:mm:ss.fffffffZ`.
 
@@ -396,7 +396,7 @@ The following table describes the functions that are only available in policy ru
 |Function|Description|
 |---|---|
 |`addDays(dateTime, numberOfDaysToAdd)`|● `dateTime`: [Required] string - String in the Universal ISO 8601 DateTime format 'yyyy-MM-ddTHH:mm:ss.FFFFFFFZ'.  <br>● `numberOfDaysToAdd`: [Required] integer - Number of days to add.|
-|`Field(fieldName)`|● `fieldName`: [Required] string - Name of the [field](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/definition-structure-policy-rule#fields) to retrieve.  <br>● Returns the value of that field from the resource evaluated by the _If_ condition.  <br>● `field` is primarily used with `auditIfNotExists` and `deployIfNotExists` to reference fields on the resource that are being evaluated.|
+|`Field(fieldName)`|● `fieldName`: [Required] string - Name of the [field](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/definition-structure-policy-rule#fields) ([ES](https://learn.microsoft.com/es-es/azure/governance/policy/concepts/definition-structure-policy-rule#fields)) to retrieve.  <br>● Returns the value of that field from the resource evaluated by the _If_ condition.  <br>● `field` is primarily used with `auditIfNotExists` and `deployIfNotExists` to reference fields on the resource that are being evaluated.|
 |`requestContext().apiVersion`|Returns the API version of the request that triggered policy evaluation. This value is the API version that was used in the PUT/PATCH request for evaluations on resource creation/update. The latest API version is always used during compliance evaluation on existing resources.|
 |`policy()`|Returns the following information about the policy that's being evaluated. Properties can be accessed from the returned object.  <br>`"assignmentId": ""`,  <br>`"definitionId": ""`,  <br>`"setDefinitionId": ""`,  <br>`"definitionReferenceId": ""`|
 |`ipRangeContains(range, targetRange)`|● `range`: [Required] string - String specifying a range of IP addresses to check if the _targetRange_ is within range.  <br>● `targetRange`: [Required] string - String specifying a range of IP addresses to validate as included within the _range_.  <br>Returns a _boolean_ for whether the _range_ IP address range contains the _targetRange_ IP address range. Empty ranges or mixing between IP families isn't allowed and results in evaluation failure.|
@@ -473,11 +473,11 @@ When multiple resources or policies have varying compliance states, the overall 
 
 The compliance percentage is determined by dividing **Compliant**, **Exempt**, and **Unknown** resources by total resources. Total resources include resources with **Compliant**, **Non-compliant**, **Unknown**, **Exempt**, **Conflicting**, and **Error** states.
 
-For more information on when the policies return these states for any particular resource, see [Azure Policy compliance states](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/compliance-states).
+For more information on when the policies return these states for any particular resource, see [Azure Policy compliance states](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/compliance-states) ([ES](https://learn.microsoft.com/es-es/azure/governance/policy/concepts/compliance-states)).
 
 ## Enforcement Mode
 
-_enforcementMode_ is a property of a policy assignment that lets you deactivate the enforcement of certain policy effects. This mode allows you to test the policy's outcome on existing resources without initiating the policy effect or triggering entries in the [Azure Activity log](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/platform-logs-overview). The _enforcementMode_ can be changed to Enabled after the policy is thoroughly tested.
+_enforcementMode_ is a property of a policy assignment that lets you deactivate the enforcement of certain policy effects. This mode allows you to test the policy's outcome on existing resources without initiating the policy effect or triggering entries in the [Azure Activity log](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/platform-logs-overview) ([ES](https://learn.microsoft.com/es-es/azure/azure-monitor/essentials/platform-logs-overview)). The _enforcementMode_ can be changed to Enabled after the policy is thoroughly tested.
 
 This scenario is commonly referred to as _What If_ and aligns to safe deployment practices. The _enforcementMode_ is different from the _disabled_ effect. The _disabled_ effect prevents resource evaluation from happening at all while _enforcementMode_ lets the evaluation happen without the effect taking place.
 

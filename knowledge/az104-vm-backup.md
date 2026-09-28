@@ -10,7 +10,7 @@ sources:
 
 # AZ-104 — Protección de las máquinas virtuales con Azure Backup
 
-Módulo 27 del [AZ-104T00](https://learn.microsoft.com/en-us/training/courses/az-104t00) · Ruta 5 — Supervisión y copia de seguridad de recursos de Azure · Área: Supervisión y mantenimiento de recursos de Azure (10–15%).
+Módulo 27 del [AZ-104T00](https://learn.microsoft.com/en-us/training/courses/az-104t00) ([ES](https://learn.microsoft.com/es-es/training/courses/az-104t00)) · Ruta 5 — Supervisión y copia de seguridad de recursos de Azure · Área: Supervisión y mantenimiento de recursos de Azure (10–15%).
 
 ## Concepto
 
@@ -27,7 +27,7 @@ Proteger servidores locales, VMs, SQL Server, recursos compartidos de archivos y
 
 ## Enlaces relacionados
 
-**Módulo de Learn**: [Protección de las máquinas virtuales con Azure Backup](https://learn.microsoft.com/en-us/training/modules/protect-virtual-machines-with-azure-backup/)
+**Módulo de Learn**: [Protección de las máquinas virtuales con Azure Backup](https://learn.microsoft.com/en-us/training/modules/protect-virtual-machines-with-azure-backup/) ([ES](https://learn.microsoft.com/es-es/training/modules/protect-virtual-machines-with-azure-backup/))
 
 **Savill**: buscar "backup" en la [playlist AZ-104](https://www.youtube.com/playlist?list=PLlVtbbG169nGlGPWs9xaLKT1KfwqREHbs) · repaso final con el [Study Cram v2](https://www.youtube.com/watch?v=0Knf9nub4-k)
 

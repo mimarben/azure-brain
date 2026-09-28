@@ -10,7 +10,7 @@ sources:
 
 # AZ-104 — Hospedaje de su dominio en Azure DNS
 
-Módulo 20 del [AZ-104T00](https://learn.microsoft.com/en-us/training/courses/az-104t00) · Ruta 4 — Configuración y administración de redes virtuales · Área: Implementación y administración de redes virtuales (15–20%).
+Módulo 20 del [AZ-104T00](https://learn.microsoft.com/en-us/training/courses/az-104t00) ([ES](https://learn.microsoft.com/es-es/training/courses/az-104t00)) · Ruta 4 — Configuración y administración de redes virtuales · Área: Implementación y administración de redes virtuales (15–20%).
 
 ## Concepto
 
@@ -26,7 +26,7 @@ Crear una zona DNS para un nombre de dominio, registros DNS para asignar el domi
 
 ## Enlaces relacionados
 
-**Módulo de Learn**: [Hospedaje de su dominio en Azure DNS](https://learn.microsoft.com/en-us/training/modules/host-domain-azure-dns/)
+**Módulo de Learn**: [Hospedaje de su dominio en Azure DNS](https://learn.microsoft.com/en-us/training/modules/host-domain-azure-dns/) ([ES](https://learn.microsoft.com/es-es/training/modules/host-domain-azure-dns/))
 
 **Savill**: buscar "DNS" en la [playlist AZ-104](https://www.youtube.com/playlist?list=PLlVtbbG169nGlGPWs9xaLKT1KfwqREHbs) · repaso final con el [Study Cram v2](https://www.youtube.com/watch?v=0Knf9nub4-k)
 

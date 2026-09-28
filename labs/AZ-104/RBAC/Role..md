@@ -44,7 +44,7 @@ As you learned in the previous unit, a role is a collection of permissions. Azur
 
 Follow this procedure to assign the Virtual Machine Contributor role to a user at the resource group scope.
 
-1. Sign in to the [Azure portal](https://portal.azure.com/) as an administrator that has permissions to assign roles, such as [User Access Administrator](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#user-access-administrator) or [Owner](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#owner).
+1. Sign in to the [Azure portal](https://portal.azure.com/) as an administrator that has permissions to assign roles, such as [User Access Administrator](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#user-access-administrator) ([ES](https://learn.microsoft.com/es-es/azure/role-based-access-control/built-in-roles#user-access-administrator)) or [Owner](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#owner) ([ES](https://learn.microsoft.com/es-es/azure/role-based-access-control/built-in-roles#owner)).
     
 2. In the Search box at the top, search for **Resource groups**.
     

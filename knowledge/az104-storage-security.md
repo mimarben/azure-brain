@@ -10,7 +10,7 @@ sources:
 
 # AZ-104 — Configurar la seguridad de Azure Storage
 
-Módulo 11 del [AZ-104T00](https://learn.microsoft.com/en-us/training/courses/az-104t00) · Ruta 2 — Implementación y administración del almacenamiento · Área: Implementación y administración del almacenamiento (15–20%).
+Módulo 11 del [AZ-104T00](https://learn.microsoft.com/en-us/training/courses/az-104t00) ([ES](https://learn.microsoft.com/es-es/training/courses/az-104t00)) · Ruta 2 — Implementación y administración del almacenamiento · Área: Implementación y administración del almacenamiento (15–20%).
 
 ## Concepto
 
@@ -30,7 +30,7 @@ Características comunes de seguridad de Azure Storage: firmas de acceso compart
 
 ## Enlaces relacionados
 
-**Módulo de Learn**: [Configurar la seguridad de Azure Storage](https://learn.microsoft.com/en-us/training/modules/configure-storage-security/)
+**Módulo de Learn**: [Configurar la seguridad de Azure Storage](https://learn.microsoft.com/en-us/training/modules/configure-storage-security/) ([ES](https://learn.microsoft.com/es-es/training/modules/configure-storage-security/))
 
 **Savill**: buscar "SAS" / "storage security" en la [playlist AZ-104](https://www.youtube.com/playlist?list=PLlVtbbG169nGlGPWs9xaLKT1KfwqREHbs) · repaso final con el [Study Cram v2](https://www.youtube.com/watch?v=0Knf9nub4-k)
 

@@ -10,7 +10,7 @@ sources:
 ![[secure-storage-access-d32868ef.png]]![[assets/images/AZ-104/geo-redundant-storage.png]]![[assets/images/AZ-104/geo-redundant-storage.png]]
 # AZ-104 — Configuración de cuentas de almacenamiento
 
-Módulo 09 del [AZ-104T00](https://learn.microsoft.com/en-us/training/courses/az-104t00) · Ruta 2 — Implementación y administración del almacenamiento · Área: Implementación y administración del almacenamiento (15–20%).
+Módulo 09 del [AZ-104T00](https://learn.microsoft.com/en-us/training/courses/az-104t00) ([ES](https://learn.microsoft.com/es-es/training/courses/az-104t00)) · Ruta 2 — Implementación y administración del almacenamiento · Área: Implementación y administración del almacenamiento (15–20%).
 
 ## Concepto
 
@@ -30,7 +30,7 @@ Configuración de cuentas de almacenamiento, incluida la replicación (redundanc
 
 ## Enlaces relacionados
 
-**Módulo de Learn**: [Configuración de cuentas de almacenamiento](https://learn.microsoft.com/en-us/training/modules/configure-storage-accounts/)
+**Módulo de Learn**: [Configuración de cuentas de almacenamiento](https://learn.microsoft.com/en-us/training/modules/configure-storage-accounts/) ([ES](https://learn.microsoft.com/es-es/training/modules/configure-storage-accounts/))
 
 **Savill**: buscar "storage" en la [playlist AZ-104](https://www.youtube.com/playlist?list=PLlVtbbG169nGlGPWs9xaLKT1KfwqREHbs) · repaso final con el [Study Cram v2](https://www.youtube.com/watch?v=0Knf9nub4-k)
 
@@ -46,7 +46,7 @@ Configuración de cuentas de almacenamiento, incluida la replicación (redundanc
 
 # Implement Azure Storage.
 
-[Azure Storage](https://learn.microsoft.com/en-us/azure/storage/common/storage-introduction) is Microsoft's cloud storage solution for modern data storage scenarios. Azure Storage offers a massively scalable object store for data objects. It provides a file system service for the cloud, a messaging store for reliable messaging, and a NoSQL store.
+[Azure Storage](https://learn.microsoft.com/en-us/azure/storage/common/storage-introduction) ([ES](https://learn.microsoft.com/es-es/azure/storage/common/storage-introduction)) is Microsoft's cloud storage solution for modern data storage scenarios. Azure Storage offers a massively scalable object store for data objects. It provides a file system service for the cloud, a messaging store for reliable messaging, and a NoSQL store.
 
 ### Things to know about Azure Storage
 
@@ -86,7 +86,7 @@ As you think about your configuration plan for Azure Storage, consider these pro
 
 ### Azure Blob Storage
 
-[Azure Blob Storage](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-overview) is Microsoft's object storage solution for the cloud. Blob Storage is optimized for storing massive amounts of unstructured or _nonrelational_ data, such as text or binary data. Blob Storage is ideal for:
+[Azure Blob Storage](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-overview) ([ES](https://learn.microsoft.com/es-es/azure/storage/blobs/storage-blobs-overview)) is Microsoft's object storage solution for the cloud. Blob Storage is optimized for storing massive amounts of unstructured or _nonrelational_ data, such as text or binary data. Blob Storage is ideal for:
 
 - Serving images or documents directly to a browser.
 - Storing files for distributed access.
@@ -99,7 +99,7 @@ Objects in Blob Storage can be accessed from anywhere in the world via HTTP or H
 
 ### Azure Files
 
-[Azure Files](https://learn.microsoft.com/en-us/azure/storage/files/storage-files-introduction) enables you to set up highly available network file shares. Shares can be accessed by using the Server Message Block (SMB) protocol and the Network File System (NFS) protocol. Multiple virtual machines can share the same files with both read and write access. You can also read the files by using the REST interface or the storage client libraries.
+[Azure Files](https://learn.microsoft.com/en-us/azure/storage/files/storage-files-introduction) ([ES](https://learn.microsoft.com/es-es/azure/storage/files/storage-files-introduction)) enables you to set up highly available network file shares. Shares can be accessed by using the Server Message Block (SMB) protocol and the Network File System (NFS) protocol. Multiple virtual machines can share the same files with both read and write access. You can also read the files by using the REST interface or the storage client libraries.
 
 File shares can be used for many common scenarios:
 
@@ -112,13 +112,13 @@ The storage account credentials are used to provide authentication for access to
 
 ### Azure Queue Storage
 
-[Azure Queue Storage](https://learn.microsoft.com/en-us/azure/storage/queues/storage-queues-introduction) is used to store and retrieve messages. Queue messages can be up to 64 KB in size, and a queue can contain millions of messages. Queues are used to store lists of messages to be processed asynchronously.
+[Azure Queue Storage](https://learn.microsoft.com/en-us/azure/storage/queues/storage-queues-introduction) ([ES](https://learn.microsoft.com/es-es/azure/storage/queues/storage-queues-introduction)) is used to store and retrieve messages. Queue messages can be up to 64 KB in size, and a queue can contain millions of messages. Queues are used to store lists of messages to be processed asynchronously.
 
 Consider a scenario where you want your customers to be able to upload pictures, and you want to create thumbnails for each picture. You could have your customer wait for you to create the thumbnails while uploading the pictures. An alternative is to use a queue. When the customer finishes the upload, you can write a message to the queue. Then you can use an Azure Function to retrieve the message from the queue and create the thumbnails. Each of the processing parts can be scaled separately, which gives you more control when tuning the configuration.
 
 ### Azure Table Storage
 
-[Azure Table storage](https://learn.microsoft.com/en-us/azure/storage/tables/table-storage-overview) is a service that stores non-relational structured data (also known as structured NoSQL data) in the cloud, providing a key/attribute store with a schemaless design. Because Table storage is schemaless, it's easy to adapt your data as the needs of your application evolve. Access to Table storage data is fast and cost-effective for many types of applications, and is typically lower in cost than traditional SQL for similar volumes of data. In addition to the existing Azure Table Storage service, there's a new Azure Cosmos DB Table API offering that provides throughput-optimized tables, global distribution, and automatic secondary indexes.
+[Azure Table storage](https://learn.microsoft.com/en-us/azure/storage/tables/table-storage-overview) ([ES](https://learn.microsoft.com/es-es/azure/storage/tables/table-storage-overview)) is a service that stores non-relational structured data (also known as structured NoSQL data) in the cloud, providing a key/attribute store with a schemaless design. Because Table storage is schemaless, it's easy to adapt your data as the needs of your application evolve. Access to Table storage data is fast and cost-effective for many types of applications, and is typically lower in cost than traditional SQL for similar volumes of data. In addition to the existing Azure Table Storage service, there's a new Azure Cosmos DB Table API offering that provides throughput-optimized tables, global distribution, and automatic secondary indexes.
 
 ### Things to consider when choosing Azure Storage services
 
@@ -140,13 +140,13 @@ As you think about your configuration plan for Azure Storage, consider the promi
 
 |Storage account|Supported services|Redundancy options|Recommended usage|
 |---|---|---|---|
-|[**Standard** **general-purpose v2**](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-upgrade)|Blob Storage (including Data Lake Storage), Queue Storage, Table Storage, and Azure Files|LRS, GRS, RA-GRS, ZRS, GZRS, RA-GZRS|Standard storage account for most scenarios, including blobs, file shares, queues, tables, and disks (page blobs).|
-|[**Premium** **block blobs**](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-block-blob-premium)|Blob Storage (including Data Lake Storage)|LRS, ZRS|Premium storage account for block blobs and append blobs. Recommended for applications with high transaction rates. Use Premium block blobs if you work with smaller objects or require consistently low storage latency. This storage is designed to scale with your applications.|
-|[**Premium** **file shares**](https://learn.microsoft.com/en-us/azure/storage/files/storage-how-to-create-file-share)|Azure Files|LRS, ZRS|Premium storage account for file shares only. Recommended for enterprise or high-performance scale applications. Use Premium file shares if you require support for both Server Message Block (SMB) and NFS file shares.|
-|[**Premium** **page blobs**](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-pageblob-overview)|Page blobs only|LRS only|Premium high-performance storage account for page blobs only. Page blobs are ideal for storing index-based and sparse data structures, such as operating systems, data disks for virtual machines, and databases.|
+|[**Standard** **general-purpose v2**](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-upgrade) ([ES](https://learn.microsoft.com/es-es/azure/storage/common/storage-account-upgrade))|Blob Storage (including Data Lake Storage), Queue Storage, Table Storage, and Azure Files|LRS, GRS, RA-GRS, ZRS, GZRS, RA-GZRS|Standard storage account for most scenarios, including blobs, file shares, queues, tables, and disks (page blobs).|
+|[**Premium** **block blobs**](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-block-blob-premium) ([ES](https://learn.microsoft.com/es-es/azure/storage/blobs/storage-blob-block-blob-premium))|Blob Storage (including Data Lake Storage)|LRS, ZRS|Premium storage account for block blobs and append blobs. Recommended for applications with high transaction rates. Use Premium block blobs if you work with smaller objects or require consistently low storage latency. This storage is designed to scale with your applications.|
+|[**Premium** **file shares**](https://learn.microsoft.com/en-us/azure/storage/files/storage-how-to-create-file-share) ([ES](https://learn.microsoft.com/es-es/azure/storage/files/storage-how-to-create-file-share))|Azure Files|LRS, ZRS|Premium storage account for file shares only. Recommended for enterprise or high-performance scale applications. Use Premium file shares if you require support for both Server Message Block (SMB) and NFS file shares.|
+|[**Premium** **page blobs**](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-pageblob-overview) ([ES](https://learn.microsoft.com/es-es/azure/storage/blobs/storage-blob-pageblob-overview))|Page blobs only|LRS only|Premium high-performance storage account for page blobs only. Page blobs are ideal for storing index-based and sparse data structures, such as operating systems, data disks for virtual machines, and databases.|
 # Determine replication strategies
 
-The data in your Azure storage account is always replicated to ensure durability and high availability. [Azure Storage replication](https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy) copies your data to protect from planned and unplanned events. These events range from transient hardware failures, network or power outages, massive natural disasters, and so on. You can choose to replicate your data within the same data center, across zonal data centers within the same region, and even across regions. Replication ensures your storage account meets the Service-Level Agreement (SLA) for Azure Storage even if there are failures.
+The data in your Azure storage account is always replicated to ensure durability and high availability. [Azure Storage replication](https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy) ([ES](https://learn.microsoft.com/es-es/azure/storage/common/storage-redundancy)) copies your data to protect from planned and unplanned events. These events range from transient hardware failures, network or power outages, massive natural disasters, and so on. You can choose to replicate your data within the same data center, across zonal data centers within the same region, and even across regions. Replication ensures your storage account meets the Service-Level Agreement (SLA) for Azure Storage even if there are failures.
 
 ### Locally redundant storage.
 
@@ -217,7 +217,7 @@ For example, to access the _myblob_ data in the _mycontainer_ location in yo
 
 ## Configure custom domains.
 
-You can configure a [custom domain](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-custom-domain-name) to access blob data in your Azure storage account. As we reviewed, the default endpoint for Azure Blob Storage is `\<storage-account-name>.blob.core.windows.net`. If you map a custom domain and subdomain, such as `www.contoso.com`, to the blob or web endpoint for your storage account, your users can use that domain to access blob data in your storage account.
+You can configure a [custom domain](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-custom-domain-name) ([ES](https://learn.microsoft.com/es-es/azure/storage/blobs/storage-custom-domain-name)) to access blob data in your Azure storage account. As we reviewed, the default endpoint for Azure Blob Storage is `\<storage-account-name>.blob.core.windows.net`. If you map a custom domain and subdomain, such as `www.contoso.com`, to the blob or web endpoint for your storage account, your users can use that domain to access blob data in your storage account.
 
 **Direct mapping** lets you enable a custom domain for a subdomain to an Azure storage account. For this approach, you create a `CNAME` record that points from the subdomain to the Azure storage account.
 

@@ -43,81 +43,93 @@ Comparación de Microsoft Entra ID con Active Directory DS, ediciones P1/P2 y ex
 
 # Examine Microsoft Entra ID.
 
-Microsoft Entra ID is part of the platform as a service (PaaS) offering and operates as a Microsoft-managed directory service in the cloud. It’s not a part of the core infrastructure that customers own and manage, nor is it an Infrastructure as a service offering. While this implies that you have less control over its implementation, it also means that you don’t have to dedicate resources to its deployment or maintenance.
+Los alumnos deben estar familiarizados con Active Directory Domain Services (AD DS o simplemente "Active Directory"). AD DS es un servicio de directorio que proporciona los métodos para almacenar datos de directorio, como cuentas de usuario y contraseñas, y hace que estos datos estén disponibles para usuarios de red, administradores y otros dispositivos y servicios. Se ejecuta como un servicio en Windows Server denominado controlador de dominio.
 
-You can use Microsoft Entra ID to provide more secure access to cloud-based resources for organizations and individuals by:
+Microsoft Entra ID forma parte de la oferta de plataforma como servicio (PaaS) y funciona como un servicio de directorio administrado por Microsoft en la nube. No forma parte de la infraestructura básica que los clientes poseen y administran, ni tampoco es una oferta de infraestructura como servicio. Aunque esto implica que se tiene menos control sobre su implementación, también significa que no se tienen que dedicar recursos a su implementación o mantenimiento.
 
-- Configuring access to applications
-- Configuring single sign-on (SSO) to cloud-based SaaS applications
-- Managing users and groups
-- Provisioning users
-- Enabling federation between organizations
-- Providing an identity management solution
-- Identifying irregular sign-in activity
-- Configuring multi-factor authentication
-- Extending existing on-premises Active Directory implementations to Microsoft Entra ID
-- Configuring Application Proxy for cloud and local applications
-- Configuring Conditional Access for users and devices.
+Gracias a Microsoft Entra ID, también tiene acceso a un conjunto de características que no están disponibles de forma nativa en AD DS, como la compatibilidad con la autenticación multifactor, la protección de identidades y el autoservicio de restablecimiento de contraseña.
+
+Puede usar Microsoft Entra ID con el fin de proporcionar un acceso más seguro a los recursos basados en la nube para organizaciones y usuarios mediante lo siguiente:
+
+- Configuración del acceso a las aplicaciones
+- Configuración del inicio de sesión único (SSO) en aplicaciones SaaS basadas en la nube
+- Administración de usuarios y grupos
+- Aprovisionamiento de usuarios
+- Habilitación de la federación entre organizaciones
+- Suministro de una solución de administración de identidades
+- Identificación de la actividad de inicio de sesión irregular
+- Configuración de la autenticación multifactor
+- Ampliación de las implementaciones locales de Active Directory existentes a Microsoft Entra ID
+- Configuración de Application Proxy para aplicaciones locales y en la nube
+- Configuración del acceso condicional para usuarios y dispositivos
 
 ![[azure-active-directory-connect-stack-f1aae359.png]]
 
+### Inquilinos de Microsoft Entra
 
-# Compare Microsoft Entra ID and Active Directory Domain Services.
+A diferencia de AD DS, Microsoft Entra ID es multiinquilino por diseño y se implementa de forma específica para garantizar el aislamiento entre sus instancias de directorio individuales. Es el directorio multiinquilino más grande del mundo: hospeda más de un millón de instancias de servicios de directorio, con miles de millones de solicitudes de autenticación por semana. En este contexto, el término inquilino normalmente representa una empresa u organización que se ha registrado para una suscripción a un servicio de Microsoft basado en la nube, como Microsoft 365, Intune o Azure, cada uno de los cuales usa Microsoft Entra ID. En cambio, desde un punto de vista técnico, el término "inquilino" representa una instancia individual de Microsoft Entra. En una suscripción de Azure, se pueden crear varios inquilinos de Microsoft Entra. Tener varios inquilinos de Microsoft Entra puede ser conveniente si desea probar la funcionalidad de Microsoft Entra en un inquilino sin afectar a los demás.
 
-### Characteristics of AD DS
 
-AD DS is the traditional deployment of Windows Server-based Active Directory on a physical or virtual server. Although AD DS is commonly considered being primarily a directory service, it’s only one component of the Windows Active Directory suite of technologies, which also includes Active Directory Certificate Services (AD CS), Active Directory Lightweight Directory Services (AD LDS), Active Directory Federation Services (AD FS), and Active Directory Rights Management Services (AD RMS).
+# Comparación de Microsoft Entra ID y Active Directory Domain Services
 
-When comparing AD DS with Microsoft Entra ID, it’s important to note the following characteristics of AD DS:
+Puede considerar Microsoft Entra ID simplemente como el homólogo basado en la nube de AD DS. Sin embargo, aunque Microsoft Entra ID y AD DS comparten algunas características comunes, hay varias diferencias significativas entre estos servicios.
 
-- AD DS is a true directory service, with a hierarchical X.500-based structure.
-- AD DS uses Domain Name System (DNS) for locating resources such as domain controllers.
-- You can query and manage AD DS by using Lightweight Directory Access Protocol (LDAP) calls.
-- AD DS primarily uses the Kerberos protocol for authentication.
-- AD DS uses OUs and GPOs for management.
-- AD DS includes computer objects, representing computers that join an Active Directory domain.
-- AD DS uses trusts between domains for delegated management.
+### Características de AD DS
 
-### Characteristics of Microsoft Entra ID
+AD DS es la implementación tradicional de Active Directory basado en Windows Server en un servidor físico o virtual. Aunque AD DS se considera principalmente un servicio de directorio, tan solo es un componente del conjunto de tecnologías de Windows Active Directory, que también incluye Servicios de certificados de Active Directory (AD CS), Active Directory Lightweight Directory Services (AD LDS), Servicios de federación de Active Directory (AD FS) y Active Directory Rights Management Services (AD RMS).
 
-Although Microsoft Entra ID has many similarities to AD DS, there are also many differences. It’s important to realize that using Microsoft Entra isn’t the same as deploying an Active Directory domain controller on an Azure virtual machine and adding it to your on-premises domain.
+Al comparar AD DS con Microsoft Entra ID, es importante tener en cuenta las siguientes características de AD DS:
 
-When comparing Microsoft Entra ID with AD DS, it’s important to note the following characteristics of Microsoft Entra ID:
+- AD DS es un verdadero servicio de directorio, con una estructura jerárquica basada en X.500.
+- AD DS usa el Sistema de nombres de dominio (DNS) para buscar recursos, como controladores de dominio.
+- Puede consultar y administrar AD DS mediante llamadas al Protocolo ligero de acceso a directorios (LDAP).
+- AD DS usa principalmente el protocolo Kerberos para la autenticación.
+- AD DS usa unidades organizativas y objetos de directiva de grupo para la administración.
+- AD DS incluye objetos de equipo que representan equipos que se unen a un dominio de Active Directory.
+- AD DS usa confianzas entre dominios para la administración delegada.
 
-- Microsoft Entra ID is primarily an identity solution, and it’s designed for internet-based applications by using HTTP (port 80) and HTTPS (port 443) communications.
-- Microsoft Entra ID is a multi-tenant directory service.
-- Microsoft Entra users and groups are created in a flat structure, and there are no OUs or GPOs.
-- You can't query Microsoft Entra ID by using LDAP; instead, Microsoft Entra ID uses the REST API over HTTP and HTTPS.
-- Microsoft Entra ID doesn't use Kerberos authentication; instead, it uses HTTP and HTTPS protocols such as SAML, WS-Federation, and OpenID Connect for authentication, and uses OAuth for authorization.
-- Microsoft Entra ID includes federation services, and many third-party services such as Facebook are federated with and trust Microsoft Entra ID.
 
-# Compare Microsoft Entra ID P1 and P2 plans.
 
-The Microsoft Entra ID P1 or P2 tier provides extra functionality as compared to the Free and Office 365 editions. However, premium versions require additional cost per user provisioning. Microsoft Entra ID P1 or P2 comes in two versions P1 and P2. You can procure it as an extra license or as a part of the Microsoft Enterprise Mobility + Security, which also includes the license for Azure Information Protection and Intune.
+> [!NOTE] Nota:
+> La implementación de AD DS en una máquina virtual de Azure requiere uno o varios discos de datos adicionales de Azure, ya que no debe usar la unidad C para el almacenamiento de AD DS. Estos discos son necesarios para almacenar la base de datos, los registros y la carpeta sysvol de AD DS. La configuración de Preferencia de caché de host para estos discos debe establecerse en Ninguna.
 
-Microsoft provides a free trial period that can be used to experience the full functionality of the Microsoft Entra ID P2 edition. The following features are available with the Microsoft Entra ID P1 edition:
+### Características de Microsoft Entra ID
 
-- **Self-service group management**. It simplifies the administration of groups where users are given the rights to create and manage the groups. End users can create requests to join other groups, and group owners can approve requests and maintain their groups’ memberships.
-- **Advanced security reports and alerts**. You can monitor and protect access to your cloud applications by viewing detailed logs that show advanced anomalies and inconsistent access pattern reports. Advanced reports are machine learning based and can help you gain new insights to improve access security and respond to potential threats.
-- **Multi-factor authentication**. Full multi-factor authentication (MFA) works with on-premises applications (using virtual private network [VPN], RADIUS, and others), Azure, Microsoft 365, Dynamics 365, and third-party Microsoft Entra gallery applications. It doesn't work with non-browser off-the-shelf apps, such as Microsoft Outlook. Full multi-factor authentication is covered in more detail in the following units in this lesson.
-- **Microsoft Identity Manager (MIM) licensing**. MIM integrates with Microsoft Entra ID P1 or P2 to provide hybrid identity solutions. MIM can bridge multiple on-premises authentication stores such as AD DS, LDAP, Oracle, and other applications with Microsoft Entra ID. This provides consistent experiences to on-premises line-of-business (LOB) applications and SaaS solutions.
-- **Enterprise SLA of 99.9%**. You're guaranteed at least 99.9% availability of the Microsoft Entra ID P1 or P2 service. The same SLA applies to Microsoft Entra Basic.
-- **Password reset with writeback**. Self-service password reset follows the Active Directory on-premises password policy.
-- **Cloud App Discovery feature of Microsoft Entra ID**. This feature discovers the most frequently used cloud-based applications.
-- **Conditional Access based on device, group, or location**. This lets you configure conditional access for critical resources, based on several criteria.
-- **Microsoft Entra Connect Health**. You can use this tool to gain operational insight into Microsoft Entra ID. It works with alerts, performance counters, usage patterns, and configuration settings, and presents the collected information in the Microsoft Entra Connect Health portal.
+Aunque Microsoft Entra ID tiene muchas semejanzas con AD DS, también hay muchas diferencias. Es importante tener en cuenta que usar Microsoft Entra no es lo mismo que implementar un controlador de dominio de Active Directory en una máquina virtual de Azure y agregarlo a su dominio local.
 
-In addition to these features, the Microsoft Entra ID P2 license provides extra functionalities:
+Al comparar Microsoft Entra ID con AD DS, es importante tener en cuenta las siguientes características de Microsoft Entra ID:
 
-- **Microsoft Entra ID Protection**. This feature provides enhanced functionalities for monitoring and protecting user accounts. You can define user risk policies and sign-in policies. In addition, you can review users’ behavior and flag users for risk.
-- **Microsoft Entra Privileged Identity Management**. This functionality lets you configure additional security levels for privileged users such as administrators. With Privileged Identity Management, you define permanent and temporary administrators. You also define a policy workflow that activates whenever someone wants to use administrative privileges to perform some task.
+- Microsoft Entra ID es principalmente una solución de identidad y está diseñado para aplicaciones basadas en Internet mediante el uso de las comunicaciones HTTP (puerto 80) y HTTPS (puerto 443).
+- Microsoft Entra ID es un servicio de directorio multiinquilino.
+- Los usuarios y grupos de Microsoft Entra se crean en una estructura plana y no hay unidades organizativas ni GPO.
+- No se puede consultar Microsoft Entra ID mediante LDAP; en su lugar, Microsoft Entra ID usa la API de REST a través de HTTP y HTTPS.
+- Microsoft Entra ID no usa la autenticación de Kerberos, en su lugar, usa los protocolos HTTP y HTTPS, como SAML, WS-Federation y OpenID Connect, para la autenticación y OAuth para la autorización.
+- Microsoft Entra ID incluye servicios de federación, y muchos servicios de terceros, como Facebook, se federan con Microsoft Entra ID y confían en este servicio.
 
-> [!NOTE]
-> Plans change frequently. Check Microsoft's website for the current plans and capabilities.
+# Comparación de los planes P1 y P2 de Microsoft Entra ID.
 
-# Examine Microsoft Entra Domain Services.
+El nivel P1 o P2 de Microsoft Entra ID proporciona funcionalidad adicional en comparación con las ediciones Gratis y Office 365. Sin embargo, las versiones prémium conllevan un costo adicional por aprovisionamiento de usuarios. Microsoft Entra ID P1 o P2 viene en dos versiones P1 y P2. Puede adquirirla como una licencia adicional o como parte de Microsoft Enterprise Mobility + Security, que también incluye la licencia para Azure Information Protection e Intune.
 
-Microsoft provides Microsoft Entra Domain Services as an alternative to these approaches. This service, which runs as part of the Microsoft Entra ID P1 or P2 tier, provides domain services such as Group Policy management, domain joining, and Kerberos authentication to your Microsoft Entra tenant. These services are fully compatible with locally deployed AD DS, so you can use them without deploying and managing additional domain controllers in the cloud.
+Microsoft proporciona un período de evaluación gratuita que se puede usar para probar todas las funcionalidades de Microsoft Entra ID edición P2. Las siguientes características están disponibles con la edición P1 de Microsoft Entra ID:
+
+- **Administración de grupos de autoservicio**. Simplifica la administración de grupos al otorgar permisos a los usuarios para crear y administrar grupos. Los usuarios finales pueden crear solicitudes para unirse a otros grupos y los propietarios de los grupos pueden aprobarlas y mantener la pertenencia a sus grupos.
+- **Informes y alertas de seguridad avanzados**. Puede supervisar y proteger el acceso a sus aplicaciones en la nube visualizando registros detallados que muestran informes avanzados de anomalías y patrones de acceso incoherentes. Los informes avanzados se basan en aprendizaje automático y pueden ayudarle a obtener una nueva percepción para mejorar la seguridad de acceso y responder a amenazas potenciales.
+- **Autenticación multifactor**. La autenticación multifactor (MFA) completa funciona con aplicaciones locales (mediante una red privada virtual [VPN], RADIUS y otras), Azure, Microsoft 365, Dynamics 365 y aplicaciones de terceros de la galería de Microsoft Entra. No funciona con aplicaciones comerciales que no son de explorador, como Microsoft Outlook. La autenticación multifactor completa se trata con más detalle en las siguientes unidades de esta lección.
+- **Licencias de Microsoft Identity Manager (MIM)**. MIM se integra con Microsoft Entra ID P1 o P2 para proporcionar soluciones de identidad híbrida. MIM puede enlazar varios almacenes de autenticación locales, como AD DS, LDAP, Oracle y otras aplicaciones con Microsoft Entra ID. Esto proporciona experiencias coherentes para aplicaciones de línea de negocio (LOB) locales y soluciones SaaS.
+- **Acuerdo de Nivel de Servicio de Enterprise del 99,9 %.** Se garantiza al menos una disponibilidad del 99,9 % del servicio Microsoft Entra ID P1 o P2. El mismo Acuerdo de Nivel de Servicio se aplica a Microsoft Entra Basic.
+- **Restablecimiento de contraseña con escritura diferida**. El autoservicio de restablecimiento de contraseña se rige por la directiva de contraseñas local de Active Directory.
+- **Característica Cloud App Discovery de Microsoft Entra ID**. Esta característica detecta las aplicaciones basadas en la nube más usadas.
+- **Acceso condicional basado en el dispositivo, el grupo o la ubicación**. Esto le permite configurar el acceso condicional para los recursos más importantes en función de varios criterios.
+- **Microsoft Entra Connect Health**. Puede usar esta herramienta para obtener información operativa sobre Microsoft Entra ID. Funciona con alertas, contadores de rendimiento, patrones de uso y opciones de configuración, y presenta la información recopilada en el portal de Microsoft Entra Connect Health.
+
+Además de estas características, la licencia de Microsoft Entra ID P2 proporciona funcionalidades adicionales:
+
+- **Protección de Microsoft Entra ID**. Esta característica ofrece funcionalidades mejoradas de supervisión y protección de las cuentas de usuario. Puede definir directivas de riesgo de usuario y de inicio de sesión. También puede revisar el comportamiento de los usuarios y marcar a los usuarios como de riesgo.
+- **Microsoft Entra Privileged Identity Management**. Esta funcionalidad le permite configurar niveles de seguridad adicionales para usuarios con privilegios, como los administradores. Con Privileged Identity Management, puede definir administradores permanentes y temporales. También puede definir el flujo de trabajo de una directiva que se activa cada vez que alguien quiere usar privilegios administrativos para realizar alguna tarea.
+
+> [!NOTE] NOTA
+> Los planes cambian con frecuencia. Consulte el sitio web de Microsoft para conocer los planes y las funcionalidades actuales.a Domain Services.
+
 
 ![[azure-active-directory-virtual-network-340081c4.png]]
 

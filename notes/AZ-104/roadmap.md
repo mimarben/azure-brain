@@ -44,17 +44,19 @@ Plan de estudio para AZ-104 por **autoestudio gratuito**: las 6 rutas de aprendi
 - [ ] Examen AZ-104 aprobado (fecha: _pendiente_)
 
 ---
+# [Curso](https://learn.microsoft.com/es-es/training/courses/az-104t00)
+
 
 ## Bloque 0 — Prerrequisitos (opcional)
 
 ### 0.1 [AZ-104: Prerequisites for Azure administrators](https://learn.microsoft.com/en-us/training/paths/az-104-administrator-prerequisites/) ([ES](https://learn.microsoft.com/es-es/training/paths/az-104-administrator-prerequisites/)) (2 módulos)
 
-- [ ] [Introduction to Azure Cloud Shell](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-cloud-shell/) ([ES](https://learn.microsoft.com/es-es/training/modules/intro-to-azure-cloud-shell/)) — shell autenticado en el navegador (Bash/PowerShell) → [az104-Azure Cloud Shell](../../knowledge/az104-azure-cloud-shell.md)
-- [ ] [Implementación de la infraestructura de Azure mediante plantillas de ARM de JSON](https://learn.microsoft.com/en-us/training/modules/create-azure-resource-manager-template-vs-code/) ([ES](https://learn.microsoft.com/es-es/training/modules/create-azure-resource-manager-template-vs-code/)) — plantillas ARM con VS Code → [Implementación de la infraestructura de Azure mediante plantillas de ARM de JSON (AZ-104)](../../knowledge/az104-arm-templates.md)
+- [x] [Introduction to Azure Cloud Shell](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-cloud-shell/) ([ES](https://learn.microsoft.com/es-es/training/modules/intro-to-azure-cloud-shell/)) — shell autenticado en el navegador (Bash/PowerShell) → [az104-Azure Cloud Shell](../../knowledge/az104-azure-cloud-shell.md)
+- [x] [Implementación de la infraestructura de Azure mediante plantillas de ARM de JSON](https://learn.microsoft.com/en-us/training/modules/create-azure-resource-manager-template-vs-code/) ([ES](https://learn.microsoft.com/es-es/training/modules/create-azure-resource-manager-template-vs-code/)) — plantillas ARM con VS Code → [Implementación de la infraestructura de Azure mediante plantillas de ARM de JSON (AZ-104)](../../knowledge/az104-arm-templates.md)
 
 Al reiniciar el curso, repasa los fundamentos (portales, CLI/PowerShell, ARM, suscripciones/RGs) desde el primer módulo. El módulo de plantillas ARM **se incorporó a la ruta oficial en 2026** (antes era refuerzo suelto del Bloque 3); hazlo antes de llegar al Bloque 3, donde el examen exige ARM/Bicep en profundidad.
 
-**Lab:** [03b — Manage Azure Resources by Using ARM Templates](../../raw/AZ-104T00/Instructions/Labs/LAB_03b-Manage_Azure_Resources_by_Using_ARM_Templates.md) (también refuerzo del Bloque 3)
+**Lab:** [03b — Manage Azure Resources by Using ARM Templates](../../raw/AZ-104T00/Instructions/Labs/LAB_03b-Manage_Azure_Resources_by_Using_ARM_Templates.md) (también refuerzo del Bloque 3) · ejemplo propio que sigue la unidad 4 (parámetros + salidas, ficheros por entorno): [parameters/](../../labs/AZ-104/arm-templates/parameters/README.md)
 
 > **Notas propias:**
 

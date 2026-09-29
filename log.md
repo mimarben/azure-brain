@@ -138,3 +138,13 @@ Fuente: learn.microsoft.com/es-es/training/modules/create-azure-resource-manager
 Páginas creadas: labs/AZ-104/arm-templates/parameters/ — azuredeploy.json (storageAccountType igual que la unidad 4: defaultValue Standard_LRS + allowedValues con Premium_LRS; storageAccountName adicional con minLength/maxLength; output storageEndpoint con reference()), dev/prod.parameters.json, commands.sh (despliegue inline de la unidad 4 + what-if + consulta de outputs + limpieza) y README.md.
 Páginas actualizadas: knowledge/az104-arm-templates.md (enlace de la sección Laboratorio repuntado a la nueva carpeta), notes/AZ-104/roadmap.md (lab añadido en la línea Lab del Bloque 0).
 Mantenimiento: eliminado labs/AZ-104/arm-templates/bicep-parameters/ completo (creado esa misma sesión, nunca commiteado) — el usuario pidió el ejemplo en ARM JSON puro.
+
+## [2026-09-29] refactor | Componentes arquitectónicos de Azure (AZ-104)
+Fuente: refactor de referencias — el módulo 05 del AZ-104T00 apuntaba directamente a la ficha AZ-900 por ser el mismo módulo de Learn (describe-core-architectural-components-of-azure).
+Páginas creadas: knowledge/az104-azure-architecture.md (ficha AZ-104 con plantilla _template-az104.md; sin duplicar contenido — callout que remite a la ficha AZ-900, solo enfoque operativo del examen: mover recursos y herencia RG/suscripción/MG).
+Páginas actualizadas: notes/AZ-104/roadmap.md (línea del módulo repuntada), certifications/AZ-104/INDEX.md (módulo 05 repuntado), knowledge/az900-azure-architecture.md (backlink en Relacionado), INDEX.md raíz (recuento de fichas az104-* corregido 26→28 — ya había 27 en disco).
+
+## [2026-09-29] refactor | Revertida la ficha AZ-104 de componentes arquitectónicos
+Decisión del usuario: al ser exactamente el mismo módulo de Learn que el 04 de AZ-900, se referencia directamente la ficha AZ-900 y no se mantiene una ficha AZ-104 paralela (regla de no duplicación).
+Páginas eliminadas: knowledge/az104-azure-architecture.md (creada y revertida en la misma sesión, sin commitear).
+Páginas actualizadas: notes/AZ-104/roadmap.md y certifications/AZ-104/INDEX.md (módulo 05 de vuelta a la ficha AZ-900), knowledge/az900-azure-architecture.md (retirado el backlink), INDEX.md raíz (recuento definitivo: 27 fichas az104-*).

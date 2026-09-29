@@ -7,7 +7,6 @@ updated: 2026-08-26
 sources:
   - https://learn.microsoft.com/en-us/training/modules/configure-storage-accounts/
 ---
-![[secure-storage-access-d32868ef.png]]![[assets/images/AZ-104/geo-redundant-storage.png]]![[assets/images/AZ-104/geo-redundant-storage.png]]
 # AZ-104 — Configuración de cuentas de almacenamiento
 
 Módulo 09 del [AZ-104T00](https://learn.microsoft.com/en-us/training/courses/az-104t00) ([ES](https://learn.microsoft.com/es-es/training/courses/az-104t00)) · Ruta 2 — Implementación y administración del almacenamiento · Área: Implementación y administración del almacenamiento (15–20%).
@@ -43,95 +42,114 @@ Configuración de cuentas de almacenamiento, incluida la replicación (redundanc
 - [Índice AZ-104](../certifications/AZ-104/INDEX.md)
 - [[Servicios de almacenamiento de Azure (AZ-900)]]
 
+# Introducción.
 
-# Implement Azure Storage.
+Azure Storage es la solución de almacenamiento de Microsoft para los escenarios modernos de almacenamiento de datos.
 
-[Azure Storage](https://learn.microsoft.com/en-us/azure/storage/common/storage-introduction) ([ES](https://learn.microsoft.com/es-es/azure/storage/common/storage-introduction)) is Microsoft's cloud storage solution for modern data storage scenarios. Azure Storage offers a massively scalable object store for data objects. It provides a file system service for the cloud, a messaging store for reliable messaging, and a NoSQL store.
+Supongamos que trabaja para una gran empresa de comercio electrónico que necesita almacenar y servir un gran número de imágenes de producto a sus clientes. La empresa quiere una solución escalable y fiable que pueda controlar el tráfico elevado y garantizar la durabilidad de los datos. Quieren restaurar rápidamente los datos si hay una interrupción.
 
-### Things to know about Azure Storage
+En este módulo, aprenderá a configurar cuentas de almacenamiento y a seleccionar los tipos de almacenamiento adecuados en Azure. En el módulo se tratan temas como la implementación de estrategias de replicación y la configuración del acceso seguro al almacenamiento.
 
-You can think of Azure Storage as supporting three categories of data: structured data, unstructured data, and virtual machine data. Review the following categories and think about which types of storage are used in your organization.
+El objetivo de este módulo es proporcionar a los administradores de Azure los conocimientos y aptitudes para configurar y administrar de forma eficaz las cuentas de almacenamiento de Azure.
 
+## Objetivos de aprendizaje
+
+En este módulo aprenderá a:
+
+- Identificar las características y los casos de uso de las cuentas de almacenamiento de Azure
+- Seleccione uno de los diferentes tipos de instancias de Azure Storage y cree cuentas de almacenamiento.
+- Seleccionar una estrategia de replicación de almacenamiento
+- Configure el acceso seguro de red a los puntos de conexión de almacenamiento.
+
+# Implementación de Azure Storage.
+
+[Azure Storage](https://learn.microsoft.com/es-es/azure/storage/common/storage-introduction) es Microsoft solución de almacenamiento en la nube para escenarios de almacenamiento de datos modernos. Azure Storage ofrece un almacén de objetos escalable de forma masiva para objetos de datos. Proporciona un servicio de sistema de archivos para la nube, un almacén de mensajería para mensajería confiable y un almacén de NoSQL.
+
+Azure Storage es un servicio listo para inteligencia artificial que puede usar para almacenar archivos, mensajes, tablas y otros tipos de información. Usa Azure Storage para aplicaciones como la compartición de archivos. Los desarrolladores usan Azure Storage para los datos de trabajo. Los datos de trabajo incluyen sitios web, aplicaciones móviles y aplicaciones de escritorio. Azure Storage también lo usan las máquinas virtuales iaaS y los servicios en la nube de PaaS.
+
+### Cosas que se deben saber sobre Azure Storage
+
+Puede considerar Azure Storage como compatibles con tres categorías de datos: datos estructurados, datos no estructurados y datos de máquina virtual. Revise las siguientes categorías y piense en qué tipos de almacenamiento se usan en su organización.
 ![[storage-types.png]]
 
+| Category                     | Description                                                                                                                                                                                                                                                            | Ejemplos de almacenamiento                                                                                                                                                                                                                                                                                                                                                |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Datos de máquina virtual** | El almacenamiento de datos de una máquina virtual incluye discos y archivos. Los discos son un almacenamiento en bloques persistente para las máquinas virtuales IaaS de Azure. Los archivos son unidades compartidas de archivos totalmente administradas en la nube. | El almacenamiento de los datos de máquina virtual se proporciona a través de Azure discos administrados. Las máquinas virtuales usan discos de datos para almacenar datos como archivos de base de datos, contenido estático del sitio web o código de aplicación personalizado. El número de discos de datos que puede agregar depende del tamaño de la máquina virtual. |
+| **Datos no estructurados**   | Los datos no estructurados son los menos organizados. El formato de los datos no estructurados se conoce como _no relacional_.                                                                                                                                         | Los datos no estructurados se pueden almacenar mediante Azure Blob Storage y Azure Data Lake Storage. Blob Storage es un almacén de objetos en la nube basado en REST altamente escalable. Azure Data Lake Storage es el sistema de archivos distribuido de Hadoop (HDFS) como servicio.                                                                                  |
+| **Datos estructurados**      | Los datos estructurados se almacenan en un formato relacional que tiene un esquema compartido. Los datos estructurados suelen estar en una tabla de base de datos con filas, columnas y claves. Las tablas son un almacén de escalado automático NoSQL.                | Los datos estructurados se pueden almacenar mediante Azure Table Storage, Azure Cosmos DB y Azure SQL Database. Azure Cosmos DB es un servicio de base de datos distribuido globalmente. Azure SQL Database es una base de datos como servicio totalmente administrada basada en SQL.                                                                                     |
 
-|Category|Description|Storage examples|
-|---|---|---|
-|**Virtual machine data**|Virtual machine data storage includes disks and files. Disks are persistent block storage for Azure IaaS virtual machines. Files are fully managed file shares in the cloud.|Storage for virtual machine data is provided through Azure managed disks. Data disks are used by virtual machines to store data like database files, website static content, or custom application code. The number of data disks you can add depends on the virtual machine size.|
-|**Unstructured data**|Unstructured data is the least organized. The format of unstructured data is referred to as _nonrelational_.|Unstructured data can be stored by using Azure Blob Storage and Azure Data Lake Storage. Blob Storage is a highly scalable, REST-based cloud object store. Azure Data Lake Storage is the Hadoop Distributed File System (HDFS) as a service.|
-|**Structured data**|Structured data is stored in a relational format that has a shared schema. Structured data is often contained in a database table with rows, columns, and keys. Tables are an autoscaling NoSQL store.|Structured data can be stored by using Azure Table Storage, Azure Cosmos DB, and Azure SQL Database. Azure Cosmos DB is a globally distributed database service. Azure SQL Database is a fully managed database-as-a-service built on SQL.|
-### Things to consider when using Azure Storage
 
-As you think about your configuration plan for Azure Storage, consider these prominent features.
+### Aspectos que se deben tener en cuenta al usar Azure Storage
 
-- **Consider durability and availability**. Azure Storage is durable and highly available. Redundancy ensures your data is safe during transient hardware failures. You replicate data across datacenters or geographical regions for protection from local catastrophe or natural disaster. Replicated data remains highly available during an unexpected outage.
-    
-- **Consider secure access**. Azure Storage encrypts all data. Azure Storage provides you with fine-grained control over who has access to your data.
-    
-- **Consider scalability**. Azure Storage is designed to be massively scalable to meet the data storage and performance needs of modern applications.
-    
-- **Consider manageability**. Microsoft Azure handles hardware maintenance, updates, and critical issues for you.
-    
-- **Consider data accessibility**. Data in Azure Storage is accessible from anywhere in the world over HTTP or HTTPS. Microsoft provides SDKs for Azure Storage in various languages. You can use .NET, Java, Node.js, Python, PHP, Ruby, Go, and the REST API. Azure Storage supports scripting in Azure PowerShell or the Azure CLI. The Azure portal and Azure Storage Explorer offer easy visual solutions for working with your data.
-    
-- **Consider SFTP support**. Blob Storage can use SFTP (SSH File Transfer Protocol), so you can keep using existing SFTP tools to move files directly to and from blobs. To use SFTP, enable hierarchical namespace (HNS). You can turn it on when you create the storage account (Advanced tab) or later under Settings → Configuration.
-    
-- **Consider NFSv3 protocol support**. Blob Storage can also be accessed using NFSv3, which lets Linux clients mount a container like an NFS share. NFSv3 can simplify migrations from Linux file workloads to Azure.
-    
-- **Consider default authorization preferences**. In the Azure portal, you can enable **Default to Microsoft Entra authorization**. This authentication makes role-based access control (RBAC) the default instead of shared access keys, which can improve security.
+A medida que piense en el plan de configuración para Azure Storage, tenga en cuenta estas características destacadas.
 
-# Explore Azure Storage services.
+- **Considere la durabilidad y la disponibilidad**. Azure Storage es duradero y de alta disponibilidad. La redundancia garantiza que los datos estén seguros durante errores de hardware transitorios. Puede replicar datos entre centros de datos o regiones geográficas para obtener protección frente a catástrofes locales o desastres naturales. Los datos replicados siguen teniendo una alta disponibilidad en caso de una interrupción inesperada.
+    
+- **Considere la posibilidad de proteger el acceso**. Azure Storage cifra todos los datos. Azure Storage proporciona un control específico sobre quién tiene acceso a los datos.
+    
+- **Considere la escalabilidad**. Azure Storage está diseñado para ser escalable de forma masiva para satisfacer las necesidades de almacenamiento de datos y rendimiento de las aplicaciones modernas.
+    
+- **Considere la posibilidad de administrar**. Microsoft Azure controla el mantenimiento, las actualizaciones y los problemas críticos de hardware.
+    
+- **Considere la posibilidad de accesibilidad de los datos**. Los datos de Azure Storage son accesibles desde cualquier lugar del mundo a través de HTTP o HTTPS. Microsoft proporciona SDK para Azure Storage en varios idiomas. Puede usar .NET, Java, Node.js, Python, PHP, Ruby, Go y la API REST. Azure Storage admite el scripting en Azure PowerShell o el CLI de Azure. El portal de Azure y Explorador de Azure Storage ofrecen soluciones visuales sencillas para trabajar con los datos.
+    
+- **Considere la posibilidad de admitir SFTP**. Blob Storage puede usar SFTP (protocolo de transferencia de archivos SSH), por lo que puede seguir usando herramientas SFTP existentes para mover archivos directamente hacia y desde blobs. Para usar SFTP, habilite el espacio de nombres jerárquico (HNS). Puede activarla al crear la cuenta de almacenamiento (pestaña Avanzadas) o posterior en Configuración → Configuración.
+    
+- **Considere la posibilidad de admitir el protocolo NFSv3**. también se puede acceder a Blob Storage mediante NFSv3, lo que permite a los clientes linux montar un contenedor como un recurso compartido NFS. NFSv3 puede simplificar las migraciones de cargas de trabajo de archivos de Linux a Azure.
+    
+- **Considere las preferencias de autorización predeterminadas**. En el portal de Azure, puede habilitar **Autorización predeterminada de Microsoft Entra**. Esta autenticación hace que el control de acceso basado en rol (RBAC) sea el valor predeterminado en lugar de las claves de acceso compartidas, lo que puede mejorar la seguridad.
+
+
+
+# Exploración de los servicios de Azure Storage
 
 ![[azure-storage-types.png]]
 
-### Azure Blob Storage
+### Azure Blob Storage (Servicio de almacenamiento de blobs de Azure)
 
-[Azure Blob Storage](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-overview) ([ES](https://learn.microsoft.com/es-es/azure/storage/blobs/storage-blobs-overview)) is Microsoft's object storage solution for the cloud. Blob Storage is optimized for storing massive amounts of unstructured or _nonrelational_ data, such as text or binary data. Blob Storage is ideal for:
+[Azure Blob Storage](https://learn.microsoft.com/es-es/azure/storage/blobs/storage-blobs-overview) es la solución de almacenamiento de objetos de Microsoft para la nube. Blob Storage está optimizado para almacenar grandes cantidades de datos no estructurados o _no relacionales_, como texto o datos binarios. Blob Storage resulta ideal para lo siguiente:
 
-- Serving images or documents directly to a browser.
-- Storing files for distributed access.
-- Streaming video and audio.
-- Storing data for backup and restore, disaster recovery, and archiving.
-- Storing data for analysis by an on-premises or Azure-hosted service.
+- Visualización de imágenes o documentos directamente en un explorador.
+- Almacenamiento de archivos para el acceso distribuido.
+- Streaming de audio y vídeo.
+- Almacenamiento de datos para copia de seguridad y restauración, recuperación ante desastres y archivado.
+- Almacenamiento de datos para el análisis por un servicio local u hospedado por Azure.
 
-Objects in Blob Storage can be accessed from anywhere in the world via HTTP or HTTPS. Users or client applications can access blobs via URLs, the Azure Storage REST API, Azure PowerShell, the Azure CLI, or an Azure Storage client library. The storage client libraries are available for multiple languages, including .NET, Java, Node.js, Python, PHP, and Ruby.
-
+Se puede acceder a los objetos de Blob Storage desde cualquier parte del mundo a través de HTTP o HTTPS. Los usuarios o aplicaciones cliente pueden acceder a blobs a través de direcciones URL, la API de REST de Azure Storage, Azure PowerShell, la CLI de Azure o una biblioteca de cliente de Azure Storage. Las bibliotecas de cliente de almacenamiento están disponibles para numerosos lenguajes, como **.NET, Java, Node.js, Python, Go, PHP y Ruby.**
 
 ### Azure Files
 
-[Azure Files](https://learn.microsoft.com/en-us/azure/storage/files/storage-files-introduction) ([ES](https://learn.microsoft.com/es-es/azure/storage/files/storage-files-introduction)) enables you to set up highly available network file shares. Shares can be accessed by using the Server Message Block (SMB) protocol and the Network File System (NFS) protocol. Multiple virtual machines can share the same files with both read and write access. You can also read the files by using the REST interface or the storage client libraries.
+[Azure Files](https://learn.microsoft.com/es-es/azure/storage/files/storage-files-introduction) le permite configurar recursos compartidos de archivos de red de alta disponibilidad. Se puede acceder a los recursos compartidos mediante el protocolo de Bloque de mensajes del servidor (SMB) y el protocolo Network File System (NFS). Varias máquinas virtuales pueden compartir los mismos archivos con acceso de lectura y escritura. También puede leer los archivos mediante la interfaz REST o las bibliotecas de cliente de Storage.
 
-File shares can be used for many common scenarios:
+Los recursos compartidos de archivos se pueden usar en muchos escenarios comunes:
 
-- Many on-premises applications use file shares. This feature makes it easier to migrate those applications that share data to Azure. If you mount the file share to the same drive letter that the on-premises application uses, the part of your application that accesses the file share should work with minimal, if any, changes.
-- Configuration files can be stored on a file share and accessed from multiple virtual machines. Tools and utilities used by multiple developers in a group can be stored on a file share, ensuring that everybody can find them, and that they use the same version.
-- Diagnostic logs, metrics, and crash dumps are just three examples of data that can be written to a file share and processed or analyzed later.
+- Muchas aplicaciones locales usan recursos compartidos de archivos. Esta característica facilita la migración de las aplicaciones que comparten datos en Azure. Si monta el recurso compartido de archivos en la misma letra de unidad que la aplicación local usa, la parte de la aplicación que accede al recurso compartido de archivos debe funcionar con cambios mínimos, si los hay.
+- Los archivos de configuración se pueden almacenar en un recurso compartido de archivos y se puede acceder a ellos desde varias máquinas virtuales. Las herramientas y utilidades que usan varios desarrolladores en un grupo se pueden almacenar en un recurso compartido de archivos, lo que garantiza que todos los usuarios puedan encontrarlos y que usen la misma versión.
+- Los registros de diagnóstico, las métricas y los volcados de memoria son solo tres ejemplos de datos que se pueden escribir en un recurso compartido y procesarlos o analizarlos más adelante.
 
-The storage account credentials are used to provide authentication for access to the file share. All users who have the share mounted should have full read/write access to the share.
-
+Las credenciales de la cuenta de almacenamiento se usan para proporcionar autenticación para el acceso al recurso compartido. Todos los usuarios que tengan el recurso compartido montado deben tener acceso completo de lectura y escritura al recurso compartido.
 
 ### Azure Queue Storage
 
-[Azure Queue Storage](https://learn.microsoft.com/en-us/azure/storage/queues/storage-queues-introduction) ([ES](https://learn.microsoft.com/es-es/azure/storage/queues/storage-queues-introduction)) is used to store and retrieve messages. Queue messages can be up to 64 KB in size, and a queue can contain millions of messages. Queues are used to store lists of messages to be processed asynchronously.
+[Azure Queue Storage](https://learn.microsoft.com/es-es/azure/storage/queues/storage-queues-introduction) se usa para almacenar y recuperar mensajes. La cola de mensajes puede ser de hasta 64 KB de tamaño y contener millones de mensajes. Las colas se usan para almacenar listas de mensajes y procesarlas de forma asincrónica.
 
-Consider a scenario where you want your customers to be able to upload pictures, and you want to create thumbnails for each picture. You could have your customer wait for you to create the thumbnails while uploading the pictures. An alternative is to use a queue. When the customer finishes the upload, you can write a message to the queue. Then you can use an Azure Function to retrieve the message from the queue and create the thumbnails. Each of the processing parts can be scaled separately, which gives you more control when tuning the configuration.
+Considere un escenario en el que desea que los clientes puedan cargar imágenes y le interesa crear miniaturas para cada imagen. Es posible que el cliente espere a que cree las miniaturas mientras se cargan las imágenes. Otra alternativa es utilizar una cola. Cuando el cliente finalice la carga, puede escribir un mensaje en la cola. Después, puede usar una función de Azure para recuperar el mensaje de la cola y crear las miniaturas. Cada una de las partes de procesamiento se puede escalar por separado, lo que permite un mayor control a la hora de ajustar la configuración.
 
-### Azure Table Storage
+### Azure Table Storage (almacenamiento de tablas de Azure)
 
-[Azure Table storage](https://learn.microsoft.com/en-us/azure/storage/tables/table-storage-overview) ([ES](https://learn.microsoft.com/es-es/azure/storage/tables/table-storage-overview)) is a service that stores non-relational structured data (also known as structured NoSQL data) in the cloud, providing a key/attribute store with a schemaless design. Because Table storage is schemaless, it's easy to adapt your data as the needs of your application evolve. Access to Table storage data is fast and cost-effective for many types of applications, and is typically lower in cost than traditional SQL for similar volumes of data. In addition to the existing Azure Table Storage service, there's a new Azure Cosmos DB Table API offering that provides throughput-optimized tables, global distribution, and automatic secondary indexes.
+[Azure Table storage](https://learn.microsoft.com/es-es/azure/storage/tables/table-storage-overview) es un servicio que almacena datos estructurados no relacionales (también conocidos como datos NoSQL estructurados) en la nube y proporciona un almacén de claves y atributos con un diseño sin esquema. Dado que Table Storage no tiene esquemas, es fácil adaptar los datos a medida que evolucionan las necesidades de la aplicación. El acceso a los datos de Table Storage es rápido y rentable para muchos tipos de aplicaciones y, por lo general, el costo es normalmente menor que con el SQL tradicional para volúmenes parecidos de datos. Además del servicio Azure Table Storage existente, hay una nueva oferta de Table API de Azure Cosmos DB que proporciona tablas optimizadas para el rendimiento, la distribución global y los índices secundarios automáticos.
 
-### Things to consider when choosing Azure Storage services
+### Aspectos que se deben tener en cuenta al elegir servicios de Azure Storage
 
-As you think about your configuration plan for Azure Storage, consider the prominent features of the types of Azure Storage and which options support your application needs.
+Cuando piense en su plan de configuración para Azure Storage, tenga en cuenta las características más destacadas de los tipos de Azure Storage y qué opciones son compatibles con las necesidades de su aplicación.
 
-- **Consider storage optimization for massive data**. Azure Blob Storage is optimized for storing massive amounts of unstructured data. Objects in Blob Storage can be accessed from anywhere in the world via HTTP or HTTPS. Blob Storage is ideal for serving data directly to a browser, streaming data, and storing data for backup and restore.
+- **Considere la optimización del almacenamiento para datos masivos**. Azure Blob Storage está optimizado para el almacenamiento de cantidades masivas de datos no estructurados. Se puede acceder a los objetos de Blob Storage desde cualquier parte del mundo a través de HTTP o HTTPS. Blob Storage es ideal para servir datos directamente a un navegador, transmitir datos y almacenar datos para copias de seguridad y restauración.
     
-- **Consider storage with high availability**. Azure Files supports highly available network file shares. On-premises apps use file shares for easy migration. By using Azure Files, all users can access shared data and tools. Storage account credentials provide file share authentication to ensure all users who have the file share mounted have the correct read/write access.
+- **Considere la posibilidad de almacenar con alta disponibilidad**. Azure Files admite recursos compartidos de archivos de red de alta disponibilidad. Las aplicaciones locales usan recursos compartidos de archivos para facilitar la migración. Al usar Azure Files, todos los usuarios pueden acceder a los datos y herramientas compartidos. Las credenciales de la cuenta de almacenamiento proporcionan autenticación de recurso compartido de archivos para asegurarse de que todos los usuarios que tengan montado el recurso compartido de archivos tengan el acceso correcto de lectura y escritura.
     
-- **Consider storage for messages**. Use Azure Queue Storage to store large numbers of messages. Queue Storage is commonly used to create a backlog of work to process asynchronously.
+- **Considere la posibilidad de almacenar los mensajes**. Use Azure Queue Storage para almacenar un gran número de mensajes. Queue Storage se usa normalmente para crear un trabajo pendiente que se va a procesar de forma asincrónica.
     
-- **Consider storage for structured data**. Azure Table Storage is ideal for storing structured, non-relational data. It provides throughput-optimized tables, global distribution, and automatic secondary indexes. B
-
+- **Considere la posibilidad de almacenar datos estructurados**. Azure Table Storage es idóneo para almacenar datos estructurados y no relacionales. Ofrece tablas optimizadas para el rendimiento, distribución global e índices secundarios automáticos. B
 ### Things to know about storage account types
 
 **Standard** storage accounts are backed by magnetic hard disk drives (HDD). A standard storage account provides the lowest cost per GB. You can use Standard storage for applications that require bulk storage or where data is infrequently accessed.

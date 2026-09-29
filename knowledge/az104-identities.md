@@ -165,7 +165,7 @@ La pertenencia dinámica requiere una licencia **de Microsoft Entra ID P1** (o I
 ![[groups-1.png]]
 
 
-# E# Agregar grupos en Microsoft Entra ID
+# Agregar grupos en Microsoft Entra ID
 
 Completado100 XP
 
@@ -241,99 +241,362 @@ Otro usuario quiere acceder a su correo electrónico organizacional en su teléf
 
 La unión a Microsoft Entra está pensada para aquellas organizaciones que quieran estar primero en la nube o solo en la nube. Cualquier organización puede implementar dispositivos unidos a Microsoft Entra, sin importar su tamaño ni su sector. La unión a Microsoft Entra permite el acceso tanto a aplicaciones en la nube como a los recursos locales.
 
-# Manage licenses.
+Los servicios en la nube de pago de Microsoft, como Microsoft 365, Enterprise Mobility + Security, Dynamics 365 y otros productos similares, requieren licencias. Estas licencias se asignan a cada usuario que necesita acceso a estos servicios. Para administrar licencias, los administradores usan el [Centro de administración de Microsoft 365](https://admin.microsoft.com/) o PowerShell y Microsoft Graph API. Microsoft Entra ID es la infraestructura subyacente que admite la administración de identidades para todos los servicios en la nube de Microsoft. Microsoft Entra ID almacena información sobre los estados de asignación de licencias de los usuarios.
 
-Microsoft paid cloud services, such as Microsoft 365, Enterprise Mobility + Security, Dynamics 365, and other similar products, require licenses.
+**Sin licencias basadas en grupos, la asignación de licencias en el nivel de usuario individual dificulta la administración a gran escala. Por ejemplo, para agregar o quitar licencias de usuario en función de los cambios de la organización, como los usuarios que se unen o abandonan la organización o un departamento, un administrador a menudo debe escribir un script complejo de PowerShell. Este script realiza llamadas individuales al servicio en la nube.**
 
-## License requirements
+Para abordar esos desafíos, el identificador de Microsoft Entra ahora incluye licencias basadas en grupos. Puede asignar una o varias licencias de producto a un grupo. Microsoft Entra ID garantiza que las licencias se asignen a todos los miembros del grupo. A todos los miembros nuevos que se unan al grupo se les asignarán las licencias correspondientes. Cuando salen del grupo, se quitan esas licencias. La administración de licencias elimina la necesidad de automatizar la administración de licencias a través de PowerShell para reflejar los cambios que se producen en la organización y en la estructura de departamento por cada usuario.
 
-You must have one of the following licenses to use group-based licensing:
+## Requisitos de licencia
 
-- Paid or trial subscription for Microsoft Entra ID Premium P1 and greater
-- Paid or trial edition Office 365 Enterprise E3 or greater
+Debe tener una de las siguientes licencias para usar licencias basadas en grupos:
 
-### An example
+- Suscripción de pago o de prueba para Microsoft Entra ID Premium P1 y versiones posteriores
+- Edición de pago o de prueba de Office 365 Enterprise E3 o posterior
 
-An organization has 1,000 users. All users require Office 365 Enterprise E3 licenses. Currently the organization has a PowerShell script running on premises, adding and removing licenses from users as they come and go. However, the organization wants to replace the script with group-based licensing so licenses can be managed automatically by Microsoft Entra ID.
+### Número necesario de licencias
 
-Here is what the migration process could look like:
+Para cualquier grupo con licencia, también debes tener una licencia para cada miembro único. Si bien no tiene que asignar una licencia a cada miembro del grupo, debe tener al menos suficientes licencias para incluir a todos los miembros. Por ejemplo, si tiene 1000 miembros exclusivos que forman parte de grupos con licencia en su inquilino, debe tener al menos 1000 licencias para cumplir el contrato de licencia.
 
-1. Using the Azure portal, assign the Office 365 E3 license to the **All users** group in Microsoft Entra ID.
+## Features
+
+A continuación se indican las características principales de las licencias basadas en grupos:
+
+- Se pueden asignar licencias a todos los grupos de seguridad en Microsoft Entra ID. Los grupos de seguridad se pueden sincronizar desde el entorno local mediante **Microsoft Entra Cloud Sync** (recomendado) o **Microsoft Entra Connect Sync**. También puede crear grupos de seguridad directamente en microsoft Entra ID (también denominados grupos solo en la nube) o automáticamente a través de la característica de grupo dinámico de Microsoft Entra.
+
+- Cuando se asigna una licencia de producto a un grupo, el administrador puede deshabilitar uno o varios planes de servicio del producto. Normalmente, esta asignación se realiza cuando la organización aún no está lista para empezar a usar un servicio incluido en un producto. Por ejemplo, el administrador podría asignar Microsoft 365 a un departamento, pero deshabilitar temporalmente el servicio Viva Engage.
+
+- Se admiten todos los Servicios en la nube de Microsoft que requieren licencias a nivel de usuario. Esta compatibilidad incluye todos los productos de Microsoft 365, Enterprise Mobility + Security y Dynamics 365.
+
+- Las licencias basadas en grupos solo están disponibles actualmente a través del [Centro de administración de Microsoft 365](https://admin.microsoft.com/).
+
+- Microsoft Entra ID administra automáticamente las modificaciones de licencia resultantes de los cambios de pertenencia a grupos. Habitualmente, las modificaciones de licencia entran en vigor minutos después de un cambio en la pertenencia.
+
+- Un usuario puede ser miembro de varios grupos con directivas de licencia especificadas. Un usuario también puede tener algunas licencias que se asignaron directamente, fuera de cualquier grupo. El estado de usuario resultante es una combinación de todas las licencias de producto y servicio asignadas. Si a un usuario se le asigna la misma licencia de varios orígenes, la licencia solo se consume una vez.
+
+- En algunos casos, no se pueden asignar licencias a un usuario. Por ejemplo, puede que no haya suficientes licencias disponibles en el inquilino o que los servicios en conflicto se asignen al mismo tiempo. Los administradores tienen acceso a información sobre usuarios para los que Microsoft Entra ID no pudo procesar íntegramente las licencias de grupo. Pueden realizar acciones correctivas según esa información.
+
+Algunos servicios de Microsoft no están disponibles en todas las ubicaciones. El administrador, antes de asignar una licencia a un usuario, debe especificar la ubicación de uso en el perfil de usuario.
+
+En el caso de la asignación de licencias de grupo, cualquier usuario sin una ubicación de uso especificada heredará la ubicación del directorio. Si tiene usuarios en varias ubicaciones, se recomienda establecer siempre la ubicación de uso como parte de la creación del usuario. La ubicación de uso ayuda a garantizar que el resultado de la asignación de licencias es siempre correcto y los usuarios no reciben servicios en ubicaciones que no están permitidas.
+
+## Cambio de la asignación de licencia de grupo
+
+1. Abra [https://entra.microsoft.com](https://entra.microsoft.com/) para acceder al Centro de administración de Microsoft Entra.
+2. En el panel de navegación izquierdo, abra **Grupos**.
+3. Seleccione **Todos los grupos**, después seleccione uno de los grupos disponibles.
+4. En el panel de navegación izquierdo, en **Administrar**, seleccione **Licencias**.
+
+Verá una lista de las asignaciones de licencias que se realizan actualmente. Y encuentra que tiene que usar el Centro de administración de Microsoft 365 para hacer actualizaciones.
+
+5. Revise las asignaciones actuales y, luego, seleccione **+ Asignaciones** en el menú.
+6. Abra [https://admin.microsoft.com](https://admin.microsoft.com/) para abrir el Centro de administración de Microsoft 365.
+7. Seleccione **Facturación**. A continuación, seleccione **Licencias**.
+8. Seleccione una licencia disponible de la lista.
+9. Seleccione **Grupos** en el menú situado cerca de la parte superior de la página.
+10. Seleccione la opción **+ Asignar licencias**.
+11. Elija el grupo que estaba viendo anteriormente en Microsoft Entra. Después seleccione el botón **Asignar** en la parte inferior de la página.
+12. Revise el cambio en la página Licencias del grupo. Debería poder ver el cambio tanto en el Centro de administración Microsoft Entra como en el Centro de administración Microsoft 365.
+## Identificación y resolución de problemas de asignación de licencias para un grupo en Microsoft Entra ID
+
+Las licencias basadas en grupos en Microsoft Entra ID presentan el concepto de usuarios en un estado de error de licencia. En esta sección, se explican los motivos por los que los usuarios pueden terminar en este estado.
+
+Al asignar licencias directamente a usuarios individuales, sin usar licencias basadas en grupos, es posible que se produzcan errores en la operación de asignación. Por ejemplo, al ejecutar el cmdlet de PowerShell `Set-MgUserLicense` en un objeto del usuario, el cmdlet puede generar un error por diversos motivos relacionados con la lógica de negocios. Por ejemplo, puede haber un número insuficiente de licencias o un conflicto entre dos planes de servicio que no se pueden asignar al mismo tiempo. El problema se le notifica inmediatamente.
+
+Cuando se usan licencias basadas en grupo se pueden producir los mismos errores, pero ocurren en segundo plano mientras el servicio Microsoft Entra está asignando las licencias. Por este motivo, los errores no se pueden comunicar de forma inmediata. En su lugar, se graban en el objeto de usuario y luego se notifican a través del portal administrativo. La intención original de licenciar al usuario nunca se pierde, pero se registra en un estado de error para futuras investigaciones y resoluciones.
+
+## Escasez de licencias
+
+**Problema**: no hay suficientes licencias disponibles para uno de los productos especificados en el grupo. Debe comprar más licencias para el producto o liberar licencias sin usar de otros usuarios o grupos.
+
+Para ver cuántas licencias están disponibles, vaya a **Microsoft Entra - Identidad - Facturación**, luego a **Licencias** y, por último, a **Todos los productos**.
+
+Para ver qué usuarios y grupos consumen licencias, seleccione un producto. En **Usuarios con** licencia, verá una lista de todos los usuarios que tienen licencias asignadas directamente o a través de uno o varios grupos. En **Grupos con licencias**, se muestran todos los grupos que tienen asignadas licencias de producto.
+
+**PowerShell**: los cmdlets de PowerShell informan este error como _CountViolation_.
+
+## Planes de servicio en conflicto
+
+**Problema**: uno de los productos especificados en el grupo contiene un plan de servicio que entra en conflicto con otro plan de servicio que ya está asignado al usuario a través de un producto diferente. Algunos planes de servicio están configurados de forma que no se pueden asignar al mismo usuario que otro plan de servicio relacionado.
+
+Considere el ejemplo siguiente. Un usuario tiene asignada directamente una licencia para Office 365 Enterprise _E1_, con todos los planes habilitados. El usuario se agrega a un grupo que tiene asignado el producto Office 365 Enterprise _E3_ . El producto E3 contiene planes de servicio que no pueden superponerse con los planes incluidos en E1, por lo que la asignación de licencia de grupo genera el error **Planes de servicio en conflicto**. En este ejemplo, los planes de servicio en conflicto son los siguientes:
+
+- SharePoint Online (plan 2) entra en conflicto con SharePoint Online (plan 1).
+- Exchange Online (plan 2) entra en conflicto con Exchange Online (plan 1).
+
+Para resolver este conflicto, debe deshabilitar dos de los planes. Puede deshabilitar la licencia E1 asignada directamente al usuario. Otra opción sería modificar la asignación de licencia de grupo completa y deshabilitar los planes en la licencia E3. Como alternativa, puede decidir quitar la licencia E1 del usuario si es redundante en el contexto de la licencia E3.
+
+La decisión sobre cómo resolver las licencias de producto en conflicto la toma siempre el administrador. Microsoft Entra ID no resuelve automáticamente los conflictos de licencias.
+
+**PowerShell**: los cmdlets de PowerShell informan este error como _MutuallyExclusiveViolation_.
+
+## Dependencia a esta licencia de otros productos
+
+**Problema**: uno de los productos especificados en el grupo contiene un plan de servicio que debe habilitarse para otro plan de servicio, en otro producto, para funcionar. Este error se produce cuando Microsoft Entra ID intenta quitar el plan de servicio subyacente. Por ejemplo, puede ocurrir al quitar al usuario del grupo.
+
+Para solucionar este problema, debe asegurarse de que el plan necesario se sigue asignando a los usuarios a través de otro método o de que los servicios dependientes están deshabilitados para esos usuarios. Después de hacerlo, puede quitar correctamente la licencia de grupo de esos usuarios.
+
+**PowerShell**: los cmdlets de PowerShell informan este error como _DependencyViolation_.
+
+## Ubicación de uso no permitida
+
+**Problema**: algunos servicios de Microsoft no están disponibles en todas las ubicaciones debido a las leyes y los reglamentos locales. Antes de poder asignar una licencia a un usuario, debe especificar la propiedad **Ubicación de uso** para el usuario. Puede especificar la ubicación en la sección **Usuario**, **Perfil** y luego **Editar** en Azure Portal.
+
+Cuando Microsoft Entra ID intenta asignar una licencia de grupo a un usuario cuya ubicación de uso no se admite, se produce un error y se registra un error en el usuario.
+
+Para solucionar este problema, quite usuarios de ubicaciones no compatibles del grupo con licencia. Como alternativa, si los valores de ubicación de uso actuales no representan la ubicación real del usuario, puede modificarlos para que las licencias se asignen correctamente la próxima vez (si se admite la nueva ubicación). Puede especificar la ubicación de uso en la pestaña **Propiedades** del usuario en el [Centro de administración de Microsoft Entra](https://entra.microsoft.com/).
+
+**PowerShell**: los cmdlets de PowerShell informan este error como _ProhibitedInUsageLocationViolation_.
+
+Nota:
+
+Cuando Microsoft Entra ID asigna licencias de grupo, los usuarios sin una ubicación de uso especificada heredan la ubicación del directorio. Se recomienda que los administradores establezcan los valores de ubicación de uso correctos para los usuarios antes de usar licencias basadas en grupos para cumplir con las leyes y normativas locales.
+
+## Direcciones de proxy duplicadas
+
+Si usa Exchange Online, es posible que algunos usuarios de su organización estén mal configurados con el mismo valor de dirección de proxy. Cuando el sistema de licencias basadas en grupos intenta asignar una licencia a un usuario de este tipo, se produce un error y se muestra un mensaje que indica que la dirección proxy ya está en uso".
+
+Después de resolver cualquier problema de direcciones proxy para los usuarios afectados, asegúrese de forzar el procesamiento de licencias en el grupo para asegurarse de que las licencias ahora se pueden aplicar.
+
+## Cambio de atributo de Correo de Microsoft Entra y ProxyAddresses
+
+**Problema**: al actualizar la asignación de licencias en un grupo o un usuario, es posible que vea que se han cambiado los atributos Mail y ProxyAddresses de Microsoft Entra de algunos usuarios.
+
+La actualización de la asignación de licencias en un usuario hace que se active el cálculo de la dirección de proxy, lo que puede cambiar los atributos de usuario.
+
+## Exception en registros de auditoría
+
+**Problema**: el usuario tiene LicenseAssignmentAttributeConcurrencyException como asignación de licencia en los registros de auditoría. Cuando la licencia basada en grupos intenta procesar la asignación simultánea de la misma licencia para un usuario, se registra esta excepción en el usuario. Esto suele suceder cuando un usuario es miembro de más de un grupo con la misma licencia asignada. Microsoft Entra ID vuelve a intentar procesar la licencia de usuario y resolverá el problema. No se requiere ninguna acción del cliente para corregir este problema.
+
+## Más de una licencia de producto asignada a un grupo
+
+Puede asignar más de una licencia de producto a un grupo. Por ejemplo, puede asignar Office 365 Enterprise E3 y Enterprise Mobility + Security a un grupo para habilitar fácilmente todos los servicios incluidos para los usuarios.
+
+Microsoft Entra ID intenta asignar todas las licencias especificadas en el grupo a cada usuario. Si Microsoft Entra ID no puede asignar uno de los productos debido a problemas de lógica de negocios, tampoco asignará las otras licencias del grupo. Por ejemplo, si no hay suficientes licencias para todos o si entra en conflicto con otros servicios que están habilitados para el usuario.
+
+Puede ver a qué usuarios no se les asignó el producto y comprobar qué productos se ven afectados por este problema.
+
+## Eliminación de un grupo con licencia
+
+Debe quitar todas las licencias asignadas a un grupo antes de poder eliminar el grupo. Sin embargo, la eliminación de licencias de todos los usuarios del grupo puede tardar tiempo. Pueden producirse errores si el usuario tiene asignada una licencia dependiente. Si un usuario tiene una licencia que depende de otra licencia, la cual se va a quitar debido a la eliminación de un grupo, la asignación de la licencia al usuario cambia de ser heredada a directa.
+
+Por ejemplo, considere la posibilidad de un grupo que tenga asignado Office 365 E3/E5 con un plan de servicio Skype Empresarial habilitado. Además, imagine que algunos miembros del grupo tienen licencias de audioconferencia asignadas directamente. Cuando se elimina el grupo, las licencias basadas en grupos intentan quitar Office 365 E3/E5 de todos los usuarios. Dado que Audioconferencia depende de Skype Empresarial, para cualquier usuario con Audioconferencia asignada, las licencias basadas en grupos convierten las licencias de Office 365 E3/E5 en asignaciones de licencias directas.
+
+## Administración de licencias de productos con requisitos previos
+
+Algunos productos de Microsoft Online que puede que tengas son _complementos_. Los complementos requieren un plan de servicio previo para habilitarse para un usuario o grupo antes de que se les pueda asignar una licencia. Con las licencias basadas en grupos, el sistema requiere que los planes de servicio de requisitos previos y de complementos estén presentes en el mismo grupo a fin de garantizar que los usuarios que se agreguen al grupo puedan recibir el producto totalmente operativo. Consideremos el siguiente ejemplo:
+
+**Microsoft Workplace Analytics** es un producto complemento. Contiene un único plan de servicio con el mismo nombre. Solo podemos asignar este plan de servicio a un usuario o grupo cuando también se asigne uno de los siguientes requisitos previos:
+
+- Exchange Online (plan 1)
+- Exchange Online (plan 2)
+
+Si intentamos asignar este producto por sí solo a un grupo, el portal devuelve un mensaje de notificación. Si seleccionamos los detalles del elemento, se muestra el siguiente mensaje de error:
+
+License operation failed (Error en la operación de licencia). Asegúrese de que el grupo tiene los servicios necesarios antes de agregar o quitar un servicio dependiente. **El servicio Microsoft Workplace Analytics necesita que Exchange Online (plan 2) también esté habilitado**.
+
+Para asignar esta licencia de complemento a un grupo, debemos asegurarnos de que el grupo también contenga el plan de servicio de requisito previo. Por ejemplo, podemos actualizar un grupo existente que ya contenga el producto Office 365 E3 completo y, después, agregarle el producto del complemento.
+
+También es posible crear un grupo independiente que contenga solo los productos mínimos necesarios para que el complemento funcione. Después se puede usar para proporcionar la licencia del producto complementario solo a los usuarios seleccionados. Según el ejemplo anterior, asignaría los siguientes productos al mismo grupo:
+
+- Office 365 Enterprise E3 solo con el plan de servicio Exchange Online (plan 2) habilitado
+- Microsoft Workplace Analytics
+
+A partir de ahora, todos los usuarios agregados a este grupo consumirán una licencia del producto E3 y una licencia del producto Workplace Analytics. Al mismo tiempo, esos usuarios pueden ser miembros de otro grupo que les proporcione el producto E3 completo y, aun así, consumir solo una licencia para ese producto.
+
+Sugerencia
+
+Puede crear varios grupos para cada plan de servicio de requisito previo. Por ejemplo, si usa Office 365 Enterprise E1 y Office 365 Enterprise E3 para los usuarios, puede crear dos grupos para licenciar Microsoft Workplace Analytics: uno que use E1 como requisito previo y el otro E3. Esto le permite distribuir el complemento a los usuarios de E1 y E3 sin consumir más licencias.
+
+## Forzado del proceso de licencias de grupo para resolver errores
+
+En función de los pasos que se realicen para resolver los errores, es posible que sea necesario desencadenar manualmente el procesamiento de un grupo para actualizar el estado del usuario.
+
+Por ejemplo, si libera algunas licencias quitando las asignaciones de licencias directas a los usuarios, deberá desencadenar el procesamiento de grupos que anteriormente no licenciaban completamente a todos los miembros del usuario. Para volver a procesar un grupo, vaya al panel de grupo, abra **Licencias** y, después, seleccione el botón **Reprocesar** en la barra de herramientas.
+
+## Forzado del proceso de licencias de usuario para resolver errores
+
+En función de los pasos que se realicen para resolver los errores, es posible que sea necesario desencadenar manualmente el procesamiento de un usuario para actualizar el estado del usuario.
+
+Por ejemplo, después de resolver el problema de dirección de proxy duplicado para un usuario afectado, debe desencadenar el procesamiento del usuario. Para volver a procesar un grupo, vaya al panel de usuario, abra **Licencias** y, después, seleccione el botón **Reprocesar** en la barra de herramientas.
+
+## Migración de usuarios con licencias individuales a licencias de grupo
+
+Puede tener licencias existentes implementadas para los usuarios de las organizaciones a través de la asignación directa; es decir, mediante scripts de PowerShell u otras herramientas para asignar licencias de usuario individuales. Antes de empezar a usar licencias basadas en grupos para administrar licencias en su organización, puede usar este plan de migración para reemplazar sin problemas las soluciones existentes por licencias basadas en grupos.
+
+Tenga en cuenta que debe evitar una situación en la que la migración a licencias basadas en grupos da lugar a que los usuarios pierdan temporalmente sus licencias asignadas actualmente. Cualquier proceso que produzca la eliminación de licencias debe evitarse para eliminar el riesgo de que los usuarios pierdan acceso a los servicios y sus datos.
+
+### Proceso de migración recomendado
+
+1. Tiene automatización existente (por ejemplo, PowerShell) que administra la asignación y eliminación de licencias para los usuarios. Déjelo funcionando como está.
     
-2. Confirm that license assignment has completed for all users. Go to the overview page for the group, select **Licenses**, and check the processing status at the top of the **Licenses** page.
+2. Cree un nuevo grupo de licencias (o decida qué grupos existentes usar) y asegúrese de que todos los usuarios necesarios se agregan como miembros.
     
-    - Look for “Latest license changes have been applied to all users" to confirm processing has completed.
-    - Look for a notification on top about any users for whom licenses were not successfully assigned. Did we run out of licenses for some users? Do some users have conflicting license plans that prevent them from inheriting group licenses?
-3. You need to check a few users to verify that they have both the direct and group licenses applied. Go to the profile page for a user, select Licenses, and examine the state of licenses.
+3. Asigne las licencias necesarias a esos grupos; su objetivo debe ser reflejar el mismo estado de licencia que aplica su automatización existente (por ejemplo, PowerShell) a esos usuarios.
+    
+4. Compruebe que las licencias se aplican a todos los usuarios de esos grupos. Esta aplicación se puede hacer comprobando el estado de procesamiento en cada grupo y los registros de auditoría.
+    
+    - Puede realizar una comprobación aleatoria de algunos usuarios individuales examinando los detalles de sus licencias. Observará que tienen las mismas licencias asignadas "directamente" o "heredadas" de los grupos.
+    - Puede ejecutar un script de PowerShell para [comprobar cómo se asignan las licencias a los usuarios](https://learn.microsoft.com/es-es/azure/active-directory/enterprise-users/licensing-group-advanced).
+    - Cuando se asigna la misma licencia de producto al usuario directamente y a través de un grupo, el usuario solo consume una licencia. Por lo tanto, no se requieren más licencias para realizar la migración.
+    
+5. Compruebe que no se ha producido ningún error en las asignaciones de licencia comprobando si cada grupo tiene usuarios en estado de error.
     
 
-- This is the expected user state during migration:
+Considere quitar las asignaciones directas originales. Le recomendamos que lo haga gradualmente y que supervise primero el resultado en un subconjunto de usuarios. Si deja las asignaciones directas originales a los usuarios, cuando los usuarios abandonen sus grupos con licencia, conservarán las licencias asignadas directamente, y puede que no sea lo que quiere.
 
-![Screenshot of the Licenses page. See the license has direct assignments to some users, and that it has inherited users from a group.](https://learn.microsoft.com/en-us/training/wwl-sci/create-configure-manage-identities/media/expected-user-state.png)
+### Un ejemplo
 
-4. After confirming that both direct and group licenses are equivalent, you can start removing direct licenses from users. You can test this by removing them for individual users in the portal and then run automation scripts to have them removed in bulk. Here's an example of the same user with the direct licenses removed through the portal. Notice that the license state remains unchanged, but we no longer see direct assignments.
+Una organización tiene 1000 usuarios. Todos los usuarios necesitan licencias **Office 365 Enterprise E3.** Actualmente, la organización tiene un script de PowerShell que se ejecuta de forma local, que agrega y quita licencias de los usuarios a medida que entran y salen. Sin embargo, la organización quiere reemplazar el script por licencias basadas en grupos para que Microsoft Entra ID pueda administrar automáticamente las licencias.
 
-![Screenshot of the Licenses page in Microsoft Entra ID after the migration is completed.](https://learn.microsoft.com/en-us/training/wwl-sci/create-configure-manage-identities/media/direct-licenses-removed.png)
+El proceso de migración podría ser como el siguiente:
 
-## Change license assignments for a user or group in Microsoft Entra ID
+1. Con Azure Portal, asigne la licencia de Office 365 E3 al grupo **Todos los usuarios** de Microsoft Entra ID.
+    
+2. Confirme que la asignación de licencia se ha completado para todos los usuarios. Vaya a la página de información general del grupo, seleccione **Licencias** y compruebe el estado de procesamiento en la parte superior de la página **Licencias**.
+    
+    - Busque "Latest license changes have been applied to all users" ("Los últimos cambios de licencia se han aplicado a todos los usuarios") para confirmar que se ha completado el procesamiento.
+    - Busque una notificación en la parte superior acerca de los usuarios para quienes las licencias no se asignaron correctamente. ¿Nos quedamos sin licencias para algunos usuarios? ¿Algunos usuarios tienen planes de licencia en conflicto que les impiden heredar licencias de grupo?
+3. Deberá revisar algunos usuarios para verificar que tengan aplicadas tanto licencias directas como de grupo. Vaya a la página de perfil de un usuario, seleccione Licencias y examine el estado de estas.
+    
 
-This section describes how to move users and groups between service license plans in Microsoft Entra ID. The goal is to ensure that there's no loss of service or data during the license change. Users should switch between services seamlessly. The license plan assignment steps in this section describe changing a user or group on Office 365 E1 to Office 365 E3, but the steps apply to all license plans. When you update license assignments for a user or group, the license assignment removals and new assignments are made simultaneously so that users don't lose access to their services during license changes or see license conflicts between plans.
+- Este es el estado de usuario esperado durante la migración:
 
-Before you update the license assignments, verify certain assumptions are true for all of the users or groups to be updated. If the assumptions aren't true for all of the users in a group, the migration might fail for some. As a result, some of the users might lose access to services or data. Ensure that:
+![Recorte de la página](https://learn.microsoft.com/es-es/training/wwl-sci/create-configure-manage-identities/media/expected-user-state.png)
 
-- Users have the current license plan that's assigned to a group and inherited by the user and not assigned directly.
-- You have enough available licenses for the license plan you're assigning. If you don't have enough licenses, some users might not be assigned the new license plan. You can check the number of available licenses.
-- Always confirm users don't have assigned service licenses that can conflict with the desired license or prevent removal of the current license. For example, a license from a service such as Workplace Analytics or Project Online that has a dependency on other services.
-- If you manage groups on-premises and sync them into Microsoft Entra ID via Microsoft Entra Connect, then you add or remove users by using your on-premises system. It can take some time for the changes to sync with Microsoft Entra ID to be picked up by group licensing.
-- If you're using Microsoft Entra dynamic group memberships, you add or remove users by changing their attributes, but the update process for license assignments remains the same.# Create custom security attributes
+4. Después de confirmar que las licencias directas y de grupo son equivalentes, puede empezar a quitar licencias directas de usuarios. Puede probar esto quitándolas para usuarios individuales en el portal y luego ejecutando scripts de automatización para que se eliminen en masa. Este es un ejemplo del mismo usuario con sus licencias directas eliminadas desde el portal. Observe que el estado de licencia no cambia, pero ya no vemos las asignaciones directas.
 
-Completed100 XP
+![Recorte de pantalla de la página Licencias en Microsoft Entra ID una vez finalizada la migración.](https://learn.microsoft.com/es-es/training/wwl-sci/create-configure-manage-identities/media/direct-licenses-removed.png)
 
-- 4 minutes
+## Cambio de las asignaciones de licencia de un usuario o grupo en Microsoft Entra ID
 
-![Screenshot of the Custom Security Attributes dialog. Create new security attributes of type String, Integer, or Boolean.](https://learn.microsoft.com/en-us/training/wwl-sci/create-configure-manage-identities/media/custom-security-attributes.png)
+En esta sección, se describe cómo trasladar usuarios y grupos entre planes de licencia de servicio en Microsoft Entra ID. El objetivo es asegurarse de que no haya pérdida de servicio o datos durante el cambio de licencia. Los usuarios deberían cambiar entre servicios sin problemas. Los pasos de la asignación del plan de licencia que aparecen en esta sección describen el cambio de un usuario o grupo en Office 365 E1 a Office 365 E3, pero se aplican a todos los planes de licencia. Al actualizar las asignaciones de licencias de un usuario o grupo, las eliminaciones de asignaciones de licencias y las nuevas asignaciones se realizan simultáneamente para que los usuarios no pierdan el acceso a sus servicios durante los cambios de licencia o vean conflictos de licencia entre planes.
 
-## What is a custom security attribute?
+Antes de actualizar las asignaciones de licencia, debe comprobar que se cumplen ciertas suposiciones para todos los usuarios o grupos que se van a actualizar. Si no se cumplen las suposiciones para todos los usuarios de un grupo, es posible que algunos no puedan realizar la migración. Como resultado, algunos de los usuarios podrían perder el acceso a los servicios o a los datos. Asegúrese de lo siguiente:
 
-Custom security attributes in Microsoft Entra ID are business-specific attributes (key-value pairs) that you can define and assign to Microsoft Entra objects. These attributes can be used to store information, categorize objects, or enforce fine-grained access control over specific Azure resources.
+- Los usuarios tienen el plan de licencia actual que se asigna a un grupo y hereda el usuario, y no uno asignado directamente.
 
-### Why use custom security attributes?
+- Tiene suficientes licencias disponibles para el plan de licencias que va a asignar. Si no tiene suficientes licencias, es posible que a algunos usuarios no se les asigne el nuevo plan de licencias. Puede comprobar el número de licencias disponibles.
 
-- Extend user profiles, such as add Hourly Salary to all my employees.
-- Ensure only administrators can see the Hourly Salary attribute in my employees' profiles.
-- Categorize hundreds or thousands of applications to easily create a filterable inventory for auditing.
-- Grant users access to the Azure Storage blobs belonging to a project.
+- Confirme siempre que los usuarios no tengan otras licencias de servicio asignadas que puedan entrar en conflicto con la licencia deseada o impedir la eliminación de la licencia actual. Por ejemplo, una licencia de un servicio como Workplace Analytics o Project Online que tiene una dependencia en otros servicios.
 
-### What can I do with custom security attributes?
+- Si administra grupos locales y los sincroniza con Microsoft Entra ID a través de Microsoft Entra Connect, agregue o quite usuarios mediante el sistema local. Los cambios pueden tardar algún tiempo en sincronizarse con Microsoft Entra ID para que se apliquen en las licencias de grupo.
 
-- Define business-specific information (attributes) for your tenant.
-- Add custom security attributes to Microsoft Entra users and enterprise applications (service principals).
-- Manage Microsoft Entra objects using custom security attributes with queries and filters.
-- Provide attribute governance so attributes determine who can get access.
+- Si usa pertenencias dinámicas a grupos de Microsoft Entra, se agregan o quitan usuarios cambiando sus atributos, pero el proceso de actualización de las asignaciones de licencias sigue siendo el mismo.
 
-Custom security attributes are **not** supported in Microsoft Entra Domain Services, SAML token claims, or JSON Web Token (JWT) claims.
+# Cambiar las asignaciones de licencias de usuario
 
-### Features of custom security attributes
-
-- Available tenant-wide
-- Include a description
-- Support different data types: Boolean, integer, string
-- Support single value or multiple values
-- Support user-defined free-form values or predefined values
-- Assign custom security attributes to directory synced users from an on-premises Active Directory.
-
-# Explore automatic user creation.
-
-![[automatic-user-provisioning.png]]
+**Necesidades del entorno del ejercicio**: este laboratorio supone que tiene un inquilino básico de Microsoft Entra con al menos derechos de administrador de usuarios para completarlo. Puede obtener una suscripción de evaluación gratuita en [Probar Microsoft Azure de forma gratuita](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn_7a2f247d-253d-2c7d-0bb0-a083a6355e75)
 
 
-### Components of SCIM (System for Cross-Domain Identity Management)
-- **HCM system** - Applications and technologies that enable Human Capital Management process and practices that support and automate HR processes throughout the employee lifecycle.
-- **Microsoft Entra Provisioning Service** - Uses the SCIM 2.0 protocol for automatic provisioning. The service connects to the SCIM endpoint for the application, and uses the SCIM user object schema and REST APIs to automate provisioning and deprovisioning of users and groups.
-- **Microsoft Entra ID** - User repository used to manage the lifecycle of identities and their entitlements.
-- **Target system** - Application or system that has SCIM endpoint and works with the Microsoft Entra provisioning to enable automatic provisioning of users and groups.
-### Why use SCIM?
-System for Cross-Domain Identity Management (SCIM) is an open standard protocol for automating the exchange of user identity information between identity domains and IT systems. SCIM ensures that employees added to the Human Capital Management (HCM) system automatically have accounts created in Microsoft Entra ID or Windows Server Active Directory.
-### API-driven inbound provisioning
-Not all HR systems expose a SCIM endpoint. For these scenarios, Microsoft Entra ID supports **API-driven inbound provisioning**, which reached general availability in March 2024. Instead of requiring the source system to push data via SCIM, any automation tool, or script can retrieve workforce data from any system of record and send it to the Microsoft Entra provisioning API.
+## Creación de un nuevo usuario en microsoft Entra ID
 
+1. Vaya al [Centro de administración de Microsoft Entra](https://entra.microsoft.com/).
+    
+2. En el panel de navegación izquierdo, en **Identidad**, seleccione **Usuarios**.
+    
+3. En la página Usuarios, en el menú, seleccione **+ Nuevo usuario** y, a continuación, **Crear nuevo usuario**.
+    
+4. Cree un usuario con esta información:
+
+|**Configuración**|**Valor**|
+|---|---|
+|Nombre de usuario|DominiqueK|
+|Nombre|Dominique Koch|
+|Nombre|Dominique|
+|Apellido|Koch|
+|Contraseña|Crear una contraseña única para el usuario|
+|Ubicación de uso|Selección de la ubicación de uso preferida|
+5. Cuando haya finalizado, verifique que la cuenta de Dominique Koch se muestra en la lista **Todos los usuarios**.
+
+## Actualización de las asignaciones de licencias de usuario
+
+La asignación de licencias a usuarios individuales se administra a través del Centro de administración de Microsoft 365.
+
+1. Abra el [Centro de administración de Microsoft 365](https://admin.microsoft.com/).
+2. Seleccione **Facturación** y, después, **Licencias**.
+3. Seleccione una licencia disponible de la lista.
+4. Seleccione **Usuarios con licencia** en el menú situado cerca de la parte superior de la página.
+5. Seleccione **+ Asignar licencias**.
+6. Busque y seleccione **Dominique Koch**, luego seleccione **Asignar** en la parte inferior de la página.
+7. Cuando haya finalizado, compruebe que la licencia aparece en el perfil de Dominique Koch en el Centro de administración de Microsoft Entra en **Identidad**>**Usuarios**>, seleccione el usuario y luego >**Licencias**.
+
+# Creación de atributos de seguridad personalizados.
+
+![[Pasted image 20260929085302.png]]
+
+## ¿Qué es un atributo de seguridad personalizado?
+
+Los atributos de seguridad personalizados de Microsoft Entra ID son atributos específicos de la empresa (pares clave-valor) que puede definir y asignar a objetos de Microsoft Entra. Estos atributos se pueden usar para almacenar información, clasificar objetos o aplicar un control de acceso específico sobre recursos específicos de Azure.
+
+### ¿Por qué se utilizan los atributos de seguridad personalizados?
+
+- Amplíe los perfiles de usuario, añada por ejemplo el salario por hora de todos los empleados.
+- Asegúrese de que solo los administradores puedan ver el atributo Salario por hora en los perfiles de mis empleados.
+- Clasifique cientos o miles de aplicaciones para crear fácilmente un inventario que se pueda filtrar para auditoría.
+- Conceda a los usuarios acceso a los blobs de Azure Storage que pertenecen a un proyecto.
+
+### ¿Qué puedo hacer con los atributos de seguridad personalizados?
+
+- Defina información específica del negocio (atributos) para el inquilino.
+- Agregue atributos de seguridad personalizados a usuarios de Microsoft Entra y a aplicaciones empresariales (principales de servicio).
+- Administre objetos de Microsoft Entra mediante atributos de seguridad personalizados con consultas y filtros.
+- Proporcione gobernanza de atributos para que los atributos determinen quién puede obtener acceso.
+
+Los atributos de seguridad personalizados **no** se admiten en reclamaciones de Microsoft Entra Domain Services, reclamaciones de token SAML o JSON Web Token (JWT).
+
+### Características de atributos de seguridad personalizados
+
+- Están disponibles para todo el inquilino
+- Incluir una descripción
+- Compatibilidad con diferentes tipos de datos: booleano, entero, cadena
+- Compatibilidad con un valor único o varios valores
+- Compatibilidad con valores de forma libre definidos por el usuario o valores predefinidos
+- Asignación de atributos de seguridad personalizados a los usuarios sincronizados de directorio desde un Active Directory local.
+
+# Exploración de la creación automática de usuarios.
+
+![[Pasted image 20260929090101.png]]
+
+### Componentes de SCIM (sistema para administración de identidades entre dominios)
+
+- **Sistema HCM** : aplicaciones y tecnologías que permiten el proceso y las prácticas de gestión de capital humano que admiten y automatizan procesos de RR. HH. a lo largo del ciclo de vida de los empleados.
+
+- **Microsoft Entra Provisioning Service** : usa el protocolo SCIM 2.0 para el aprovisionamiento automático. El servicio se conecta al punto de conexión SCIM de la aplicación y usa el esquema de objetos de usuario de SCIM y las API REST para automatizar el aprovisionamiento y desaprovisionamiento de usuarios y grupos.
+
+- **Microsoft Entra ID** : repositorio de usuarios que se usa para administrar el ciclo de vida de las identidades y sus derechos.
+
+- **Sistema de destino** - Aplicación o sistema que tiene el punto de conexión SCIM y funciona con el aprovisionamiento de Microsoft Entra para habilitar el aprovisionamiento automático de usuarios y grupos.
+
+### ¿Por qué usar SCIM?
+
+**System for Cross-Domain Identity Management (SCIM)** es un protocolo estándar abierto para automatizar el intercambio de información de identidad de usuario entre dominios de identidad y sistemas de TI. SCIM garantiza que los empleados agregados al sistema de Administrador de conexiones híbridas (HCM) tengan cuentas creadas automáticamente en Microsoft Entra ID o en Windows Server Active Directory. Los atributos y perfiles de usuario se sincronizan entre los dos sistemas, la actualización o la eliminación de usuarios en función del estado de usuario o el cambio de rol.
+
+La clave es mantener actualizados los sistemas de identidad. Si un usuario se puede desaprovisionar automáticamente de Microsoft Entra ID tan pronto como se quite de los sistemas de RR. HH., tendrá menos preocupación sobre una posible infracción.
+
+### Aprovisionamiento de entrada controlado por API
+
+No todos los sistemas de RR. HH. exponen un punto de conexión SCIM. En estos escenarios, microsoft Entra ID admite el **aprovisionamiento entrante controlado por API**, que alcanzó la disponibilidad general en marzo de 2024. En lugar de requerir que el sistema de origen inserte datos a través de SCIM, cualquier herramienta de automatización o script puede recuperar datos de recursos de cualquier sistema de registro y enviarlos a la API de aprovisionamiento de Microsoft Entra. Entre los orígenes autoritativos admitidos se incluyen **Workday, SAP SuccessFactors** y cualquier sistema de RR. HH. personalizado integrado a través de la API. Este enfoque ofrece a las organizaciones flexibilidad para automatizar la administración del ciclo de vida de las identidades, independientemente de las funcionalidades de integración nativas de su plataforma de RR. HH.
+
+
+## Recursos
+
+Use estos recursos para encontrar más información:
+
+- [Inicio rápido: Creación y asignación de una cuenta de usuario](https://learn.microsoft.com/es-es/entra/identity/enterprise-apps/add-application-portal-assign-users)
+    
+- [Creación masiva de usuarios en Microsoft Entra ID](https://learn.microsoft.com/es-es/entra/identity/users/users-bulk-add)
+    
+- [Creación de un grupo básico y adición de miembros mediante el identificador de Entra de Microsoft](https://learn.microsoft.com/es-es/entra/fundamentals/how-to-manage-groups)
+    
+- [Crear o actualizar un grupo de pertenencia dinámica en Microsoft Entra ID](https://learn.microsoft.com/es-es/entra/identity/users/groups-create-rule)
+    
+- [¿Qué es Microsoft Entra Cloud Sync?](https://learn.microsoft.com/es-es/entra/identity/hybrid/cloud-sync/what-is-cloud-sync)
+    
+- [Administración de solicitudes de licencia](https://learn.microsoft.com/es-es/microsoft-365/commerce/licenses/manage-license-requests)
+    
+- [Asignación de licencias a usuarios: Centro de administración de Microsoft 365](https://learn.microsoft.com/es-es/microsoft-365/admin/manage/assign-licenses-to-users)
+    
+- [Planear la implementación de dispositivos de Microsoft Entra](https://learn.microsoft.com/es-es/entra/identity/devices/plan-device-deployment)
+    
+- [Conceptos de aprovisionamiento de entrada controlados por API](https://learn.microsoft.com/es-es/entra/identity/app-provisioning/inbound-provisioning-api-concepts)

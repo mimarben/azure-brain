@@ -8,7 +8,7 @@ sources:
   - https://learn.microsoft.com/en-us/training/modules/allow-users-reset-their-password/
 ---
 
-# AZ-104 — Restablecimiento de contraseñas con SSPR
+# AZ-104 - Restablecimiento de contraseñas con SSPR (Self-Service Password Reset)
 
 Módulo 08 del [AZ-104T00](https://learn.microsoft.com/en-us/training/courses/az-104t00) ([ES](https://learn.microsoft.com/es-es/training/courses/az-104t00)) · Ruta 1 — Administración de identidades y gobernanza · Área: Administración de identidades y gobernanza en Azure (20–25%).
 
@@ -18,7 +18,7 @@ Evaluar el autoservicio de restablecimiento de contraseña (SSPR) para que los u
 
 ## Resumen en mis palabras
 
-> *(pendiente — rellenar al estudiar el módulo)*
+> *Imaginemos que somos un administrador de TI de una organización minorista de gran tamaño. Su organización comienza a usar Microsoft Entra ID para permitir que los empleados inicien sesión de forma segura y usen aplicaciones de software como servicio (SaaS).*
 
 ## Por qué importa para el examen
 
@@ -40,258 +40,164 @@ Evaluar el autoservicio de restablecimiento de contraseña (SSPR) para que los u
 - [Índice AZ-104](../certifications/AZ-104/INDEX.md)
 - [[Entra ID]]
 
-# What is self-service password reset in Microsoft Entra ID?
-
-You've been asked to assess ways to reduce help-desk costs in your retail organization. You've noticed that the support staff spends a lot of their time resetting passwords for users. Users often complain about delays with this process, and these delays impact their productivity. You want to understand how you can configure Azure to allow users to manage their own passwords.
-
-In this unit, you'll learn how self-service password reset (SSPR) works in Microsoft Entra ID.
-
-## Why use SSPR?
-
-In Microsoft Entra ID, any user can change their password if they're already signed in. But if they're not signed in, forgot their password, or it's expired, they'll need to reset their password. With SSPR, users can reset their passwords in a web browser or from a Windows sign-in screen to regain access to Azure, Microsoft 365, and any other application that uses Microsoft Entra ID for authentication.
-
-SSPR reduces the load on administrators because users can fix password problems themselves without having to call the help desk. Also, it minimizes the productivity impact of a forgotten or expired password. Users don't have to wait until an administrator is available to reset their password.
-
-## How SSPR works
-
-The user initiates a password reset either by going directly to the password-reset portal, or by selecting the **Can't access your account** link on a sign-in page. The reset portal takes these steps:
-
-1. **Localization**: The portal checks the browser's locale setting and renders the SSPR page in the appropriate language.
-2. **Verification**: The user enters their username and passes a CAPTCHA to ensure that it's a user and not a bot.
-3. **Authentication**: The user enters the required data to authenticate their identity. They might enter a code or answer security questions.
-4. **Password reset**: If the user passes the authentication tests, they can enter a new password and confirm it.
-5. **Notification**: A message is sent to the user to confirm the reset.
-
-There are several ways you can customize the SSPR user experience. For example, you can add your company logo to the sign-in page so users know they're in the right place to reset their password.
-
-## Authenticate a password reset
-
-It's critical to verify a user's identity before you allow a password reset. Malicious users might exploit any weakness in the system to impersonate that user. Azure supports six different ways to authenticate reset requests.
-
-As an administrator, you can choose the methods to use when you configure SSPR. Enable two or more of these methods so that users can choose the ones they can easily use. The methods are:
-
-| Authentication method   | How to register                                                                                                               | How to authenticate for a password reset                                                                                              |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| Mobile app notification | Install the Microsoft Authenticator app on your mobile device, then register it on the multifactor authentication setup page. | Azure sends a notification to the app, which you can either verify or deny.                                                           |
-| Mobile app code         | This method also uses the Authenticator app, and you install and register it in the same way.                                 | Enter the code from the app.                                                                                                          |
-| Email                   | Provide an email address that's external to Azure and Microsoft 365.                                                          | Azure sends a code to the address, which you enter in the reset wizard.                                                               |
-| Mobile phone            | Provide a mobile phone number.                                                                                                | Azure sends a code to the phone in an SMS message, which you enter in the reset wizard. You can also choose to get an automated call. |
-| Office phone            | Provide a nonmobile phone number.                                                                                             | You receive an automated call to this number and press #.                                                                             |
-| Security questions      | Select questions such as "In what city was your mother born?" and save their responses.                                       | Answer the questions.                                                                                                                 |
-
-### Require the minimum number of authentication methods
-
-You can specify the minimum number of methods that the user must set up, either one or two. For example, you might enable the mobile app code, email, office phone, and security questions methods and specify a minimum of two methods. Users can then choose the two methods they prefer, like mobile app code and email.
-
-For the security-question method, you can specify a minimum number of questions the user must set up to register for this method. You also can specify a minimum number of questions they must answer correctly to reset their password.
-
-After your users register the required information for the minimum number of methods you've specified, they're considered registered for SSPR.
-
-### Recommendations
-
-- Enable two or more of the authentication reset request methods.
-- Use the mobile app notification or code as the primary method. But also enable the email or office phone methods to support users without mobile devices.
-- The mobile phone method isn't a recommended method, because it's possible to send fraudulent SMS messages.
-- The security-question option is the least recommended method, because the answers to the security questions might be known to other people. Only use the security-question method in combination with at least one other method.
-
-### Accounts associated with administrator roles
-
-- A strong, two-method authentication policy is always applied to accounts with an administrator role, regardless of your configuration for other users.
-- The security-question method isn't available to accounts associated with an administrator role.
-
-## Configure notifications
-
-Administrators can choose how users are notified of password changes. There are two options you can enable:
-
-- **Notify users on password resets**: The user who resets their own password is notified to their primary and secondary email addresses. If the reset was done by a malicious user, this notification alerts the user, who can take mitigation steps.
-- **Notify all admins when other admins reset their password**: All administrators are notified when another administrator resets their password.
-
-## License requirements
-
-There are two editions of Microsoft Entra ID, Premium P1 and Premium P2. The password-reset functionality you can use depends on your edition.
-
-Any user who is signed in can change their password, regardless of the edition of Microsoft Entra ID.
-
-What if you're not signed in, and you've forgotten your password or your password has expired? In this case, you can use SSPR in Microsoft Entra ID P1 or P2. It's also available with Microsoft 365 Apps for business or Microsoft 365.
-
-In a hybrid situation, where you have Active Directory on-premises and Microsoft Entra ID in the cloud, any password change in the cloud must be written back to the on-premises directory. This writeback support is available in Microsoft Entra ID P1 or P2. It's also available with Microsoft 365 Apps for business.
-
-## SSPR deployment options
-
-You can deploy SSPR with password writeback by using [Microsoft Entra Connect](https://learn.microsoft.com/en-us/entra/identity/authentication/tutorial-enable-sspr-writeback/) ([ES](https://learn.microsoft.com/es-es/entra/identity/authentication/tutorial-enable-sspr-writeback/)) or [cloud sync](https://learn.microsoft.com/en-us/entra/identity/authentication/tutorial-enable-cloud-sync-sspr-writeback/) ([ES](https://learn.microsoft.com/es-es/entra/identity/authentication/tutorial-enable-cloud-sync-sspr-writeback/)), depending on user needs. You can deploy each option side-by-side in different domains to target different sets of users. This helps existing users on-premises to write back password changes, while adding an option for users in disconnected domains because of a company merger or split. Users from an existing on-premises domain can use Microsoft Entra Connect, while new users from a merger can use cloud sync in another domain.
-
-Cloud sync can also provide higher availability, because it doesn't rely on a single instance of Microsoft Entra Connect. For a feature comparison between the two deployment options, see [Comparison between Microsoft Entra Connect and cloud sync](https://learn.microsoft.com/en-us/entra/identity/hybrid/cloud-sync/what-is-cloud-sync#how-is-azure-ad-connect-cloud-sync-different-from-azure-ad-connect-sync/) ([ES](https://learn.microsoft.com/es-es/entra/identity/hybrid/cloud-sync/what-is-cloud-sync#how-is-azure-ad-connect-cloud-sync-different-from-azure-ad-connect-sync/)).
+# Permitir que los usuarios restablezcan sus contraseñas con el autoservicio de restablecimiento de contraseña de Microsoft Entra.
 
 
-# Implement Microsoft Entra self-service password reset
+# Introducción.
 
-You've decided to implement self-service password reset (SSPR) in Microsoft Entra ID for your organization. You want to start using SSPR for a group of 20 users in the marketing department as a trial deployment. If everything works well, you'll enable SSPR for your whole organization.
+Imaginemos que somos un administrador de TI de una organización minorista de gran tamaño. Su organización comienza a usar Microsoft Entra ID para permitir que los empleados inicien sesión de forma segura y usen aplicaciones de software como servicio (SaaS). También permite el acceso a los recursos de la organización en Microsoft 365. Está sobrecargado con las solicitudes de restablecimiento de contraseña porque actualmente restablece manualmente las contraseñas de los empleados. Para que estos empleados vuelvan a ser productivos rápidamente y la carga de trabajo se reduzca, decidimos evaluar y configurar el autoservicio de restablecimiento de contraseña en Microsoft Entra ID.
 
-In this unit, you'll learn how to enable SSPR in Microsoft Entra ID.
+En este módulo, veremos cómo Azure admite esta característica y cómo podemos configurarla. Solo las suscripciones de pago pueden aprovechar esto, mientras que las suscripciones gratuitas y de pago por uso no pueden hacerlo.
 
-## Prerequisites
+Al término de este módulo, sabremos configurar el autoservicio de restablecimiento de contraseña en Microsoft Entra ID.
 
-Before you start to configure SSPR, you need a:
 
-- **Microsoft Entra organization**: This organization must have at least a P1 or P2 trial license enabled.
-- **Microsoft Entra account with Authentication Policy Administrator role**: You'll use this account to set up SSPR.
-- **Non-administrative user account**: You'll use this account to test SSPR. It's important that this account isn't an administrator, because Microsoft Entra imposes extra requirements on administrative accounts for SSPR. This user, and all user accounts, must have a valid license to use SSPR.
-- **Security group with which to test the configuration**: The non-administrative user account must be a member of this group. You'll use this security group to limit who you roll SSPR out to.
+# ¿Qué es el autoservicio de restablecimiento de contraseña de Microsoft Entra ID?.
 
-## Scope of SSPR rollout
+Se le ha pedido que evalúe las maneras de reducir los costos del departamento de soporte técnico en la organización comercial. Se ha detectado que el personal de soporte técnico dedica mucho tiempo a restablecer las contraseñas de los usuarios. A menudo, los usuarios se quejan de retrasos con este proceso y estos retrasos afectan a su productividad. Queremos saber cómo podemos configurar Azure para permitir que los usuarios administren sus propias contraseñas.
+En esta unidad, veremos cómo funciona el autoservicio de restablecimiento de contraseña (SSPR) de Microsoft Entra ID.
 
-There are three settings for the **Self-service password reset enabled** property:
+## ¿Por qué usar SSPR?
 
-- **None**: No users in the Microsoft Entra organization can use SSPR. This value is the default.
-- **Selected**: Only the members of the specified security group can use SSPR. You can use this option to enable SSPR for a targeted group of users who can test it and verify that it works as expected. When you're ready to roll it out broadly, set the property to **Enabled** so that all users have access to SSPR.
-- **All**: All users in the Microsoft Entra organization can use SSPR.
+En Microsoft Entra ID, cualquier usuario puede cambiar su contraseña si ya ha iniciado sesión. Pero si no ha iniciado sesión, olvidó su contraseña o ha expirado, tendrá que restablecer su contraseña. Con SSPR, los usuarios pueden restablecer sus contraseñas en un explorador web o en una pantalla de inicio de sesión de Windows para poder volver a acceder a Azure, Microsoft 365 y cualquier otra aplicación que use Microsoft Entra ID para la autenticación.
 
-## Configure SSPR
+El SSPR reduce la carga de los administradores porque los usuarios pueden solucionar los problemas relacionados con sus contraseñas por sí mismos, sin tener que acudir al departamento de soporte técnico. Además, reduce el impacto en la productividad que conlleva una contraseña olvidada o caducada. Los usuarios no tienen que esperar a que un administrador esté disponible para restablecer su contraseña.
 
-Here are the high-level steps to configure SSPR:
+## Cómo funciona SSPR
 
-1. Go to the [Azure portal](https://portal.azure.com/), then to **Microsoft Entra ID** > **Manage** > **Password reset**.
+El usuario inicia un restablecimiento de contraseña yendo directamente al portal de restablecimiento de contraseña o seleccionando el vínculo **No puede acceder a su cuenta** en una página de inicio de sesión. En el portal de restablecimiento se llevan a cabo estos pasos:
+
+1. **Localización**: El portal comprueba la configuración regional del explorador y representa la página SSPR en el idioma correspondiente.
+
+2. **Comprobación**: El usuario escribe su nombre de usuario y pasa un CAPTCHA para garantizar que es un usuario, y no un robot.
+
+3. **Autenticación**: el usuario escribe los datos necesarios para autenticar su identidad; Podrían ingresar un código o responder preguntas de seguridad.
+
+4. **Restablecimiento de contraseña**: Si el usuario pasa las pruebas de autenticación, puede escribir una nueva contraseña y confirmarla.
+
+5. **Notificación**: se envía un mensaje al usuario para confirmar el restablecimiento.
+
+Existen diversas formas de personalizar la experiencia de usuario de SSPR. Por ejemplo, podemos agregar el logotipo de la empresa a la página de inicio de sesión para que los usuarios sepan que están en el lugar adecuado para restablecer la contraseña.
+
+## Autenticación de un restablecimiento de contraseña
+
+Antes de permitir un restablecimiento de contraseña, es fundamental confirmar la identidad de un usuario. Los usuarios malintencionados podrían aprovechar cualquier debilidad del sistema para suplantar a ese usuario. Azure admite seis maneras diferentes de autenticar solicitudes de restablecimiento.
+
+Como administrador, puede elegir los métodos que se van a usar al configurar el SSPR. Habilite dos o más de estos métodos para que los usuarios puedan elegir los que pueden usar con facilidad. Los métodos son los siguientes:
+
+| Método de autenticación          | Cómo registrarse                                                                                                                                  | Cómo autenticar un restablecimiento de contraseña                                                                                                                        |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Notificación en aplicación móvil | Instale la aplicación Microsoft Authenticator en el dispositivo móvil y regístrela en la página de configuración de la autenticación multifactor. | Azure envía una notificación a la aplicación, que se puede confirmar o denegar.                                                                                          |
+| Código de aplicación móvil       | Este método también usa la aplicación Authenticator y se instala y registra de la misma manera.                                                   | Escriba el código de la aplicación.                                                                                                                                      |
+| Correo electrónico               | Indique una dirección de correo electrónico que sea ajena a Azure y Microsoft 365.                                                                | Azure envía un código a la dirección, que hay que introducir en el asistente de restablecimiento.                                                                        |
+| Teléfono móvil                   | Indique un número de teléfono móvil.                                                                                                              | Azure envía un código al teléfono en un mensaje SMS, que debes introducir en el asistente de restablecimiento. También puede optar por recibir una llamada automatizada. |
+| Teléfono del trabajo             | Proporcione un número de teléfono no móvil.                                                                                                       | Se recibirá una llamada automatizada a dicho número, y habrá que presionar #.                                                                                            |
+| Preguntas de seguridad           | Seleccione preguntas como "¿En qué ciudad nació su madre?" y guarde las respuestas.                                                               | Responda las preguntas.                                                                                                                                                  |
+En las organizaciones de Microsoft Entra de prueba no se admiten las opciones de llamada de teléfono.
+### Requerimiento del número mínimo de métodos de autenticación
+
+Puede especificar el número mínimo de métodos que el usuario debe configurar, ya sea uno o dos. Por ejemplo, puede habilitar los métodos de código de aplicación móvil, correo electrónico, teléfono de la oficina y preguntas de seguridad y especificar un mínimo de dos métodos. Después, los usuarios pueden elegir los dos métodos que prefieran, como el correo electrónico y el código de la aplicación móvil.
+
+En el caso del método de preguntas de seguridad, puede especificar un número mínimo de preguntas que el usuario debe configurar para registrarse para este método. También puede especificar un número mínimo de preguntas que estos deben responder correctamente para restablecer la contraseña.
+
+Una vez que los usuarios registren la información necesaria para el número mínimo de métodos que ha especificado, se consideran registrados para SSPR.
+
+### Recomendaciones
+
+- Habilite dos o más métodos de solicitud de restablecimiento de autenticación.
+- Use la notificación o el código de la aplicación móvil como método principal. Pero habilite también los métodos de correo electrónico o teléfono de la oficina para dar soporte a los usuarios sin dispositivos móviles.
+- El método del teléfono móvil no es un método recomendado, ya que se pueden enviar mensajes SMS fraudulentos.
+- La opción de preguntas de seguridad es el método menos recomendable porque existe la posibilidad de que otras personas conozcan las respuestas a esas preguntas. Use el método de preguntas de seguridad únicamente en combinación con, al menos, otro de los métodos.
+
+### Cuentas asociadas a roles de administrador
+
+- Las cuentas con un rol de administrador siempre tienen aplicada una directiva de autenticación de dos métodos muy sólida, independientemente de la configuración de otros usuarios.
+- El método de preguntas de seguridad no está disponible en las cuentas asociadas a un rol de administrador.
+
+## Configuración de notificaciones
+
+Los administradores pueden elegir cómo se va a notificar a los usuarios de los cambios de contraseña. Se pueden habilitar dos opciones:
+
+- **¿Quiere notificar a los usuarios los restablecimientos de contraseña?**: el usuario que restablezca su propia contraseña recibirá una notificación en sus direcciones de correo electrónico principal y secundaria. Si el restablecimiento lo ha realizado un usuario malintencionado, dicha notificación avisará al usuario, que puede tomar medidas de mitigación de riesgos.
+- **¿Quiere notificar a todos los administradores cuando otros administradores restablezcan su contraseña?**: cuando un administrador restablezca su contraseña, se notificará a todos los demás administradores.
+
+## Requisitos de licencia
+
+Existen dos ediciones de Microsoft Entra ID: Premium P1 y Premium P2. La funcionalidad de restablecimiento de contraseña que puede usar dependerá de la edición.
+
+Cualquier usuario que haya iniciado sesión puede cambiar su contraseña, independientemente de la edición de Microsoft Entra ID que posea.
+
+¿Qué ocurre si no ha iniciado sesión y ha olvidado la contraseña, o esta ha expirado? En este caso, puede usar SSPR en Microsoft Entra ID P1 o P2. También está disponible con Aplicaciones de Microsoft 365 para negocios o Microsoft 365.
+
+En una situación híbrida donde haya Active Directory en un entorno local y Microsoft Entra ID en la nube, cualquier cambio de contraseña en la nube se debe volver a escribir en el directorio local. Esta compatibilidad con escritura diferida está disponible en Microsoft Entra ID, tanto P1 como P2. También está disponible con Aplicaciones de Microsoft 365 para negocios.
+
+## Opciones de implementación de SSPR
+
+Puede implementar el SSPR con escritura diferida de contraseñas mediante [Microsoft Entra Connect](https://learn.microsoft.com/es-es/entra/identity/authentication/tutorial-enable-sspr-writeback/) o [Cloud Sync](https://learn.microsoft.com/es-es/entra/identity/authentication/tutorial-enable-cloud-sync-sspr-writeback/) en la nube, en función de las necesidades de los usuarios. Puede implementar cada opción en paralelo en dominios diferentes para dirigirse a distintos conjuntos de usuarios. Esto ayuda a los usuarios existentes locales a reescribir los cambios de contraseña, al tiempo que se agrega una opción para los usuarios de dominios desconectados debido a una fusión o división de la empresa. Los usuarios de un dominio local existente pueden utilizar Microsoft Entra Connect, mientras que los nuevos usuarios de una fusión pueden utilizar la sincronización en la nube en otro dominio.
+
+La sincronización en la nube también puede proporcionar una mayor disponibilidad porque no se basa en una sola instancia de Microsoft Entra Connect. Para obtener una comparación de características entre las dos opciones de implementación, consulte [Comparación entre Microsoft Entra Connect y la sincronización en la nube](https://learn.microsoft.com/es-es/entra/identity/hybrid/cloud-sync/what-is-cloud-sync#how-is-azure-ad-connect-cloud-sync-different-from-azure-ad-connect-sync/).
+
+# Implementar el autoservicio de restablecimiento de contraseña de Microsoft Entra.
+
+Ha decidido implementar el autoservicio de restablecimiento de contraseña (SSPR) en Microsoft Entra ID para su organización. Queremos empezar a usar SSPR con un grupo de 20 usuarios del departamento de marketing a modo de implementación de prueba. Si todo va bien, habilitaremos SSPR en toda la organización.
+
+En esta unidad, aprenderá a habilitar SSPR en Microsoft Entra ID.
+
+## Requisitos previos
+
+Antes de empezar a configurar SSPR, necesita una:
+
+- **organización de Microsoft Entra**: Esta organización debe tener al menos una licencia de prueba habilitada P1 o P2.
+- **Cuenta de Microsoft Entra con el rol Administrador de directivas de autenticación**: La usaremos para configurar SSPR.
+- **cuenta de usuario no administrativo**: La usaremos para comprobar SSPR. Es importante que esta cuenta no sea de administrador, ya que Microsoft Entra impone más requisitos en las cuentas administrativas de SSPR. Este usuario, y todas las cuentas de usuario, deben tener una licencia válida para usar SSPR.
+- **grupo seguridad con el que probar la configuración**: La cuenta de usuario no administrativo debe ser miembro de este grupo. Usaremos este grupo de seguridad para limitar en qué usuarios implementaremos SSPR.
+
+## Ámbito de la implementación de SSPR
+
+Hay tres opciones de configuración en la propiedad **Se habilitó el restablecimiento de contraseña del autoservicio**:
+
+- **Ninguno**: Ningún usuario de la organización de Microsoft Entra puede usar SSPR. Este es el valor predeterminado.
+- **Seleccionado**: solo los miembros del grupo de seguridad especificado pueden usar SSPR. Esto permite habilitar SSPR en un grupo de usuarios concreto, que puede probarlo y comprobar que funciona según lo previsto. Cuando todo esté listo para llevar a cabo la implementación global, establezca la propiedad en **Habilitado**, así todos los usuarios tendrán acceso a SSPR.
+- **Todos**: Todos los usuarios de la organización de Microsoft Entra pueden usar SSPR.
+
+## Configuración de SSPR
+
+Estos son los pasos de alto nivel para configurar SSPR:
+
+1. Vaya a [Azure Portal](https://portal.azure.com/), a continuación a **Microsoft Entra ID**>**Administrar**>**Restablecimiento de contraseña**.
     
-2. **Properties**:
+2. **Propiedades**:
     
-    - Enable SSPR.
-    - You can enable it for all users in the Microsoft Entra organization or for selected users.
-    - To enable for selected users, you must specify the security group. Members of this group can use SSPR.
+    - Habilite SSPR.
+    - Puede habilitarlo para todos los usuarios de la organización de Microsoft Entra o solo para determinados usuarios.
+    - Para habilitarlo para determinados usuarios, debe especificar el grupo de seguridad. Los miembros de este grupo pueden usar SSPR.
+
+    - ![[Pasted image 20260929133736.png]]
+
+3.**Métodos de autenticación**:
+
+- Elija si desea requerir uno o dos métodos de autenticación.
+- Elija los métodos de autenticación que los usuarios pueden usar.
+![[Pasted image 20260929133806.png]]
+
+4. **Registro**:
+    - Especifique si los usuarios deben registrarse en SSPR la próxima vez que inicien sesión.
+    - Especifique con qué frecuencia se va a pedir a los usuarios que vuelvan a confirmar su información de autenticación.
     
-    ![Screenshot of the Password Reset configuration panel. Properties option is selected allowing user to enable self service password resets.](https://learn.microsoft.com/en-us/training/modules/allow-users-reset-their-password/media/3-enable-sspr.png)
+    ![Captura de pantalla de la opción Registro del panel Restablecimiento de contraseña seleccionada en la que se muestra el panel con opciones de registro.](https://learn.microsoft.com/es-es/training/modules/allow-users-reset-their-password/media/3-registration-options.png)
     
-3. **Authentication methods**:
+5. **Notificaciones**: Elija si se va a notificar a los usuarios y a los administradores los restablecimientos de contraseñas.
     
-    - Choose whether to require one or two authentication methods.
-    - Choose the authentication methods that the users can use.
+    ![Captura de pantalla de la opción Notificación del panel Restablecimiento de contraseña seleccionada e la que se muestra el panel con opciones de notificación.](https://learn.microsoft.com/es-es/training/modules/allow-users-reset-their-password/media/3-notification-settings.png)
     
-    ![Screenshot of the Password Reset panel's Authentication methods option selected displaying panel with authentication options.](https://learn.microsoft.com/en-us/training/modules/allow-users-reset-their-password/media/3-auth-methods.png)
+6. **Personalización**: Indique una dirección de correo electrónico o una dirección URL de página web donde los usuarios puedan obtener ayuda.
     
-4. **Registration**:
-    
-    - Specify whether users are required to register for SSPR when they next sign in.
-    - Specify how often users are asked to reconfirm their authentication information.
-    
-    ![Screenshot of the Password Reset panel's Registration option selected displaying panel with registration options.](https://learn.microsoft.com/en-us/training/modules/allow-users-reset-their-password/media/3-registration-options.png)
-    
-5. **Notifications**: Choose whether to notify users and administrators of password resets.
-    
-    ![Screenshot of the Password Reset panel's Notification option selected displaying panel with notification options.](https://learn.microsoft.com/en-us/training/modules/allow-users-reset-their-password/media/3-notification-settings.png)
-    
-6. **Customization**: Provide an email address or web page URL where your users can get help.
-    
-    ![Screenshot of the Password Reset panel's Customization option selected displaying panel with helpdesk options.](https://learn.microsoft.com/en-us/training/modules/allow-users-reset-their-password/media/3-customization-settings.png)
+    ![Captura de pantalla de la opción Personalización del panel Restablecimiento de contraseña seleccionada en la que se muestra el panel con opciones de soporte técnico.](https://learn.microsoft.com/es-es/training/modules/allow-users-reset-their-password/media/3-customization-settings.png)
 
 
-# Exercise - Set up self-service password reset
+# Ejercicios.
 
-In this unit, you'll configure and test self-service password reset (SSPR) by using your email. You'll need to use your email to complete the password-reset process in this exercise.
+[Configurar el autoservicio de restablecimiento de contraseña](https://learn.microsoft.com/es-es/training/modules/allow-users-reset-their-password/4-exercise-set-up-self-service-password-reset)
+[Personalizar la información de marca de directorio](https://learn.microsoft.com/es-es/training/modules/allow-users-reset-their-password/5-exercise-customize-directory-branding)
 
-## Create a group
-
-You want to roll out SSPR to a limited set of users first to make sure your SSPR configuration works as expected. Let's begin by creating a security group for the limited rollout.
-
-1. In the Microsoft Entra organization you created, under **Manage**, select **Groups**.
-    
-2. Select **New Group**.
-    
-3. Enter the following values:
-
-|Setting|Value|
-|---|---|
-|Group type|Security|
-|Group name|SSPRTesters|
-|Group description|Members are testing the rollout of SSPR|
-|Membership type|Assigned|
-    
-4. Select **Create**.
-    
-    ![Screenshot that shows new group form filled out and the create button highlighted.](https://learn.microsoft.com/en-us/training/modules/allow-users-reset-their-password/media/4-create-group.png)
-    
-
-## Create a user account
-
-To test your configuration, create an account that's not associated with an administrator role. You'll also assign the account to the group you created.
-
-1. In your Microsoft Entra organization, under **Manage**, select **Users**.
-    
-2. Select **+ New user**, select **Create new user** in the drop-down, and use the following values:
-    
-    |Setting|Value|
-    |---|---|
-    |User principal name|balas|
-    |Display name|Bala Sandhu|
-    |Password|Select the **Copy** icon next to the autogenerated password, then paste the password to a text editor like Notepad.|
-    
-3. Select the **Assignments** tab.
-    
-4. Select **Add group**, check the box for the **SSPRTesters** group, and then the **Select** button.
-    
-5. Select **Review + create** and then select **Create**.
-    
-
-## Enable SSPR
-
-Now, you're ready to enable SSPR for the group.
-
-1. In your Microsoft Entra organization, under **Manage**, select **Password reset**.
-    
-2. On the **Properties** page, select **Selected**. Select the link under **Select Group**, select the box next to the **SSPRTesters** group, and then the **Select** button.
-    
-3. Select **Save**.
-    
-    ![Screenshot of the Password Reset properties panel wwith SSPR enabled and selected group set to SSPRTesters.](https://learn.microsoft.com/en-us/training/modules/allow-users-reset-their-password/media/4-choose-sspr-group.png)
-    
-4. Under **Manage**, select the **Authentication methods**, **Registration**, and **Notifications** pages to review the default values. Ensure **Authentication methods** has **Email** selected.
-    
-5. Select **Customization**.
-    
-6. Select **Yes**, and then in the **Custom helpdesk email or URL** text box, enter **admin@organization-domain-name.onmicrosoft.com**. Replace "organization-domain-name" with the domain name of the Microsoft Entra organization you created. If you've forgotten the domain name, hover over your profile in the Azure portal.
-    
-7. Select **Save**.
-    
-
-## Register for SSPR
-
-Now that the SSPR configuration is complete, register an email for the user you created.
-
- Note
-
-If you get a message that says "The administrator has not enabled this feature," use private/incognito mode in your web browser.
-
-1. In a new browser window, go to [https://aka.ms/ssprsetup](https://aka.ms/ssprsetup).
-    
-2. Sign in with the user name **balas@organization-domain-name.onmicrosoft.com** and the password that you noted earlier. Remember to replace "organization-domain-name" with the domain name of the Microsoft Entra organization you created.
-    
-3. If you're asked to update your password, enter a new password of your choice. Make sure you note the new password.
-    
-4. Select the **Security info** tab, and then select **+ Add sign-in method**.
-    
-5. In the **Add a method** box, select **Email**.
-    
-6. Enter your email details.
-    
-    ![Screenshot that shows mobile phone registration form for SSPR.](https://learn.microsoft.com/en-us/training/modules/allow-users-reset-their-password/media/4-register-email.png)
-    
-7. When you receive the code in your email, enter the code in the text box and select **Next**.
-    
-
-## Test SSPR
-
-Now, let's test whether the user can reset their password.
-
-1. In a new browser window, go to [https://aka.ms/sspr](https://aka.ms/sspr).
-    
-2. For **User ID**, type **balas@organization-domain-name.onmicrosoft.com**. Replace "organization-domain-name" with the domain you used for your Microsoft Entra organization.
-    
-    ![Screenshot that shows the password reset dialog.](https://learn.microsoft.com/en-us/training/modules/allow-users-reset-their-password/media/4-start-password-reset.png)
-    
-3. Complete the CAPTCHA and select **Next**.
-    
-4. The **Email my alternate email** radio button is selected. Select **Email**.
-    
-5. When the email arrives, in the **Enter your verification code** text box, enter the code you were sent. Select **Next**.
-    
-6. Enter a new password, and then select **Finish**. Make sure you note the new password.
-    
-7. Close the browser window.
+[[SSPR]]

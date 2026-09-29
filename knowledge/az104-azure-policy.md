@@ -3,11 +3,11 @@ title: AZ-104 — Iniciativas de Azure Policy
 aliases: ["Iniciativas de Azure Policy (AZ-104)"]
 tags: [associate, governance]
 certification: [AZ-104]
-updated: 2026-08-26
+updated: 2026-09-29
 sources:
   - https://learn.microsoft.com/en-us/training/modules/sovereignty-policy-initiatives/
 ---
-![[steps-for-cloud-governance.svg]]
+
 # AZ-104 — Iniciativas de Azure Policy
 
 Módulo 06 del [AZ-104T00](https://learn.microsoft.com/en-us/training/courses/az-104t00) ([ES](https://learn.microsoft.com/es-es/training/courses/az-104t00)) · Ruta 1 — Administración de identidades y gobernanza · Área: Administración de identidades y gobernanza en Azure (20–25%).
@@ -18,7 +18,25 @@ Uso de iniciativas de Azure Policy para aplicar estándares de la organización,
 
 ## Resumen en mis palabras
 
-> *(pendiente — rellenar al estudiar el módulo)*
+Azure Policy permite definir reglas para controlar y evaluar los recursos de Azure. Una **iniciativa** agrupa varias definiciones de directiva para asignarlas y supervisarlas como un conjunto.
+
+Las directivas se asignan a un ámbito —por ejemplo, un grupo de administración, una suscripción o un grupo de recursos— y los ámbitos inferiores heredan las asignaciones de los superiores. Cada definición compara propiedades del recurso con condiciones y, si se cumplen, aplica un efecto: por ejemplo, **auditar**, **denegar**, **modificar** o **implementar un recurso relacionado**.
+
+Azure Policy evalúa tanto los recursos nuevos o actualizados como los que ya existían. En estos últimos, el estado de cumplimiento se actualiza mediante exámenes que pueden tardar. Para reducir riesgos, conviene probar las directivas sin aplicarlas y desplegarlas gradualmente por anillos antes de extenderlas a producción.
+
+**Explicado de forma sencilla**
+
+Piensa en Azure Policy como un conjunto de reglas para los recursos de tu organización:
+
+- Una **definición** es una regla concreta: por ejemplo, “las máquinas virtuales solo pueden tener ciertos tamaños”.
+- Una **iniciativa** es un paquete de reglas relacionadas, como un estándar de seguridad.
+- Una **asignación** decide dónde se aplican esas reglas y qué valores tienen sus parámetros.
+- El **efecto** determina qué ocurre si un recurso incumple: se puede registrar el incumplimiento, bloquear la operación o corregir ciertos aspectos.
+- Una **exención** permite exceptuar un recurso o ámbito; a diferencia de una exclusión, queda registrada como exento en el contexto de cumplimiento.
+
+Hay dos escenarios importantes: **Greenfield**, cuando la regla ya existe y se crea o actualiza un recurso; y **Brownfield**, cuando se asigna una regla a recursos que ya estaban desplegados. En Brownfield, los recursos existentes se evalúan y pueden aparecer como no conformes, pero no necesariamente se modifican o eliminan.
+
+Para introducir una directiva con cuidado, primero se puede asignar con `enforcementMode` desactivado para evaluar el impacto sin aplicar el efecto. Después se valida en entornos no productivos y se amplía el despliegue poco a poco. **No es lo mismo que el efecto `disabled`**: ese efecto impide que la regla se evalúe; `enforcementMode` permite evaluarla, pero evita aplicar su efecto.
 
 ## Por qué importa para el examen
 
@@ -40,174 +58,256 @@ Uso de iniciativas de Azure Policy para aplicar estándares de la organización,
 - [Índice AZ-104](../certifications/AZ-104/INDEX.md)
 - [[Azure RBAC]]
 
-# Cloud Adoption Framework for Azure.
 
-The Microsoft Cloud Adoption Framework for Azure offers comprehensive technical guidance for Microsoft Azure. This end-to-end framework helps cloud architects, IT experts, and business leaders reach their cloud adoption objectives.
+# Introducción
+
+Azure Policy es un servicio que permite crear, asignar y administrar directivas de gobernanza que aplican reglas y efectos a los recursos de Azure para garantizar que cumplan los estándares de gobernanza de TI. Estas directivas aplican diversas reglas y efectos a los recursos para garantizar que se ajusten a los estándares corporativos y a los acuerdos de nivel de servicio. Se describen en formato JSON y se conocen como definiciones de directiva. Azure Policy es fundamental para aplicar los estándares de la organización y evaluar el cumplimiento a gran escala.
+
+Las iniciativas de Azure Policy son colecciones de definiciones de Azure Policy agrupadas para alcanzar un objetivo o propósito específico. Al consolidar varias directivas de Azure en un único elemento, las iniciativas permiten controlar y aplicar configuraciones de forma centralizada en los recursos de Azure.
+
+Las organizaciones de sectores como el gobierno, el sector público y las finanzas aceleran la transformación digital y obtienen mejores resultados empresariales. Pueden lograrlo mediante la adopción de iniciativas de Azure Policy específicas y centradas en la soberanía, que abordan la complejidad de cumplir los requisitos normativos nacionales y regionales.
+
+Los clientes pueden crear iniciativas de Azure Policy para personalizar las implementaciones, reducir el tiempo necesario para auditar los entornos y facilitar el cumplimiento de los marcos normativos establecidos y de los requisitos gubernamentales. Estas iniciativas ayudan a los clientes y asociados del sector público a establecer barreras de protección en la nube y aplicar eficazmente normativas específicas. Pueden combinar varias iniciativas para crear una solución completa que se ajuste a sus necesidades y automatizar las implementaciones para garantizar la coherencia, aplicar los procedimientos recomendados y ahorrar tiempo.
+
+En este módulo aprenderás cómo Azure Policy ayuda a realizar tareas habituales de creación, asignación y administración de directivas en toda la organización, como las siguientes:
+
+- Asignar una directiva para exigir una condición a los recursos que se creen en el futuro.
+- Crear y asignar una definición de iniciativa para hacer seguimiento del cumplimiento de varios recursos.
+- Corregir un recurso no conforme o cuya creación se haya denegado.
+- Implementar una nueva directiva en toda la organización.
+
+# Cloud Adoption Framework para Azure
+
+Microsoft Cloud Adoption Framework para Azure ofrece orientación técnica integral para Microsoft Azure. Este marco, de principio a fin, ayuda a arquitectos de nube, especialistas de TI y responsables empresariales a alcanzar sus objetivos de adopción de la nube. Incluye procedimientos recomendados, documentación y herramientas que empleados, asociados y clientes de Microsoft aportan para formular e implementar estrategias empresariales y tecnológicas eficaces para la nube. Para obtener más información, consulta la [documentación de Microsoft Cloud Adoption Framework para Azure](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/overview).
+
+El diagrama siguiente ofrece una visión general de las distintas metodologías incluidas en Microsoft Cloud Adoption Framework para Azure para cada fase del ciclo de adopción de la nube. En este marco, Azure Policy desempeña un papel importante en la gobernanza y ayuda a administrar el entorno y las cargas de trabajo en la nube.
 
 ![[microsoft-caf-for-azure.png]]
 
-Cloud governance refers to the management of cloud usage in your organization. The Cloud Adoption Framework - Govern methodology offers a systematic framework for setting up and improving cloud governance in Azure. This guidance applies to organizations across various industries and it addresses crucial areas, such as regulatory compliance, security, operations, cost management, data, resource management, and AI. It's essential for defining and maintaining efficient cloud use.
+La gobernanza de la nube consiste en administrar el uso de la nube en una organización. La metodología Govern de Cloud Adoption Framework ofrece un marco sistemático para establecer y mejorar la gobernanza de la nube en Azure. Esta orientación se aplica a organizaciones de distintos sectores y aborda áreas fundamentales como el cumplimiento normativo, la seguridad, las operaciones, la administración de costos, los datos, la administración de recursos y la inteligencia artificial. Es esencial para definir y mantener un uso eficiente de la nube.
 
-## Steps for cloud governance.
+Una gobernanza integral de la nube supervisa todos los aspectos de su uso, minimiza distintos riesgos (como los relacionados con el cumplimiento, la seguridad, la administración de recursos y los datos) y optimiza las operaciones en la nube en toda la organización. Garantiza que las actividades en la nube sean coherentes con la estrategia general y facilita alcanzar los objetivos empresariales con menos obstáculos.
 
-Cloud governance is a continuous process. It requires ongoing monitoring, evaluation, and adjustments to adapt to evolving technologies, risks, and compliance requirements. The Cloud Adoption Framework - Govern methodology divides cloud governance into five steps.
+## Pasos para la gobernanza de la nube
+
+La gobernanza de la nube es un proceso continuo. Requiere supervisión, evaluación y ajustes permanentes para adaptarse a la evolución de las tecnologías, los riesgos y los requisitos de cumplimiento. La metodología Govern de Cloud Adoption Framework divide la gobernanza de la nube en cinco pasos.
 
 
 ![[steps-for-cloud-governance.svg]]
 
-1. **Build a governance team** - Establish a dedicated cloud governance team that's responsible for defining, maintaining, and reporting on the progress of cloud governance policies.
-2. **Assess cloud risks** - Conduct a thorough risk assessment that's unique to your organization, addressing all risk categories, including regulatory compliance, security, operations, costs, data management, resource management, and AI-related risks.
-3. **Document cloud governance policies** - Clearly document cloud governance policies that dictate acceptable cloud usage and outline the rules and guidelines that mitigate identified risks.
-4. **Enforce cloud governance policies** - Implement a systematic approach to ensure compliance with cloud governance policies. Use automated tools alongside manual oversight to enforce compliance. These tools help set guardrails, monitor configurations, and ensure adherence to policies.
-5. **Monitor cloud governance** - Regularly monitor cloud usage and the governance teams to ensure ongoing compliance with the established cloud governance policies.
+1. **Formar un equipo de gobernanza**: establecer un equipo dedicado a la gobernanza de la nube, responsable de definir y mantener las directivas, así como de informar sobre su progreso.
 
-## Considerations for defining a cloud governance policy.
+2. **Evaluar los riesgos de la nube**: realizar una evaluación de riesgos exhaustiva y adaptada a la organización que abarque todas las categorías, incluido el cumplimiento normativo, la seguridad, las operaciones, los costos, la administración de datos y recursos, y los riesgos relacionados con la inteligencia artificial.
 
-The key considerations when defining a corporate cloud governance policy are as follows:
+3. **Documentar las directivas de gobernanza de la nube**: documentar claramente las directivas que determinan los usos aceptables de la nube y especifican las reglas y directrices para mitigar los riesgos identificados.
 
-- **Business risk** – You must document the evolving business risks and the business's tolerance for risk based on data classification and application criticality.
-- **Policy and compliance** – You must convert risk decisions into policy statements to establish cloud adoption boundaries efficiently.
-- **Process** – You must establish processes to monitor violations and adherence to corporate policies.
+4. **Aplicar las directivas de gobernanza de la nube**: implementar un enfoque sistemático para garantizar su cumplimiento. Combinar herramientas automatizadas con supervisión manual para establecer barreras de protección, supervisar configuraciones y asegurar que se respeten las directivas.
+
+5. **Supervisar la gobernanza de la nube**: supervisar periódicamente el uso de la nube y los equipos de gobernanza para garantizar el cumplimiento continuo de las directivas establecidas.
+
+## Consideraciones para definir una directiva de gobernanza de la nube
+
+Al definir una directiva corporativa de gobernanza de la nube, deben tenerse en cuenta los siguientes aspectos:
+
+- **Riesgo empresarial**: documentar los riesgos empresariales cambiantes y la tolerancia de la organización al riesgo, según la clasificación de los datos y la criticidad de las aplicaciones.
+
+- **Directivas y cumplimiento**: convertir las decisiones sobre riesgos en declaraciones de directiva para establecer de forma eficaz los límites de adopción de la nube.
+
+- **Procesos**: establecer procesos para supervisar las infracciones y el cumplimiento de las directivas corporativas.
 
 ![[cloud-governance.png]]
 
-The five core disciplines of cloud governance are as follows:
+Las cinco disciplinas fundamentales de la gobernanza de la nube son:
 
-- **Cost management** – Evaluates and monitors costs, including controlling IT expenditures to establish well-defined cost management. It also includes adjusting resources according to demand. It's crucial to exercise control over cloud expenditure to derive greater value from your investments.
-- **Security baseline** – Ensures compliance with IT security requirements by applying a security baseline to all adoption efforts.
-- **Resource consistency** – Ensures consistency in resource configuration and enforcing practices for onboarding, recovery, and discoverability.
-- **Identity baseline** – Ensures that the baseline for identity and access is enforced by consistently applying role definitions and assignments.
-- **Deployment acceleration** – Accelerates the deployment of policies through centralization, consistency, and standardization across deployment templates.
-## Cloud governance with Azure Policy
+- **Administración de costos**: evalúa y supervisa los costos, incluido el control de los gastos de TI, para establecer una administración de costos bien definida. También contempla ajustar los recursos según la demanda. Controlar el gasto en la nube es fundamental para obtener más valor de las inversiones.
 
-Azure's primary governance tool is [Azure Policy](https://learn.microsoft.com/en-us/azure/governance/policy/overview) ([ES](https://learn.microsoft.com/es-es/azure/governance/policy/overview)). Azure Policy facilitates the governance of all resources, including current and forthcoming resources. It helps to enforce organizational standards and to assess compliance at scale by establishing guardrails across various resources.
+- **Línea base de seguridad**: garantiza el cumplimiento de los requisitos de seguridad de TI mediante la aplicación de una línea base de seguridad en todas las iniciativas de adopción.
 
-# Azure Policy design principles
+- **Coherencia de los recursos**: garantiza la coherencia de la configuración de los recursos y la aplicación de prácticas de incorporación, recuperación y detección.
 
-Governance provides mechanisms and processes to maintain control over your applications and resources in Azure. It involves planning your policy in Azure Policy and setting strategic priorities. While designing your policy, you must organize your cloud-based resources to secure, manage, and track costs that are related to your workloads.
+- **Línea base de identidad**: garantiza que se aplique la línea base de identidad y acceso mediante la aplicación coherente de definiciones y asignaciones de roles.
 
-## Hierarchy for governance
+- **Aceleración de las implementaciones**: acelera la implementación de directivas mediante la centralización, la coherencia y la estandarización de las plantillas de implementación.
+## Gobernanza de la nube con Azure Policy
 
-Azure provides four levels of management to establish proper governance: Management groups, Subscriptions, Resource groups, and Resources. You can build a flexible structure of management groups and subscriptions to organize your resources into a hierarchy for unified policy and access management. The following diagram shows an example of creating a hierarchy for governance by using management groups.![[azure-governance-hierarchy.png]]
+La principal herramienta de gobernanza de Azure es [Azure Policy](https://learn.microsoft.com/en-us/azure/governance/policy/overview). Azure Policy facilita la gobernanza de todos los recursos, tanto los actuales como los futuros. Ayuda a aplicar los estándares de la organización y evaluar el cumplimiento a escala mediante el establecimiento de barreras de protección en distintos recursos.
 
+Azure Policy permite administrar las directivas de forma centralizada, hacer seguimiento del estado de cumplimiento e investigar los cambios que provocan incumplimientos. Puedes consolidar todos los datos de cumplimiento en un único repositorio, lo que simplifica las auditorías y mejora el cumplimiento en la nube y la gobernanza de los recursos. El panel de cumplimiento de Azure Policy ofrece una vista agregada del estado general del entorno y permite examinar los detalles de cada recurso y directiva.
+
+Azure Policy garantiza el cumplimiento coherente de los estándares y evita configuraciones incorrectas. También ayuda a que los recursos cumplan los requisitos mediante la corrección en bloque de los recursos existentes y la corrección automática de los nuevos. Además, al integrar Azure Policy directamente en la plataforma Azure, se puede reducir considerablemente la necesidad de procesos de aprobación externos y aumentar la productividad de los desarrolladores.
+
+Algunas acciones de gobernanza útiles que puedes aplicar con Azure Policy son:
+
+- Garantizar que el equipo implemente recursos de Azure solo en las regiones permitidas.
+
+- Aplicar reglas de replicación geográfica para cumplir los requisitos de residencia de datos.
+
+- Permitir únicamente determinados tamaños de máquinas virtuales en el entorno de nube.
+
+- Exigir la aplicación coherente de etiquetas taxonómicas en los recursos.
+
+- Recomendar actualizaciones del sistema en los servidores.
+
+- Permitir la autenticación multifactorial en todas las cuentas de la suscripción.
+
+- Exigir que los recursos envíen registros de diagnóstico a un área de trabajo de Azure Monitor Logs.
+
+Azure Policy evalúa los recursos y señala los que no cumplen las directivas que has creado. También puede impedir que se creen recursos no conformes. Incluye definiciones integradas de directivas e iniciativas para almacenamiento, redes, proceso, Security Center y supervisión. Por ejemplo, si defines una directiva que solo permite determinados tamaños de máquina virtual (VM) en el entorno, se invoca al crear una VM y cada vez que se cambia el tamaño de una existente. Azure Policy también evalúa y supervisa todas las VM actuales del entorno, incluidas las creadas antes de definir la directiva.
+
+En algunos casos, Azure Policy puede corregir automáticamente recursos y configuraciones no conformes para mantener la integridad de su estado. Por ejemplo, si todos los recursos de un grupo de recursos determinado deben tener la etiqueta _AppName_ con el valor _SpecialOrders_, Azure Policy puede agregarla automáticamente cuando falte. Sin embargo, mantienes el control total del entorno. Si no quieres que Azure Policy actualice automáticamente un recurso concreto, puedes marcarlo como excepción y la directiva no lo actualizará.
+
+Azure Policy también se integra con Azure DevOps mediante la aplicación de las directivas de los canales de integración y entrega continuas correspondientes a las fases anteriores y posteriores a la implementación de las aplicaciones.
+
+Al diseñar una directiva de Azure, el objetivo debe ser equilibrar el control y la estabilidad con la rapidez y los resultados. Este equilibrio permite mantener un entorno fácil de administrar y aplicar los controles de gobernanza necesarios sin perjudicar la eficiencia operativa ni la productividad. Al establecer y aplicar estos controles, hay que procurar que no se reduzca la velocidad necesaria para alcanzar la eficiencia. Por eso, equilibrar el control y la estabilidad con la rapidez y los resultados suele requerir decisiones meditadas, y es necesario evaluar cuidadosamente el impacto potencial antes de introducir nuevas directivas.
+
+Para obtener más información, consulta [Microsoft Cloud Adoption Framework para Azure](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/).
+
+# Principios de diseño de Azure Policy
+
+La gobernanza proporciona mecanismos y procesos para mantener el control de las aplicaciones y los recursos de Azure. Implica planificar las directivas en Azure Policy y establecer prioridades estratégicas. Al diseñarlas, debes organizar los recursos en la nube para protegerlos, administrarlos y hacer seguimiento de los costos asociados a las cargas de trabajo.
+
+## Jerarquía de gobernanza
+
+Azure proporciona cuatro niveles de administración para establecer una gobernanza adecuada: grupos de administración, suscripciones, grupos de recursos y recursos. Puedes crear una estructura flexible de grupos de administración y suscripciones para organizar los recursos en una jerarquía y administrar de forma unificada las directivas y el acceso. El diagrama siguiente muestra un ejemplo de jerarquía de gobernanza creada con grupos de administración.
+
+![[azure-governance-hierarchy.png]]
+
+La estructura de Azure comienza con el grupo raíz del inquilino, en la parte superior, seguido de una jerarquía de grupos de administración que puede extenderse hasta seis niveles por debajo de la raíz. A continuación se define cada nivel de la jerarquía y la relación entre ellos:
 
 |Concept|Description|
 |---|---|
-|**Resource**|A resource is the basic building block of Azure, and it includes instances of services that you create, provision, deploy, and so on. Virtual machines (VMs), virtual networks, databases, AI services, and so on, are considered resources in Azure.|
-|**Resource groups**|Resource groups are groupings of resources. When you create a resource, you must place it into a resource group. While a resource group can contain many resources, a single resource can only be in one resource group at a time.  <br>  <br>When you apply an action to a resource group, that action applies to all resources in the resource group. If you delete a resource group, all resources are deleted. If you grant or deny access to a resource group, all resources in the resource group are also granted or denied access.|
-|**Subscriptions**|In Azure, subscriptions are a unit of management, billing, and scale. Similar to how resource groups are a way of logically organizing resources, subscriptions allow you to logically organize your resource groups and facilitate billing. Each subscription has limits or quotas on the number of resources that you can create and use. Organizations can use subscriptions to manage costs and the resources that users, teams, and projects create.  <br>  <br>Using Azure requires an Azure subscription. An Azure subscription provides you with authenticated and authorized access to Azure products and services. It also allows you to provision resources. An Azure subscription links to an Azure account, which is an identity in Microsoft Entra ID or in a directory that Microsoft Entra ID trusts.|
-|**Management groups**|Azure management groups provide a level of scope above subscriptions. If you have many subscriptions, you might need a way to efficiently manage access, policies, and compliance for those subscriptions. You organize subscriptions into containers called management groups and then apply governance conditions to the management groups.  <br>  <br>Management groups give you enterprise-grade management at a large scale, no matter what type of subscriptions you might have. Management groups can be nested.|
+|**Recurso**|Un recurso es el componente básico de Azure e incluye instancias de servicios que se crean, aprovisionan, implementan, etc. Las máquinas virtuales (VM), las redes virtuales, las bases de datos y los servicios de inteligencia artificial, entre otros, son recursos de Azure.|
+|**Grupos de recursos**|Los grupos de recursos agrupan recursos. Al crear un recurso, debes colocarlo en un grupo de recursos. Un grupo puede contener muchos recursos, pero cada recurso solo puede pertenecer a un grupo a la vez.  <br>  <br>Cuando se aplica una acción a un grupo de recursos, esta afecta a todos sus recursos. Si eliminas el grupo, se eliminan todos sus recursos. Si concedes o deniegas el acceso al grupo, también se concede o deniega el acceso a todos sus recursos.|
+|**Suscripciones**|En Azure, las suscripciones son una unidad de administración, facturación y escala. Al igual que los grupos de recursos permiten organizar los recursos de forma lógica, las suscripciones permiten organizar los grupos de recursos y facilitan la facturación. Cada suscripción tiene límites o cuotas para la cantidad de recursos que se pueden crear y usar. Las organizaciones pueden usar suscripciones para administrar los costos y los recursos creados por usuarios, equipos y proyectos.  <br>  <br>Para usar Azure se necesita una suscripción. Esta proporciona acceso autenticado y autorizado a los productos y servicios de Azure, y permite aprovisionar recursos. Una suscripción de Azure está vinculada a una cuenta de Azure, que es una identidad de Microsoft Entra ID o de un directorio en el que Microsoft Entra ID confía.|
+|**Grupos de administración**|Los grupos de administración de Azure proporcionan un ámbito situado por encima de las suscripciones. Si tienes muchas suscripciones, quizá necesites una forma eficaz de administrar su acceso, sus directivas y su cumplimiento. Puedes organizarlas en contenedores llamados grupos de administración y aplicarles condiciones de gobernanza.  <br>  <br>Los grupos de administración permiten administrar a escala empresarial, independientemente del tipo de suscripciones. Se pueden anidar.|
+Puedes aplicar la configuración de administración en cualquiera de estos niveles de ámbito. El nivel seleccionado determina la amplitud de la aplicación. Los niveles inferiores heredan la configuración de los superiores. Por ejemplo, una directiva asignada a una suscripción se aplica a todos sus grupos de recursos y recursos. Una directiva asignada a un grupo de recursos se aplica a ese grupo y a todos sus recursos, pero no a otros grupos. Todas las suscripciones de un grupo de administración heredan automáticamente las condiciones aplicadas a dicho grupo.
 
-## Introduction to Azure Resource Manager
+## Introducción a Azure Resource Manager
 
-Azure Resource Manager is the deployment and management service for Azure. It provides a management layer that allows you to create, update, and delete resources in your Azure account.
+Azure Resource Manager es el servicio de implementación y administración de Azure. Proporciona una capa de administración que permite crear, actualizar y eliminar recursos en la cuenta de Azure.
 
-Azure operations are classified into two main types: control plane and data plane. The control plane helps you manage resources in your subscription, while the data plane allows you to access the capabilities provided by instances of specific resource types.
+Las operaciones de Azure se clasifican en dos tipos principales: plano de control y plano de datos. El plano de control permite administrar los recursos de la suscripción, mientras que el plano de datos permite acceder a las funcionalidades de instancias de tipos de recursos específicos.
 
-### Control plane
+### Plano de control
 
-Azure Policy operates in the control plane to enforce rules and compliance on your resources. Azure Resource Manager manages all control plane operations in Azure and includes the different components that are centralized between the different services. Azure Policy is integrated with Azure Resource Manager.
+Azure Policy opera en el plano de control para aplicar reglas y requisitos de cumplimiento a los recursos. Azure Resource Manager administra todas las operaciones del plano de control de Azure e integra componentes comunes a los distintos servicios. Azure Policy está integrado con Azure Resource Manager.
 
 ![[azure-policy-and-resource-manager.png]]
 
-Azure Resource Manager manages essential functions, such as template-based deployments, role-based access control (RBAC), auditing, monitoring, and tagging, which provides a unified management experience for Azure resources after deployment. For example, consider a scenario where you have a storage account. With Azure Resource Manager, you can create the storage account and enforce a policy that mandates encryption for all storage accounts.
+Azure Resource Manager administra funciones esenciales, como las implementaciones basadas en plantillas, el control de acceso basado en roles (RBAC), la auditoría, la supervisión y el etiquetado. Esto proporciona una experiencia unificada para administrar los recursos de Azure después de implementarlos. Por ejemplo, puedes crear una cuenta de almacenamiento mediante Azure Resource Manager y aplicar una directiva que exija el cifrado en todas las cuentas de almacenamiento.
 
-### Data plane
+### Plano de datos
 
-The data plane is where the actual data operations occur, and Azure Policy ensures that the resources you interact with in the data plane are compliant with your policies. Data plane operations involve direct interaction with the data stored in a resource. Continuing with the previous example, you engage with the storage account to upload or download files. This interaction is handled directly by the data plane of the storage account rather than being managed by Azure Resource Manager.
+El plano de datos es donde se realizan las operaciones sobre los datos. Azure Policy garantiza que los recursos con los que interactúas en este plano cumplan las directivas. Las operaciones del plano de datos implican interactuar directamente con los datos almacenados en un recurso. Siguiendo con el ejemplo anterior, la carga y descarga de archivos en la cuenta de almacenamiento se gestionan directamente en el plano de datos de dicha cuenta, no mediante Azure Resource Manager.
 
-Azure Policy allows individual Azure services to implement an Azure Policy extension, enhancing policy behavior and integration with specific resource providers. Azure Policy currently supports data plane operations through the following resource provider modes:
+Azure Policy permite que los servicios individuales de Azure implementen una extensión de Azure Policy, lo que amplía el comportamiento de las directivas y su integración con proveedores de recursos específicos. Actualmente, Azure Policy admite operaciones del plano de datos mediante los siguientes modos de proveedor de recursos:
 
-- **Microsoft.Kubernetes.Data** - Used for managing Kubernetes clusters and components such as pods, containers, and ingresses.
-- **Microsoft.KeyVault.Data** - Used for managing vaults and certificates in Azure Key Vault.
-- **Microsoft.Network.Data** - Used for managing Microsoft Azure Virtual Network Manager custom membership policies by using Azure Policy.
-- **Microsoft.ManagedHSM.Data** - Used for managing Azure Key Vault Managed HSM keys by using Azure Policy.
-- **Microsoft.DataFactory.Data** - Used for using Azure Policy to deny Microsoft Azure Data Factory outbound traffic domain names.
-- **Microsoft.MachineLearningServices.v2.Data** - Used for managing Microsoft Azure Machine Learning model deployments. This Resource Provider mode reports compliance for newly created and updated components.
+- **Microsoft.Kubernetes.Data**: se usa para administrar clústeres de Kubernetes y componentes como pods, contenedores e ingress.
 
-## Operation flows of Azure Resource Manager
+- **Microsoft.KeyVault.Data**: se usa para administrar almacenes y certificados de Azure Key Vault.
+
+- **Microsoft.Network.Data**: se usa para administrar directivas personalizadas de pertenencia de Azure Virtual Network Manager mediante Azure Policy.
+
+- **Microsoft.ManagedHSM.Data**: se usa para administrar claves de Azure Key Vault Managed HSM mediante Azure Policy.
+
+- **Microsoft.DataFactory.Data**: se usa para que Azure Policy deniegue nombres de dominio del tráfico saliente de Azure Data Factory.
+
+- **Microsoft.MachineLearningServices.v2.Data**: se usa para administrar implementaciones de modelos de Azure Machine Learning. Este modo de proveedor de recursos informa del cumplimiento de los componentes recién creados o actualizados.
+
+## Flujos de operación de Azure Resource Manager.
+
+Azure Resource Manager contempla dos escenarios para gestionar solicitudes de Azure: **Greenfield** y **Brownfield**. Al implementar recursos, Azure Resource Manager determina cuándo debe crear recursos nuevos y cuándo actualizar los existentes.
 
 ![[operation-flows.png]]
 
-**Greenfield** refers to a scenario where an Azure Policy (policy-first) exists, and when you're creating or updating an Azure resource.
+**Greenfield** describe el escenario en el que ya existe una directiva de Azure Policy (primero la directiva) y se crea o actualiza un recurso de Azure.
 
-**Brownfield** is the scenario where the resources exist already (resource-first), and you're assigning a new Azure Policy to those resources.
+Por ejemplo, creas un recurso mediante una llamada a la API REST HTTPS de Azure Resource Manager dirigida a un proveedor de recursos específico. La solicitud pasa por distintas capas, entre ellas el control de acceso basado en roles (RBAC) y Azure Policy. Aunque son solo dos de varias capas, es importante recordar que Azure Policy se ejecuta después de RBAC. Si no tienes permiso para realizar una operación, esta falla en la fase de RBAC y Azure Policy ni siquiera se evalúa. Si tienes permiso, la solicitud pasa por Azure Policy y se evalúa frente a las directivas aplicables. Al actualizar un recurso, el cuerpo de la solicitud incluye únicamente los cambios (el delta). Azure Policy necesita conocer el estado completo del recurso, por lo que lee su estado actual y combina con él el delta enviado. El estado resultante es el que se evalúa frente a las directivas.
 
-# Azure Policy resources
+**Brownfield** describe el escenario en el que los recursos ya existen (primero los recursos) y se les asigna una nueva directiva de Azure Policy.
 
-Azure Policy enforces organizational standards and assesses compliance at scale. It evaluates Azure resources and actions by comparing their properties to business rules, providing an aggregated view of the environment's overall state. This policy allows for detailed analysis down to each resource and policy level with granularity. Six policy resources are available in Azure, and multiple different concepts apply to these Azure policy resources.
+En este caso, la evaluación de la directiva se realiza mediante un examen de cumplimiento, que se ejecuta automáticamente cada 24 horas o puede iniciarse manualmente. La duración del examen es impredecible, pero al finalizar se actualiza el estado de cumplimiento de los recursos existentes. Para realizar la evaluación, Azure Policy lee todos los recursos existentes en el ámbito. Puedes crear una directiva que prohíba crear recursos fuera de una región determinada, como West Europe. Los recursos existentes fuera de esa región no se eliminan, pero se marcan como no conformes; las futuras solicitudes para crear recursos fuera de West Europe se deniegan.
+
+# Recursos de Azure Policy
+
+Azure Policy aplica los estándares de la organización y evalúa el cumplimiento a escala. Evalúa los recursos y las acciones de Azure comparando sus propiedades con las reglas empresariales, y ofrece una vista agregada del estado general del entorno. También permite analizar detalladamente cada recurso y cada directiva. Azure dispone de seis tipos de recursos de Policy, asociados a varios conceptos.
 
 ![[policy-resources.png]]
 
-## Definitions
+## Definiciones
 
-Azure Policy definitions describe resource compliance conditions and the effect to take if a condition is met. Several settings determine which resources are evaluated by any Azure Policy. You explore these settings in the next unit, **Azure Policy definitions**. The primary concept to which these settings can be applied is scope.
+Las definiciones de Azure Policy describen las condiciones de cumplimiento de los recursos y el efecto que se aplica cuando se cumple una condición. Varias opciones determinan qué recursos evalúa una directiva. Estas opciones se explican en la siguiente unidad, **Definiciones de Azure Policy**. El concepto principal al que se aplican es el ámbito.
 
-## Initiatives
+El ámbito de Azure Policy corresponde a los niveles de la jerarquía de gobernanza de Azure. Bajo la raíz del inquilino hay cuatro niveles de ámbito de administración: grupos de administración, suscripciones, grupos de recursos y recursos. La definición puede guardarse en un grupo de administración o en una suscripción. Su ubicación determina el ámbito al que se puede asignar la iniciativa o la directiva. La asignación también incluye propiedades que establecen el ámbito y determinan qué recursos evalúa Azure Policy y cuáles se contabilizan para el cumplimiento.
 
-Azure Policy initiatives, also known as a policy set, allow you to group several policy definitions to simplify assignments and management because you work with the initiatives as a single item. Initiatives offer a streamlined and automated approach to governance, allowing organizations to manage and monitor compliance at scale.
+Puedes aplicar la configuración de administración en cualquiera de estos niveles. El nivel seleccionado determina la amplitud de su aplicación, y los niveles inferiores heredan la configuración de los superiores. Para obtener más información, consulta [Ámbito en Azure Policy](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/scope).
 
-## Assignments
+## Iniciativas
 
-Policy assignments define which resources are evaluated by a policy definition or initiative. Policy assignments can be done in the portal, an API call, or through the command line interface.
+Las iniciativas de Azure Policy, también conocidas como conjuntos de directivas, permiten agrupar varias definiciones para simplificar su asignación y administración, ya que se trabaja con la iniciativa como un único elemento. Ofrecen un enfoque optimizado y automatizado de la gobernanza, que permite a las organizaciones administrar y supervisar el cumplimiento a escala.
 
-Policies and initiatives are assigned to a specific scope (management group, subscription, or resource group). While doing so, you can define several optional aspects, including the resource scope and policy definition.
+## Asignaciones
 
-- Optional _resource selectors_ to allow gradual rollout based on resource location or type.
-- Optional _overrides_ to change the effect of a policy definition without modifying the underlying definition.
-- _enforcementMode_ can be disabled to support "what-if" scenarios without changing the definition, which is equivalent to changing the definition to an audit effect mode, but a way to do it at assignment level. For example, if the policy has _Deny_ effects, that denial isn't effective, but you can still view the result of the compliance evaluation of that policy.
-- Optional _excluded scopes_ to exclude inner containers or resources from the assignment scope.
-- _Noncompliance messages_ can be defined.
-- _Parameters_ can be assigned values.
-- If you have a policy with the _deployIfNotExists_ effect type, a _managed identity_ can be assigned (system-assigned or user-assigned) to turn on remediation actions. An assignment has several properties that set a scope. The use of these properties determines which resource for Azure Policy to evaluate and which resources count toward compliance. These properties map to the following concepts:
-    - **Inclusion** - For more information, see [Azure Policy assignment structure](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/assignment-structure) ([ES](https://learn.microsoft.com/es-es/azure/governance/policy/concepts/assignment-structure)).
-    - **Exclusion** - For more information, see [Azure Policy assignment structure excluded scopes](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/assignment-structure#excluded-scopes) ([ES](https://learn.microsoft.com/es-es/azure/governance/policy/concepts/assignment-structure#excluded-scopes)).
+Las asignaciones de directiva definen qué recursos se evalúan mediante una definición de directiva o una iniciativa. Se pueden crear en el portal, mediante una llamada a la API o desde la interfaz de línea de comandos.
 
-## Exemptions
+Las directivas y las iniciativas se asignan a un ámbito específico (grupo de administración, suscripción o grupo de recursos). Durante la asignación, se pueden definir varios aspectos opcionales, como el ámbito de los recursos y la definición de directiva.
 
-Use the Policy exemptions feature to _exempt_ a resource hierarchy or an individual resource from evaluation of initiatives or definitions. Resources that are _exempt_ count toward overall compliance but can't be evaluated or have a temporary waiver. They're created as a child object on the resource hierarchy, or the individual resource granted the exemption.
+- Los _selectores de recursos_ opcionales permiten implementar gradualmente según la ubicación o el tipo de recurso.
+- Las _invalidaciones_ opcionales permiten cambiar el efecto de una definición de directiva sin modificar la definición subyacente.
+- Se puede deshabilitar _enforcementMode_ para admitir escenarios hipotéticos («what-if») sin cambiar la definición. Esto equivale a cambiar el efecto de la definición a _audit_, pero se configura en el nivel de asignación. Por ejemplo, si la directiva tiene el efecto _Deny_, la denegación no se aplica, aunque se puede ver el resultado de la evaluación de cumplimiento.
+- Los _ámbitos excluidos_ opcionales permiten excluir contenedores o recursos secundarios del ámbito de asignación.
+- Se pueden definir _mensajes de incumplimiento_.
+- Se pueden asignar valores a los _parámetros_.
+- Si una directiva usa el efecto _deployIfNotExists_, se le puede asignar una _identidad administrada_ (asignada por el sistema o por el usuario) para habilitar las acciones de corrección. Una asignación tiene varias propiedades que establecen el ámbito y determinan qué recursos evalúa Azure Policy y cuáles se contabilizan para el cumplimiento. Estas propiedades corresponden a los conceptos siguientes:
+  - **Inclusión**: para obtener más información, consulta la [estructura de las asignaciones de Azure Policy](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/assignment-structure) ([ES](https://learn.microsoft.com/es-es/azure/governance/policy/concepts/assignment-structure)).
+  - **Exclusión**: para obtener más información, consulta los [ámbitos excluidos de las asignaciones de Azure Policy](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/assignment-structure#excluded-scopes) ([ES](https://learn.microsoft.com/es-es/azure/governance/policy/concepts/assignment-structure#excluded-scopes)).
 
-Policy exemptions aren't created during assignment time, but after, and the effect is still the same as an excluded scope. Two exemption categories exist and are used to group exemptions:
+## Exenciones
 
-- **Mitigated** - The exemption is granted because the policy intent is met through another method.
-- **Waiver** - The exemption is granted because the noncompliance state of the resource is temporarily accepted.
+Usa la característica de exenciones de Policy para excluir de la evaluación de iniciativas o definiciones una jerarquía de recursos o un recurso individual. Los recursos _exentos_ se contabilizan en el cumplimiento general, aunque no se evalúan o cuentan con una dispensa temporal. Las exenciones se crean como objetos secundarios de la jerarquía de recursos o del recurso individual al que se concede la exención.
 
-For more information about policy exemption, see [Azure Policy exemption structure](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/exemption-structure) ([ES](https://learn.microsoft.com/es-es/azure/governance/policy/concepts/exemption-structure)).
+Las exenciones de Policy no se crean al asignar la directiva, sino después; su efecto es similar al de excluir un ámbito. Hay dos categorías de exención:
 
-## Attestations
+- **Mitigada**: se concede la exención porque el objetivo de la directiva se cumple por otro método.
+- **Dispensa**: se concede la exención porque se acepta temporalmente el estado de incumplimiento del recurso.
 
-Policy attestations are used by Azure Policy to set compliance states of resources or scopes targeted by [manual policies](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/effect-manual) ([ES](https://learn.microsoft.com/es-es/azure/governance/policy/concepts/effect-manual)). Each applicable resource requires one attestation for each manual policy assignment. For ease of management, manual policies should be designed to target the scope that defines the boundary of resources whose compliance state needs to be attested.
+Para obtener más información sobre las exenciones, consulta la [estructura de exenciones de Azure Policy](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/exemption-structure) ([ES](https://learn.microsoft.com/es-es/azure/governance/policy/concepts/exemption-structure)).
 
-For more information, see [Azure Policy attestation structure](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/attestation-structure) ([ES](https://learn.microsoft.com/es-es/azure/governance/policy/concepts/attestation-structure)).
+## Atestaciones
 
-## Remediations
+Azure Policy usa atestaciones para establecer el estado de cumplimiento de los recursos o ámbitos a los que se aplican las [directivas manuales](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/effect-manual) ([ES](https://learn.microsoft.com/es-es/azure/governance/policy/concepts/effect-manual)). Cada recurso aplicable requiere una atestación por cada asignación de directiva manual. Para facilitar la administración, las directivas manuales deben diseñarse para aplicarse al ámbito que delimita los recursos cuyo estado de cumplimiento debe atestarse.
 
-The policy remediation task feature is used to bring resources into compliance based on a definition and assignment. Resources that are noncompliant to a _modify_ or _deployIfNotExists_ definition assignment can be brought into compliance by using a remediation task. Resources that are newly created or updated that are applicable to a _deployIfNotExists_ or _modify_ definition assignment are automatically remediated.
+Para obtener más información, consulta la [estructura de atestaciones de Azure Policy](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/attestation-structure) ([ES](https://learn.microsoft.com/es-es/azure/governance/policy/concepts/attestation-structure)).
 
-For more information, see [Azure Policy remediation task structure](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/remediation-structure) ([ES](https://learn.microsoft.com/es-es/azure/governance/policy/concepts/remediation-structure)).
+## Correcciones
+
+La característica de tareas de corrección de Policy se usa para conseguir que los recursos cumplan una definición y una asignación. Los recursos que no cumplen una asignación de definición con efecto _modify_ o _deployIfNotExists_ se pueden corregir mediante una tarea de corrección. Los recursos que se crean o actualizan y están sujetos a una asignación de definición con efecto _deployIfNotExists_ o _modify_ se corrigen automáticamente.
+
+Para obtener más información, consulta la [estructura de tareas de corrección de Azure Policy](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/remediation-structure) ([ES](https://learn.microsoft.com/es-es/azure/governance/policy/concepts/remediation-structure)).
 
 
-# Azure Policy definitions
+# Definiciones de Azure Policy
 
-**Azure Policy definition** describes resource compliance conditions and the action or effects that take place if those conditions are met. The policy consists of two parts:
+Una **definición de Azure Policy** describe las condiciones de cumplimiento de los recursos y la acción o los efectos que se aplican cuando se cumplen dichas condiciones. La directiva consta de dos partes:
 
-- A **condition** that compares a resource property field or a value, accessed by using aliases, to a required value.
-- The **effect** determines what happens when the policy rule is evaluated to match the condition. For each new resource, an updated resource, or an existing resource, the effects behave differently.
+- Una **condición** que compara un campo de propiedad del recurso o un valor, al que se accede mediante alias, con un valor requerido.
 
-## Anatomy of a policy definition
+- El **efecto** determina qué ocurre cuando la regla de directiva evalúa que se cumple la condición. Los efectos se comportan de manera distinta con los recursos nuevos, actualizados y existentes.
 
-You use JSON to create a policy definition that contains the elements shown in the following table.
+## Estructura de una definición de directiva
+
+Las definiciones de directiva se crean en JSON y contienen los elementos que se muestran en la tabla siguiente.
 
 |Element|Description|Properties or values|
 |---|---|---|
-|_displayName (string, max 128 characters)_|Used to identify the policy definition.||
-|_description (string, max 512 characters)_|Provides context for when the definition is used.||
-|_policyType (read-only string)_|Indicates the origin of the policy definition. This property can't be set, but SDK returns three values which are visible in the portal.|● Built in: Provided and maintained by Microsoft.  <br>● Custom: Custom definitions created by the customer.  <br>● Static: Regulatory Compliance policy with Microsoft ownership.|
-|_mode (string)_|Configured depending on the target of the policy: an Azure Resource Manager property or a Resource Provider property.|● Resource Manager Modes:  <br>    o On All: Evaluates resource groups, subscriptions, and all resource types.  <br>    o Indexed: Evaluates resource groups, subscriptions, and all resource types.  <br>● Resource Provider Modes (limited to Built in policies and fully supported):  <br>    o Microsoft.Kubernetes.Data  <br>    o Microsoft.KeyVault.Data  <br>    o Microsoft.Network.Data  <br>● Resource Provider Modes (limited to Built in policies and in preview mode):  <br>    o Microsoft.ManagedHSM.Data  <br>    o Microsoft.DataFactory.Data|
-|_version (string, optional)_|Built-in policy definitions can host multiple versions with the same definitionID. If no version number is specified, all experiences show the latest version of the definition.||
-|_metadata (object, optional, max 1,024 characters)_|Stores information about the policy definition.|Common properties (for Built-in policies):  <br>● _version (string)_: Tracks details about the version of the contents of a policy definition.  <br>● _category (string)_: Determines under which category in the Azure portal the policy definition is displayed.  <br>● _preview (Boolean)_: True or false flag that indicates if the policy definition is in preview.  <br>● _deprecated (Boolean)_: True or false flag that indicates if the policy definition is deprecated.  <br>● _portalReview (string)_: Determines if parameters require review in the portal.|
-|_parameters (object, optional)_|Help simplify your policy management by reducing the number of policy definitions. By including parameters in a policy definition, you can reuse that policy for different scenarios by using different values.|Properties:  <br>● name  <br>● type (String, Array, Object, Boolean, Integer, Float, DateTime)  <br>● metadata (description, displayName, strongType, assignPermissions)  <br>● defaultValue  <br>● allowedValues  <br>● schema|
-|_policyRule (object)_|The effect of a policy is defined in the _policyRule_. The policy rule consists of the _if and then_ blocks.  <br>● In the _if_ block, you define one or more conditions that specify when the policy applies.  <br>● In the _then_ block, you define the effect that happens when the _if_ conditions result true.||
+|_displayName (string, max 128 characters)_|Se usa para identificar la definición de directiva.||
+|_description (string, max 512 characters)_|Proporciona contexto sobre el uso de la definición.||
+|_policyType (read-only string)_|Indica el origen de la definición de directiva. Esta propiedad no se puede establecer, pero el SDK devuelve tres valores visibles en el portal.|● Integrada: proporcionada y mantenida por Microsoft.  <br>● Personalizada: definición creada por el cliente.  <br>● Estática: directiva de cumplimiento normativo propiedad de Microsoft.|
+|_mode (string)_|Se configura según el destino de la directiva: una propiedad de Azure Resource Manager o del proveedor de recursos.|● Modos de Resource Manager:  <br>    o On All: evalúa grupos de recursos, suscripciones y todos los tipos de recursos.  <br>    o Indexed: evalúa grupos de recursos, suscripciones y todos los tipos de recursos.  <br>● Modos de proveedor de recursos (solo directivas integradas y con compatibilidad completa):  <br>    o Microsoft.Kubernetes.Data  <br>    o Microsoft.KeyVault.Data  <br>    o Microsoft.Network.Data  <br>● Modos de proveedor de recursos (solo directivas integradas y en versión preliminar):  <br>    o Microsoft.ManagedHSM.Data  <br>    o Microsoft.DataFactory.Data|
+|_version (string, optional)_|Las definiciones de directiva integradas pueden tener varias versiones con el mismo definitionID. Si no se especifica una versión, todas las experiencias muestran la versión más reciente de la definición.||
+|_metadata (object, optional, max 1,024 characters)_|Almacena información sobre la definición de directiva.|Propiedades comunes de las directivas integradas:  <br>● _version (string)_: registra detalles de la versión del contenido de una definición de directiva.  <br>● _category (string)_: determina la categoría en la que se muestra la definición en el portal de Azure.  <br>● _preview (Boolean)_: valor verdadero o falso que indica si la definición está en versión preliminar.  <br>● _deprecated (Boolean)_: valor verdadero o falso que indica si la definición está en desuso.  <br>● _portalReview (string)_: determina si es necesario revisar los parámetros en el portal.|
+|_parameters (object, optional)_|Ayuda a simplificar la administración de directivas al reducir la cantidad de definiciones. Los parámetros permiten reutilizar una directiva en distintos escenarios con diferentes valores.|Propiedades:  <br>● name  <br>● type (String, Array, Object, Boolean, Integer, Float, DateTime)  <br>● metadata (description, displayName, strongType, assignPermissions)  <br>● defaultValue  <br>● allowedValues  <br>● schema|
+|_policyRule (object)_|El efecto de una directiva se define en _policyRule_. La regla consta de los bloques _if_ y _then_.  <br>● En el bloque _if_, se definen una o varias condiciones que determinan cuándo se aplica la directiva.  <br>● En el bloque _then_, se define el efecto que se aplica cuando las condiciones de _if_ se evalúan como verdaderas.||
 
 ```json
 {
@@ -253,21 +353,20 @@ You use JSON to create a policy definition that contains the elements shown in t
   }
 ```
 
-In the given example, _b2cDirectories_ is excluded from the policy logic because its location field isn't a region (it can be "United States," "Europe," "Asia Pacific," or "Australia"). This logic can be enforced with a separate policy.
+En el ejemplo, _b2cDirectories_ queda excluido de la lógica de la directiva porque su campo de ubicación no corresponde a una región (puede ser «United States», «Europe», «Asia Pacific» o «Australia»). Esta lógica se puede aplicar mediante una directiva independiente.
 
-## Logical operators and conditions (_if_ blocks)
+## Operadores lógicos y condiciones (bloques _if_)
 
-The first part of the _policyRule_ in an Azure Policy definition is the _if_ block. This block defines the conditions for which the policy evaluates the resources. A policy definition can contain several conditional statements. Depending on your evaluation requirements, you might or might not need each statement to be true, and you might only need some of them to be true.
+La primera parte de _policyRule_ en una definición de Azure Policy es el bloque _if_. Este bloque define las condiciones que usa la directiva para evaluar los recursos. Una definición puede contener varias expresiones condicionales. Según los requisitos de evaluación, puede ser necesario que todas sean verdaderas o que solo lo sean algunas.
+### Operadores lógicos admitidos en el bloque _if_
 
-### Logical operators supported in the _if_ block
+En la condición _if_ se pueden usar distintos operadores lógicos.
 
-In the _if_ condition, you can put different logical operators.
-
-|Operator|Type|Description|
+|Operador|Tipo|Descripción|
 |---|---|---|
-|_not_|{condition or operator}|The _not_ syntax inverts the result of the condition.|
-|_allOf_|[{condition or operator}, {condition or operator}]|The _allOf_ syntax (like the logical _and_ operation) requires all conditions to be true.|
-|_anyOf_|[{condition or operator}, {condition or operator}]|The _anyOf_ syntax (like the logical _or_ operation) requires one or more conditions to be true.|
+|_not_|{condition or operator}|La sintaxis _not_ invierte el resultado de la condición.|
+|_allOf_|[{condition or operator}, {condition or operator}]|La sintaxis _allOf_ (similar a la operación lógica _and_) requiere que todas las condiciones sean verdaderas.|
+|_anyOf_|[{condition or operator}, {condition or operator}]|La sintaxis _anyOf_ (similar a la operación lógica _or_) requiere que una o varias condiciones sean verdaderas.|
 ```json
 {
   "if": {
@@ -291,11 +390,11 @@ In the _if_ condition, you can put different logical operators.
   }
 }
 ```
-### Nested logical operations
+### Operaciones lógicas anidadas
 
-Logical operations are optional and can be nested to create complex scenarios.
+Las operaciones lógicas son opcionales y se pueden anidar para crear escenarios complejos.
 
-The following example shows a _not_ operation nested in an _allOf_ operation:
+El ejemplo siguiente muestra una operación _not_ anidada en una operación _allOf_:
 ```json
 "if": {
     "allOf": [
@@ -314,18 +413,18 @@ The following example shows a _not_ operation nested in an _allOf_ operation
 ```
 
 
-### Conditions
+### Condiciones
 
-Properties like fields, values, or counts can be evaluated within a condition.
+En una condición se pueden evaluar propiedades como campos, valores o recuentos.
 
 |   |   |   |
 |---|---|---|
-|**Fields**|Conditions that evaluate whether the values of properties in the resource request payload meet certain criteria can be formed by using a field expression.|Name, fullName, kind, type, location, ID, identity.type, tags, tags['tagName'], property aliases|
-|**Value**|Conditions that evaluate whether a value meets certain criteria can be formed by using a value expression.||
-|**Count**|Conditions that count how many members of an array meet certain criteria can be formed by using a count expression.|● Field count, value count  <br>● The current () function returns the value of the array member that's being evaluated|
-he condition in an Azure Policy assesses whether the evaluated values for the properties, such as Fields, Value, or Count, meets certain criteria. If the result of a function is an error, the policy results in a deny effect. This result can be avoided while testing by disabling _enforcementMode_ in the assignment. For more information, see [Enforcement Mode](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/assignment-structure#enforcement-mode) ([ES](https://learn.microsoft.com/es-es/azure/governance/policy/concepts/assignment-structure#enforcement-mode)).
+|**Campos**|Las expresiones de campo permiten crear condiciones que evalúan si los valores de las propiedades de la carga de la solicitud de recurso cumplen ciertos criterios.|Name, fullName, kind, type, location, ID, identity.type, tags, tags['tagName'], alias de propiedades|
+|**Valor**|Las expresiones de valor permiten crear condiciones que evalúan si un valor cumple ciertos criterios.||
+|**Recuento**|Las expresiones de recuento permiten contar cuántos elementos de una matriz cumplen ciertos criterios.|● Recuento de campos y recuento de valores  <br>● La función current() devuelve el valor del elemento de matriz que se está evaluando|
+La condición de Azure Policy evalúa si los valores de propiedades, como los campos, los valores o los recuentos, cumplen determinados criterios. Si una función devuelve un error, la directiva produce un efecto deny. Durante las pruebas, se puede evitar este resultado deshabilitando _enforcementMode_ en la asignación. Para obtener más información, consulta [Modo de cumplimiento](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/assignment-structure#enforcement-mode) ([ES](https://learn.microsoft.com/es-es/azure/governance/policy/concepts/assignment-structure#enforcement-mode)).
 
-|Evaluation criteria|Value type|
+|Criterio de evaluación|Tipo de valor|
 |---|---|
 |_equals_|stringValue|
 |_notEquals_|stringValue|
@@ -383,121 +482,188 @@ he condition in an Azure Policy assesses whether the evaluated values for the pr
 }
 ```
 
-### Policy functions
+### Funciones de Policy
 
-Functions can be used to introduce extra logic into a policy rule. They're resolved in the policy rule of a policy definition and in the parameter values that are assigned to the policy definitions in an initiative.
+Se pueden usar funciones para añadir lógica a una regla de directiva. Se resuelven en la regla de la definición de directiva y en los valores de los parámetros asignados a las definiciones de una iniciativa.
 
-The Resource Manager template functions are available to use in a policy rule except a [few policy functions and user-defined functions](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/definition-structure-policy-rule#policy-functions) ([ES](https://learn.microsoft.com/es-es/azure/governance/policy/concepts/definition-structure-policy-rule#policy-functions)).
+En una regla de directiva se pueden usar las funciones de plantillas de Resource Manager, excepto algunas [funciones de Policy y funciones definidas por el usuario](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/definition-structure-policy-rule#policy-functions) ([ES](https://learn.microsoft.com/es-es/azure/governance/policy/concepts/definition-structure-policy-rule#policy-functions)).
 
-The _utcNow()_ function is available to use in a policy rule but differs from use in an Azure Resource Manager template (ARM template). Unlike an ARM template, this function can be used outside _defaultValue_. It returns a string set to the current date and time in Universal ISO 8601 DateTime format `yyyy-MM-ddTHH:mm:ss.fffffffZ`.
+La función _utcNow()_ se puede usar en una regla de directiva, pero su comportamiento difiere del que tiene en una plantilla de Azure Resource Manager (plantilla ARM). A diferencia de una plantilla ARM, esta función se puede usar fuera de _defaultValue_. Devuelve una cadena con la fecha y hora actuales en formato ISO 8601 universal `yyyy-MM-ddTHH:mm:ss.fffffffZ`.
 
-The following table describes the functions that are only available in policy rules.
+La tabla siguiente describe las funciones disponibles únicamente en las reglas de directiva.
 
-|Function|Description|
+|Función|Descripción|
 |---|---|
-|`addDays(dateTime, numberOfDaysToAdd)`|● `dateTime`: [Required] string - String in the Universal ISO 8601 DateTime format 'yyyy-MM-ddTHH:mm:ss.FFFFFFFZ'.  <br>● `numberOfDaysToAdd`: [Required] integer - Number of days to add.|
-|`Field(fieldName)`|● `fieldName`: [Required] string - Name of the [field](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/definition-structure-policy-rule#fields) ([ES](https://learn.microsoft.com/es-es/azure/governance/policy/concepts/definition-structure-policy-rule#fields)) to retrieve.  <br>● Returns the value of that field from the resource evaluated by the _If_ condition.  <br>● `field` is primarily used with `auditIfNotExists` and `deployIfNotExists` to reference fields on the resource that are being evaluated.|
-|`requestContext().apiVersion`|Returns the API version of the request that triggered policy evaluation. This value is the API version that was used in the PUT/PATCH request for evaluations on resource creation/update. The latest API version is always used during compliance evaluation on existing resources.|
-|`policy()`|Returns the following information about the policy that's being evaluated. Properties can be accessed from the returned object.  <br>`"assignmentId": ""`,  <br>`"definitionId": ""`,  <br>`"setDefinitionId": ""`,  <br>`"definitionReferenceId": ""`|
-|`ipRangeContains(range, targetRange)`|● `range`: [Required] string - String specifying a range of IP addresses to check if the _targetRange_ is within range.  <br>● `targetRange`: [Required] string - String specifying a range of IP addresses to validate as included within the _range_.  <br>Returns a _boolean_ for whether the _range_ IP address range contains the _targetRange_ IP address range. Empty ranges or mixing between IP families isn't allowed and results in evaluation failure.|
-|`current(indexName)`|Special function that can only be used inside count expressions.|
-## Effect types (_then_ blocks)
+|`addDays(dateTime, numberOfDaysToAdd)`|● `dateTime`: cadena [obligatoria] en formato ISO 8601 universal 'yyyy-MM-ddTHH:mm:ss.FFFFFFFZ'.  <br>● `numberOfDaysToAdd`: entero [obligatorio] que indica el número de días que se agregarán.|
+|`Field(fieldName)`|● `fieldName`: cadena [obligatoria], nombre del [campo](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/definition-structure-policy-rule#fields) ([ES](https://learn.microsoft.com/es-es/azure/governance/policy/concepts/definition-structure-policy-rule#fields)) que se recuperará.  <br>● Devuelve el valor de ese campo del recurso evaluado por la condición _if_.  <br>● `field` se usa principalmente con `auditIfNotExists` y `deployIfNotExists` para hacer referencia a campos del recurso que se está evaluando.|
+|`requestContext().apiVersion`|Devuelve la versión de API de la solicitud que desencadenó la evaluación de la directiva. Este valor es la versión de API usada en la solicitud PUT/PATCH para evaluar la creación o actualización de un recurso. Al evaluar el cumplimiento de recursos existentes, siempre se usa la versión de API más reciente.|
+|`policy()`|Devuelve información sobre la directiva que se está evaluando. Se puede acceder a las propiedades del objeto devuelto.  <br>`"assignmentId": ""`,  <br>`"definitionId": ""`,  <br>`"setDefinitionId": ""`,  <br>`"definitionReferenceId": ""`|
+|`ipRangeContains(range, targetRange)`|● `range`: cadena [obligatoria] que especifica un intervalo de direcciones IP para comprobar si contiene `targetRange`.  <br>● `targetRange`: cadena [obligatoria] que especifica el intervalo de direcciones IP cuya inclusión en `range` se quiere validar.  <br>Devuelve un valor booleano que indica si el intervalo IP de `range` contiene el intervalo IP de `targetRange`. No se permiten intervalos vacíos ni combinar familias IP; hacerlo provoca un error de evaluación.|
+|`current(indexName)`|Función especial que solo se puede usar dentro de expresiones de recuento.|
+## Tipos de efecto (bloques _then_)
 
-The second part of the _policyRule_ in an Azure Policy definition is the _then_ block. This block defines the effect that takes place when the policy rule is evaluated to match the condition resources. More than one effect can be valid for a given policy definition. Parameters are often used to specify allowed effect values (_allowedValues_) in such cases so that a single definition can be more versatile during assignment. Resource properties and logic in the policy rule can determine whether a certain effect is considered valid to the policy definition.
+La segunda parte de _policyRule_ en una definición de Azure Policy es el bloque _then_. Este bloque define el efecto que se aplica cuando la regla determina que los recursos cumplen la condición. Una definición de directiva puede admitir más de un efecto. En esos casos, se suelen usar parámetros para especificar los valores de efecto permitidos (_allowedValues_), lo que aporta flexibilidad a una misma definición durante la asignación. Las propiedades de los recursos y la lógica de la regla pueden determinar si un efecto concreto es válido para la definición.
 
-|Effect|Description|Type|
-|---|---|---|
-|_disabled_|The _disabled_ effect is a way to deactivate the policy. If a policy definition has _Disabled_ as its effect, any assignments of that policy aren't active. This effect is checked first to determine if the policy rule should be evaluated. This flexibility makes it possible to deactivate a single assignment instead of deactivating all of that policy's assignments.|Synchronous evaluation|
-|_append_|The _append_ effect is used to add more fields to the requested resource during creation or update. It's mostly obsolete because _Modify_ can also be used to add fields to the request.|Synchronous evaluation|
-|_modify_|The _modify_ effect is used to add, update, or remove properties or tags on a subscription or resource during creation or update. It allows Azure Policy to modify requests to Azure Resource Manager by altering fields to ensure compliance.|Synchronous evaluation|
-|_deny_|The _deny_ effect is used to prevent a resource request that doesn't match defined standards through a policy definition and fails the request.|Synchronous evaluation|
-|_denyAction_|The _denyAction_ effect is used to block requests based on intended action to resources at scale. Currently, the only supported action is DELETE.|Synchronous evaluation|
-|_audit_|The _audit_ effect is used to create a warning event in the activity log when you're evaluating a noncompliant resource, but it doesn't stop the request.|Asynchronous evaluation|
-|_auditIfNotExists_|The _auditIfNotExists_ effect allows the auditing of resources that are related to the resource that matches the _if_ condition but doesn't have the properties specified in the details of the _then_ condition.|Asynchronous evaluation|
-|_deployIfNotExists_|The _deployIfNotExists_ policy definition runs a template deployment when the condition is met. It can trigger deployment of a related resource based on the compliance state of the currently evaluated resource.|Asynchronous evaluation|
-|_manual_|The _manual_ effect allows you to self-attest the compliance of resources or scopes. When a policy definition with _Manual_ effect is assigned, you can set the compliance states of targeted resources or scopes through custom attestations.|Manual attestation|
-The following list provides general guidance around interchangeable effects:
+| Efecto              | Descripción                                                                                                                                                                                                                                                                                                      | Tipo                   |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------- |
+| _disabled_          | El efecto _disabled_ desactiva la directiva. Si una definición tiene _Disabled_ como efecto, sus asignaciones no están activas. Este efecto se comprueba primero para determinar si se debe evaluar la regla. Así se puede desactivar una sola asignación sin desactivar todas las asignaciones de la directiva. | Evaluación sincrónica  |
+| _append_            | El efecto _append_ agrega campos al recurso solicitado durante su creación o actualización. En gran medida ha quedado obsoleto porque _modify_ también permite agregar campos a la solicitud.                                                                                                                    | Evaluación sincrónica  |
+| _modify_            | El efecto _modify_ agrega, actualiza o quita propiedades o etiquetas de una suscripción o un recurso durante su creación o actualización. Permite que Azure Policy modifique las solicitudes a Azure Resource Manager cambiando campos para garantizar el cumplimiento.                                          | Evaluación sincrónica  |
+| _deny_              | El efecto _deny_ impide una solicitud de recurso que no cumple los estándares definidos por una directiva y hace que la solicitud produzca un error.                                                                                                                                                             | Evaluación sincrónica  |
+| _denyAction_        | El efecto _denyAction_ bloquea a escala las solicitudes según la acción prevista sobre los recursos. Actualmente, la única acción admitida es DELETE.                                                                                                                                                            | Evaluación sincrónica  |
+| _audit_             | El efecto _audit_ crea un evento de advertencia en el registro de actividad al evaluar un recurso no conforme, pero no detiene la solicitud.                                                                                                                                                                     | Evaluación asincrónica |
+| _auditIfNotExists_  | El efecto _auditIfNotExists_ audita los recursos relacionados con el recurso que coincide con la condición _if_ cuando no tienen las propiedades especificadas en los detalles de la condición _then_.                                                                                                           | Evaluación asincrónica |
+| _deployIfNotExists_ | La definición de directiva con efecto _deployIfNotExists_ ejecuta una implementación de plantilla cuando se cumple la condición. Puede desencadenar la implementación de un recurso relacionado según el estado de cumplimiento del recurso evaluado.                                                            | Evaluación asincrónica |
+| _manual_            | El efecto _manual_ permite atestar manualmente el cumplimiento de recursos o ámbitos. Cuando se asigna una definición con efecto _Manual_, se pueden establecer los estados de cumplimiento de los recursos o ámbitos seleccionados mediante atestaciones personalizadas.                                        | Atestación manual      |
+La siguiente lista ofrece orientación general sobre los efectos que se pueden intercambiar:
 
-- _audit_, _deny_, and either _modify_ or _append_ are often interchangeable.
-- _auditIfNotExists_ and _deployIfNotExists_ are often interchangeable.
-- _manual_ isn't interchangeable.
-- _disabled_ is interchangeable with any effect.
+- _audit_, _deny_ y _modify_ o _append_ suelen ser intercambiables.
+- _auditIfNotExists_ y _deployIfNotExists_ suelen ser intercambiables.
+- _manual_ no es intercambiable.
+- _disabled_ se puede intercambiar con cualquier efecto.
 
-Multiple policies can be assigned to a single resource at the same scope or at different scopes. Each policy mostly has a different effect defined. The condition and effect for each policy is independently evaluated. The net result of layering policy definitions is considered **cumulative most restrictive**.
+Se pueden asignar varias directivas a un mismo recurso, en el mismo ámbito o en ámbitos distintos. Por lo general, cada directiva define un efecto diferente. La condición y el efecto de cada directiva se evalúan de forma independiente. El resultado neto de combinar definiciones de directiva se considera **el más restrictivo de forma acumulativa**.
 
-# Evaluation of resources through Azure Policy.
+# Evaluación de recursos mediante Azure Policy.
 
-A significant benefit of Azure Policy is the insight and controls that it provides over resources in a subscription or management group of subscriptions.
-## Evaluation triggers.
+Una ventaja importante de Azure Policy es la visibilidad y el control que ofrece sobre los recursos de una suscripción o de un grupo de suscripciones. Este control puede impedir que se creen recursos en ubicaciones incorrectas, exigir un uso uniforme de las etiquetas o auditar la configuración y los valores adecuados de los recursos existentes. Antes de revisar los datos de cumplimiento y actuar en consecuencia, es necesario comprender los desencadenadores de evaluación, los tiempos y los estados de cumplimiento de los recursos.
+## Desencadenadores de evaluación
 
-Evaluations of assigned policies and initiatives happen as the result of various events:
+La evaluación de las directivas y las iniciativas asignadas se produce como resultado de distintos eventos:
 
-- A policy or initiative is newly assigned to a scope
-- A policy or initiative already assigned to a scope is updated
-- A resource is deployed to or updated in a scope with an assignment through Azure Resource Manager, REST API, or a supported SDK
-- A subscription (resource type Microsoft.Resources/subscriptions) is created or moved in a management group hierarchy with an assigned policy definition that targets the subscription resource type
-- A policy exemption is created, updated, or deleted
-- Standard compliance evaluation cycle
-- The machine configuration resource provider is updated with compliance details by a managed resource
-- On-demand scan
-## Evaluation timing.
-When you're working with policy assignments in Azure, you need to understand the behavior and timing of compliance scans, especially in Brownfield scenarios, where new policies are applied to existing resources. Compliance scans through Azure policies are triggered by various methods:
+- Se asigna una directiva o iniciativa nueva a un ámbito.
 
-- **Automatic full scan** - A full compliance scan is triggered automatically every 24 hours.
-- **Manual scan for Brownfield scenarios** - In cases where a new policy is applied to existing resources (Brownfield scenarios), you can manually trigger a compliance scan by running _az policy state trigger-scan_.
+- Se actualiza una directiva o iniciativa que ya estaba asignada a un ámbito.
 
-When you assign a new policy, a delay can occur in the policy taking effect, which can be up to 30 minutes. The Azure Resource Manager cache holds session data, and it can take time for the policy to propagate in the same session. To bypass the caching delay, you can sign out and sign back in to refresh the Azure Resource Manager cache, which ensures that the new policy is applied immediately to the defined scope.
+- Se implementa o actualiza un recurso en un ámbito con una asignación, mediante Azure Resource Manager, la API REST o un SDK compatible.
 
-After the scan starts, several factors influence how long it takes for a compliance scan to complete:
+- Se crea o mueve una suscripción (tipo de recurso Microsoft.Resources/subscriptions) dentro de una jerarquía de grupos de administración que tiene asignada una definición de directiva dirigida al tipo de recurso de suscripción.
 
-- **Policy definitions** - The size and complexity of the policy definitions can increase scan time.
-- **Number of policies** - The more policies applied, the longer the scan might take.
-- **Scope size** - The size of the resource scope assigned to the policy also plays a role.
-- **System load** - Compliance scans are a low-priority operation, meaning that if the system is busy with more critical tasks, the scan might take longer. The system prioritizes interactive and high-importance operations, so scans might take several minutes, or tens of minutes, even in smaller environments.
-- **Synchronous scan (Low-Priority Execution)** - Because compliance scans are synchronous and assigned a low priority in Azure's system, they're delayed if the system is busy. This scan can significantly extend the time it takes for the scan to complete, even for smaller scopes or policies.
+- Se crea, actualiza o elimina una exención de directiva.
 
-This understanding of the compliance scan process and potential delays allows you to better manage the application and avoid unnecessary waiting, especially in environments with complex or extensive policy definitions.
+- Se inicia el ciclo estándar de evaluación del cumplimiento.
 
-## Resource compliance states
+- Un recurso administrado actualiza el proveedor de recursos de configuración de máquina con detalles de cumplimiento.
 
-When initiative or policy definitions are assigned, Azure Policy determines which resources are applicable. Then, it evaluates those resources that aren't excluded or exempted. Evaluation provides one of the compliance states to each resource based on conditions in the policy rule and each resource's adherence to those requirements.
+- Se inicia un examen a petición.
 
-- **Non-compliant**
-- **Compliant**
-- **Error** (for template or evaluation error)
-- **Conflicting** (two or more policy assignments in the same scope with contradicting rules, such as two policies appending the same tag with different values)
-- **Protected** (resource covered under an assignment with a _denyAction_ effect)
-- **Exempted Unknown** (default state for definitions with a _manual_ effect)
+Para obtener más información, consulta los [desencadenadores de evaluación](https://learn.microsoft.com/en-us/azure/governance/policy/how-to/get-compliance-data#evaluation-triggers).
+## Tiempos de evaluación.
 
-When multiple resources or policies have varying compliance states, the overall compliance state is assessed individually for each resource and for each policy assignment. Azure Policy ranks each compliance state so that one wins over another in this situation. The rank order of the states is as given in the previous list of compliance states.
+Al trabajar con asignaciones de directivas en Azure, es importante comprender el comportamiento y los tiempos de los exámenes de cumplimiento, especialmente en escenarios **Brownfield**, donde se aplican directivas nuevas a recursos existentes. Los exámenes de cumplimiento de Azure Policy se pueden desencadenar de varias maneras:
 
-The compliance percentage is determined by dividing **Compliant**, **Exempt**, and **Unknown** resources by total resources. Total resources include resources with **Compliant**, **Non-compliant**, **Unknown**, **Exempt**, **Conflicting**, and **Error** states.
+- **Examen completo automático**: se inicia automáticamente cada 24 horas.
 
-For more information on when the policies return these states for any particular resource, see [Azure Policy compliance states](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/compliance-states) ([ES](https://learn.microsoft.com/es-es/azure/governance/policy/concepts/compliance-states)).
+- **Examen manual en escenarios Brownfield**: cuando se aplica una directiva nueva a recursos existentes, puedes iniciar manualmente un examen de cumplimiento ejecutando _az policy state trigger-scan_.
 
-## Enforcement Mode
+Al asignar una **directiva nueva, su aplicación puede demorarse hasta 30 minutos**. La caché de Azure Resource Manager conserva datos de sesión y la directiva puede tardar en propagarse dentro de la misma sesión. Para evitar la demora de la caché, puedes cerrar sesión y volver a iniciarla para actualizarla y lograr que la directiva nueva se aplique inmediatamente al ámbito definido.
 
-_enforcementMode_ is a property of a policy assignment that lets you deactivate the enforcement of certain policy effects. This mode allows you to test the policy's outcome on existing resources without initiating the policy effect or triggering entries in the [Azure Activity log](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/platform-logs-overview) ([ES](https://learn.microsoft.com/es-es/azure/azure-monitor/essentials/platform-logs-overview)). The _enforcementMode_ can be changed to Enabled after the policy is thoroughly tested.
+Una vez iniciado el examen, varios factores influyen en el tiempo que tarda en completarse:
 
-This scenario is commonly referred to as _What If_ and aligns to safe deployment practices. The _enforcementMode_ is different from the _disabled_ effect. The _disabled_ effect prevents resource evaluation from happening at all while _enforcementMode_ lets the evaluation happen without the effect taking place.
+- **Definiciones de directiva**: su tamaño y complejidad pueden aumentar la duración del examen.
 
-The following table describes this property's values.
+- **Cantidad de directivas**: cuantas más directivas se apliquen, más puede tardar el examen.
 
-|Mode|JSON value|Type|Remediate manually|Activity log entry|Description|
+- **Tamaño del ámbito**: también influye el tamaño del ámbito de recursos al que se asigna la directiva.
+
+- **Carga del sistema**: los exámenes de cumplimiento tienen prioridad baja; si el sistema está ocupado con tareas más importantes, pueden tardar más. El sistema prioriza las operaciones interactivas y de alta importancia, por lo que un examen puede durar varios minutos o incluso decenas de minutos, aun en entornos pequeños.
+
+- **Examen sincrónico (ejecución de baja prioridad)**: como los exámenes de cumplimiento son sincrónicos y tienen baja prioridad en Azure, se retrasan si el sistema está ocupado. Esto puede prolongar considerablemente su duración, incluso con ámbitos o directivas pequeños.
+
+Comprender el proceso de examen de cumplimiento y sus posibles demoras permite administrar mejor la aplicación y evitar esperas innecesarias, especialmente en entornos con definiciones de directiva complejas o extensas.
+
+## Estados de cumplimiento de los recursos
+
+Al asignar definiciones de directiva o iniciativas, Azure Policy determina qué recursos son aplicables. Después evalúa los que no están excluidos ni exentos. Según las condiciones de la regla y el grado en que cada recurso las cumple, la evaluación asigna a cada uno un estado de cumplimiento:
+
+- **No conforme** (`Non-compliant`).
+
+- **Conforme** (`Compliant`).
+
+- **Error** (error de plantilla o de evaluación).
+
+- **En conflicto** (`Conflicting`): dos o más asignaciones del mismo ámbito tienen reglas contradictorias, por ejemplo, dos directivas agregan la misma etiqueta con valores distintos.
+
+- **Protegido** (`Protected`): el recurso está cubierto por una asignación con efecto _denyAction_.
+
+- **Exento desconocido** (`Exempted Unknown`): estado predeterminado de las definiciones con efecto _manual_.
+
+Cuando varios recursos o directivas tienen distintos estados de cumplimiento, el estado general se determina individualmente para cada recurso y cada asignación de directiva. Azure Policy asigna una prioridad a los estados para resolver estas situaciones; el orden de prioridad es el indicado en la lista anterior.
+
+El porcentaje de cumplimiento se calcula dividiendo la cantidad de recursos **conformes**, **exentos** y **desconocidos** entre el total de recursos. El total incluye los recursos con estado **conforme**, **no conforme**, **desconocido**, **exento**, **en conflicto** y **error**.
+
+Para obtener más información sobre cuándo devuelven las directivas estos estados para un recurso determinado, consulta los [estados de cumplimiento de Azure Policy](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/compliance-states) ([ES](https://learn.microsoft.com/es-es/azure/governance/policy/concepts/compliance-states)).
+
+## Modo de cumplimiento
+
+_enforcementMode_ es una propiedad de la asignación de una directiva que permite desactivar la aplicación de determinados efectos. Este modo permite probar el resultado de la directiva en recursos existentes sin activar el efecto ni generar entradas en el [registro de actividad de Azure](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/platform-logs-overview) ([ES](https://learn.microsoft.com/es-es/azure/azure-monitor/essentials/platform-logs-overview)). Una vez probada exhaustivamente, se puede cambiar _enforcementMode_ a Enabled.
+
+Este escenario suele denominarse _What If_ y se ajusta a las prácticas de implementación segura. _enforcementMode_ es distinto del efecto _disabled_: el efecto _disabled_ impide por completo la evaluación de los recursos, mientras que _enforcementMode_ permite evaluarlos sin aplicar el efecto.
+
+La tabla siguiente describe los valores de esta propiedad.
+
+|Modo|Valor JSON|Tipo|Corrección manual|Entrada en el registro de actividad|Descripción|
 |---|---|---|---|---|---|
-|Enabled|Default|string|Yes|Yes|The policy effect is enforced during resource creation or update.|
-|Disabled|DoNotEnforce|string|Yes|No|The policy effect isn't enforced during resource creation or update.|
-## Policy enforcement and safe deployment best practices
+|Enabled|Predeterminado|string|Sí|Sí|El efecto de la directiva se aplica al crear o actualizar recursos.|
+|Disabled|DoNotEnforce|string|Sí|No|El efecto de la directiva no se aplica al crear o actualizar recursos.|
+## Aplicación de directivas y procedimientos recomendados para una implementación segura
 
-Without the appropriate knowledge of best practices and proper testing, applying a set of policy to an existing environment that's running production workloads can result in unintended behaviors of policy resources. Treating policy as code (keeping your policy definitions in source control, and whenever a change is made, testing and validating that change) allows you to automate testing and make sure that no manual error factor happens. The best practices framework focuses on minimizing the impact of policy changes while ensuring compliance, and it includes two aspects:
+Sin conocer los procedimientos recomendados ni realizar las pruebas adecuadas, aplicar un conjunto de directivas a un entorno existente que ejecuta cargas de trabajo de producción puede provocar comportamientos imprevistos en los recursos. Tratar las directivas como código (mantener sus definiciones en el control de código fuente y probar y validar cada cambio) permite automatizar las pruebas y evitar errores manuales. El marco de procedimientos recomendados se centra en reducir al mínimo el impacto de los cambios y garantizar el cumplimiento, y consta de dos aspectos:
 
-- **First aspect** - Start from Assignments of new policies with _enforcementMode_ Disabled. When assigning policies that include deny or modify actions, beginning with _enforcementMode_ Disabled allows you to view the compliance state and evaluate policy outcomes without triggering actions or denying operations. This "what-if" scenario minimizes impact and helps identify issues in the new policies or changes without disrupting the environment.
-    
-- **Second aspect** - Deploy policies in deployment rings. To control potential negative impacts, policies should be deployed gradually in smaller subsets and then in bigger sets. You can start with test and development environments and then move to production by applying the policy to a small subset first. This strategy helps in testing the policy thoroughly. Gradually expanding the scope (through deployment rings) can cover the full production environment.
+- **Primer aspecto**: comenzar asignando las directivas nuevas con _enforcementMode_ Disabled. Al asignar directivas con acciones deny o modify, iniciar con _enforcementMode_ Disabled permite consultar el estado de cumplimiento y evaluar los resultados sin desencadenar acciones ni denegar operaciones. Este escenario «what-if» minimiza el impacto y ayuda a detectar problemas en las directivas nuevas o en los cambios sin interrumpir el entorno.
+
+- **Segundo aspecto**: implementar las directivas por anillos. Para controlar posibles efectos negativos, las directivas deben implementarse gradualmente, primero en subconjuntos pequeños y luego en otros más grandes. Puedes empezar en entornos de prueba y desarrollo y pasar después a producción, aplicando inicialmente la directiva a un subconjunto reducido. Esta estrategia permite probarla a fondo. La ampliación gradual del ámbito mediante anillos puede cubrir todo el entorno de producción.
+
 ![[safe-deployment.png]]
 
-## Reacting to policy state changes.
+Los pasos siguientes corresponden a los indicados en la captura anterior:
+
+1. **Crear la definición**: empezar definiendo la directiva con el ámbito raíz (inquilino).
+
+2. **Crear la asignación**: definir anillos de implementación (del 1 al 5) mediante selectores de recursos. Asignar la directiva a un ámbito específico (por ejemplo, un grupo de recursos, una suscripción o un grupo de administración) del anillo 5. Asignarla con _enforcementMode_ Disabled para evaluar el cumplimiento sin aplicar cambios.
+
+3. a) **Comprobación del cumplimiento**: verificar que la directiva se aplique correctamente y que los recursos del anillo 5 alcancen el estado de cumplimiento deseado.
+
+    b) **Comprobación del estado de la aplicación**: evaluar el impacto de la directiva en los recursos del anillo 5 y confirmar que no haya efectos secundarios imprevistos.
+
+4. **Repetir en cada anillo (no producción)**: repetir el paso 3 en todos los anillos de los entornos que no son de producción.
+
+5. **Actualizar la asignación (opcional)**: si es necesario, ajustar la definición o la asignación según la evaluación de los recursos del entorno que no es de producción y volver a asignarla a los recursos del anillo 5 con _enforcementMode_ Enabled.
+
+6. a) **Comprobación del cumplimiento**: volver a evaluar el cumplimiento después de realizar los cambios (igual que en el paso 3a).
+
+    b) **Comprobación del estado de la aplicación**: volver a confirmar que la directiva no esté causando problemas (igual que en el paso 3b).
+
+7. **Repetir en cada anillo (no producción)**: repetir el paso 6 en todos los anillos de los entornos que no son de producción.
+
+8. **Repetir en los anillos de producción**: después de validar la directiva en un entorno que no es de producción, implementarla gradualmente en los entornos de producción, empezando por un subconjunto pequeño (un anillo) y ampliando el ámbito con el tiempo.
+
+
+For more detailed steps on the safe deployment of Azure Policy assignments with different effects, see [Safe deployment of Azure Policy assignments](https://learn.microsoft.com/en-us/azure/governance/policy/how-to/policy-safe-deployment-practices#steps-for-safe-deployment-of-azure-policy-assignments-with-deny-or-append-effects).
+
+## Respuesta a los cambios de estado de las directivas
+
+Los eventos de Azure Policy permiten que las aplicaciones reaccionen a los cambios de estado. Esta integración no requiere código complejo ni servicios de sondeo costosos e ineficientes. Los eventos de Azure Policy (el origen de eventos) se envían mediante Azure Event Grid a los controladores de eventos.
 
 ![[reacting-to-policy-changes.png]]
 
+Azure Event Grid ofrece servicios de entrega confiables a las aplicaciones mediante directivas de reintento completas y entrega de mensajes no procesables. Event Grid enruta, filtra y distribuye los eventos correctamente a sus destinos mediante suscripciones de Event Grid. Para obtener más información, consulta [Azure Event Grid](https://learn.microsoft.com/en-us/azure/event-grid/).
 
+El controlador de eventos es el destino al que se envía el evento. Se pueden configurar varios servicios para gestionarlos, como Microsoft Azure Functions, Microsoft Azure Logic Apps o un agente de escucha HTTP personalizado. También se puede usar cualquier webhook.
+
+Para obtener más información, consulta [Controladores de eventos en Azure Event Grid](https://learn.microsoft.com/en-us/azure/event-grid/event-handlers), [Respuesta a eventos de cambio de estado de Azure Policy](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/event-overview?tabs=event-grid-event-schema) y el tutorial [Enrutamiento de eventos de cambio de estado de directivas a Event Grid con la CLI de Azure](https://learn.microsoft.com/en-us/azure/governance/policy/tutorials/route-state-change-events).
+
+# Summary.
+
+Azure Policy is a crucial component of the governance model in the Cloud Adoption Framework for Azure, which is designed to balance control and stability with speed and results. It helps you enforce organizational and regulatory standards and assess compliance at scale through built-in and custom policies and policy initiatives.
+
+The module covered the hierarchical organization of Azure resources, policy operations in Greenfield and Brownfield scenarios, and the various components of policy definitions. You also delved into the evaluation and effects of policies, safe deployment practices, and integration with Event Grid for automated actions based on policy state changes. Key points included:
+
+- Importance of careful policy design
+- Testing to ensure effective governance without disrupting operations
+- Logical operators and conditions in policy evaluation
+- Supported effect types such as _disabled_, _modify_, _deny_, _audit_, _deployIfNotExists_, and _manual_
+
+Additionally, the module emphasized starting with _enforcementMode_ deactivated for new policies to test their impact and then deploying policies in rings to gradually expand to production environments.
+
+For more information, see the [Azure Policy](https://learn.microsoft.com/en-us/azure/governance/policy/overview) documentation.

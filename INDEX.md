@@ -20,7 +20,7 @@ Catálogo de todo el contenido del repositorio. Se actualiza en cada ingesta. Ve
 | [[Azure Cloud Shell]] | devops, tools | Stub |
 | [[ARM Templates]] | devops, iac | Stub |
 
-Notas de estudio por módulo: 12 fichas `knowledge/az900-*.md` (AZ-900, plantilla `_template-az900.md`, enlaces Learn × vídeo de Savill) y 26 fichas `knowledge/az104-*.md` (AZ-104, plantilla `_template-az104.md`, enlaces Learn + labs oficiales) — contenido a rellenar al estudiar. Checklists de uso: [AZ-900](certifications/AZ-900/INDEX.md) · [AZ-104](certifications/AZ-104/INDEX.md).
+Notas de estudio por módulo: 12 fichas `knowledge/az900-*.md` (AZ-900, plantilla `_template-az900.md`, enlaces Learn × vídeo de Savill) y 27 fichas `knowledge/az104-*.md` (AZ-104, plantilla `_template-az104.md`, enlaces Learn + labs oficiales) — contenido a rellenar al estudiar. Checklists de uso: [AZ-900](certifications/AZ-900/INDEX.md) · [AZ-104](certifications/AZ-104/INDEX.md).
 
 ## Certifications
 

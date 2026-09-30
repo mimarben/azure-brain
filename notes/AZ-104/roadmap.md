@@ -31,10 +31,19 @@ Plan de estudio para AZ-104 por **autoestudio gratuito**: las 6 rutas de aprendi
 
 > **Nota sobre el clon local.** `raw/azure-docs/articles/` en este repo incluye carpetas para la mayoría de temas de AZ-104 (`storage/`, `virtual-network/`, `app-service/`, `application-gateway/`, `load-balancer/`, `dns/`, `backup/`, `site-recovery/`, `bastion/`, `container-apps/`, `containers/`, `azure-resource-manager/`, `role-based-access-control/`, `governance/`, `cost-management-billing/`). **No** incluye `active-directory` (Entra ID, solo b2c), `virtual-machines`, `azure-monitor` ni `network-watcher` — para esos los enlaces van directos a Microsoft Learn.
 
+Pruebas exámen.
+
+https://www.certlibrary.com/exam/AZ-104
+
+https://www.examtopics.com/exams/microsoft/az-104/view/
+
+https://github.com/Iamrushabhshahh/Microsoft-Azure-Administrator-AZ-104-Exam-Dump-Question-With-Solution
+
+https://github.com/Ditectrev/Microsoft-Azure-AZ-104-Microsoft-Azure-Administrator-Practice-Tests-Exams-Questions-Answers
 ## Progreso general
 
-- [ ] Bloque 0 — Prerrequisitos (2 módulos)
-- [ ] Bloque 1 — Identidad y gobernanza (20–25%) — módulos 03–08
+- [x] Bloque 0 — Prerrequisitos (2 módulos)
+- [x] Bloque 1 — Identidad y gobernanza (20–25%) — módulos 03–08
 - [ ] Bloque 2 — Almacenamiento (15–20%)
 - [ ] Bloque 3 — Cómputo (20–25%)
 - [ ] Bloque 4 — Redes virtuales (15–20%)
@@ -93,13 +102,13 @@ Docs: [Microsoft Entra ID](https://learn.microsoft.com/en-us/azure/active-direct
 
 ### 2.1 [AZ-104: Implement and manage storage in Azure](https://learn.microsoft.com/en-us/training/paths/az-104-manage-storage/) ([ES](https://learn.microsoft.com/es-es/training/paths/az-104-manage-storage/)) (4 módulos)
 
-- [ ] [Configure storage accounts](https://learn.microsoft.com/en-us/training/modules/configure-storage-accounts/) ([ES](https://learn.microsoft.com/es-es/training/modules/configure-storage-accounts/)) — creación, redundancia (LRS/GRS/GZRS...), endpoints → [Configuración de cuentas de almacenamiento (AZ-104)](../../knowledge/az104-storage-accounts.md)
+- [x] [Configure storage accounts](https://learn.microsoft.com/en-us/training/modules/configure-storage-accounts/) ([ES](https://learn.microsoft.com/es-es/training/modules/configure-storage-accounts/)) — creación, redundancia (LRS/GRS/GZRS...), endpoints → [Configuración de cuentas de almacenamiento (AZ-104)](../../knowledge/az104-storage-accounts.md)
 
-- [ ] [Configure Azure Blob Storage](https://learn.microsoft.com/en-us/training/modules/configure-blob-storage/) ([ES](https://learn.microsoft.com/es-es/training/modules/configure-blob-storage/)) — tiers, replicación de objetos, ciclo de vida, versionado → [Configuración de Azure Blob Storage (AZ-104)](../../knowledge/az104-blob-storage.md)
+- [x] [Configure Azure Blob Storage](https://learn.microsoft.com/en-us/training/modules/configure-blob-storage/) ([ES](https://learn.microsoft.com/es-es/training/modules/configure-blob-storage/)) — tiers, replicación de objetos, ciclo de vida, versionado → [Configuración de Azure Blob Storage (AZ-104)](../../knowledge/az104-blob-storage.md)
 
-- [ ] [Configure Azure Storage security](https://learn.microsoft.com/en-us/training/modules/configure-storage-security/) ([ES](https://learn.microsoft.com/es-es/training/modules/configure-storage-security/)) — SAS tokens, directivas de acceso almacenadas, claves, firewalls/vNet → [Configurar la seguridad de Azure Storage (AZ-104)](../../knowledge/az104-storage-security.md)
+- [x] [Configure Azure Storage security](https://learn.microsoft.com/en-us/training/modules/configure-storage-security/) ([ES](https://learn.microsoft.com/es-es/training/modules/configure-storage-security/)) — SAS tokens, directivas de acceso almacenadas, claves, firewalls/vNet → [Configurar la seguridad de Azure Storage (AZ-104)](../../knowledge/az104-storage-security.md)
 
-- [ ] [Configure Azure Files](https://learn.microsoft.com/en-us/training/modules/configure-azure-files-file-sync/) ([ES](https://learn.microsoft.com/es-es/training/modules/configure-azure-files-file-sync/)) — file shares, Azure File Sync, acceso basado en identidad → [Configuración de Azure Files (AZ-104)](../../knowledge/az104-azure-files.md)
+- [x] [Configure Azure Files](https://learn.microsoft.com/en-us/training/modules/configure-azure-files-file-sync/) ([ES](https://learn.microsoft.com/es-es/training/modules/configure-azure-files-file-sync/)) — file shares, Azure File Sync, acceso basado en identidad → [Configuración de Azure Files (AZ-104)](../../knowledge/az104-azure-files.md)
 
 **Lab:** [07 — Manage Azure Storage](../../raw/AZ-104T00/Instructions/Labs/LAB_07-Manage_Azure_Storage.md)
 
@@ -174,6 +183,18 @@ Docs: [Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/) ([
 
 > **Notas propias:**
 
+
+---
+# Bloque 6- Test de exámenes.
+
+- [ ] Preparar el examen teoría: https://learn.microsoft.com/es-es/credentials/certifications/resources/study-guides/az-104.
+- [ ]  Completar la [evaluación de práctica gratuita](https://learn.microsoft.com/en-us/credentials/certifications/exams/az-104/practice/assessment?assessment-type=practice&assessmentId=21) ([ES](https://learn.microsoft.com/es-es/credentials/certifications/exams/az-104/practice/assessment?assessment-type=practice&assessmentId=21)) (assessmentId 21) y repasar donde falle
+- [ ] Ver el [AZ-104 Study Cram v2](https://www.youtube.com/watch?v=0Knf9nub4-k) de Savill (~4 h) como repaso global
+- [ ] Ver entero el **[vídeo de preparación del examen](https://aka.ms/AZ104-ExamPrep)** (`aka.ms/AZ104-ExamPrep`, ~1–2 semanas antes)
+- [ ] Revisar que la skills outline en [INDEX.md](../../certifications/AZ-104/INDEX.md) sigue vigente (Microsoft actualiza las guías periódicamente; nota de cambio vigente: 17/04/2026)
+- [ ] Repasar los stubs de `knowledge/` completados durante el estudio ([Entra ID](../../knowledge/entra-id.md), [Azure RBAC](../../knowledge/azure-rbac.md), [Azure Networking](../../knowledge/azure-networking.md), [Private Endpoints](../../knowledge/private-endpoints.md), [Terraform vs Bicep](../../knowledge/terraform-vs-bicep.md))
+- [ ] Programar el examen desde [tu perfil de Microsoft Learn](https://learn.microsoft.com/en-us/users) ([ES](https://learn.microsoft.com/es-es/users)) (usa una cuenta personal MSA para no perder los registros)
+
 ---
 
 ## Gaps detectados (importante — no cubiertos por las rutas oficiales)
@@ -218,14 +239,6 @@ Distribución orientativa (la ruta oficial son ~4 días de instructor-led; en au
 
 ---
 
-## Antes del examen
-
-- [ ] Completar la [evaluación de práctica gratuita](https://learn.microsoft.com/en-us/credentials/certifications/exams/az-104/practice/assessment?assessment-type=practice&assessmentId=21) ([ES](https://learn.microsoft.com/es-es/credentials/certifications/exams/az-104/practice/assessment?assessment-type=practice&assessmentId=21)) (assessmentId 21) y repasar donde falle
-- [ ] Ver el [AZ-104 Study Cram v2](https://www.youtube.com/watch?v=0Knf9nub4-k) de Savill (~4 h) como repaso global
-- [ ] Ver entero el **[vídeo de preparación del examen](https://aka.ms/AZ104-ExamPrep)** (`aka.ms/AZ104-ExamPrep`, ~1–2 semanas antes)
-- [ ] Revisar que la skills outline en [INDEX.md](../../certifications/AZ-104/INDEX.md) sigue vigente (Microsoft actualiza las guías periódicamente; nota de cambio vigente: 17/04/2026)
-- [ ] Repasar los stubs de `knowledge/` completados durante el estudio ([Entra ID](../../knowledge/entra-id.md), [Azure RBAC](../../knowledge/azure-rbac.md), [Azure Networking](../../knowledge/azure-networking.md), [Private Endpoints](../../knowledge/private-endpoints.md), [Terraform vs Bicep](../../knowledge/terraform-vs-bicep.md))
-- [ ] Programar el examen desde [tu perfil de Microsoft Learn](https://learn.microsoft.com/en-us/users) ([ES](https://learn.microsoft.com/es-es/users)) (usa una cuenta personal MSA para no perder los registros)
 
 ## Relacionado
 

@@ -172,27 +172,27 @@ Estos son los pasos de alto nivel para configurar SSPR:
     - Puede habilitarlo para todos los usuarios de la organización de Microsoft Entra o solo para determinados usuarios.
     - Para habilitarlo para determinados usuarios, debe especificar el grupo de seguridad. Los miembros de este grupo pueden usar SSPR.
 
-    - ![[Pasted image 20260929133736.png]]
+    - ![Habilitar SSPR para usuarios o grupos](../assets/images/AZ-104/sspr-enable-users.png)
 
 3.**Métodos de autenticación**:
 
 - Elija si desea requerir uno o dos métodos de autenticación.
 - Elija los métodos de autenticación que los usuarios pueden usar.
-![[Pasted image 20260929133806.png]]
+![Métodos de autenticación para SSPR](../assets/images/AZ-104/sspr-authentication-methods.png)
 
 4. **Registro**:
     - Especifique si los usuarios deben registrarse en SSPR la próxima vez que inicien sesión.
     - Especifique con qué frecuencia se va a pedir a los usuarios que vuelvan a confirmar su información de autenticación.
     
-    ![Captura de pantalla de la opción Registro del panel Restablecimiento de contraseña seleccionada en la que se muestra el panel con opciones de registro.](https://learn.microsoft.com/es-es/training/modules/allow-users-reset-their-password/media/3-registration-options.png)
+    ![Opciones de registro de SSPR](../assets/images/AZ-104/sspr-registration-options.png)
     
 5. **Notificaciones**: Elija si se va a notificar a los usuarios y a los administradores los restablecimientos de contraseñas.
     
-    ![Captura de pantalla de la opción Notificación del panel Restablecimiento de contraseña seleccionada e la que se muestra el panel con opciones de notificación.](https://learn.microsoft.com/es-es/training/modules/allow-users-reset-their-password/media/3-notification-settings.png)
+    ![Opciones de notificación de SSPR](../assets/images/AZ-104/sspr-notification-settings.png)
     
 6. **Personalización**: Indique una dirección de correo electrónico o una dirección URL de página web donde los usuarios puedan obtener ayuda.
     
-    ![Captura de pantalla de la opción Personalización del panel Restablecimiento de contraseña seleccionada en la que se muestra el panel con opciones de soporte técnico.](https://learn.microsoft.com/es-es/training/modules/allow-users-reset-their-password/media/3-customization-settings.png)
+    ![Opciones de personalización de SSPR](../assets/images/AZ-104/sspr-customization-settings.png)
 
 
 # Ejercicios.

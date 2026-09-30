@@ -35,7 +35,7 @@ Módulo NN del [AZ-104T00](https://learn.microsoft.com/en-us/training/courses/az
 
 **Páginas de `knowledge/`**: [[<página de concepto>]]
 
-**Laboratorio**: <lab oficial relacionado, si existe — ver [labs/AZ-104](../labs/AZ-104/README.md)>
+**Laboratorio**: <lab oficial relacionado, si existe — ver [labs/AZ-104](create-vm.md)>
 
 ## Relacionado
 

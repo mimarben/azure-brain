@@ -122,13 +122,13 @@ Puede controlar el acceso a los recursos mediante Azure RBAC mediante la creaci�
 
 Una _entidad de seguridad_ es simplemente un nombre extravagante para un usuario, un grupo o una aplicación a los que quiere conceder acceso.
 
-![An illustration showing security principal including user, group, and service principal.](https://learn.microsoft.com/en-us/training/modules/secure-azure-resources-with-rbac/media/2-rbac-security-principal.png)
+![Entidad de seguridad: usuario, grupo o entidad de servicio](../assets/images/AZ-104/rbac-security-principal.png)
 
 ### 2. Definición de rol (qué)
 
 Una _definición de roles_ es una recopilación de permisos. A veces, se denomina simplemente rol. Una definición de roles enumera los permisos que el rol puede realizar, como lectura, escritura y eliminación. Los roles pueden ser generales, como Propietario, o bien específicos, como Colaborador de máquina virtual.
 
-![An illustration listing different built-in and custom roles with zoom-in on the definition for the contributor role.](https://learn.microsoft.com/en-us/training/modules/secure-azure-resources-with-rbac/media/2-rbac-role-definition.png)
+![Definición de rol RBAC](../assets/images/AZ-104/rbac-role-definition.png)
 
 Azure incluye varios roles integrados que puede usar. Aquí se enumeran cuatros roles integrados fundamentales:
 
@@ -148,7 +148,7 @@ _Ámbito_ es el nivel al que se aplica el acceso. Esto resulta útil si desea co
 En Azure, puede especificar un ámbito en varios niveles: grupo de administración, suscripción, grupo de recursos o recurso. Los ámbitos se estructuran en una relación de elementos primarios y secundarios. Si otorga acceso a un ámbito primario, los ámbitos secundarios heredan automáticamente esos permisos. Por ejemplo, si a un grupo se le asigna el rol Colaborador en el ámbito de la suscripción, heredará el rol de todos los grupos de recursos y recursos de la suscripción.
 
 
-![An illustration showing a hierarchical representation of different Azure levels to apply scope. The hierarchy, starting with the highest level, is in this order: Management group, subscription, resource group, and resource.](https://learn.microsoft.com/en-us/training/modules/secure-azure-resources-with-rbac/media/2-rbac-scope.png)
+![Jerarquía de ámbitos de Azure RBAC](../assets/images/AZ-104/rbac-scope.png)
 
 ### Asignación de roles
 

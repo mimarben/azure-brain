@@ -148,3 +148,12 @@ Páginas actualizadas: notes/AZ-104/roadmap.md (línea del módulo repuntada), c
 Decisión del usuario: al ser exactamente el mismo módulo de Learn que el 04 de AZ-900, se referencia directamente la ficha AZ-900 y no se mantiene una ficha AZ-104 paralela (regla de no duplicación).
 Páginas eliminadas: knowledge/az104-azure-architecture.md (creada y revertida en la misma sesión, sin commitear).
 Páginas actualizadas: notes/AZ-104/roadmap.md y certifications/AZ-104/INDEX.md (módulo 05 de vuelta a la ficha AZ-900), knowledge/az900-azure-architecture.md (retirado el backlink), INDEX.md raíz (recuento definitivo: 27 fichas az104-*).
+
+## [2026-09-30] lint | Imágenes de AZ-104
+Páginas actualizadas: fichas AZ-104 de knowledge/, laboratorios AZ-104 y knowledge/az900-azure-architecture.md (referencias de imágenes locales con rutas relativas).
+Assets: imágenes externas descargadas en assets/images/AZ-104/, incluidas seis capturas de Azure Files enlazadas desde knowledge/az104-azure-files.md; capturas pegadas renombradas según su contenido; una imagen de AZ-900 movida a assets/images/AZ-900/; cuatro archivos sin referencias eliminados de assets/images/AZ-104/.
+
+## [2026-09-30] revisión | Laboratorio 07 de Azure Storage
+Fuente: https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/Instructions/Labs/LAB_07-Manage_Azure_Storage.html
+Páginas actualizadas: labs/AZ-104/MicrosoftAzureAdministrator/AZ-104-MicrosoftAzureAdministrator..md (traducción, tabla de creación corregida y ejemplos por tarea), knowledge/az104-storage-security.md (imagen local y enlace al laboratorio).
+Assets: capturas oficiales del laboratorio guardadas con nombres descriptivos en assets/images/AZ-104/.

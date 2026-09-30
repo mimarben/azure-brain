@@ -74,7 +74,7 @@ A medida que aumentan las aptitudes, puede modernizar una carga de trabajo a la 
 
 Para crear y usar los servicios de Azure, necesita una suscripción de Azure. Cuando trabaja con sus propias aplicaciones y cargas de trabajo, crea una cuenta de Azure y se le crea una suscripción. Después de crear una cuenta de Azure, puedes crear suscripciones adicionales. Por ejemplo, el equipo podría usar una sola cuenta de Azure y suscripciones independientes para cargas de trabajo de desarrollo, pruebas y producción. Una vez que has creado una suscripción de Azure, puedes empezar a crear recursos de Azure dentro de cada suscripción.
 
-![Niveles de alcance de cuenta de Azure](../../assets/images/AZ-900/account-scope-levels.png)
+![Niveles de alcance de cuenta de Azure](../assets/images/AZ-900/account-scope-levels.png)
 
 Si no estás familiarizado con Azure, puedes registrarse para obtener una cuenta gratuita en el sitio web de Azure y, de este modo, empezar a explorar sin coste alguno. Cuando estés listo, puedes optar por actualizar la cuenta gratuita. También puedes crear una suscripción que te permita comenzar a pagar por los servicios de Azure que necesitas y a los que no puedes acceder con una cuenta gratuita.
 
@@ -124,7 +124,7 @@ Los servicios de Azure que admiten zonas de disponibilidad se dividen en tres ca
 - Servicios de redundancia de zona: la plataforma se replica automáticamente entre zonas (por ejemplo, almacenamiento con redundancia de zona, SQL Database).
 - Servicios no regionales: los servicios siempre están disponibles en las ubicaciones geográficas de Azure y son resistentes a las interrupciones de toda la zona, así como a las de toda la región.
 
-![[Pasted image 20260929101648.png]]
+![Categorías de servicios por zona de disponibilidad](../assets/images/AZ-900/availability-zone-service-categories.png)
 
 
 ### Pares de región

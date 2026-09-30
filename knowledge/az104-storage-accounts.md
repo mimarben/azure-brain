@@ -143,117 +143,438 @@ Considere un escenario en el que desea que los clientes puedan cargar imágenes 
 
 Cuando piense en su plan de configuración para Azure Storage, tenga en cuenta las características más destacadas de los tipos de Azure Storage y qué opciones son compatibles con las necesidades de su aplicación.
 
-- **Considere la optimización del almacenamiento para datos masivos**. Azure Blob Storage está optimizado para el almacenamiento de cantidades masivas de datos no estructurados. Se puede acceder a los objetos de Blob Storage desde cualquier parte del mundo a través de HTTP o HTTPS. Blob Storage es ideal para servir datos directamente a un navegador, transmitir datos y almacenar datos para copias de seguridad y restauración.
+- **Considere la optimización del almacenamiento para datos masivos**. **Azure Blob Storage** está optimizado para el almacenamiento de cantidades masivas de datos no estructurados. Se puede acceder a los objetos de Blob Storage desde cualquier parte del mundo a través de HTTP o HTTPS. Blob Storage es ideal para servir datos directamente a un navegador, transmitir datos y almacenar datos para copias de seguridad y restauración.
     
-- **Considere la posibilidad de almacenar con alta disponibilidad**. Azure Files admite recursos compartidos de archivos de red de alta disponibilidad. Las aplicaciones locales usan recursos compartidos de archivos para facilitar la migración. Al usar Azure Files, todos los usuarios pueden acceder a los datos y herramientas compartidos. Las credenciales de la cuenta de almacenamiento proporcionan autenticación de recurso compartido de archivos para asegurarse de que todos los usuarios que tengan montado el recurso compartido de archivos tengan el acceso correcto de lectura y escritura.
+- **Considere la posibilidad de almacenar con alta disponibilidad**. **Azure Files** admite recursos compartidos de archivos de red de alta disponibilidad. Las aplicaciones locales usan recursos compartidos de archivos para facilitar la migración. Al usar Azure Files, todos los usuarios pueden acceder a los datos y herramientas compartidos. Las credenciales de la cuenta de almacenamiento proporcionan autenticación de recurso compartido de archivos para asegurarse de que todos los usuarios que tengan montado el recurso compartido de archivos tengan el acceso correcto de lectura y escritura.
     
-- **Considere la posibilidad de almacenar los mensajes**. Use Azure Queue Storage para almacenar un gran número de mensajes. Queue Storage se usa normalmente para crear un trabajo pendiente que se va a procesar de forma asincrónica.
+- **Considere la posibilidad de almacenar los mensajes**. Use **Azure Queue Storage** para almacenar un gran número de mensajes. Queue Storage se usa normalmente para crear un trabajo pendiente que se va a procesar de forma asincrónica.
     
-- **Considere la posibilidad de almacenar datos estructurados**. Azure Table Storage es idóneo para almacenar datos estructurados y no relacionales. Ofrece tablas optimizadas para el rendimiento, distribución global e índices secundarios automáticos. B
-### Things to know about storage account types
+- **Considere la posibilidad de almacenar datos estructurados**. **Azure Table Storage** es idóneo para almacenar datos estructurados y no relacionales. Ofrece tablas optimizadas para el rendimiento, distribución global e índices secundarios automáticos. B
+# Determinación de los tipos de cuentas de almacenamiento
 
-**Standard** storage accounts are backed by magnetic hard disk drives (HDD). A standard storage account provides the lowest cost per GB. You can use Standard storage for applications that require bulk storage or where data is infrequently accessed.
+Las cuentas de almacenamiento de Azure de uso general tienen dos tipos básicos **Estándar** y **Premium**.
 
-**Premium** storage accounts are backed by solid-state drives (SSD) and offer consistent low-latency performance. You can use Premium storage for Azure virtual machine disks with I/O-intensive applications like databases.
+### Aspectos que se deben tener en cuenta sobre los tipos de cuentas de almacenamiento
 
-|Storage account|Supported services|Redundancy options|Recommended usage|
-|---|---|---|---|
-|[**Standard** **general-purpose v2**](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-upgrade) ([ES](https://learn.microsoft.com/es-es/azure/storage/common/storage-account-upgrade))|Blob Storage (including Data Lake Storage), Queue Storage, Table Storage, and Azure Files|LRS, GRS, RA-GRS, ZRS, GZRS, RA-GZRS|Standard storage account for most scenarios, including blobs, file shares, queues, tables, and disks (page blobs).|
-|[**Premium** **block blobs**](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-block-blob-premium) ([ES](https://learn.microsoft.com/es-es/azure/storage/blobs/storage-blob-block-blob-premium))|Blob Storage (including Data Lake Storage)|LRS, ZRS|Premium storage account for block blobs and append blobs. Recommended for applications with high transaction rates. Use Premium block blobs if you work with smaller objects or require consistently low storage latency. This storage is designed to scale with your applications.|
-|[**Premium** **file shares**](https://learn.microsoft.com/en-us/azure/storage/files/storage-how-to-create-file-share) ([ES](https://learn.microsoft.com/es-es/azure/storage/files/storage-how-to-create-file-share))|Azure Files|LRS, ZRS|Premium storage account for file shares only. Recommended for enterprise or high-performance scale applications. Use Premium file shares if you require support for both Server Message Block (SMB) and NFS file shares.|
-|[**Premium** **page blobs**](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-pageblob-overview) ([ES](https://learn.microsoft.com/es-es/azure/storage/blobs/storage-blob-pageblob-overview))|Page blobs only|LRS only|Premium high-performance storage account for page blobs only. Page blobs are ideal for storing index-based and sparse data structures, such as operating systems, data disks for virtual machines, and databases.|
-# Determine replication strategies
+**Las** cuentas de almacenamiento **estándar** están respaldadas por unidades de disco duro magnéticas (HDD). Una cuenta de almacenamiento estándar proporciona el costo más bajo por GB. Puede utilizar el almacenamiento estándar para aplicaciones que requieran un almacenamiento masivo o en las que se acceda a los datos con poca frecuencia.
 
-The data in your Azure storage account is always replicated to ensure durability and high availability. [Azure Storage replication](https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy) ([ES](https://learn.microsoft.com/es-es/azure/storage/common/storage-redundancy)) copies your data to protect from planned and unplanned events. These events range from transient hardware failures, network or power outages, massive natural disasters, and so on. You can choose to replicate your data within the same data center, across zonal data centers within the same region, and even across regions. Replication ensures your storage account meets the Service-Level Agreement (SLA) for Azure Storage even if there are failures.
+Las cuentas de **Premium Storage** están respaldadas por unidades de estado sólido (SSD) y ofrecen un rendimiento coherente de baja latencia. Puede usar almacenamiento Premium para discos de máquinas virtuales en Azure con aplicaciones que tienen un uso intensivo de E/S, como bases de datos.
 
-### Locally redundant storage.
+
+> [!NOTE] Nota:
+> No es posible convertir una cuenta de almacenamiento estándar en premium o viceversa. Debe crear una cuenta de almacenamiento con el tipo deseado y copiar los datos a ella, si es aplicable. Todos los tipos de cuenta de almacenamiento se cifran mediante Storage Service Encryption (SSE) para los datos en reposo.
+
+| Cuenta de almacenamiento                                                                                                                  | Servicios admitidos                                                                    | Opciones de redundancia                                                                | Uso recomendado                                                                                                                                                                                                                                                                                                                                     |
+| ----------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [**Estándar****uso general v2**](https://learn.microsoft.com/es-es/azure/storage/common/storage-account-upgrade)                          | Blob Storage (incluidos Data Lake Storage), Queue Storage, Table Storage y Azure Files | LRS, GRS, RA-GRS, ZRS, GZRS, RA-GZRS                                                   | Cuenta de almacenamiento estándar para la mayoría de los escenarios, incluidos blobs, recursos compartidos de archivos, colas, tablas y discos (blobs en páginas).                                                                                                                                                                                  |
+| [**Premium****blobs en bloques**](https://learn.microsoft.com/es-es/azure/storage/blobs/storage-blob-block-blob-premium)                  | Blob Storage (incluido Data Lake Storage)                                              | LRS (Almacenamiento con Redundancia Local), ZRS (Almacenamiento con Redundancia Zonal) | Cuenta de almacenamiento Premium para blobs en bloques y blobs anexos. Se recomienda para las aplicaciones con altas tasas de transacciones. Use blobs en bloques Premium si trabaja con objetos más pequeños o requiere una latencia de almacenamiento constantemente baja. Este almacenamiento está diseñado para escalarse con las aplicaciones. |
+| [**Premium****recursos compartidos de archivos**](https://learn.microsoft.com/es-es/azure/storage/files/storage-how-to-create-file-share) | Azure Files                                                                            | LRS (Almacenamiento con Redundancia Local), ZRS (Almacenamiento con Redundancia Zonal) | Cuenta de almacenamiento Premium solo para recursos compartidos de archivos. Se recomiendan para aplicaciones a escala empresarial o de alto rendimiento. Use recursos compartidos de archivos Premium si necesita compatibilidad con el Bloque de mensajes del servidor (SMB) y los recursos compartidos de archivos NFS.                          |
+| [**Premium****blobs en páginas**](https://learn.microsoft.com/es-es/azure/storage/blobs/storage-blob-pageblob-overview)                   | Solo blobs en páginas                                                                  | Solo LRS                                                                               | Cuenta de almacenamiento de alto rendimiento Premium solo para blobs en páginas. Los blobs en páginas son ideales para almacenar estructuras de datos dispersas y basadas en índices, como los sistemas operativos, los discos de datos para máquinas virtuales y las bases de datos.                                                               |
+
+| Servicio                | ¿Qué almacena?                                                          | Caso de uso típico                                                   | Acceso                       |
+| ----------------------- | ----------------------------------------------------------------------- | -------------------------------------------------------------------- | ---------------------------- |
+| **Azure Blob Storage**  | Archivos no estructurados (imágenes, vídeos, documentos, backups, logs) | Data Lake, copias de seguridad, contenido web, almacenamiento masivo | REST API, SDKs, Azure Portal |
+| **Azure Files**         | Archivos compartidos en formato SMB/NFS                                 | Carpetas compartidas entre servidores y usuarios                     | SMB, NFS, Azure File Sync    |
+| **Azure Queue Storage** | Mensajes en cola                                                        | Comunicación asíncrona entre aplicaciones y microservicios           | REST API, SDKs               |
+| **Azure Table Storage** | Datos NoSQL clave-valor                                                 | Almacenamiento rápido y económico de datos semiestructurados         | REST API, SDKs               |
+
+| Servicio                                        | Dónde se guardan los datos                                                                                                          |
+| ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| **Azure SQL Database**                          | En una base de datos administrada por Azure (PaaS). Los archivos físicos los gestiona Microsoft y no tienes acceso directo a ellos. |
+| **Azure SQL Managed Instance**                  | Similar a SQL Server, pero totalmente administrado por Azure. Los datos se almacenan en almacenamiento administrado por Azure.      |
+| **SQL Server en una Máquina Virtual (IaaS)**    | Los datos se guardan en los discos de la VM (`.mdf`, `.ldf`) igual que en un SQL Server tradicional.                                |
+| **Azure SQL Edge / SQL Server en contenedores** | Los datos se almacenan en volúmenes o almacenamiento asociado al contenedor.                                                        |
+
+
+> [!NOTE] Nota:
+> Los administradores que administran suscripciones de Azure existentes pueden encontrar tipos de cuenta de almacenamiento heredados, como cuentas de uso general v1 (GPv1) y BlobStorage heredadas. Microsoft recomienda actualizar cuentas heredadas a Uso general v2 para acceder a todas las funcionalidades actuales. Las actualizaciones se admiten en el lugar a través del Portal de Azure, CLI de Azure o PowerShell.
+
+
+> [!INFO] Sugerencia
+> Antes de continuar, considere la posibilidad de trabajar en el módulo [_de entrenamiento Crear una cuenta de almacenamiento_](https://learn.microsoft.com/es-es/training/modules/create-azure-storage-account/) .
+
+
+# Determinación de las estrategias de replicación.
+
+Los datos de la cuenta de almacenamiento de Azure se replican siempre para garantizar su durabilidad y alta disponibilidad. [La replicación de Azure Storage](https://learn.microsoft.com/es-es/azure/storage/common/storage-redundancy) copia los datos para protegerse de eventos planeados y no planeados. Estos eventos pueden incluir, entre otros, errores de hardware transitorios, cortes de red, apagones, desastres naturales masivos. Puede optar por replicar los datos en el mismo centro de datos, en centros de datos zonales que estén en la misma región e incluso entre regiones. La replicación garantiza que la cuenta de almacenamiento cumpla el contrato de nivel de servicio (**SLA (Service Level Agreement)** significa **Acuerdo de Nivel de Servicio**.) para Azure Storage, incluso en caso de errores.
+
+### Almacenamiento con redundancia local
 
 ![[assets/images/AZ-104/locally-redundant-storage.png]]
 
-Locally redundant storage is the lowest-cost replication option and offers the least durability compared to other strategies. If a data center-level disaster occurs, such as fire or flooding, all replicas might be lost or unrecoverable. Despite its limitations, LRS can be appropriate in several scenarios:
+El **almacenamiento con redundancia local (LRS Locally Redundant Storage)** es la opción de replicación de costo más bajo y ofrece la menor durabilidad en comparación con otras opciones. Si se produce un desastre de nivel de centro de datos, como un incendio o una inundación, todas las réplicas podrían perderse o no recuperarse. A pesar de sus limitaciones, LRS puede ser adecuado en estos escenarios:
 
-- Your application stores data that can be easily reconstructed if data loss occurs.
-- Your data is constantly changing like in a live feed, and storing the data isn't essential.
-- Your application is restricted to replicating data only within a location due to data governance requirements.
+- Si la aplicación almacena datos que se pueden reconstruir fácilmente en caso de que se produzca una pérdida de datos.
+- Si los datos cambian constantemente, como en una fuente en vivo, y el almacenamiento de los datos no es esencial.
+- La aplicación está restringida a replicar datos solo dentro de una ubicación debido a los requisitos de gobernanza de datos.
 
-### Zone redundant storage.
+### Almacenamiento con redundancia de zona
 
 ![[assets/images/AZ-104/zone-redundant-storage.png]]
 
 
-Zone redundant storage synchronously replicates your data across three storage clusters in a single region. Each storage cluster is physically separated from the others and resides in its own availability zone. Each availability zone, and the ZRS cluster within it, is autonomous, and has separate utilities and networking capabilities. Storing your data in a ZRS account ensures you can access and manage your data if a zone becomes unavailable. ZRS provides excellent performance and low latency.
+El almacenamiento con redundancia de zona (**ZRS Zone-Redundant Storage**) replica los datos de manera sincrónica en tres clústeres de almacenamiento en una sola región. Cada clúster de almacenamiento está separado físicamente de los demás y reside en su propia zona de disponibilidad. Cada zona de disponibilidad, así como el clúster ZRS dentro de ella, es autónoma y tiene distintas herramientas y funcionalidades de red. Al almacenar los datos en una cuenta de ZRS, se asegura de que podrá acceder a los datos y administrarlos aunque una zona deja de estar disponible. ZRS proporciona un excelente rendimiento y baja latencia.
 
-- ZRS isn't currently available in all regions.
-- Changing to ZRS from another data replication option requires the physical data movement from a single storage stamp to multiple stamps within a region.
+- ZRS no está disponible actualmente en todas las regiones.
+- Para cambiar a ZRS desde otra opción de replicación de datos, es necesario mover los datos físicos de un solo stamp de almacenamiento a varios stamps de una región.
 
-### Geo-redundant storage.
+### Almacenamiento con redundancia geográfica
 
 ![[assets/images/AZ-104/geo-redundant-storage.png]]
 
-Geo-redundant storage replicates your data to a secondary region (hundreds of miles away from the primary location of the source data). GRS provides a higher level of durability even during a regional outage. GRS is designed to provide at least 99.99999999999999% **(16 9's) durability**. When your storage account has GRS enabled, your data is durable even when there's a complete regional outage or a disaster where the primary region isn't recoverable.
 
-If you implement GRS, you have two related options to choose from:
+El almacenamiento con redundancia geográfica (**GRS Geo-Redundant Storage**) replica los datos en una región secundaria (a cientos de kilómetros de la ubicación principal del origen de datos). GRS proporciona un mayor nivel de durabilidad incluso en caso de interrupción regional. GRS está diseñado para proporcionar al menos 99,9999999999999999 % **(16 nueves) de durabilidad**. Si la cuenta de almacenamiento tiene GRS habilitado, los datos se mantienen incluso ante una interrupción regional completa o un desastre del que la región primaria no se puede recuperar.
 
-- **GRS** replicates your data to another data center in a secondary region. The data is available to be read only if Microsoft initiates a failover from the primary to secondary region.
+Si opta por implementar GRS, puede elegir entre dos opciones:
+
+- **GRS** replica los datos en otro centro de datos de una región secundaria. Los datos están disponibles para su lectura (RA) solo si Microsoft inicia una conmutación por error de la región primaria a la secundaria.
     
-- **Read-access geo-redundant storage** (RA-GRS) is based on GRS. RA-GRS replicates your data to another data center in a secondary region, and also provides you with the option to read from the secondary region. With RA-GRS, you can read from the secondary region regardless of whether Microsoft initiates a failover from the primary to the secondary.
+- El **almacenamiento con redundancia geográfica con acceso de lectura** (RA-GRS) se basa en GRS. RA-GRS replica los datos en otro centro de datos de una región secundaria y también proporciona la opción para leer desde la región secundaria. Con RA-GRS, puede leer desde la región secundaria sin importar si Microsoft inicia una conmutación por error desde la región primaria a la región secundaria.
     
 
-For a storage account with GRS or RA-GRS enabled, all data is first replicated with locally redundant storage. An update is first committed to the primary location and replicated by using LRS. The update is then replicated asynchronously to the secondary region by using GRS. Data in the secondary region uses LRS. Both the primary and secondary regions manage replicas across separate fault domains and upgrade domains within a storage scale unit. The storage scale unit is the basic replication unit within the datacenter. Replication at this level is provided by LRS.
+Para una cuenta de almacenamiento con GRS o RA-GRS habilitado, todos los datos se replican primero con el almacenamiento con redundancia local. Una actualización se confirma primero en la ubicación principal y se replica mediante LRS. A continuación, la actualización se replica de manera asincrónica en la región secundaria mediante GRS. Los datos de la región secundaria usan LRS. Las regiones primarias y secundarias administran las réplicas entre dominios de error y de actualización diferentes dentro de una unidad de escalado de almacenamiento. La unidad de escalado de almacenamiento es la unidad de replicación básica dentro del centro de datos. LRS proporciona replicación en este nivel.
 
 
-### Geo-zone redundant storage.
+### Almacenamiento con redundancia de zona geográfica.
 
 ![[assets/images/AZ-104/geo-zone-redundant-storage.png]]
 
+El almacenamiento con redundancia de zona geográfica (**GZRS Geo-Zone-Redundant Storage**) combina la alta disponibilidad del almacenamiento con redundancia de zona y la protección frente a interrupciones regionales que proporciona el almacenamiento con redundancia geográfica. Los datos de una cuenta de almacenamiento de GZRS se replican en las zonas de disponibilidad de Azure en la región primaria y en una región geográfica secundaria para la protección frente a desastres regionales. Cada región de Azure se empareja con otra región de la misma zona geográfica, que juntas forman un emparejamiento regional.
+
+Con una cuenta de almacenamiento de GZRS, puede seguir leyendo y escribiendo datos si una zona de disponibilidad deja de estar disponible o es irrecuperable. Además, los datos se mantienen cuando se produce una interrupción regional completa o un desastre del cual la región primaria no se puede recuperar. El almacenamiento con redundancia de zona geográfica (GZRS) está diseñado para proporcionar una durabilidad mínima del 99,99999999999999 % (dieciséis nueves) de los objetos en un año determinado. GZRS también ofrece los mismos objetivos de escalabilidad que LRS, ZRS, GRS o RA-GRS. Opcionalmente, puede habilitar el acceso de lectura a los datos de la región secundaria con el almacenamiento con redundancia de zona geográfica con acceso de lectura (RA-GZRS).
 
 > [!TIP] TIP
-> Microsoft recommends using GZRS for applications that require consistency, durability, high availability, excellent performance, and resilience for disaster recovery. Enable RA-GZRS for read access to a secondary region when there's a regional disaster.
+> Microsoft recomienda el uso de GZRS en aplicaciones que requieren coherencia, durabilidad, alta disponibilidad, un rendimiento excelente y resistencia para la recuperación ante desastres. Habilite RA-GZRS para el acceso de lectura a una región secundaria cuando se produce un desastre regional.
 
-### Things to consider when choosing replication strategies.
+### Aspectos que se deben tener en cuenta al elegir estrategias de replicación.
 
-|Node in data center unavailable|Entire data center unavailable|Region-wide outage|Read access during region-wide outage|
-|---|---|---|---|
-|- **LRS**  <br>- **ZRS**  <br>- **GRS**  <br>- **RA-GRS**  <br>- **GZRS**  <br>- **RA-GZRS**|- **ZRS**  <br>- **GRS**  <br>- **RA-GRS**  <br>- **GZRS**  <br>- **RA-GZRS**|- **GRS**  <br>- **RA-GRS**  <br>- **GZRS**  <br>- **RA-GZRS**|- **RA-GRS**  <br>- **RA-GZRS**|
-# Access storage.
+Examinemos el ámbito de durabilidad y disponibilidad de las diferentes estrategias de replicación. En la tabla siguiente se describen varios factores clave durante el proceso de replicación, incluida la falta de disponibilidad del nodo dentro de un centro de datos y si todo el centro de datos (zonal o no zonal) deja de estar disponible. La tabla identifica el acceso de lectura a los datos de una región remota replicada geográficamente durante la falta de disponibilidad en toda la región y los tipos de cuenta de almacenamiento de Azure admitidos.
 
-Every object you store in Azure Storage has a unique URL address. Your storage account name forms the _subdomain_ portion of the URL address. The combination of the subdomain and the domain name, which is specific to each service, forms an endpoint for your storage account.
+| Nodo en el centro de datos no disponible                                                     | Todo el centro de datos no disponible                                         | Interrupción en toda la región                                 | Acceso de lectura durante una interrupción en toda la región |
+| -------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------ |
+| - **LRS**  <br>- **ZRS**  <br>- **GRS**  <br>- **RA-GRS**  <br>- **GZRS**  <br>- **RA-GZRS** | - **ZRS**  <br>- **GRS**  <br>- **RA-GRS**  <br>- **GZRS**  <br>- **RA-GZRS** | - **GRS**  <br>- **RA-GRS**  <br>- **GZRS**  <br>- **RA-GZRS** | - **RA-GRS**  <br>- **RA-GZRS**                              |
 
-Let's look at an example. If your storage account name is _mystorageaccount_, default endpoints for your storage account are formed for the Azure services as shown in the following table:
 
-|Service|Default endpoint|
+| Tipo        | Significado                                | Descripción                                                                                                                                                                   |
+| ----------- | ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **LRS**     | **Locally Redundant Storage**              | Mantiene **3 copias** de los datos dentro de un único datacenter de una región Azure. Protege frente a fallos de hardware locales.                                            |
+| **ZRS**     | **Zone-Redundant Storage**                 | Mantiene los datos replicados de forma síncrona en **3 Availability Zones** de la misma región. Protege frente a la caída de una zona completa.                               |
+| **GRS**     | **Geo-Redundant Storage**                  | Replica los datos a una **segunda región emparejada**. Mantiene **6 copias** (3 en la región primaria y 3 en la secundaria). Protege frente a la pérdida de una región.       |
+| **RA-GRS**  | **Read-Access Geo-Redundant Storage**      | Igual que GRS, pero permite **lectura desde la región secundaria** además de la primaria.                                                                                     |
+| **GZRS**    | **Geo-Zone-Redundant Storage**             | Combina **ZRS + GRS**. Replica los datos entre zonas de la región primaria y después a una región secundaria. Protege frente a la caída de una zona o de una región completa. |
+| **RA-GZRS** | **Read-Access Geo-Zone-Redundant Storage** | Igual que GZRS, pero permite **acceso de lectura a la región secundaria**. Es la opción con mayor disponibilidad y resiliencia.                                               |
+|             |                                            |                                                                                                                                                                               |
+
+
+|Requisito|Solución|
 |---|---|
-|**Container service**|`//`**`mystorageaccount`**`.blob.core.windows.net`|
-|**Table service**|`//`**`mystorageaccount`**`.table.core.windows.net`|
-|**Queue service**|`//`**`mystorageaccount`**`.queue.core.windows.net`|
-|**File service**|`//`**`mystorageaccount`**`.file.core.windows.net`|
-We create the URL to access an object in your storage account by appending the object's location in the storage account to the endpoint.
+|Fallo de hardware|LRS|
+|Fallo de zona|ZRS|
+|Fallo de región|GRS|
+|Fallo de zona + fallo de región|GZRS|
 
-For example, to access the _myblob_ data in the _mycontainer_ location in your storage account, we use the following URL address:
+# Acceso al almacenamiento.
+
+Cada objeto que se almacena en Azure Storage tiene una dirección URL única. El nombre de la cuenta de almacenamiento forma la parte del _subdominio_ de la dirección URL. La combinación del subdominio y el nombre de dominio, que es específico de cada servicio, forma un punto de conexión para su cuenta de almacenamiento.
+
+Veamos un ejemplo. Si el nombre de la cuenta de almacenamiento es _mystorageaccount_, se forman puntos de conexión predeterminados de la cuenta de almacenamiento para los servicios de Azure, como se muestra en la tabla siguiente:
+
+|Servicio|Punto de conexión predeterminado|
+|---|---|
+|**Servicio de contenedor**|`//`**`mystorageaccount`**`.blob.core.windows.net`|
+|**Servicio de mesa**|`//`**`mystorageaccount`**`.table.core.windows.net`|
+|**Queue Service**|`//`**`mystorageaccount`**`.queue.core.windows.net`|
+|**Servicio de archivos**|`//`**`mystorageaccount`**`.file.core.windows.net`|
+
+Creamos la dirección URL para acceder a un objeto de una cuenta de almacenamiento anexando la ubicación de este al punto de conexión.
+
+Por ejemplo, para acceder a los datos _de myblob_ en la ubicación _mycontainer_ de la cuenta de almacenamiento, se usa la siguiente dirección URL:
 
 `//`**`mystorageaccount`**`.blob.core.windows.net/`**`mycontainer`**`/`**`myblob`**.
 
-## Configure custom domains.
+## Configuración de dominios personalizados.
 
-You can configure a [custom domain](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-custom-domain-name) ([ES](https://learn.microsoft.com/es-es/azure/storage/blobs/storage-custom-domain-name)) to access blob data in your Azure storage account. As we reviewed, the default endpoint for Azure Blob Storage is `\<storage-account-name>.blob.core.windows.net`. If you map a custom domain and subdomain, such as `www.contoso.com`, to the blob or web endpoint for your storage account, your users can use that domain to access blob data in your storage account.
+Puede configurar un [dominio personalizado](https://learn.microsoft.com/es-es/azure/storage/blobs/storage-custom-domain-name) para acceder a datos de blobs en la cuenta de Azure Storage. Como hemos revisado, el punto de conexión predeterminado para Azure Blob Storage es `\<storage-account-name>.blob.core.windows.net`. Si asigna un dominio y un subdominio personalizados (como `www.contoso.com`) al punto de conexión web o de blob para la cuenta de almacenamiento, los usuarios pueden utilizar dicho dominio para acceder a los datos de blob en la cuenta de almacenamiento.
 
-**Direct mapping** lets you enable a custom domain for a subdomain to an Azure storage account. For this approach, you create a `CNAME` record that points from the subdomain to the Azure storage account.
+La **asignación directa** permite habilitar un dominio personalizado para un subdominio en una cuenta de almacenamiento de Azure. Para este enfoque, se crea un registro `CNAME` que apunta desde el subdominio a la cuenta de Azure Storage.
 
-The following example shows how a subdomain is mapped to an Azure storage account to create a `CNAME` record in the domain name system (DNS):
+En el ejemplo siguiente se muestra cómo se asigna un subdominio a una cuenta de Azure Storage para crear un registro `CNAME` en el sistema de nombres de dominio (DNS):
 
-- Subdomain: `blobs.contoso.com`
-- Azure storage account: `\<storage account>\.blob.core.windows.net`
-- Direct `CNAME` record: `contosoblobs.blob.core.windows.net`
+- Subdominio: `blobs.contoso.com`
+- Cuenta de Azure Storage: `\<storage account>\.blob.core.windows.net`
+- Registro `CNAME` directo: `contosoblobs.blob.core.windows.net`
 
-# Secure storage endpoints.
+# Protección de puntos de conexión de almacenamiento.
 
-In the Azure portal, each Azure service requires certain steps to configure the service endpoints and restrict network access.
+En el portal de Azure, cada servicio Azure requiere determinados pasos para configurar los puntos de conexión de servicio y restringir el acceso a la red.
 
-To access these settings for your storage account, you use the **Firewalls and virtual networks** settings. You add the virtual networks that should have access to the service for the account. - This setting restricts access to your storage account from specific subnets on virtual networks or public IPs.
+*Para acceder a esta configuración de la cuenta de almacenamiento, use la configuración de **Firewalls y redes virtuales**. Agregue las redes virtuales que deben tener acceso al servicio para la cuenta. - Esta configuración restringe el acceso a la cuenta de almacenamiento desde subredes específicas en redes virtuales o direcciones IP públicas.*
+
+> [!NOTE] NSG
+> **NSG (Network Security Group)** es un servicio de Azure que actúa como un **firewall de red básico** para controlar qué tráfico puede entrar o salir de tus recursos.
+
 
 ![[secure-storage-access-d32868ef.png]]
 
 
 
+Los puntos de conexión de servicio de una cuenta de almacenamiento proporcionan la dirección URL base para cualquier blob, cola, tabla o objeto de archivo en Azure Storage. Use esta dirección URL base para construir la dirección de cualquier recurso determinado.
+
 ![[assets/images/AZ-104/service-endpoints-portal-lrg.png]]
 
+### Aspectos que se deben saber sobre la configuración de puntos de conexión de servicio
+
+Estos son algunos puntos que se deben tener en cuenta para configurar las opciones de acceso al servicio:
+
+- Puede configurar el servicio para permitir el acceso a uno o varios intervalos de direcciones IP públicas.
+    
+- Las subredes y redes virtuales deben existir en el mismo par de regiones o regiones de Azure que la cuenta de almacenamiento.
+
+> [!NOTE] Azure Service Endpoints
+> La **principal ventaja de usar Azure Service Endpoints** para proteger una cuenta de almacenamiento es que:
+> **Permiten que el tráfico entre una VNet y Azure Storage viaje por la red troncal privada de Azure, limitando el acceso al servicio únicamente desde subredes autorizadas.**
+
+
+
+> [!quote] Title
+> Asegúrese de probar el punto de conexión de servicio y compruebe que el punto de conexión limita el acceso según lo previsto.
+
+**Diferencias clave de los puntos de conexión de servicio**
+
+- Los puntos de conexión privados asignan una dirección IP privada de la red virtual a la cuenta de almacenamiento, lo que mantiene todo el tráfico dentro de la red troncal de Microsoft. Uso de puntos de conexión privados para cargas de trabajo de producción que requieren requisitos completos de aislamiento y cumplimiento de red
+    
+- Los puntos de conexión de servicio mantienen la cuenta de almacenamiento en su punto de conexión público, pero restringen el acceso a redes virtuales y subredes específicas. Use puntos de conexión de servicio para escenarios de desarrollo o cuando necesite una configuración más sencilla con algún acceso público a Internet.
+
+
+> [!tip] Sugerencia
+> Obtenga más información con el módulo de formación [_asegure y aísle el acceso a los recursos de Azure mediante grupos de seguridad de red y puntos de conexión de servicio_](https://learn.microsoft.com/es-es/training/modules/secure-and-isolate-with-nsg-and-service-endpoints/). Este módulo tiene un espacio aislado donde puede restringir el acceso a Azure Storage mediante puntos de conexión de servicio.
+
+
+
+# Resumen y recursos.
+
+En este módulo, se ha informado sobre Azure Storage y cómo crear una cuenta de almacenamiento.
+
+**Las principales conclusiones de este módulo son las siguientes:**
+
+- Azure Storage proporciona una variedad de opciones de almacenamiento para distintos tipos de datos, incluyendo datos de máquina virtual, datos no estructurados y estructurados.
+    
+- Hay diferentes tipos de cuentas de almacenamiento disponibles, cada una con sus propias características y modelos de precios. Es importante tener en cuenta los requisitos específicos de la aplicación al elegir el tipo de cuenta de almacenamiento adecuado.
+    
+- Azure Storage ofrece cuatro servicios de datos: Azure Blob Storage, Azure Files, Azure Queue Storage y Azure Table Storage. Cada servicio está optimizado para diferentes tipos de datos y tiene sus propios casos de uso y ventajas.
+    
+- Es importante considerar la replicación para garantizar la durabilidad de los datos y la alta disponibilidad. Azure Storage ofrece diferentes estrategias de replicación para elegir en función de sus requisitos.
+    
+- La configuración de dominios personalizados y puntos de conexión seguros le permite acceder a la cuenta de almacenamiento y protegerla en Azure.
+## Más información con Copilot
+
+Copilot puede ayudarle a configurar soluciones de infraestructura de Azure. Copilot puede comparar, recomendar, explicar e investigar productos y servicios en los que necesita más información. Abra un explorador de Microsoft Edge y elija Copilot (arriba a la derecha) o vaya a copilot.microsoft.com. Dedique unos minutos a probar estos mensajes y ampliar el aprendizaje con Copilot.
+
+- ¿Qué es una cuenta de Azure Storage? ¿Qué tipo de cuentas de almacenamiento están disponibles?
+    
+- Explique a una persona sin conocimientos técnicos la redundancia de datos de Azure para cuentas de almacenamiento.
+    
+
+## Más información con la documentación de Azure
+
+- [Introducción a las cuentas de almacenamiento](https://learn.microsoft.com/es-es/azure/storage/common/storage-account-overview). Este artículo es el punto de partida para informarse sobre las cuentas de almacenamiento de Azure.
+    
+- [Redundancia de Azure Storage](https://learn.microsoft.com/es-es/azure/storage/common/storage-redundancy). Este artículo repasa cómo reducir el costo y la disponibilidad al seleccionar una opción de redundancia.
+    
+
+## Más información con el aprendizaje autodirigido
+
+- [Creación de una cuenta de almacenamiento de Azure](https://learn.microsoft.com/es-es/training/modules/create-azure-storage-account/). Cómo crear una cuenta de Azure Storage con las opciones correctas para sus necesidades empresariales.
+    
+- [Diseño e implementación de acceso privado en los servicios de Azure](https://learn.microsoft.com/es-es/training/modules/design-implement-private-access-to-azure-services/). Cómo diseñar e implementar acceso privado en los servicios de Azure con Azure Private Link y puntos de conexión de servicio de red virtual.
+
+
+# Acceso al almacenamiento.
+
+Cada objeto que se almacena en Azure Storage tiene una dirección URL única. El nombre de la cuenta de almacenamiento forma la parte del _subdominio_ de la dirección URL. La combinación del subdominio y el nombre de dominio, que es específico de cada servicio, forma un punto de conexión para su cuenta de almacenamiento.
+
+Veamos un ejemplo. Si el nombre de la cuenta de almacenamiento es _mystorageaccount_, se forman puntos de conexión predeterminados de la cuenta de almacenamiento para los servicios de Azure, como se muestra en la tabla siguiente:
+
+|Servicio|Punto de conexión predeterminado|
+|---|---|
+|**Servicio de contenedor**|`//`**`mystorageaccount`**`.blob.core.windows.net`|
+|**Servicio de mesa**|`//`**`mystorageaccount`**`.table.core.windows.net`|
+|**Queue Service**|`//`**`mystorageaccount`**`.queue.core.windows.net`|
+|**Servicio de archivos**|`//`**`mystorageaccount`**`.file.core.windows.net`|
+
+Creamos la dirección URL para acceder a un objeto de una cuenta de almacenamiento anexando la ubicación de este al punto de conexión.
+
+Por ejemplo, para acceder a los datos _de myblob_ en la ubicación _mycontainer_ de la cuenta de almacenamiento, se usa la siguiente dirección URL:
+
+`//`**`mystorageaccount`**`.blob.core.windows.net/`**`mycontainer`**`/`**`myblob`**.
+
+## Configuración de dominios personalizados
+
+Puede configurar un [dominio personalizado](https://learn.microsoft.com/es-es/azure/storage/blobs/storage-custom-domain-name) para acceder a datos de blobs en la cuenta de Azure Storage. Como hemos revisado, el punto de conexión predeterminado para Azure Blob Storage es `\<storage-account-name>.blob.core.windows.net`. Si asigna un dominio y un subdominio personalizados (como `www.contoso.com`) al punto de conexión web o de blob para la cuenta de almacenamiento, los usuarios pueden utilizar dicho dominio para acceder a los datos de blob en la cuenta de almacenamiento.
+
+La **asignación directa** permite habilitar un dominio personalizado para un subdominio en una cuenta de almacenamiento de Azure. Para este enfoque, se crea un registro `CNAME` que apunta desde el subdominio a la cuenta de Azure Storage.
+
+En el ejemplo siguiente se muestra cómo se asigna un subdominio a una cuenta de Azure Storage para crear un registro `CNAME` en el sistema de nombres de dominio (DNS):
+
+- Subdominio: `blobs.contoso.com`
+- Cuenta de Azure Storage: `\<storage account>\.blob.core.windows.net`
+- Registro `CNAME` directo: `contosoblobs.blob.core.windows.net`
+
+# Protección de puntos de conexión de almacenamiento.
+
+En el portal de Azure, cada servicio Azure requiere determinados pasos para configurar los puntos de conexión de servicio y restringir el acceso a la red.
+
+Para acceder a esta configuración de la cuenta de almacenamiento, use la configuración de **Firewalls y redes virtuales**. Agregue las redes virtuales que deben tener acceso al servicio para la cuenta. - Esta configuración restringe el acceso a la cuenta de almacenamiento desde subredes específicas en redes virtuales o direcciones IP públicas.
+
+![Cortafuegos y redes virtuales de la cuenta de almacenamiento](../assets/images/AZ-104/secure-storage-access-d32868ef.png)
+
+Los puntos de conexión de servicio de una cuenta de almacenamiento proporcionan la dirección URL base para cualquier blob, cola, tabla o objeto de archivo en Azure Storage. Use esta dirección URL base para construir la dirección de cualquier recurso determinado.
+
+![Direcciones URL de puntos de conexión de servicio](../assets/images/AZ-104/service-endpoints-portal-lrg.png)
+
+### Aspectos que se deben saber sobre la configuración de puntos de conexión de servicio
+
+Estos son algunos puntos que se deben tener en cuenta para configurar las opciones de acceso al servicio:
+
+- Puede configurar el servicio para permitir el acceso a uno o varios intervalos de direcciones IP públicas.
+    
+- Las subredes y redes virtuales deben existir en el mismo par de regiones o regiones de Azure que la cuenta de almacenamiento.
+    
+
+> [!NOTE] Importante> 
+> Asegúrese de probar el punto de conexión de servicio y compruebe que el punto de conexión limita el acceso según lo previsto.
+
+### Aspectos que se deben saber sobre la configuración de puntos de conexión privados
+
+Además de los puntos de conexión de servicio, Azure Storage admite puntos de conexión privados para mejorar la seguridad y el aislamiento de red. Los puntos de conexión privados son el enfoque recomendado para cargas de trabajo de producción que requieren acceso seguro.
+
+Un punto de conexión privado usa una dirección IP privada de la red virtual para incorporar el servicio Azure Storage a la red virtual. Todo el tráfico entre la red virtual y el servicio de almacenamiento pasa por la red troncal de Microsoft, lo que elimina la exposición a la red pública de Internet.
+
+**Diferencias clave de los puntos de conexión de servicio**
+
+- Los puntos de conexión privados asignan una dirección IP privada de la red virtual a la cuenta de almacenamiento, lo que mantiene todo el tráfico dentro de la red troncal de Microsoft. Uso de puntos de conexión privados para cargas de trabajo de producción que requieren requisitos completos de aislamiento y cumplimiento de red
+    
+- Los puntos de conexión de servicio mantienen la cuenta de almacenamiento en su punto de conexión público, pero restringen el acceso a redes virtuales y subredes específicas. Use puntos de conexión de servicio para escenarios de desarrollo o cuando necesite una configuración más sencilla con algún acceso público a Internet
+    
+
+> [!TIP] Sugerencia> 
+> Obtenga más información con el módulo de formación [_asegure y aísle el acceso a los recursos de Azure mediante grupos de seguridad de red y puntos de conexión de servicio_](https://learn.microsoft.com/es-es/training/modules/secure-and-isolate-with-nsg-and-service-endpoints/). Este módulo tiene un espacio aislado donde puede restringir el acceso a Azure Storage mediante puntos de conexión de servicio.
+
+
+# Resumen y recursos.
+
+En este módulo, se ha informado sobre Azure Storage y cómo crear una cuenta de almacenamiento.
+
+**Las principales conclusiones de este módulo son las siguientes:**
+
+- Azure Storage proporciona una variedad de opciones de almacenamiento para distintos tipos de datos, incluyendo datos de máquina virtual, datos no estructurados y estructurados.
+    
+- Hay diferentes tipos de cuentas de almacenamiento disponibles, cada una con sus propias características y modelos de precios. Es importante tener en cuenta los requisitos específicos de la aplicación al elegir el tipo de cuenta de almacenamiento adecuado.
+    
+- Azure Storage ofrece cuatro servicios de datos: Azure Blob Storage, Azure Files, Azure Queue Storage y Azure Table Storage. Cada servicio está optimizado para diferentes tipos de datos y tiene sus propios casos de uso y ventajas.
+    
+- Es importante considerar la replicación para garantizar la durabilidad de los datos y la alta disponibilidad. Azure Storage ofrece diferentes estrategias de replicación para elegir en función de sus requisitos.
+    
+- La configuración de dominios personalizados y puntos de conexión seguros le permite acceder a la cuenta de almacenamiento y protegerla en Azure.
+
+## Más información con Copilot
+
+Copilot puede ayudarle a configurar soluciones de infraestructura de Azure. Copilot puede comparar, recomendar, explicar e investigar productos y servicios en los que necesita más información. Abra un explorador de Microsoft Edge y elija Copilot (arriba a la derecha) o vaya a copilot.microsoft.com. Dedique unos minutos a probar estos mensajes y ampliar el aprendizaje con Copilot.
+
+- ¿Qué es una cuenta de Azure Storage? ¿Qué tipo de cuentas de almacenamiento están disponibles?
+    
+- Explique a una persona sin conocimientos técnicos la redundancia de datos de Azure para cuentas de almacenamiento.
+    
+
+## Más información con la documentación de Azure
+
+- [Introducción a las cuentas de almacenamiento](https://learn.microsoft.com/es-es/azure/storage/common/storage-account-overview). Este artículo es el punto de partida para informarse sobre las cuentas de almacenamiento de Azure.
+    
+- [Redundancia de Azure Storage](https://learn.microsoft.com/es-es/azure/storage/common/storage-redundancy). Este artículo repasa cómo reducir el costo y la disponibilidad al seleccionar una opción de redundancia.
+    
+
+## Más información con el aprendizaje autodirigido
+
+- [Creación de una cuenta de almacenamiento de Azure](https://learn.microsoft.com/es-es/training/modules/create-azure-storage-account/). Cómo crear una cuenta de Azure Storage con las opciones correctas para sus necesidades empresariales.
+    
+- [Diseño e implementación de acceso privado en los servicios de Azure](https://learn.microsoft.com/es-es/training/modules/design-implement-private-access-to-azure-services/). Cómo diseñar e implementar acceso privado en los servicios de Azure con Azure Private Link y puntos de conexión de servicio de red virtual.
+
+
+# Protección de puntos de conexión de almacenamiento.
+
+En el portal de Azure, cada servicio Azure requiere determinados pasos para configurar los puntos de conexión de servicio y restringir el acceso a la red.
+
+Para acceder a esta configuración de la cuenta de almacenamiento, use la configuración de **Firewalls y redes virtuales**. Agregue las redes virtuales que deben tener acceso al servicio para la cuenta. - Esta configuración restringe el acceso a la cuenta de almacenamiento desde subredes específicas en redes virtuales o direcciones IP públicas.
+
+![Cortafuegos y redes virtuales de la cuenta de almacenamiento](../assets/images/AZ-104/secure-storage-access-d32868ef.png)
+
+Los puntos de conexión de servicio de una cuenta de almacenamiento proporcionan la dirección URL base para cualquier blob, cola, tabla o objeto de archivo en Azure Storage. Use esta dirección URL base para construir la dirección de cualquier recurso determinado.
+
+![Direcciones URL de puntos de conexión de servicio](../assets/images/AZ-104/service-endpoints-portal-lrg.png)
+
+### Aspectos que se deben saber sobre la configuración de puntos de conexión de servicio
+
+Estos son algunos puntos que se deben tener en cuenta para configurar las opciones de acceso al servicio:
+
+- Puede configurar el servicio para permitir el acceso a uno o varios intervalos de direcciones IP públicas.
+
+- Las subredes y redes virtuales deben existir en el mismo par de regiones o regiones de Azure que la cuenta de almacenamiento.
+
+> [!NOTE] Importante 
+> Asegúrese de probar el punto de conexión de servicio y compruebe que el punto de conexión limita el acceso según lo previsto.
+
+### Aspectos que se deben saber sobre la configuración de puntos de conexión privados
+
+Además de los puntos de conexión de servicio, Azure Storage admite puntos de conexión privados para mejorar la seguridad y el aislamiento de red. Los puntos de conexión privados son el enfoque recomendado para cargas de trabajo de producción que requieren acceso seguro.
+
+Un punto de conexión privado usa una dirección IP privada de la red virtual para incorporar el servicio Azure Storage a la red virtual. Todo el tráfico entre la red virtual y el servicio de almacenamiento pasa por la red troncal de Microsoft, lo que elimina la exposición a la red pública de Internet.
+
+**Diferencias clave de los puntos de conexión de servicio**
+
+- Los puntos de conexión privados asignan una dirección IP privada de la red virtual a la cuenta de almacenamiento, lo que mantiene todo el tráfico dentro de la red troncal de Microsoft. Uso de puntos de conexión privados para cargas de trabajo de producción que requieren requisitos completos de aislamiento y cumplimiento de red
+  
+- Los puntos de conexión de servicio mantienen la cuenta de almacenamiento en su punto de conexión público, pero restringen el acceso a redes virtuales y subredes específicas. Use puntos de conexión de servicio para escenarios de desarrollo o cuando necesite una configuración más sencilla con algún acceso público a Internet
+
+
+> [!NOTE] Sugerencia> 
+> Obtenga más información con el módulo de formación [_asegure y aísle el acceso a los recursos de Azure mediante grupos de seguridad de red y puntos de conexión de servicio_](https://learn.microsoft.com/es-es/training/modules/secure-and-isolate-with-nsg-and-service-endpoints/). Este módulo tiene un espacio aislado donde puede restringir el acceso a Azure Storage mediante puntos de conexión de servicio.
+
+
+# Resumen y recursos
+
+En este módulo, se ha informado sobre Azure Storage y cómo crear una cuenta de almacenamiento.
+
+**Las principales conclusiones de este módulo son las siguientes:**
+
+- Azure Storage proporciona una variedad de opciones de almacenamiento para distintos tipos de datos, incluyendo datos de máquina virtual, datos no estructurados y estructurados.
+    
+- Hay diferentes tipos de cuentas de almacenamiento disponibles, cada una con sus propias características y modelos de precios. Es importante tener en cuenta los requisitos específicos de la aplicación al elegir el tipo de cuenta de almacenamiento adecuado.
+    
+- Azure Storage ofrece cuatro servicios de datos: Azure Blob Storage, Azure Files, Azure Queue Storage y Azure Table Storage. Cada servicio está optimizado para diferentes tipos de datos y tiene sus propios casos de uso y ventajas.
+    
+- Es importante considerar la replicación para garantizar la durabilidad de los datos y la alta disponibilidad. Azure Storage ofrece diferentes estrategias de replicación para elegir en función de sus requisitos.
+    
+- La configuración de dominios personalizados y puntos de conexión seguros le permite acceder a la cuenta de almacenamiento y protegerla en Azure.
+    
+
+## Más información con Copilot
+
+Copilot puede ayudarle a configurar soluciones de infraestructura de Azure. Copilot puede comparar, recomendar, explicar e investigar productos y servicios en los que necesita más información. Abra un explorador de Microsoft Edge y elija Copilot (arriba a la derecha) o vaya a copilot.microsoft.com. Dedique unos minutos a probar estos mensajes y ampliar el aprendizaje con Copilot.
+
+- ¿Qué es una cuenta de Azure Storage? ¿Qué tipo de cuentas de almacenamiento están disponibles?
+    
+- Explique a una persona sin conocimientos técnicos la redundancia de datos de Azure para cuentas de almacenamiento.
+    
+
+## Más información con la documentación de Azure
+
+- [Introducción a las cuentas de almacenamiento](https://learn.microsoft.com/es-es/azure/storage/common/storage-account-overview). Este artículo es el punto de partida para informarse sobre las cuentas de almacenamiento de Azure.
+    
+- [Redundancia de Azure Storage](https://learn.microsoft.com/es-es/azure/storage/common/storage-redundancy). Este artículo repasa cómo reducir el costo y la disponibilidad al seleccionar una opción de redundancia.
+    
+
+## Más información con el aprendizaje autodirigido
+
+- [Creación de una cuenta de almacenamiento de Azure](https://learn.microsoft.com/es-es/training/modules/create-azure-storage-account/). Cómo crear una cuenta de Azure Storage con las opciones correctas para sus necesidades empresariales.
+    
+- [Diseño e implementación de acceso privado en los servicios de Azure](https://learn.microsoft.com/es-es/training/modules/design-implement-private-access-to-azure-services/). Cómo diseñar e implementar acceso privado en los servicios de Azure con Azure Private Link y puntos de conexión de servicio de red virtual.

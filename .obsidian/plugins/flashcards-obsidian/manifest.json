@@ -1,0 +1,10 @@
+{
+  "id": "flashcards-obsidian",
+  "name": "Flashcards",
+  "version": "2.2.0",
+  "minAppVersion": "1.13.0",
+  "description": "Create and sync Anki flashcards from your notes.",
+  "author": "Alex Colucci",
+  "authorUrl": "https://github.com/reuseman",
+  "isDesktopOnly": true
+}

@@ -65,7 +65,7 @@ Siga este procedimiento para asignar el rol Colaborador de máquina virtual a un
     
 2. En el cuadro Buscar de la parte superior, busque **Grupos de recursos**.
     
-    ![Screenshot of the Azure portal that shows how to search for resource groups.](https://learn.microsoft.com/en-us/training/modules/secure-azure-resources-with-rbac/media/5-resource-groups.png)
+    ![Buscar grupos de recursos en Azure Portal](../../../assets/images/AZ-104/rbac-resource-groups.png)
     
 2. En la lista de grupos de recursos, seleccione un grupo de recursos.
     
@@ -75,18 +75,18 @@ Siga este procedimiento para asignar el rol Colaborador de máquina virtual a un
     
 4. Seleccione la pestaña **Asignaciones** de roles para mostrar la lista actual de asignaciones de roles en este ámbito.
     
-    ![Screenshot showing Role assignments tab for the selected resource group.](https://learn.microsoft.com/en-us/training/modules/secure-azure-resources-with-rbac/media/5-resource-group-role-assignment.png)
+    ![Asignaciones de roles del grupo de recursos](../../../assets/images/AZ-104/rbac-resource-group-role-assignment.png)
     
 5. Seleccione **Agregar**>**Agregar asignación de rol**.
 
 Si no tiene permisos para asignar roles, se deshabilitará la opción **Agregar asignación de roles**.
-    ![[Pasted image 20260929130632.png]]
+    ![Agregar una asignación de rol](../../../assets/images/AZ-104/rbac-add-role-assignment.png)
 
 6. Se abre la página **Agregar asignación de roles**.
     
 7. En la pestaña **Rol** , busque y seleccione **Colaborador de máquina virtual**.
     
-    ![Screenshot that shows Add role assignment and list of roles.](https://learn.microsoft.com/en-us/training/modules/secure-azure-resources-with-rbac/media/5-select-role.png)
+    ![Seleccionar rol para la asignación](../../../assets/images/AZ-104/rbac-select-role.png)
 
 
 8. Seleccione **Siguiente**.
@@ -94,7 +94,7 @@ Si no tiene permisos para asignar roles, se deshabilitará la opción **Agregar 
 9. En la pestaña **Miembros**, elija **Seleccionar miembros**.
     
 10. Busque y seleccione un usuario.
-![[Pasted image 20260929130811.png]]
+![Seleccionar miembro para la asignación de rol](../../../assets/images/AZ-104/rbac-select-member.png)
 
 11. Seleccione **Seleccionar** para agregar el usuario a la lista Miembros.
     
@@ -106,7 +106,7 @@ Si no tiene permisos para asignar roles, se deshabilitará la opción **Agregar 
     
     Después de unos instantes, al usuario se le asigna el rol Colaborador de máquina virtual en el ámbito del grupo de recursos. El usuario ahora puede crear y administrar máquinas virtuales justo dentro de este grupo de recursos.
 
-![[Pasted image 20260929130849.png]]
+![Asignación de rol completada](../../../assets/images/AZ-104/rbac-role-assignment-complete.png)
 
 ## Eliminar acceso
 
@@ -118,7 +118,7 @@ En RBAC de Azure, puede quitar una asignación de un rol para eliminar el acceso
     
 3. Seleccione **Eliminar**.
     
-    ![Captura de pantalla que muestra el mensaje Quitar asignación de roles.](https://learn.microsoft.com/es-es/training/modules/secure-azure-resources-with-rbac/media/5-remove-role-assignment.png)
+    ![Quitar asignación de rol](../../../assets/images/AZ-104/rbac-remove-role-assignment.png)
     
 4. En el mensaje **Quitar asignaciones de roles** que aparece, seleccione **Sí**.
     
@@ -135,11 +135,11 @@ La manera más fácil de empezar a trabajar es ver los registros de actividad co
 
 1. Seleccione **Todos los servicios** y busque **Registro de actividad**. **Activity Log.**
     
-    ![Captura de pantalla de Azure Portal que muestra la ubicación de la opción Registros de actividad.](https://learn.microsoft.com/es-es/training/modules/secure-azure-resources-with-rbac/media/6-all-services-activity-log.png)
+    ![Acceso al registro de actividad](../../../assets/images/AZ-104/rbac-activity-log-menu.png)
     
 2. Seleccione **Registro de** actividad para abrir el registro de actividad.
     
-    ![Captura de pantalla de Azure Portal en la que se muestran los registros de actividad.](https://learn.microsoft.com/es-es/training/modules/secure-azure-resources-with-rbac/media/6-activity-log-portal.png)
+    ![Registros de actividad en Azure Portal](../../../assets/images/AZ-104/rbac-activity-log-portal.png)
     
 3. Establezca el filtro **Intervalo de tiempo** en **Último mes**.
     
@@ -152,13 +152,13 @@ La manera más fácil de empezar a trabajar es ver los registros de actividad co
     - Crear o actualizar la definición de roles personalizados (roleDefinitions)
     - Eliminar definición de roles personalizados (roleDefinitions)
     
-    ![Captura de pantalla que muestra una lista del filtro Operación con los cuatro filtros seleccionados.](https://learn.microsoft.com/es-es/training/modules/secure-azure-resources-with-rbac/media/6-operation-filter.png)
+    ![Filtro de operaciones del registro de actividad](../../../assets/images/AZ-104/rbac-activity-log-operation-filter.png)
     
     Después de un momento, obtendrá una lista de todas las operaciones de asignación de roles y definición de roles del último mes. También hay un botón en la parte superior de la pantalla para descargar el registro de actividad como un archivo CSV.
     
 6. Seleccione una de las operaciones para obtener los detalles del registro de actividad.
     
-    ![Captura de pantalla que muestra los detalles de un registro de actividad.](https://learn.microsoft.com/es-es/training/modules/secure-azure-resources-with-rbac/media/6-activity-log-details.png)
+    ![Detalles de un registro de actividad](../../../assets/images/AZ-104/rbac-activity-log-details.png)
     
 
 En esta unidad, ha aprendido a usar el registro de actividad de Azure para enumerar los cambios de RBAC de Azure en el portal y generar un informe sencillo.

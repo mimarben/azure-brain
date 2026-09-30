@@ -26,7 +26,7 @@ You have a few different options for accessing Azure Cloud Shell:
 
 Al usar Cloud Shell, es posible que también tenga que ejecutar scripts o usar archivos para diferentes acciones. Puede conservar archivos en Cloud Shell mediante Azure CloudDrive:
 
-[![Captura de pantalla de cómo acceder a CloudDrive en una sesión de Cloud Shell.](https://learn.microsoft.com/es-es/training/modules/intro-to-azure-cloud-shell/media/use-azure-cloud-drive.png)](https://learn.microsoft.com/es-es/training/modules/intro-to-azure-cloud-shell/media/use-azure-cloud-drive.png#lightbox)
+[![Acceso a CloudDrive en Cloud Shell](../assets/images/AZ-104/cloud-shell-cloud-drive-access.png)](../assets/images/AZ-104/cloud-shell-cloud-drive-access.png)
 
 
 ## Herramientas de Cloud Shell
@@ -65,7 +65,7 @@ No debe usar Azure Cloud Shell si:
 - Necesita almacenamiento de diferentes regiones. Es posible que tenga que realizar copias de seguridad y sincronizar este contenido, ya que solo una región puede tener asignado el almacenamiento a Azure Cloud Shell.
 - Debe abrir varias sesiones al mismo tiempo. Azure Cloud Shell solo permite una instancia a la vez y no es adecuada para el trabajo simultáneo en varias suscripciones o inquilinos.
 - 
-![[Pasted image 20260928130218.png]]
+![Sesión de Azure Cloud Shell](../assets/images/AZ-104/cloud-shell-session-example.png)
 ## Learn more
 
 Check out these articles to learn more about Azure Cloud Shell.

@@ -38,7 +38,7 @@ Configurar y supervisar instancias de Azure App Service, incluidas las ranuras d
 
 **Páginas de `knowledge/`**: —
 
-**Laboratorio**: Lab 09a (Implement Web Apps) de [MicrosoftLearning/AZ-104](https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator) — ver [labs/AZ-104](../labs/AZ-104/README.md)
+**Laboratorio**: Lab 09a (Implement Web Apps) de [MicrosoftLearning/AZ-104](https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator) — ver [labs/AZ-104](create-vm.md)
 
 ## Relacionado
 

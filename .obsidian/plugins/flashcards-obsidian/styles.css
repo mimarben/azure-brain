@@ -1,0 +1,187 @@
+/* Intentionally minimal for now. The rewrite will add styles only when needed. */
+
+/* Render-preview: keep ==highlight== and {{cN::body}} visually unified. */
+/* Theme-owned colours: a hardcoded light background leaves the inherited
+   (light) text unreadable in dark themes. */
+.markdown-rendered mark,
+.markdown-rendered .ff-cloze {
+  background: var(--text-highlight-bg);
+  color: var(--text-normal);
+  padding: 0 0.1em;
+  border-radius: 2px;
+}
+
+.markdown-rendered .ff-anchor {
+  color: var(--text-faint);
+  cursor: help;
+  margin-left: 0.25em;
+}
+
+.markdown-rendered .ff-sep {
+  color: var(--text-muted);
+  font-weight: 600;
+  margin: 0 0.15em;
+}
+
+.markdown-rendered .ff-hashtag-tag {
+  color: var(--text-faint);
+  font-size: 0.9em;
+  border: 1px dashed var(--text-faint);
+  border-radius: 3px;
+  padding: 0 0.25em;
+}
+
+/* Live Preview surfaces inside the CM6 editor. */
+.cm-editor .ff-cloze,
+.cm-editor mark {
+  background: var(--text-highlight-bg);
+  color: var(--text-normal);
+  padding: 0 0.1em;
+  border-radius: 2px;
+}
+.cm-editor .ff-anchor {
+  color: var(--text-faint);
+  margin-left: 0.25em;
+}
+.cm-editor .ff-sep {
+  color: var(--text-muted);
+  font-weight: 600;
+  margin: 0 0.15em;
+}
+.cm-editor .ff-hashtag-tag {
+  color: var(--text-faint);
+  font-size: 0.9em;
+  border: 1px dashed var(--text-faint);
+  border-radius: 3px;
+  padding: 0 0.25em;
+}
+
+/* Present the machine-owned card registry as read-only managed data. */
+.metadata-property[data-property-key="flashcards"] {
+  --flashcards-property-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 18V6a2 2 0 0 1 2-2h2'/%3E%3Crect x='8' y='2' width='12' height='20' rx='2'/%3E%3Cpath d='M11 7h6M11 11h4'/%3E%3C/svg%3E");
+  --metadata-property-background: transparent;
+}
+
+.metadata-property[data-property-key="flashcards"]
+  .metadata-property-icon
+  > * {
+  display: none;
+}
+
+.metadata-property[data-property-key="flashcards"]
+  .metadata-property-icon::after {
+  background-color: currentColor;
+  content: "";
+  height: var(--icon-size);
+  mask: var(--flashcards-property-icon) center / contain no-repeat;
+  width: var(--icon-size);
+  -webkit-mask: var(--flashcards-property-icon) center / contain no-repeat;
+}
+
+.metadata-property[data-property-key="flashcards"] .metadata-property-value {
+  box-sizing: border-box;
+  color: transparent;
+  font-size: 0;
+  padding: var(--metadata-input-padding);
+}
+
+/* `body` is here purely to out-specify Obsidian's own
+   `.metadata-property-value > *` rule without resorting to `!important`. */
+body
+  .metadata-property[data-property-key="flashcards"]
+  .metadata-property-value
+  > * {
+  display: none;
+}
+
+.metadata-property[data-property-key="flashcards"]
+  .metadata-property-value::before {
+  background: var(--background-modifier-hover);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-s);
+  color: var(--text-muted);
+  content: "Managed sync data";
+  flex: 0 0 auto;
+  font-size: var(--font-ui-smaller);
+  font-weight: var(--font-normal);
+  line-height: var(--line-height-tight);
+  padding: var(--size-2-1) var(--size-4-2);
+}
+
+/* Status-bar items. Kept in the stylesheet rather than set inline so themes
+   and snippets can override them. `hidden` is declared last so it wins over
+   `pending` if an element ever carries both. */
+.flashcards-status-pending {
+  align-items: center;
+  color: var(--text-warning);
+  display: inline-flex;
+  gap: var(--size-2-1);
+}
+
+.flashcards-status-hidden {
+  display: none;
+}
+
+/* Shared scope editor: align with native settings and keep path lists compact. */
+.flashcards-scope-setting { display: block; }
+.flashcards-sync-scope section { padding: 0; margin: 0; }
+.flashcards-sync-scope section + section {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--background-modifier-border);
+}
+.flashcards-scope-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.flashcards-sync-scope .flashcards-scope-heading {
+  margin: 0;
+  padding: 0;
+  font-size: var(--font-ui-small);
+  font-weight: var(--font-semibold);
+  line-height: 1.4;
+}
+.flashcards-scope-header button { flex-shrink: 0; }
+.flashcards-sync-scope .flashcards-scope-description {
+  margin: 6px 0 8px;
+  padding: 0;
+  color: var(--text-muted);
+  font-size: var(--font-ui-smaller);
+  line-height: 1.4;
+}
+.flashcards-sync-scope input[type="search"] { width: 100%; margin-block: 4px; }
+.flashcards-sync-scope summary {
+  cursor: pointer;
+  padding-block: 4px;
+  font-size: var(--font-ui-small);
+  overflow-wrap: anywhere;
+}
+.flashcards-scope-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-block: 2px;
+  font-size: var(--font-ui-small);
+}
+.flashcards-scope-row span { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.flashcards-scope-row .flashcards-scope-remove {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 20px;
+}
+.flashcards-scope-row .flashcards-scope-remove:hover:not(:disabled) {
+  background: var(--background-modifier-hover);
+  color: var(--text-normal);
+}
+.flashcards-scope-remove:focus-visible { outline: 2px solid var(--interactive-accent); outline-offset: 2px; }
+.flashcards-scope-picker { max-height: 50vh; overflow-y: auto; margin-block: 1em; }
+.flashcards-scope-picker label { display: flex; align-items: baseline; gap: 0.5em; padding-block: 0.4em; overflow-wrap: anywhere; }

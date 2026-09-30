@@ -76,7 +76,7 @@ Las plantillas de ARM son _idempotentes_, lo que significa que puede implementar
 Resource Manager organiza la implementación de los recursos para que se creen en el orden correcto. Cuando sea posible, los recursos se crean en paralelo, por lo que las implementaciones de plantillas de ARM finalizan más rápido que las implementaciones con scripts.
 
 
-![Diagrama que muestra una asignación del procedimiento de procesamiento de plantillas. Solo hay una llamada para procesar una plantilla en lugar de varias llamadas a los scripts de proceso.](https://learn.microsoft.com/es-es/training/modules/create-azure-resource-manager-template-vs-code/media/2-template-processing.png)
+![Procesamiento de plantillas ARM](../assets/images/AZ-104/arm-template-processing.png)
 
 
 
@@ -301,4 +301,4 @@ Este es un ejemplo para mostrar los puntos de conexión de la cuenta de almacena
 }
 ```
 
-![[Pasted image 20260928142914.png]]
+![Referencia a la salida de una plantilla ARM](../assets/images/AZ-104/arm-template-output-reference.png)

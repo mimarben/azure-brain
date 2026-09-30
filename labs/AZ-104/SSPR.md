@@ -23,7 +23,7 @@ Vamos a usar Microsoft Entra ID para configurar la personalización de marca.
     
 6. Seleccione un **color de fondo de página** o acepte el valor predeterminado.
    
-    ![Screenshot that shows the configure company branding form.](https://learn.microsoft.com/en-us/training/modules/allow-users-reset-their-password/media/5-customize-ui.png)
+    ![Formulario de personalización de SSPR](../../assets/images/AZ-104/sspr-customize-ui.png)
     
 7. Select **Review + Create**, and then select **Create**.
     
@@ -49,7 +49,7 @@ Queremos implementar SSPR en un conjunto limitado de usuarios en primer lugar pa
 |Tipo de pertenencia|Asignado|
 4. Seleccione **Crear**.
 
-![Captura de pantalla que muestra el nuevo formulario completado y el botón Crear resaltado.](https://learn.microsoft.com/es-es/training/modules/allow-users-reset-their-password/media/4-create-group.png)
+![Creación de un grupo para SSPR](../../assets/images/AZ-104/sspr-create-group.png)
 
 
 ## Creación de una cuenta de usuario
@@ -81,7 +81,7 @@ Ahora, estás listo para habilitar SSPR en el grupo.
     
 3. Seleccione **Guardar**.
     
-    ![Captura de pantalla del panel Propiedades de Restablecimiento de contraseña con SSPR habilitado y el grupo seleccionado establecido en SSPRTesters.](https://learn.microsoft.com/es-es/training/modules/allow-users-reset-their-password/media/4-choose-sspr-group.png)
+    ![Selección del grupo habilitado para SSPR](../../assets/images/AZ-104/sspr-choose-group.png)
     
 4. En **Administrar**, seleccione las páginas **Métodos de autenticación**, **Registro** y **Notificaciones** para revisar los valores predeterminados. Asegúrese de que en **métodos de autenticación** tenga seleccionado **correo electrónico**.
     
@@ -112,7 +112,7 @@ Si recibe un mensaje que indica "El administrador no ha habilitado esta caracter
     
 6. Escriba los detalles del correo electrónico.
     
-    ![Captura de pantalla en la que se muestra el formulario de registro de teléfono móvil de SSPR.](https://learn.microsoft.com/es-es/training/modules/allow-users-reset-their-password/media/4-register-email.png)
+    ![Registro de correo para SSPR](../../assets/images/AZ-104/sspr-register-email.png)
     
 7. Cuando reciba el código en el correo electrónico, escriba el código en el cuadro de texto y seleccione **Siguiente**.
     
@@ -125,7 +125,7 @@ Ahora vamos a comprobar si el usuario puede restablecer su contraseña.
     
 2. En **Id. de usuario**, escriba **balas@organization-domain-name.onmicrosoft.com**. Reemplace "organization-domain-name" por el nombre de dominio que se ha usado para la organización de Microsoft Entra.
     
-    ![Captura de pantalla en la que se muestra el cuadro de diálogo de restablecimiento de contraseña.](https://learn.microsoft.com/es-es/training/modules/allow-users-reset-their-password/media/4-start-password-reset.png)
+    ![Inicio del restablecimiento de contraseña](../../assets/images/AZ-104/sspr-start-password-reset.png)
     
 3. Escriba los caracteres del CAPTCHA y seleccione **Siguiente**.
     

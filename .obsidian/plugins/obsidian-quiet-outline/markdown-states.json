@@ -1,0 +1,281 @@
+{
+  "knowledge/az104-storage-accounts.md": {
+    "expandedKeys": [
+      "item-1-0",
+      "item-1-6",
+      "item-1-8",
+      "item-1-11",
+      "item-1-17",
+      "item-1-19",
+      "item-1-25",
+      "item-1-27",
+      "item-1-33",
+      "item-1-35",
+      "item-1-38",
+      "item-1-42",
+      "item-1-45",
+      "item-1-29"
+    ],
+    "cursor": {
+      "from": {
+        "line": 528,
+        "ch": 0
+      },
+      "to": {
+        "line": 528,
+        "ch": 0
+      }
+    },
+    "scroll": 527.0654296875
+  },
+  "notes/AZ-104/roadmap.md": {
+    "expandedKeys": [
+      "item-1-0",
+      "item-2-3",
+      "item-1-2",
+      "item-2-5",
+      "item-2-7",
+      "item-2-9",
+      "item-2-11",
+      "item-2-13",
+      "item-1-15"
+    ],
+    "cursor": {
+      "from": {
+        "line": 119,
+        "ch": 0
+      },
+      "to": {
+        "line": 119,
+        "ch": 0
+      }
+    },
+    "scroll": 103.57486979166667
+  },
+  "knowledge/az104-blob-storage.md": {
+    "cursor": {
+      "from": {
+        "line": 287,
+        "ch": 0
+      },
+      "to": {
+        "line": 287,
+        "ch": 0
+      }
+    },
+    "expandedKeys": [
+      "item-1-0",
+      "item-1-6",
+      "item-1-9",
+      "item-3-13",
+      "item-1-12",
+      "item-3-20",
+      "item-1-19",
+      "item-1-23",
+      "item-1-26",
+      "item-1-29",
+      "item-1-31"
+    ],
+    "scroll": 288.0260416666667
+  },
+  "labs/AZ-104/Blob-Storage/Secure-storage-for-Azure-Files-and-Azure-Blob-Storage..md": {
+    "expandedKeys": [],
+    "scroll": 0
+  },
+  "labs/AZ-104/Blob-Storage/Untitled.md": {
+    "expandedKeys": []
+  },
+  "labs/AZ-104/Blob-Storage/alamcenamiento-publico.md": {
+    "expandedKeys": [
+      "item-1-0"
+    ],
+    "cursor": {
+      "from": {
+        "line": 27,
+        "ch": 0
+      },
+      "to": {
+        "line": 27,
+        "ch": 0
+      }
+    },
+    "scroll": 64.24317617866005
+  },
+  "knowledge/az104-storage-security.md": {
+    "expandedKeys": [
+      "item-1-0",
+      "item-1-6",
+      "item-1-8",
+      "item-1-10",
+      "item-1-12",
+      "item-1-15",
+      "item-1-18",
+      "item-1-22",
+      "item-1-26"
+    ],
+    "cursor": {
+      "from": {
+        "line": 271,
+        "ch": 0
+      },
+      "to": {
+        "line": 271,
+        "ch": 0
+      }
+    },
+    "scroll": 180.90818858560795
+  },
+  "labs/AZ-104/AZ-104-MicrosoftAzureAdministrator/Untitled.md": {
+    "expandedKeys": [],
+    "scroll": 0,
+    "cursor": {
+      "from": {
+        "line": 0,
+        "ch": 0
+      },
+      "to": {
+        "line": 0,
+        "ch": 0
+      }
+    }
+  },
+  "labs/AZ-104/MicrosoftAzureAdministrator/AZ-104-MicrosoftAzureAdministrator.md": {
+    "cursor": {
+      "from": {
+        "line": 0,
+        "ch": 0
+      },
+      "to": {
+        "line": 0,
+        "ch": 0
+      }
+    }
+  },
+  "labs/AZ-104/MicrosoftAzureAdministrator/AZ-104-MicrosoftAzureAdministrator..md": {
+    "cursor": {
+      "from": {
+        "line": 186,
+        "ch": 38
+      },
+      "to": {
+        "line": 186,
+        "ch": 38
+      }
+    },
+    "expandedKeys": [
+      "item-1-0"
+    ],
+    "scroll": 251.55598644578313
+  },
+  "knowledge/az104-azure-files.md": {
+    "expandedKeys": [
+      "item-1-0",
+      "item-1-5",
+      "item-1-9",
+      "item-2-12",
+      "item-3-13",
+      "item-1-16",
+      "item-1-19",
+      "item-2-20",
+      "item-1-22",
+      "item-1-25",
+      "item-2-28",
+      "item-1-30",
+      "item-1-33"
+    ],
+    "cursor": {
+      "from": {
+        "line": 414,
+        "ch": 0
+      },
+      "to": {
+        "line": 414,
+        "ch": 0
+      }
+    },
+    "scroll": 261.3053385416667
+  },
+  "labs/AZ-104/README.md": {
+    "expandedKeys": [],
+    "cursor": {
+      "from": {
+        "line": 8,
+        "ch": 0
+      },
+      "to": {
+        "line": 8,
+        "ch": 0
+      }
+    }
+  },
+  "General Purpose v2.md": {
+    "expandedKeys": [],
+    "cursor": {
+      "from": {
+        "line": 2,
+        "ch": 2
+      },
+      "to": {
+        "line": 2,
+        "ch": 2
+      }
+    },
+    "scroll": 0.11594202898550725
+  },
+  "certifications/AZ-104/INDEX.md": {
+    "expandedKeys": [
+      "item-1-0",
+      "item-2-4"
+    ],
+    "cursor": {
+      "from": {
+        "line": 12,
+        "ch": 0
+      },
+      "to": {
+        "line": 12,
+        "ch": 0
+      }
+    },
+    "scroll": 73.94964454976304
+  },
+  "knowledge/az104-virtual-machines.md": {
+    "expandedKeys": [
+      "item-1-0",
+      "item-1-7",
+      "item-2-10",
+      "item-2-13",
+      "item-1-22"
+    ],
+    "cursor": {
+      "from": {
+        "line": 248,
+        "ch": 0
+      },
+      "to": {
+        "line": 248,
+        "ch": 0
+      }
+    },
+    "scroll": 221.51777251184834
+  },
+  "labs/AZ-104/create-vm.md": {
+    "scroll": 0,
+    "expandedKeys": [
+      "item-1-0"
+    ],
+    "cursor": {
+      "from": {
+        "line": 9,
+        "ch": 13
+      },
+      "to": {
+        "line": 9,
+        "ch": 13
+      }
+    }
+  },
+  "labs/AZ-104/VM/Untitled.md": {
+    "expandedKeys": []
+  }
+}

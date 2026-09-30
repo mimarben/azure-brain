@@ -35,7 +35,7 @@ Qué hace Azure Application Gateway (balanceador de capa 7), cómo funciona y cu
 
 **Páginas de `knowledge/`**: [[Azure Networking]]
 
-**Laboratorio**: Lab 06 (Implement Network Traffic Management, incluye App Gateway) de [MicrosoftLearning/AZ-104](https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator) — ver [labs/AZ-104](../labs/AZ-104/README.md)
+**Laboratorio**: Lab 06 (Implement Network Traffic Management, incluye App Gateway) de [MicrosoftLearning/AZ-104](https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator) — ver [labs/AZ-104](create-vm.md)
 
 ## Relacionado
 

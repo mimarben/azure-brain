@@ -158,7 +158,7 @@ Con la pertenencia dinámica, Microsoft Entra ID agrega o quita automáticamente
 
 La pertenencia dinámica requiere una licencia **de Microsoft Entra ID P1** (o Intune for Education para reglas basadas en dispositivos).
 
-![[Pasted image 20260928195138.png]]
+![Pertenencia dinámica de grupos en Microsoft Entra](../assets/images/AZ-104/entra-dynamic-group-membership.png)
 
 
 
@@ -462,11 +462,11 @@ El proceso de migración podría ser como el siguiente:
 
 - Este es el estado de usuario esperado durante la migración:
 
-![Recorte de la página](https://learn.microsoft.com/es-es/training/wwl-sci/create-configure-manage-identities/media/expected-user-state.png)
+![Estado esperado del usuario aprovisionado](../assets/images/AZ-104/entra-user-provisioning-state.png)
 
 4. Después de confirmar que las licencias directas y de grupo son equivalentes, puede empezar a quitar licencias directas de usuarios. Puede probar esto quitándolas para usuarios individuales en el portal y luego ejecutando scripts de automatización para que se eliminen en masa. Este es un ejemplo del mismo usuario con sus licencias directas eliminadas desde el portal. Observe que el estado de licencia no cambia, pero ya no vemos las asignaciones directas.
 
-![Recorte de pantalla de la página Licencias en Microsoft Entra ID una vez finalizada la migración.](https://learn.microsoft.com/es-es/training/wwl-sci/create-configure-manage-identities/media/direct-licenses-removed.png)
+![Licencias directas eliminadas tras la migración](../assets/images/AZ-104/entra-direct-licenses-removed.png)
 
 ## Cambio de las asignaciones de licencia de un usuario o grupo en Microsoft Entra ID
 
@@ -523,7 +523,7 @@ La asignación de licencias a usuarios individuales se administra a través del 
 
 # Creación de atributos de seguridad personalizados.
 
-![[Pasted image 20260929085302.png]]
+![Atributos de seguridad personalizados en Microsoft Entra](../assets/images/AZ-104/entra-custom-security-attributes.png)
 
 ## ¿Qué es un atributo de seguridad personalizado?
 
@@ -556,7 +556,7 @@ Los atributos de seguridad personalizados **no** se admiten en reclamaciones de 
 
 # Exploración de la creación automática de usuarios.
 
-![[Pasted image 20260929090101.png]]
+![Aprovisionamiento automático de usuarios con SCIM](../assets/images/AZ-104/entra-scim-user-provisioning.png)
 
 ### Componentes de SCIM (sistema para administración de identidades entre dominios)
 

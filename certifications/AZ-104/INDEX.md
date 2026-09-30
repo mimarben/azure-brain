@@ -101,7 +101,7 @@ Material de apoyo: [whiteboard de ámbito del examen](../../raw/savill-cert-mate
 
 ## Laboratorios
 
-Índice y resultados en [`labs/AZ-104/`](../../labs/AZ-104/README.md) (carpeta de primer nivel). Labs oficiales: [MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator](https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator) — la mejor forma de cubrir lo que las rutas dejan corto.
+Índice y resultados en [`labs/AZ-104/`](create-vm.md) (carpeta de primer nivel). Labs oficiales: [MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator](https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator) — la mejor forma de cubrir lo que las rutas dejan corto.
 
 ## Conceptos relacionados
 

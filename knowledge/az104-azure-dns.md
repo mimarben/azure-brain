@@ -32,7 +32,7 @@ Crear una zona DNS para un nombre de dominio, registros DNS para asignar el domi
 
 **Páginas de `knowledge/`**: [[Azure Networking]]
 
-**Laboratorio**: sin lab dedicado en el repo oficial — práctica libre en sandbox. Ver [labs/AZ-104](../labs/AZ-104/README.md)
+**Laboratorio**: sin lab dedicado en el repo oficial — práctica libre en sandbox. Ver [labs/AZ-104](create-vm.md)
 
 ## Relacionado
 

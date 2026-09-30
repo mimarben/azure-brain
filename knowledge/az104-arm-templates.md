@@ -35,7 +35,7 @@ Creación de plantillas de Azure Resource Manager (ARM) con JSON usando Visual S
 
 **Páginas de `knowledge/`**: [[ARM Templates]] · [[Terraform vs Bicep]] · [[Herramientas de administración e implementación (AZ-900)]]
 
-**Laboratorio**: Lab 03b (gestión de recursos con plantillas ARM) de [MicrosoftLearning/AZ-104](https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator) — ver [labs/AZ-104](../labs/AZ-104/README.md) · ejemplo propio en ARM JSON con parámetros y salidas (unidad 4): [parameters](../labs/AZ-104/arm-templates/parameters/README.md)
+**Laboratorio**: Lab 03b (gestión de recursos con plantillas ARM) de [MicrosoftLearning/AZ-104](https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator) — ver [labs/AZ-104](create-vm.md) · ejemplo propio en ARM JSON con parámetros y salidas (unidad 4): [parameters](../labs/AZ-104/arm-templates/parameters/README.md)
 
 ## Relacionado
 

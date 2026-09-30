@@ -36,7 +36,7 @@ Azure Backup como servicio: bóvedas de Recovery Services vs almacenes de Backup
 
 **Páginas de `knowledge/`**: —
 
-**Laboratorio**: Lab 10 (Implement Data Protection) de [MicrosoftLearning/AZ-104](https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator) — ver [labs/AZ-104](../labs/AZ-104/README.md)
+**Laboratorio**: Lab 10 (Implement Data Protection) de [MicrosoftLearning/AZ-104](https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator) — ver [labs/AZ-104](create-vm.md)
 
 ## Relacionado
 

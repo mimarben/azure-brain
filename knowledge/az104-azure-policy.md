@@ -51,7 +51,7 @@ Para introducir una directiva con cuidado, primero se puede asignar con `enforc
 
 **Páginas de `knowledge/`**: [[Gobernanza y cumplimiento en Azure (AZ-900)]] · [[Azure RBAC]]
 
-**Laboratorio**: Lab 02b (gobernanza con Azure Policy) de [MicrosoftLearning/AZ-104](https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator) — ver [labs/AZ-104](../labs/AZ-104/README.md)
+**Laboratorio**: Lab 02b (gobernanza con Azure Policy) de [MicrosoftLearning/AZ-104](https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator) — ver [labs/AZ-104](create-vm.md)
 
 ## Relacionado
 

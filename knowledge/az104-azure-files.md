@@ -35,7 +35,7 @@ Configuración de recursos compartidos de archivos de Azure (file shares) y Azur
 
 **Páginas de `knowledge/`**: [[Servicios de almacenamiento de Azure (AZ-900)]]
 
-**Laboratorio**: Lab 07 (Manage Azure Storage) de [MicrosoftLearning/AZ-104](https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator) — ver [labs/AZ-104](../labs/AZ-104/README.md)
+**Laboratorio**: Lab 07 (Manage Azure Storage) de [MicrosoftLearning/AZ-104](https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator) — ver [labs/AZ-104](create-vm.md)
 
 # Introducción
 

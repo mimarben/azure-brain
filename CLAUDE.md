@@ -42,14 +42,16 @@ Carpetas de primer nivel, con una subcarpeta por certificación activa: `notes/<
 ### Otras carpetas
 
 - `examples/` — ejemplos de código reutilizables por tecnología (azure-cli, bicep, python, csharp, terraform, bash...), no atados a una certificación concreta.
+- `concepts/` — guías de decisión y comparativas transversales: cruzan varios servicios o módulos ("¿qué opción de cómputo elijo?", "¿RBAC o Policy?"). Plano, kebab-case, mismo frontmatter y convenciones que `knowledge/`. **No duplican las fichas**: enlazan a `knowledge/` y aportan el razonamiento (cuándo elegir qué, árboles de decisión, gotchas de examen).
+- `cheatsheets/` — chuletas de referencia rápida por área: comandos CLI/PowerShell, tablas de cifras (tiers, redundancia, límites) y reglas mnemotécnicas. Destilan `knowledge/`, `labs/` y `raw/` sin desarrollar teoría — la teoría vive en `knowledge/` y `concepts/`.
 - `assets/` — imágenes y diagramas exportados, cuando un diagrama no se pueda expresar en Mermaid.
 - `log.md` — registro cronológico de ingestas, consultas y lints (ver formato abajo).
-- `INDEX.md` — catálogo de todo el contenido de `knowledge/` y `certifications/`.
-- Carpetas heredadas de un scaffold anterior (`agents/`, `architecture/`, `archive/`, `cheatsheets/`, `concepts/`, `processed/`, `prompts/`, `scripts/`, `templates/`) están vacías y en desuso por decisión explícita del usuario (se mantienen "por si acaso"). **No añadas contenido ahí** — si un concepto encaja en una de ellas, probablemente ya tiene su sitio natural en `knowledge/`, `certifications/`, `notes/`, `labs/` o `examples/`. Pregunta antes de reutilizar alguna.
+- `INDEX.md` — catálogo de todo el contenido de `knowledge/`, `concepts/`, `cheatsheets/` y `certifications/`.
+- Carpetas heredadas de un scaffold anterior (`agents/`, `architecture/`, `archive/`, `processed/`, `prompts/`, `scripts/`, `templates/`) están vacías y en desuso por decisión explícita del usuario (se mantienen "por si acaso"). **No añadas contenido ahí** — si un concepto encaja en una de ellas, probablemente ya tiene su sitio natural en `knowledge/`, `concepts/`, `cheatsheets/`, `certifications/`, `notes/`, `labs/` o `examples/`. Pregunta antes de reutilizar alguna.
 
 ## Frontmatter
 
-Toda página de `knowledge/` y `certifications/*/INDEX.md` lleva YAML al inicio:
+Toda página de `knowledge/`, `concepts/`, `cheatsheets/` y `certifications/*/INDEX.md` lleva YAML al inicio:
 
 ```yaml
 ---

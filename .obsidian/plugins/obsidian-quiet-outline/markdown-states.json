@@ -50,7 +50,7 @@
         "ch": 77
       }
     },
-    "scroll": 113.62066268920898
+    "scroll": 117.36458659172058
   },
   "knowledge/az104-blob-storage.md": {
     "cursor": {
@@ -380,5 +380,85 @@
         "ch": 0
       }
     }
+  },
+  "knowledge/az104-container-instances.md": {
+    "cursor": {
+      "from": {
+        "line": 318,
+        "ch": 0
+      },
+      "to": {
+        "line": 318,
+        "ch": 0
+      }
+    },
+    "scroll": 297.7256886959076
+  },
+  "labs/AZ-104/containers/Untitled.md": {
+    "scroll": 0
+  },
+  "labs/AZ-104/containers/Contenedor..md": {
+    "cursor": {
+      "from": {
+        "line": 1,
+        "ch": 0
+      },
+      "to": {
+        "line": 1,
+        "ch": 0
+      }
+    }
+  },
+  "labs/AZ-104/containers/Contenedor.md": {
+    "cursor": {
+      "from": {
+        "line": 71,
+        "ch": 0
+      },
+      "to": {
+        "line": 71,
+        "ch": 0
+      }
+    },
+    "scroll": 73.8398106542701
+  },
+  "concepts/virtual-machines/Untitled.md": {
+    "scroll": 0,
+    "cursor": {
+      "from": {
+        "line": 0,
+        "ch": 0
+      },
+      "to": {
+        "line": 0,
+        "ch": 0
+      }
+    }
+  },
+  "concepts/virtual-machines/Contenedores frente a máquinas virtuales.md": {
+    "cursor": {
+      "from": {
+        "line": 3,
+        "ch": 0
+      },
+      "to": {
+        "line": 3,
+        "ch": 0
+      }
+    },
+    "scroll": 0
+  },
+  "knowledge/az104-virtual-networks.md": {
+    "cursor": {
+      "from": {
+        "line": 81,
+        "ch": 46
+      },
+      "to": {
+        "line": 81,
+        "ch": 46
+      }
+    },
+    "scroll": 47.72894867261251
   }
 }

@@ -22,6 +22,29 @@ Catálogo de todo el contenido del repositorio. Se actualiza en cada ingesta. Ve
 
 Notas de estudio por módulo: 12 fichas `knowledge/az900-*.md` (AZ-900, plantilla `_template-az900.md`, enlaces Learn × vídeo de Savill) y 27 fichas `knowledge/az104-*.md` (AZ-104, plantilla `_template-az104.md`, enlaces Learn + labs oficiales) — contenido a rellenar al estudiar. Checklists de uso: [AZ-900](certifications/AZ-900/INDEX.md) · [AZ-104](certifications/AZ-104/INDEX.md).
 
+## Concepts — guías de decisión y comparativas
+
+Transversales: cruzan varios servicios o módulos. Enlazan a las fichas de `knowledge/`, no las duplican.
+
+| Guía | Qué resuelve | Cert |
+|---|---|---|
+| [Contenedores frente a máquinas virtuales](concepts/containers-vs-vms.md) | Cuándo contenedor y cuándo VM | AZ-104, AZ-900 |
+| [Guía de decisión — opciones de cómputo](concepts/compute-decision-guide.md) | VM/VMSS, App Service, ACI, Container Apps, AKS, Functions, AVD | AZ-104, AZ-900, AZ-305 |
+| [Guía de decisión — almacenamiento](concepts/storage-decision-guide.md) | Servicio, redundancia, tier y mecanismo de acceso | AZ-104, AZ-900 |
+| [Guía de decisión — identidad y gobernanza](concepts/identity-governance-decision-guide.md) | RBAC vs Policy vs locks vs tags | AZ-104, AZ-500 |
+| [Modelo mental de red — Bloque 4](concepts/networking-primer.md) | Mapa previo al Bloque 4: VNet, NSG, rutas, peering, endpoints | AZ-104, AZ-700 |
+
+## Cheatsheets
+
+Referencia rápida por área — comandos y cifras, sin teoría.
+
+| Chuleta | Ámbito |
+|---|---|
+| [Azure CLI](cheatsheets/azure-cli.md) | Transversal: sesión, `--query`, RG, plantillas, locks |
+| [AZ-104 Compute](cheatsheets/az-104-compute.md) | VM/VMSS, App Service, ACI, Container Apps, ACR |
+| [AZ-104 Storage](cheatsheets/az-104-storage.md) | Cuentas, redundancia, tiers, SAS, red, azcopy |
+| [AZ-104 Identidad y gobernanza](cheatsheets/az-104-identity-governance.md) | `az ad`, RBAC, Policy, locks, presupuestos |
+
 ## Certifications
 
 | Cert | INDEX.md | Habilidades medidas (oficial) | Progreso |

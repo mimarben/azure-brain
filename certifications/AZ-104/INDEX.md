@@ -116,6 +116,11 @@ Material de apoyo: [whiteboard de ámbito del examen](../../raw/savill-cert-mate
 - [[az104-Azure Cloud Shell]]
 - [[Hub-Spoke]]
 
+## Guías y chuletas
+
+- Guías transversales: [opciones de cómputo](../../concepts/compute-decision-guide.md) · [almacenamiento](../../concepts/storage-decision-guide.md) · [identidad y gobernanza](../../concepts/identity-governance-decision-guide.md) · [modelo mental de red — Bloque 4](../../concepts/networking-primer.md) · [contenedores frente a VMs](../../concepts/containers-vs-vms.md)
+- Chuletas: [Azure CLI](../../cheatsheets/azure-cli.md) · [compute](../../cheatsheets/az-104-compute.md) · [storage](../../cheatsheets/az-104-storage.md) · [identidad y gobernanza](../../cheatsheets/az-104-identity-governance.md)
+
 ## Ejemplos
 
 - [Registro de aplicación en Entra ID](../../examples/entra/README.md)

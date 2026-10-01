@@ -42,15 +42,15 @@
     ],
     "cursor": {
       "from": {
-        "line": 119,
-        "ch": 0
+        "line": 129,
+        "ch": 330
       },
       "to": {
-        "line": 119,
-        "ch": 0
+        "line": 129,
+        "ch": 330
       }
     },
-    "scroll": 103.57486979166667
+    "scroll": 99.71441300710042
   },
   "knowledge/az104-blob-storage.md": {
     "cursor": {
@@ -249,15 +249,15 @@
     ],
     "cursor": {
       "from": {
-        "line": 248,
+        "line": 611,
         "ch": 0
       },
       "to": {
-        "line": 248,
+        "line": 611,
         "ch": 0
       }
     },
-    "scroll": 221.51777251184834
+    "scroll": 584.8772397089707
   },
   "labs/AZ-104/create-vm.md": {
     "scroll": 0,
@@ -277,5 +277,31 @@
   },
   "labs/AZ-104/VM/Untitled.md": {
     "expandedKeys": []
+  },
+  "knowledge/az104-vm-availability.md": {
+    "cursor": {
+      "from": {
+        "line": 361,
+        "ch": 0
+      },
+      "to": {
+        "line": 361,
+        "ch": 0
+      }
+    },
+    "scroll": 94.01518670717876
+  },
+  "knowledge/az104-app-service-plans.md": {
+    "cursor": {
+      "from": {
+        "line": 817,
+        "ch": 0
+      },
+      "to": {
+        "line": 817,
+        "ch": 0
+      }
+    },
+    "scroll": 738.6666301091512
   }
 }

@@ -2,6 +2,11 @@
 
 Registro cronológico de ingestas, consultas y lints. Formato: `## [YYYY-MM-DD] tipo | Título`.
 
+## [2026-10-01] maintenance | Localización de imágenes de los módulos 13–14 de AZ-104
+Fuente: petición del usuario
+Páginas actualizadas: knowledge/az104-virtual-machines.md, knowledge/az104-vm-availability.md
+Notas: descargadas 10 imágenes enlazadas de Microsoft Learn (3 del módulo 13, 7 del módulo 14) a assets/images/AZ-104/ con nombres descriptivos en kebab-case; los enlaces de ambas fichas pasan de URL externa a ruta relativa local. Se verificó que todos los ficheros son PNG válidos.
+
 ## [2026-09-28] maintenance | Reinicio del seguimiento del curso AZ-104
 Fuente: petición del usuario (reiniciar el curso AZ-104)
 Páginas actualizadas: certifications/AZ-104/INDEX.md, notes/AZ-104/roadmap.md, log.md
@@ -157,3 +162,7 @@ Assets: imágenes externas descargadas en assets/images/AZ-104/, incluidas seis 
 Fuente: https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/Instructions/Labs/LAB_07-Manage_Azure_Storage.html
 Páginas actualizadas: labs/AZ-104/MicrosoftAzureAdministrator/AZ-104-MicrosoftAzureAdministrator..md (traducción, tabla de creación corregida y ejemplos por tarea), knowledge/az104-storage-security.md (imagen local y enlace al laboratorio).
 Assets: capturas oficiales del laboratorio guardadas con nombres descriptivos en assets/images/AZ-104/.
+
+## [2026-10-01] lint | Últimas imágenes remotas de AZ-104
+Páginas actualizadas: knowledge/az104-app-service-plans.md, knowledge/az104-azure-files.md y labs/AZ-104/VM/Creación de una VM..md (enlaces de imagen remotos sustituidos por rutas locales relativas).
+Assets: seis imágenes nuevas en assets/images/AZ-104/ (app-service-planes-portal.gif, app-service-condicion-escalado-automatico.png, azure-file-sync-cache.png, vm-crear-recurso.png, vm-panel-notificaciones.png, vm-ip-publica.png). Las seis capturas de Azure Files descargadas el 2026-09-30 se verificaron por checksum y solo faltaba re-enlazarlas.

@@ -187,7 +187,7 @@ Los recursos compartidos de archivos de Azure clásicos residen dentro de una cu
 Los recursos compartidos de archivos SSD son excelentes cuando necesita un rendimiento rápido y coherente con baja latencia, normalmente en milisegundos de un solo dígito. Los recursos compartidos de HDD son más asequibles y funcionan bien para el almacenamiento de uso general.
 Si necesita acceso SMB, cree el recurso compartido de archivos dentro de una cuenta de almacenamiento. Los recursos compartidos de archivos por SMB le permiten elegir diferente niveles de acceso, como el optimizado para transacciones, el acceso frecuente y el acceso esporádico.
 
-![Captura de pantalla de la creación de un recurso compartido de archivos que muestra las opciones de nivel de acceso.](https://learn.microsoft.com/es-es/training/wwl-azure/configure-azure-files-file-sync/media/configure-classic-files.png)
+![Captura de pantalla de la creación de un recurso compartido de archivos que muestra las opciones de nivel de acceso.](../assets/images/AZ-104/azure-files-classic-share-access-tier.png)
 
 > [!NOTE] Nota:
 > Al conectarse a través de SMB, no olvide que el tráfico usa el puerto 445. Muchos ISP bloquean el puerto 445 de salida, que es el problema de conectividad más común al montar recursos compartidos de archivos de Azure desde entornos locales.
@@ -200,7 +200,7 @@ Si necesita acceso SMB, cree el recurso compartido de archivos dentro de una cue
 
 Azure Files proporciona la capacidad de tomar [instantáneas de recursos compartidos de recursos compartidos de archivos](https://learn.microsoft.com/es-es/azure/storage/files/storage-snapshots-files). Las instantáneas de recursos compartidos proporcionan copias puntuales de los recursos compartidos de archivos de Azure que protegen contra la eliminación accidental y habilitan la recuperación de errores de aplicación.
 
-![Captura de pantalla de una instantánea de recurso compartido de archivos en la que se muestra el nombre de la instantánea y la fecha en que se ha creado.](https://learn.microsoft.com/es-es/training/wwl-azure/configure-azure-files-file-sync/media/file-share-snapshot-cbda2136.png)
+![Captura de pantalla de una instantánea de recurso compartido de archivos en la que se muestra el nombre de la instantánea y la fecha en que se ha creado.](../assets/images/AZ-104/azure-files-share-snapshot.png)
 
 ## Aspectos que tener en cuenta sobre las instantáneas de recurso compartido de archivos
 
@@ -229,7 +229,7 @@ Las instantáneas de la compartición de archivos pueden ayudarte a proteger y r
 
 Azure Files ofrece la [eliminación temporal para recursos compartidos de archivos](https://learn.microsoft.com/es-es/azure/storage/files/storage-files-prevent-file-share-deletion?toc=%2Fazure%2Fstorage%2Ffile-sync). La eliminación temporal le permite recuperar archivos eliminados y recursos compartidos de archivos.
 
-![Ilustración que muestra cómo habilitar la eliminación temporal en un recurso compartido de archivos de Azure.](https://learn.microsoft.com/es-es/training/wwl-azure/configure-azure-files-file-sync/media/files-enable-soft-delete-new-ui.png)
+![Ilustración que muestra cómo habilitar la eliminación temporal en un recurso compartido de archivos de Azure.](../assets/images/AZ-104/azure-files-enable-soft-delete.png)
 
 ### Aspectos que debe saber sobre la eliminación temporal para Azure Files.
 
@@ -265,7 +265,7 @@ Usar la eliminación temporal para Azure Files tiene muchas ventajas. Tenga en c
 
 [El Explorador de Azure Storage](https://learn.microsoft.com/es-es/azure/storage/storage-explorer/vs-azure-tools-storage-manage-with-storage-explorer?tabs=windows) es una aplicación independiente que facilita el trabajo con datos de Azure Storage en Windows, macOS y Linux. Con el Explorador de Azure Storage, puede acceder a varias cuentas y suscripciones y administrar todo el contenido de Storage.
   
-![Captura de pantalla del Explorador de Azure Storage que muestra la cuenta de almacenamiento del emulador abierta, que tiene una carpeta y varios documentos. La información del nivel de acceso es visible.](https://learn.microsoft.com/es-es/training/wwl-azure/configure-azure-files-file-sync/media/storage-explorer.png)
+![Captura de pantalla del Explorador de Azure Storage que muestra la cuenta de almacenamiento del emulador abierta, que tiene una carpeta y varios documentos. La información del nivel de acceso es visible.](../assets/images/AZ-104/azure-files-storage-explorer.png)
 
 ### Cosas que debe saber sobre el Explorador de Azure Storage
 
@@ -278,7 +278,7 @@ El Explorador de Azure Storage tiene las características siguientes.
     - Conéctese a cuentas de almacenamiento y servicios que se comparten desde otras suscripciones de Azure.
     - Conéctese y administre el almacenamiento local mediante el emulador de Azure Storage.
     
-    ![Captura de pantalla de la página Administrar cuentas de Azure Explorer.](https://learn.microsoft.com/es-es/training/wwl-azure/configure-azure-files-file-sync/media/connection-options-1df9c8f7.png)
+    ![Captura de pantalla de la página Administrar cuentas de Azure Explorer.](../assets/images/AZ-104/azure-files-storage-explorer-connection-options.png)
     
 
 ### Aspectos que se deben tener en cuenta al usar el Explorador de Azure Storage
@@ -300,7 +300,7 @@ El Explorador de Azure Storage le permite conectarse a cuentas de almacenamiento
 
 Para crear la conexión, necesita el nombre de la **cuenta** de almacenamiento externo y la **clave de cuenta**. En Azure Portal, la clave de cuenta se denomina **key1**.
 
-![Captura de pantalla del asistente del Explorador de Azure Storage para conectarse a una cuenta de almacenamiento externa.](https://learn.microsoft.com/es-es/training/wwl-azure/configure-azure-files-file-sync/media/attach-name-key-13fe3ba3.png)
+![Captura de pantalla del asistente del Explorador de Azure Storage para conectarse a una cuenta de almacenamiento externa.](../assets/images/AZ-104/azure-files-storage-explorer-attach-account.png)
 
 Para usar un nombre y una clave de cuenta de almacenamiento de una nube nacional de Azure, utilice el menú desplegable **Dominio de puntos de conexión de almacenamiento** para seleccionar **Otros** y luego introduzca el dominio personalizado del punto de conexión de la cuenta de almacenamiento.
 
@@ -319,7 +319,7 @@ Cuando regenere las claves de acceso, deberá actualizar todos los recursos y ap
 
 Azure File Sync consta de cinco componentes principales que funcionan conjuntamente para sincronizar archivos entre servidores de Windows locales y recursos compartidos de archivos de Azure.
 
-![Ilustración en la que se muestra cómo usar Azure File Sync para almacenar en caché los recursos compartidos de archivos de una organización en Azure Files.](https://learn.microsoft.com/es-es/training/wwl-azure/configure-azure-files-file-sync/media/file-sync-1d3fd2e7.png)
+![Ilustración en la que se muestra cómo usar Azure File Sync para almacenar en caché los recursos compartidos de archivos de una organización en Azure Files.](../assets/images/AZ-104/azure-file-sync-cache.png)
 
 - El **servicio de sincronización de almacenamiento** es el recurso principal de Azure responsable de administrar la sincronización de archivos. Puede admitir hasta 100 grupos de sincronización, funciona dentro de una sola región de Azure y permite hasta 99 servidores windows registrados.
 

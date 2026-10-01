@@ -21,7 +21,13 @@
       "Bash(./raw/setup-raw.sh --reclone)",
       "Bash(./raw/setup-raw.sh)",
       "Bash(./raw/setup-raw.sh --only savill-cert-materials)",
-      "WebSearch"
+      "WebSearch",
+      "Bash(file /mnt/SRC/dev/azure-brain/assets/images/AZ-104/*.png)",
+      "Bash(mkdir -p /tmp/img-dl)",
+      "Bash(curl -sfL -o configure-classic-files.png 'https://learn.microsoft.com/es-es/training/wwl-azure/configure-azure-files-file-sync/media/configure-classic-files.png')",
+      "Bash(curl -sfL -o file-share-snapshot.png 'https://learn.microsoft.com/es-es/training/wwl-azure/configure-azure-files-file-sync/media/file-share-snapshot-cbda2136.png')",
+      "Bash(curl -sfL -o files-enable-soft-delete.png 'https://learn.microsoft.com/es-es/training/wwl-azure/configure-azure-files-file-sync/media/files-enable-soft-delete-new-ui.png')",
+      "Bash(curl -sfL -o storage-explorer.png 'https://learn.microsoft.com/es-es/training/wwl-azure/configure-azure-files-file-sync/media/storage-explorer.png')"
     ]
   }
 }

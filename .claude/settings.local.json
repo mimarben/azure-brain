@@ -27,7 +27,23 @@
       "Bash(curl -sfL -o configure-classic-files.png 'https://learn.microsoft.com/es-es/training/wwl-azure/configure-azure-files-file-sync/media/configure-classic-files.png')",
       "Bash(curl -sfL -o file-share-snapshot.png 'https://learn.microsoft.com/es-es/training/wwl-azure/configure-azure-files-file-sync/media/file-share-snapshot-cbda2136.png')",
       "Bash(curl -sfL -o files-enable-soft-delete.png 'https://learn.microsoft.com/es-es/training/wwl-azure/configure-azure-files-file-sync/media/files-enable-soft-delete-new-ui.png')",
-      "Bash(curl -sfL -o storage-explorer.png 'https://learn.microsoft.com/es-es/training/wwl-azure/configure-azure-files-file-sync/media/storage-explorer.png')"
+      "Bash(curl -sfL -o storage-explorer.png 'https://learn.microsoft.com/es-es/training/wwl-azure/configure-azure-files-file-sync/media/storage-explorer.png')",
+      "Bash(git -C /mnt/SRC/dev/azure-brain ls-files .smart-env)",
+      "Bash(/usr/bin/du -sh /mnt/SRC/dev/azure-brain/.smart-env/)",
+      "Bash(/usr/bin/du -sh /mnt/SRC/dev/azure-brain/.smart-env/*/)",
+      "Bash(/usr/bin/du -sh /mnt/SRC/dev/azure-brain/.git/)",
+      "Bash(git rm *)",
+      "Bash(python3 -c ' *)",
+      "Bash(mkdir -p /tmp/img-dl2)",
+      "Bash(curl -sfL -o config-post.png 'https://learn.microsoft.com/es-es/training/wwl-azure/configure-azure-app-services/media/web-app-configuration-27facdc5.png')",
+      "Bash(curl -sfL -o cicd-github.png 'https://learn.microsoft.com/es-es/training/wwl-azure/configure-azure-app-services/media/continuous-development-a0dfd350.png')",
+      "Bash(curl -sfL -o centro-implementacion.png 'https://learn.microsoft.com/es-es/training/wwl-azure/configure-azure-app-services/media/deployment-center.png')",
+      "Bash(curl -sfL -o ranuras.png 'https://learn.microsoft.com/es-es/training/wwl-azure/configure-azure-app-services/media/deployment-slots-5b3660cc.png')",
+      "Bash(git -C /mnt/SRC/dev/azure-brain log origin/main..HEAD --oneline)",
+      "Bash(git -C /mnt/SRC/dev/azure-brain log --oneline --follow -- .smart-env)",
+      "Bash(git -C /mnt/SRC/dev/azure-brain branch -r --contains HEAD)",
+      "Bash(git -C /mnt/SRC/dev/azure-brain rev-parse origin/main HEAD)",
+      "Bash(git -C /mnt/SRC/dev/azure-brain log --stat --oneline origin/main..HEAD -- .smart-env)"
     ]
   }
 }

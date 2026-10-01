@@ -42,15 +42,15 @@
     ],
     "cursor": {
       "from": {
-        "line": 129,
-        "ch": 330
+        "line": 122,
+        "ch": 77
       },
       "to": {
-        "line": 129,
-        "ch": 330
+        "line": 122,
+        "ch": 77
       }
     },
-    "scroll": 99.71441300710042
+    "scroll": 113.62066268920898
   },
   "knowledge/az104-blob-storage.md": {
     "cursor": {
@@ -303,5 +303,82 @@
       }
     },
     "scroll": 738.6666301091512
+  },
+  "knowledge/az104-app-service.md": {
+    "cursor": {
+      "from": {
+        "line": 426,
+        "ch": 1
+      },
+      "to": {
+        "line": 426,
+        "ch": 1
+      }
+    },
+    "scroll": 443.206293695707
+  },
+  "labs/AZ-104/app-service/Untitled.md": {
+    "scroll": 0,
+    "cursor": {
+      "from": {
+        "line": 0,
+        "ch": 0
+      },
+      "to": {
+        "line": 0,
+        "ch": 4
+      }
+    }
+  },
+  "labs/AZ-104/app-service/app-service..md": {
+    "cursor": {
+      "from": {
+        "line": 7,
+        "ch": 82
+      },
+      "to": {
+        "line": 7,
+        "ch": 82
+      }
+    },
+    "scroll": 172.4869725704193
+  },
+  "labs/AZ-104/app-service/Web Apps.md": {
+    "cursor": {
+      "from": {
+        "line": 2,
+        "ch": 29
+      },
+      "to": {
+        "line": 2,
+        "ch": 29
+      }
+    },
+    "scroll": 0
+  },
+  "labs/AZ-104/app-service/Lab09a-Implement Web Apps.md": {
+    "cursor": {
+      "from": {
+        "line": 9,
+        "ch": 60
+      },
+      "to": {
+        "line": 9,
+        "ch": 159
+      }
+    }
+  },
+  "labs/AZ-104/app-service/Lab09a-Implement-Web-Apps.md": {
+    "scroll": 618.752934047154,
+    "cursor": {
+      "from": {
+        "line": 265,
+        "ch": 0
+      },
+      "to": {
+        "line": 265,
+        "ch": 0
+      }
+    }
   }
 }

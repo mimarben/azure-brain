@@ -20,23 +20,8 @@
               "icon": "lucide-file",
               "title": "roadmap"
             }
-          },
-          {
-            "id": "ade7bbba880dd424",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "knowledge/az104-app-service-plans.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "az104-app-service-plans"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -176,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "knowledge/az104-app-service-plans.md",
+                "file": "notes/AZ-104/roadmap.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -194,9 +179,29 @@
               "icon": "spreadsheet",
               "title": "Advanced Tables"
             }
+          },
+          {
+            "id": "587ad3e826e823aa",
+            "type": "leaf",
+            "state": {
+              "type": "smart-env-status-view",
+              "state": {},
+              "icon": "gauge",
+              "title": "Smart Environment Status"
+            }
+          },
+          {
+            "id": "4d4210d2f6f4095b",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-view",
+              "state": {},
+              "icon": "smart-connections",
+              "title": "Connections"
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -218,34 +223,42 @@
       "obsidian-excalidraw-plugin:New drawing": false,
       "smart-connections:Smart Connections: Open random connection": false,
       "smart-connections:Smart Connections: Open connections view": false,
-      "smart-connections:Toggle Footer Connections": false
+      "smart-connections:Toggle Footer Connections": false,
+      "smart-lookup:Smart Lookup: Open lookup view": false,
+      "smart-context:Smart Context: List Named Contexts": false,
+      "smart-context:Smart Context: Open Builder": false,
+      "smart-context:Smart Context: Copy current": false
     }
   },
-  "active": "ade7bbba880dd424",
+  "active": "6cb60e38e3fa06ec",
   "lastOpenFiles": [
+    "log.md.tmp.672969.6a4a1187a7b2",
+    "labs/AZ-104/app-service/Lab09a-Implement-Web-Apps.md.tmp.672969.323e671134a2",
+    "labs/AZ-104/app-service/Lab09a-Implement-Web-Apps.md.tmp.672969.86e09da92ec1",
+    "labs/AZ-104/app-service/app-service..md.tmp.672969.d1ae84e5cd39",
+    "labs/AZ-104/app-service/app-service..md.tmp.672969.10fa9f10c7ef",
+    "knowledge/az104-app-service.md.tmp.672969.5547dcd2a4c2",
+    "knowledge/az104-app-service.md.tmp.672969.5aa80e09826d",
+    "knowledge/az104-app-service.md.tmp.672969.97edf07c71a1",
+    "knowledge/az104-app-service.md.tmp.672969.cd2fdda8d1c4",
+    "knowledge/az104-app-service.md.tmp.672969.77bf9c9cf71e",
+    "knowledge/az104-app-service.md.tmp.672969.5ba50a908999",
+    "assets/images/AZ-104/app-service-web-navegador.png",
+    "assets/images/AZ-104/app-service-panel-url.png",
+    "assets/images/AZ-104/app-service-creacion-portal.png",
+    "assets/images/AZ-104/app-service-lab09a-tareas.png",
+    "assets/images/AZ-104/app-service-lab09a-arquitectura.png",
+    "assets/images/AZ-104/app-service-application-insights.png",
+    "assets/images/AZ-104/app-service-copias-seguridad.png",
+    "assets/images/AZ-104/app-service-dominio-personalizado.png",
+    "assets/images/AZ-104/app-service-ranuras-implementacion.png",
+    "assets/images/AZ-104/app-service-centro-implementacion.png",
+    "knowledge/az104-app-service.md",
     "notes/AZ-104/roadmap.md",
-    "knowledge/az104-vm-availability.md",
+    "labs/AZ-104/app-service/Lab09a-Implement-Web-Apps.md",
+    "labs/AZ-104/app-service/app-service..md",
     "knowledge/az104-app-service-plans.md",
-    "log.md.tmp.672969.ba952b9c5541",
-    "knowledge/az104-app-service-plans.md.tmp.672969.0fee484530b5",
-    "knowledge/az104-app-service-plans.md.tmp.672969.5dbd097c63c7",
-    "knowledge/az104-azure-files.md.tmp.672969.905b17f89fdb",
-    "knowledge/az104-azure-files.md.tmp.672969.098ed617e4af",
-    "knowledge/az104-azure-files.md.tmp.672969.acd5a7c0e9f4",
-    "assets/images/AZ-104/vm-ip-publica.png",
-    "assets/images/AZ-104/vm-panel-notificaciones.png",
-    "assets/images/AZ-104/vm-crear-recurso.png",
-    "assets/images/AZ-104/app-service-condicion-escalado-automatico.png",
-    "assets/images/AZ-104/app-service-planes-portal.gif",
-    "assets/images/AZ-104/azure-file-sync-cache.png",
-    "log.md.tmp.387540.bd63b8b0bcbb",
-    "knowledge/az104-vm-availability.md.tmp.387540.9733ac203eb9",
-    "knowledge/az104-vm-availability.md.tmp.387540.a1353338c08c",
-    "knowledge/az104-vm-availability.md.tmp.387540.f94d7a1cdf8e",
-    "assets/images/AZ-104/vmss-config-escalado-automatico.png",
-    "assets/images/AZ-104/vmss-metodo-escalado-portal.png",
-    "assets/images/AZ-104/vmss-escalado-automatico.png",
-    "assets/images/AZ-104/vmss-creacion-portal.png",
+    "knowledge/az104-vm-availability.md",
     "knowledge/az104-virtual-machines.md",
     "labs/AZ-104/VM/Creación de una VM..md",
     "labs/AZ-104/create-vm.md",
@@ -264,9 +277,6 @@
     "knowledge/az104-entra-id.md",
     "labs/AZ-104/arm-templates/parameters/README.md",
     "labs/AZ-104/Blob-Storage/Secure-storage-for-Azure-Files-and-Azure-Blob-Storage..md",
-    "knowledge/az104-blob-storage.md",
-    "knowledge/az900-azure-storage.md",
-    "certifications/AZ-104/INDEX.md",
-    "notes/AZ-104/azure-RBAC.md"
+    "knowledge/az104-blob-storage.md"
   ]
 }

@@ -166,3 +166,11 @@ Assets: capturas oficiales del laboratorio guardadas con nombres descriptivos en
 ## [2026-10-01] lint | Últimas imágenes remotas de AZ-104
 Páginas actualizadas: knowledge/az104-app-service-plans.md, knowledge/az104-azure-files.md y labs/AZ-104/VM/Creación de una VM..md (enlaces de imagen remotos sustituidos por rutas locales relativas).
 Assets: seis imágenes nuevas en assets/images/AZ-104/ (app-service-planes-portal.gif, app-service-condicion-escalado-automatico.png, azure-file-sync-cache.png, vm-crear-recurso.png, vm-panel-notificaciones.png, vm-ip-publica.png). Las seis capturas de Azure Files descargadas el 2026-09-30 se verificaron por checksum y solo faltaba re-enlazarlas.
+
+## [2026-10-01] lint | Imagen pegada del Lab09a de App Service
+Páginas actualizadas: labs/AZ-104/app-service/Lab09a-Implement-Web-Apps.md (imagen pegada renombrada y wikilink convertido a ruta relativa Markdown).
+Assets: assets/images/AZ-104/Pasted image 20261001132023.png renombrada a app-service-scale-out-automatico.png (blade Scale out con escalado Automatic, máximo burst 2).
+
+## [2026-10-01] lint | Imágenes remotas de App Service
+Páginas actualizadas: knowledge/az104-app-service.md, labs/AZ-104/app-service/app-service..md y labs/AZ-104/app-service/Lab09a-Implement-Web-Apps.md (enlaces de imagen remotos sustituidos por rutas locales relativas; la imagen-enlace del diagrama de tareas del Lab09a se convirtió en imagen plana).
+Assets: doce imágenes nuevas en assets/images/AZ-104/ con prefijo app-service-* (opciones-configuracion, cicd-github, centro-implementacion, ranuras-implementacion, dominio-personalizado, copias-seguridad, application-insights, lab09a-arquitectura, lab09a-tareas, creacion-portal, panel-url, web-navegador).

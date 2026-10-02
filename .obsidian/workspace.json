@@ -20,6 +20,20 @@
               "icon": "lucide-file",
               "title": "roadmap"
             }
+          },
+          {
+            "id": "c0df5a9a37e4a99d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "knowledge/az104-vm-monitoring.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "az104-vm-monitoring"
+            }
           }
         ]
       }
@@ -232,6 +246,10 @@
   },
   "active": "d4471377e1bddf49",
   "lastOpenFiles": [
+    "knowledge/az104-vm-monitoring.md",
+    "notes/AZ-104/roadmap.md",
+    "knowledge/az104-vm-backup.md",
+    "knowledge/az104-azure-backup.md",
     "log.md.tmp.964950.1ee8ecac504c",
     "labs/AZ-104/dns/Lab 05 - Implement Intersite Connectivity..md.tmp.964950.9ca437265aef",
     "knowledge/az104-application-gateway.md.tmp.964950.acd9c903dcd4",
@@ -242,7 +260,6 @@
     "knowledge/az104-application-gateway.md.tmp.964950.d4117b06cb1f",
     "knowledge/az104-application-gateway.md.tmp.964950.c7eae713f6f6",
     "knowledge/az104-application-gateway.md.tmp.964950.9104bbffe40a",
-    "knowledge/az104-network-watcher.md.tmp.964950.2867928e2f29",
     "assets/images/AZ-104/lab05-coreservicesvm-basics.png",
     "assets/images/AZ-104/app-gateway-terminacion-tls-ssl.png",
     "assets/images/AZ-104/app-gateway-enrutamiento-multisitio.png",
@@ -253,7 +270,6 @@
     "assets/images/AZ-104/network-watcher-busqueda-portal.png",
     "assets/images/AZ-104/network-watcher-herramientas.png",
     "knowledge/az104-network-watcher.md",
-    "notes/AZ-104/roadmap.md",
     "knowledge/az104-application-gateway.md",
     "knowledge/az104-load-balancer.md",
     "labs/AZ-104/network/Enrutamiento NVA..md",
@@ -275,8 +291,6 @@
     "labs/AZ-104/app-service/Lab09a-Implement-Web-Apps.md",
     "labs/AZ-104/app-service/app-service..md",
     "knowledge/az104-app-service-plans.md",
-    "knowledge/az104-vm-availability.md",
-    "knowledge/az104-virtual-machines.md",
-    "labs/AZ-104/VM/Creación de una VM..md"
+    "knowledge/az104-vm-availability.md"
   ]
 }

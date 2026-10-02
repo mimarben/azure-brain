@@ -196,9 +196,9 @@ Docs: [Virtual Network](https://learn.microsoft.com/en-us/azure/virtual-network/
 
 ### 5.1 [AZ-104: Monitor and back up Azure resources](https://learn.microsoft.com/en-us/training/paths/az-104-monitor-backup-resources/) ([ES](https://learn.microsoft.com/es-es/training/paths/az-104-monitor-backup-resources/)) (3 módulos)
 
-- [ ] [Introduction to Azure Backup](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-backup/) ([ES](https://learn.microsoft.com/es-es/training/modules/intro-to-azure-backup/)) — Recovery Services vault vs Backup vault, políticas → [Introducción a Azure Backup (AZ-104)](../../knowledge/az104-azure-backup.md)
-- [ ] [Protect your virtual machines by using Azure Backup](https://learn.microsoft.com/en-us/training/modules/protect-virtual-machines-with-azure-backup/) ([ES](https://learn.microsoft.com/es-es/training/modules/protect-virtual-machines-with-azure-backup/)) — backup/restore de VMs y otros workloads → [Protección de las máquinas virtuales con Azure Backup (AZ-104)](../../knowledge/az104-vm-backup.md)
-- [ ] [Monitor your Azure virtual machines with Azure Monitor](https://learn.microsoft.com/en-us/training/modules/monitor-azure-vm-using-diagnostic-data/) ([ES](https://learn.microsoft.com/es-es/training/modules/monitor-azure-vm-using-diagnostic-data/)) — métricas y logs de VM host/cliente → [Supervisión de las máquinas virtuales de Azure con Azure Monitor (AZ-104)](../../knowledge/az104-vm-monitoring.md)
+- [x] [Introduction to Azure Backup](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-backup/) ([ES](https://learn.microsoft.com/es-es/training/modules/intro-to-azure-backup/)) — Recovery Services vault vs Backup vault, políticas → [Introducción a Azure Backup (AZ-104)](../../knowledge/az104-azure-backup.md)
+- [x] [Protect your virtual machines by using Azure Backup](https://learn.microsoft.com/en-us/training/modules/protect-virtual-machines-with-azure-backup/) ([ES](https://learn.microsoft.com/es-es/training/modules/protect-virtual-machines-with-azure-backup/)) — backup/restore de VMs y otros workloads → [Protección de las máquinas virtuales con Azure Backup (AZ-104)](../../knowledge/az104-vm-backup.md)
+- [x] [Monitor your Azure virtual machines with Azure Monitor](https://learn.microsoft.com/en-us/training/modules/monitor-azure-vm-using-diagnostic-data/) ([ES](https://learn.microsoft.com/es-es/training/modules/monitor-azure-vm-using-diagnostic-data/)) — métricas y logs de VM host/cliente → [Supervisión de las máquinas virtuales de Azure con Azure Monitor (AZ-104)](../../knowledge/az104-vm-monitoring.md)
 
 **Labs:** [10 — Implement Data Protection](../../raw/AZ-104T00/Instructions/Labs/LAB_10-Implement_Data_Protection.md) · [11 — Implement Monitoring](../../raw/AZ-104T00/Instructions/Labs/LAB_11-Implement_Monitoring.md)
 
@@ -212,7 +212,7 @@ Docs: [Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/) ([
 ---
 # Bloque 6- Test de exámenes.
 
-- [ ] Preparar el examen teoría: https://learn.microsoft.com/es-es/credentials/certifications/resources/study-guides/az-104.
+- [ ] Preparar el examen teoría: https://learn.microsoft.com/es-es/credentials/certifications/resources/study-guides/az-104. > 
 - [ ]  Completar la [evaluación de práctica gratuita](https://learn.microsoft.com/en-us/credentials/certifications/exams/az-104/practice/assessment?assessment-type=practice&assessmentId=21) ([ES](https://learn.microsoft.com/es-es/credentials/certifications/exams/az-104/practice/assessment?assessment-type=practice&assessmentId=21)) (assessmentId 21) y repasar donde falle
 - [ ] Ver el [AZ-104 Study Cram v2](https://www.youtube.com/watch?v=0Knf9nub4-k) de Savill (~4 h) como repaso global
 - [ ] Ver entero el **[vídeo de preparación del examen](https://aka.ms/AZ104-ExamPrep)** (`aka.ms/AZ104-ExamPrep`, ~1–2 semanas antes)

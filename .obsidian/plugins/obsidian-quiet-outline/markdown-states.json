@@ -42,15 +42,15 @@
     ],
     "cursor": {
       "from": {
-        "line": 147,
-        "ch": 8
+        "line": 214,
+        "ch": 127
       },
       "to": {
-        "line": 147,
-        "ch": 162
+        "line": 214,
+        "ch": 127
       }
     },
-    "scroll": 139.23220813274384
+    "scroll": 184.69082464485825
   },
   "knowledge/az104-blob-storage.md": {
     "cursor": {
@@ -657,5 +657,44 @@
       }
     },
     "scroll": 254.4490721863104
+  },
+  "knowledge/az104-azure-backup.md": {
+    "cursor": {
+      "from": {
+        "line": 269,
+        "ch": 442
+      },
+      "to": {
+        "line": 269,
+        "ch": 442
+      }
+    },
+    "scroll": 169.36951126140755
+  },
+  "knowledge/az104-vm-backup.md": {
+    "cursor": {
+      "from": {
+        "line": 435,
+        "ch": 248
+      },
+      "to": {
+        "line": 435,
+        "ch": 248
+      }
+    },
+    "scroll": 554.1587982177734
+  },
+  "knowledge/az104-vm-monitoring.md": {
+    "cursor": {
+      "from": {
+        "line": 474,
+        "ch": 178
+      },
+      "to": {
+        "line": 474,
+        "ch": 178
+      }
+    },
+    "scroll": 447.94054222106934
   }
 }

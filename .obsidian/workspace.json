@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/AZ-104/roadmap.md",
+                "file": "certifications/AZ-104/test-exams/examen-1-basico.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "roadmap"
+              "title": "examen-1-basico"
             }
           },
           {
@@ -175,7 +175,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/AZ-104/roadmap.md",
+                "file": "certifications/AZ-104/test-exams/examen-1-basico.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -246,20 +246,28 @@
   },
   "active": "d4471377e1bddf49",
   "lastOpenFiles": [
-    "knowledge/az104-vm-monitoring.md",
+    "certifications/AZ-104/test-exams/README.md.tmp.1418127.2e29f12225c2",
+    "certifications/AZ-104/test-exams/README.md.tmp.1418127.bf53d49cecb2",
+    "certifications/AZ-104/test-exams/examen-3-avanzado.md.tmp.1418127.784a702bc8af",
+    "certifications/AZ-104/test-exams/examen-2-intermedio.md.tmp.1418127.25d483e54c2e",
+    "certifications/AZ-104/test-exams/examen-1-basico.md.tmp.1418127.80d521fc88fd",
+    "certifications/AZ-104/test-exams/examen-3-avanzado.md.tmp.1418127.40c7ce490178",
+    "certifications/AZ-104/test-exams/examen-2-intermedio.md.tmp.1418127.311f4eb26951",
+    "certifications/AZ-104/test-exams/examen-1-basico.md.tmp.1418127.e0312089fbf7",
     "notes/AZ-104/roadmap.md",
+    "log.md.tmp.1418127.5442faadc32c",
+    "certifications/AZ-104/INDEX.md.tmp.1418127.9bd0e448a236",
+    "certifications/AZ-104/INDEX.md.tmp.1418127.362a9db61a0b",
+    "certifications/AZ-104/test-exams/examen-3-soluciones.md",
+    "certifications/AZ-104/test-exams/examen-3-avanzado.md",
+    "certifications/AZ-104/test-exams/examen-2-soluciones.md",
+    "certifications/AZ-104/test-exams/examen-2-intermedio.md",
+    "certifications/AZ-104/test-exams/examen-1-soluciones.md",
+    "certifications/AZ-104/test-exams/examen-1-basico.md",
+    "certifications/AZ-104/test-exams/README.md",
+    "knowledge/az104-vm-monitoring.md",
     "knowledge/az104-vm-backup.md",
     "knowledge/az104-azure-backup.md",
-    "log.md.tmp.964950.1ee8ecac504c",
-    "labs/AZ-104/dns/Lab 05 - Implement Intersite Connectivity..md.tmp.964950.9ca437265aef",
-    "knowledge/az104-application-gateway.md.tmp.964950.acd9c903dcd4",
-    "knowledge/az104-application-gateway.md.tmp.964950.f3662a4f204e",
-    "knowledge/az104-application-gateway.md.tmp.964950.0b1c23d74d9a",
-    "knowledge/az104-application-gateway.md.tmp.964950.3f096d270950",
-    "knowledge/az104-application-gateway.md.tmp.964950.21aea48d4b9a",
-    "knowledge/az104-application-gateway.md.tmp.964950.d4117b06cb1f",
-    "knowledge/az104-application-gateway.md.tmp.964950.c7eae713f6f6",
-    "knowledge/az104-application-gateway.md.tmp.964950.9104bbffe40a",
     "assets/images/AZ-104/lab05-coreservicesvm-basics.png",
     "assets/images/AZ-104/app-gateway-terminacion-tls-ssl.png",
     "assets/images/AZ-104/app-gateway-enrutamiento-multisitio.png",
@@ -283,14 +291,6 @@
     "labs/AZ-104/network/Implementación de redes virtuales..md",
     "knowledge/az104-network-security-groups.md",
     "labs/AZ-104/network/Create and configure network..md",
-    "knowledge/az104-virtual-networks.md",
-    "knowledge/az104-container-instances.md",
-    "concepts/virtual-machines/Contenedores frente a máquinas virtuales.md",
-    "labs/AZ-104/containers/Contenedor.md",
-    "knowledge/az104-app-service.md",
-    "labs/AZ-104/app-service/Lab09a-Implement-Web-Apps.md",
-    "labs/AZ-104/app-service/app-service..md",
-    "knowledge/az104-app-service-plans.md",
-    "knowledge/az104-vm-availability.md"
+    "knowledge/az104-virtual-networks.md"
   ]
 }

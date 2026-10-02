@@ -2,7 +2,7 @@
 title: AZ-104 — Administrador de Microsoft Azure
 tags: [certification]
 certification: [AZ-104]
-updated: 2026-09-28
+updated: 2026-10-02
 sources:
   - https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-104
   - https://learn.microsoft.com/en-us/training/courses/az-104t00
@@ -92,6 +92,7 @@ Los vídeos de Savill para AZ-104 no se listan módulo a módulo (a diferencia d
 - [ ] Cubrir los **gaps** de las rutas oficiales (ARM/Bicep en profundidad, ACR, Container Apps, Application Gateway, Site Recovery, Network Watcher, private endpoints) — lista en el [roadmap](../../notes/AZ-104/roadmap.md)
 - [ ] Ver entero el [vídeo de preparación del examen](https://aka.ms/AZ104-ExamPrep) (`aka.ms/AZ104-ExamPrep`, 1–2 semanas antes)
 - [ ] Superar la [evaluación de práctica gratuita](https://learn.microsoft.com/en-us/credentials/certifications/exams/az-104/practice/assessment?assessment-type=practice&assessmentId=21) ([ES](https://learn.microsoft.com/es-es/credentials/certifications/exams/az-104/practice/assessment?assessment-type=practice&assessmentId=21)) y repasar donde falle
+- [ ] Superar antes los [simulacros de test-exams/](test-exams/README.md) — los tres niveles, con margen en el avanzado
 
 ## Progreso
 
@@ -102,6 +103,10 @@ Material de apoyo: [whiteboard de ámbito del examen](../../raw/savill-cert-mate
 ## Laboratorios
 
 Índice y resultados en [`labs/AZ-104/`](create-vm.md) (carpeta de primer nivel). Labs oficiales: [MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator](https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator) — la mejor forma de cubrir lo que las rutas dejan corto.
+
+## Exámenes de prueba
+
+Simulacros estilo examen real en [test-exams/](test-exams/README.md): preguntas originales basadas en la guía oficial de estudio y `raw/AZ-104T00` (los ítems reales están bajo NDA). Tres niveles — [básico](test-exams/examen-1-basico.md), [intermedio](test-exams/examen-2-intermedio.md) y [avanzado con caso práctico](test-exams/examen-3-avanzado.md) — de 40 ítems y 100 minutos cada uno, con soluciones comentadas y enlaces a `knowledge/`. *(Excepción puntual a la regla "solo INDEX.md" de CLAUDE.md, creada a petición del mantenedor.)*
 
 ## Conceptos relacionados
 

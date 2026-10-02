@@ -205,3 +205,9 @@ Nota: cuatro SVG de Learn traían width="26" height="15" (tamaño intrínseco di
 ## [2026-10-02] fix | Tamaño de imágenes: SVG de UDR y arquitectura del lab04
 Problema: los diagramas seguían viéndose pequeños — los SVG sin atributo width caen al tamaño por defecto (~300px) en Obsidian, y la sintaxis |N de enlaces Markdown a ficheros locales no está garantizada en todas las versiones.
 Arreglos: width="700" explícito en el tag raíz de los cinco SVG udr-* (determinista en Obsidian y VSCode, conserva viewBox); lab04-arquitectura-escenario.png ampliada 2x (590→1180px, LANCZOS) para que su tamaño natural sea grande; embed del lab actualizado a |700. Verificado que los dos diagramas de arquitectura del lab son distintos (escenario vm1+NSG vs topología LAB_04 completa): se mantienen ambos.
+
+## [2026-10-02] ingest | Simulacros de examen AZ-104 (test-exams)
+Fuente: guía oficial de estudio (skills desde 17/04/2026, verificada en el INDEX el 26/08/2026) + raw/AZ-104T00 — preguntas originales al estilo del examen real (los ítems reales están bajo NDA)
+Páginas creadas: certifications/AZ-104/test-exams/ (README.md + examen-1-basico, examen-2-intermedio y examen-3-avanzado con caso práctico, 40 ítems cada uno, + sus 3 hojas de soluciones comentadas con enlaces a knowledge/)
+Páginas actualizadas: certifications/AZ-104/INDEX.md (sección "Exámenes de prueba", bullet en Repaso final, fecha de frontmatter)
+Nota: test-exams/ es una excepción puntual a la regla "certifications/<CERT>/ contiene únicamente INDEX.md" de CLAUDE.md, creada a petición del mantenedor.

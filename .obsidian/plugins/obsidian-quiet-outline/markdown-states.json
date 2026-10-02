@@ -696,5 +696,18 @@
       }
     },
     "scroll": 447.94054222106934
+  },
+  "certifications/AZ-104/test-exams/examen-1-basico.md": {
+    "cursor": {
+      "from": {
+        "line": 9,
+        "ch": 0
+      },
+      "to": {
+        "line": 9,
+        "ch": 0
+      }
+    },
+    "scroll": 0
   }
 }

@@ -147,14 +147,14 @@ Docs: [App Service](https://learn.microsoft.com/en-us/azure/app-service/) ([ES](
 
 ### 4.1 [AZ-104: Configure and manage virtual networks for Azure administrators](https://learn.microsoft.com/en-us/training/paths/az-104-manage-virtual-networks/) ([ES](https://learn.microsoft.com/es-es/training/paths/az-104-manage-virtual-networks/)) (8 módulos)
 
-- [ ] [Configure virtual networks](https://learn.microsoft.com/en-us/training/modules/configure-virtual-networks/) ([ES](https://learn.microsoft.com/es-es/training/modules/configure-virtual-networks/)) — VNets, subnets, direccionamiento IP → [Configuración de redes virtuales (AZ-104)](../../knowledge/az104-virtual-networks.md)
-- [ ] [Configure network security groups](https://learn.microsoft.com/en-us/training/modules/configure-network-security-groups/) ([ES](https://learn.microsoft.com/es-es/training/modules/configure-network-security-groups/)) — NSG/ASG, reglas efectivas → [Configuración de grupos de seguridad de red (AZ-104)](../../knowledge/az104-network-security-groups.md)
-- [ ] [Host your domain on Azure DNS](https://learn.microsoft.com/en-us/training/modules/host-domain-azure-dns/) ([ES](https://learn.microsoft.com/es-es/training/modules/host-domain-azure-dns/)) — zonas y registros DNS → [Hospedaje de su dominio en Azure DNS (AZ-104)](../../knowledge/az104-azure-dns.md)
-- [ ] [Configure Azure Virtual Network peering](https://learn.microsoft.com/en-us/training/modules/configure-vnet-peering/) ([ES](https://learn.microsoft.com/es-es/training/modules/configure-vnet-peering/)) — peering, tránsito, conectividad → [Configuración del emparejamiento de Azure Virtual Network (AZ-104)](../../knowledge/az104-vnet-peering.md)
-- [ ] [Manage and control traffic flow with routes](https://learn.microsoft.com/en-us/training/modules/control-network-traffic-flow-with-routes/) ([ES](https://learn.microsoft.com/es-es/training/modules/control-network-traffic-flow-with-routes/)) — UDR (rutas definidas por el usuario) → [Administración y control del flujo de tráfico con rutas (AZ-104)](../../knowledge/az104-user-defined-routes.md)
-- [ ] [Introduction to Azure Load Balancer](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-load-balancer/) ([ES](https://learn.microsoft.com/es-es/training/modules/intro-to-azure-load-balancer/)) — LB interno/público → [Introducción a Azure Load Balancer (AZ-104)](../../knowledge/az104-load-balancer.md)
-- [ ] [Introduction to Azure Application Gateway](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-application-gateway/) ([ES](https://learn.microsoft.com/es-es/training/modules/intro-to-azure-application-gateway/)) — Application Gateway (cuándo elegirlo) → [Introducción a Azure Application Gateway (AZ-104)](../../knowledge/az104-application-gateway.md)
-- [ ] [Introduction to Azure Network Watcher](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-network-watcher/) ([ES](https://learn.microsoft.com/es-es/training/modules/intro-to-azure-network-watcher/)) — diagnóstico y monitoring de red → [Introducción a Azure Network Watcher (AZ-104)](../../knowledge/az104-network-watcher.md)
+- [x] [Configure virtual networks](https://learn.microsoft.com/en-us/training/modules/configure-virtual-networks/) ([ES](https://learn.microsoft.com/es-es/training/modules/configure-virtual-networks/)) — VNets, subnets, direccionamiento IP → [Configuración de redes virtuales (AZ-104)](../../knowledge/az104-virtual-networks.md)
+- [x] [Configure network security groups](https://learn.microsoft.com/en-us/training/modules/configure-network-security-groups/) ([ES](https://learn.microsoft.com/es-es/training/modules/configure-network-security-groups/)) — NSG/ASG, reglas efectivas → [Configuración de grupos de seguridad de red (AZ-104)](../../knowledge/az104-network-security-groups.md)
+- [x] [Host your domain on Azure DNS](https://learn.microsoft.com/en-us/training/modules/host-domain-azure-dns/) ([ES](https://learn.microsoft.com/es-es/training/modules/host-domain-azure-dns/)) — zonas y registros DNS → [Hospedaje de su dominio en Azure DNS (AZ-104)](../../knowledge/az104-azure-dns.md)
+- [x] [Configure Azure Virtual Network peering](https://learn.microsoft.com/en-us/training/modules/configure-vnet-peering/) ([ES](https://learn.microsoft.com/es-es/training/modules/configure-vnet-peering/)) — peering, tránsito, conectividad → [Configuración del emparejamiento de Azure Virtual Network (AZ-104)](../../knowledge/az104-vnet-peering.md)
+- [x] [Manage and control traffic flow with routes](https://learn.microsoft.com/en-us/training/modules/control-network-traffic-flow-with-routes/) ([ES](https://learn.microsoft.com/es-es/training/modules/control-network-traffic-flow-with-routes/)) — UDR (rutas definidas por el usuario) → [Administración y control del flujo de tráfico con rutas (AZ-104)](../../knowledge/az104-user-defined-routes.md)
+- [x] [Introduction to Azure Load Balancer](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-load-balancer/) ([ES](https://learn.microsoft.com/es-es/training/modules/intro-to-azure-load-balancer/)) — LB interno/público → [Introducción a Azure Load Balancer (AZ-104)](../../knowledge/az104-load-balancer.md)
+- [x] [Introduction to Azure Application Gateway](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-application-gateway/) ([ES](https://learn.microsoft.com/es-es/training/modules/intro-to-azure-application-gateway/)) — Application Gateway (cuándo elegirlo) → [Introducción a Azure Application Gateway (AZ-104)](../../knowledge/az104-application-gateway.md)
+- [x] [Introduction to Azure Network Watcher](https://learn.microsoft.com/en-us/training/modules/intro-to-azure-network-watcher/) ([ES](https://learn.microsoft.com/es-es/training/modules/intro-to-azure-network-watcher/)) — diagnóstico y monitoring de red → [Introducción a Azure Network Watcher (AZ-104)](../../knowledge/az104-network-watcher.md)
 
 **Labs:** [04 — Implement Virtual Networking](../../raw/AZ-104T00/Instructions/Labs/LAB_04-Implement_Virtual_Networking.md) · [05 — Implement Intersite Connectivity](../../raw/AZ-104T00/Instructions/Labs/LAB_05-Implement_Intersite_Connectivity.md) · [06 — Implement Network Traffic Management](../../raw/AZ-104T00/Instructions/Labs/LAB_06-Implement_Network_Traffic_Management.md)
 
@@ -164,6 +164,31 @@ Conceptos del repo: [Azure Networking](../../knowledge/azure-networking.md) (stu
 Docs: [Virtual Network](https://learn.microsoft.com/en-us/azure/virtual-network/) ([ES](https://learn.microsoft.com/es-es/azure/virtual-network/)) · [DNS](https://learn.microsoft.com/en-us/azure/dns/) ([ES](https://learn.microsoft.com/es-es/azure/dns/)) · [Bastion](https://learn.microsoft.com/en-us/azure/bastion/) ([ES](https://learn.microsoft.com/es-es/azure/bastion/)) · [Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/) ([ES](https://learn.microsoft.com/es-es/azure/application-gateway/)) · [Load Balancer](https://learn.microsoft.com/en-us/azure/load-balancer/) ([ES](https://learn.microsoft.com/es-es/azure/load-balancer/)) — local: `raw/azure-docs/articles/virtual-network/` (y `virtual-network-manager/`), `dns/`, `bastion/`, `application-gateway/`, `load-balancer/`. Sin copia local de `network-watcher`.
 
 > **Notas propias:**
+
+| Concepto / servicio     | ¿Para qué sirve?                               | ¿Cuándo lo uso?                               | Idea para memorizar     |
+| ----------------------- | ---------------------------------------------- | --------------------------------------------- | ----------------------- |
+| **VNet**                | Red privada lógica en Azure                    | Necesitas una red para tus recursos           | 🏠 Mi red Azure         |
+| **Subnet**              | Divide una VNet en segmentos                   | Separar frontend, backend, DB, etc.           | 🏠 → habitaciones       |
+| **Private IP**          | Comunicación interna                           | VM ↔ VM, VM ↔ servicio privado                | 🏠 comunicación interna |
+| **Public IP**           | Permite conectividad desde/hacia Internet      | Recurso que necesita exposición pública       | 🌍 Internet             |
+| **NSG**                 | Filtra tráfico por IP, puerto y protocolo      | Controlar qué tráfico entra/sale              | 🚪 Guardia              |
+| **ASG**                 | Agrupa interfaces de red por aplicación        | Aplicar NSG a grupos como "WebServers"        | 👥 Grupo de servidores  |
+| **Azure DNS**           | Resuelve nombres DNS                           | `www.ejemplo.com → IP`                        | 📖 Agenda telefónica    |
+| **VNet Peering**        | Conecta VNets                                  | VNet A ↔ VNet B                               | 🔗 Red ↔ Red            |
+| **Gateway Transit**     | Permite utilizar el Gateway de otra VNet       | Hub-Spoke con VPN/ExpressRoute en Hub         | 🚪 Compartir puerta     |
+| **UDR / Custom Route**  | Controla el siguiente salto del tráfico        | Quieres forzar tráfico por NVA/firewall       | 🗺️ "Ve por aquí"       |
+| **NVA**                 | Appliance virtual que procesa tráfico          | Firewall, router, IDS, proxy, etc.            | 🛡️ Policía de tráfico  |
+| **Service Chaining**    | Envía tráfico a una NVA mediante rutas         | Inspección antes de llegar al destino         | 🚗 → 🛡️ → destino      |
+| **VPN Gateway**         | VPN entre Azure y otras redes                  | Azure ↔ oficina/datacenter                    | 🔐 Túnel VPN            |
+| **ExpressRoute**        | Conectividad privada dedicada con Azure        | Azure ↔ datacenter mediante circuito privado  | ═══ conexión privada    |
+| **Load Balancer**       | Distribuye tráfico de red entre VMs            | Alta disponibilidad para aplicaciones TCP/UDP | ⚖️ Reparte tráfico      |
+| **Application Gateway** | Balanceador **HTTP/HTTPS** de capa 7           | Web apps, routing por URL, TLS, WAF           | 🌐 Balanceador web      |
+| **WAF**                 | Protege aplicaciones web frente a ataques HTTP | SQL injection, XSS, etc.                      | 🛡️ Firewall web        |
+| **Network Watcher**     | Diagnóstico y monitorización de red            | "¿Por qué esta VM no conecta?"                | 🔎 Detective            |
+| **Connection Monitor**  | Comprueba conectividad entre endpoints         | Monitorizar VM → servidor/endpoint            | 📡 ¿Hay conexión?       |
+
+
+
 
 ---
 

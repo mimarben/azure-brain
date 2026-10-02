@@ -42,15 +42,15 @@
     ],
     "cursor": {
       "from": {
-        "line": 122,
-        "ch": 77
+        "line": 147,
+        "ch": 8
       },
       "to": {
-        "line": 122,
-        "ch": 77
+        "line": 147,
+        "ch": 162
       }
     },
-    "scroll": 117.36458659172058
+    "scroll": 139.23220813274384
   },
   "knowledge/az104-blob-storage.md": {
     "cursor": {
@@ -451,14 +451,211 @@
   "knowledge/az104-virtual-networks.md": {
     "cursor": {
       "from": {
-        "line": 81,
-        "ch": 46
+        "line": 295,
+        "ch": 21
       },
       "to": {
-        "line": 81,
-        "ch": 46
+        "line": 295,
+        "ch": 21
       }
     },
-    "scroll": 47.72894867261251
+    "scroll": 286.3207850962602
+  },
+  "labs/AZ-104/network/Untitled.md": {
+    "scroll": 0,
+    "cursor": {
+      "from": {
+        "line": 0,
+        "ch": 0
+      },
+      "to": {
+        "line": 0,
+        "ch": 0
+      }
+    }
+  },
+  "labs/AZ-104/network/Create and configure network..md": {
+    "cursor": {
+      "from": {
+        "line": 86,
+        "ch": 0
+      },
+      "to": {
+        "line": 86,
+        "ch": 0
+      }
+    },
+    "scroll": 134.946826616923
+  },
+  "knowledge/az104-network-security-groups.md": {
+    "cursor": {
+      "from": {
+        "line": 436,
+        "ch": 0
+      },
+      "to": {
+        "line": 436,
+        "ch": 0
+      }
+    },
+    "scroll": 413.9197200687112
+  },
+  "labs/AZ-104/network/Implementación de redes virtuales..md": {
+    "cursor": {
+      "from": {
+        "line": 416,
+        "ch": 0
+      },
+      "to": {
+        "line": 416,
+        "ch": 0
+      }
+    },
+    "scroll": 48.884500746339015
+  },
+  "knowledge/az104-azure-dns.md": {
+    "cursor": {
+      "from": {
+        "line": 9,
+        "ch": 0
+      },
+      "to": {
+        "line": 9,
+        "ch": 0
+      }
+    },
+    "scroll": 705.1155046584446
+  },
+  "knowledge/az104-vnet-peering.md": {
+    "cursor": {
+      "from": {
+        "line": 253,
+        "ch": 281
+      },
+      "to": {
+        "line": 253,
+        "ch": 281
+      }
+    },
+    "scroll": 219.57249252001444
+  },
+  "labs/AZ-104/dns/Untitled.md": {
+    "scroll": 0
+  },
+  "labs/AZ-104/dns/Lab 05 - Implement Intersite Connectivity..md": {
+    "cursor": {
+      "from": {
+        "line": 268,
+        "ch": 0
+      },
+      "to": {
+        "line": 268,
+        "ch": 0
+      }
+    },
+    "scroll": 266.49842964218357
+  },
+  "knowledge/az104-user-defined-routes.md": {
+    "cursor": {
+      "from": {
+        "line": 233,
+        "ch": 0
+      },
+      "to": {
+        "line": 233,
+        "ch": 0
+      }
+    },
+    "scroll": 204.77104560534158
+  },
+  "labs/AZ-104/network/Ejercicio. Creación de rutas personalizadas.md": {
+    "cursor": {
+      "from": {
+        "line": 0,
+        "ch": 0
+      },
+      "to": {
+        "line": 0,
+        "ch": 0
+      }
+    }
+  },
+  "labs/AZ-104/network/Creación de rutas personalizadas.md": {
+    "cursor": {
+      "from": {
+        "line": 24,
+        "ch": 0
+      },
+      "to": {
+        "line": 24,
+        "ch": 0
+      }
+    },
+    "scroll": 87.93426688101385
+  },
+  "labs/AZ-104/network/Creación de una NVA..md": {
+    "cursor": {
+      "from": {
+        "line": 7,
+        "ch": 197
+      },
+      "to": {
+        "line": 7,
+        "ch": 197
+      }
+    },
+    "scroll": 75.98741332689922
+  },
+  "labs/AZ-104/network/Enrutamiento NVA..md": {
+    "cursor": {
+      "from": {
+        "line": 2,
+        "ch": 178
+      },
+      "to": {
+        "line": 2,
+        "ch": 178
+      }
+    },
+    "scroll": 144.63496613343793
+  },
+  "knowledge/az104-load-balancer.md": {
+    "cursor": {
+      "from": {
+        "line": 211,
+        "ch": 778
+      },
+      "to": {
+        "line": 211,
+        "ch": 778
+      }
+    },
+    "scroll": 192.44791301091513
+  },
+  "knowledge/az104-application-gateway.md": {
+    "cursor": {
+      "from": {
+        "line": 282,
+        "ch": 901
+      },
+      "to": {
+        "line": 282,
+        "ch": 901
+      }
+    },
+    "scroll": 258.8587520109218
+  },
+  "knowledge/az104-network-watcher.md": {
+    "cursor": {
+      "from": {
+        "line": 99,
+        "ch": 21
+      },
+      "to": {
+        "line": 99,
+        "ch": 21
+      }
+    },
+    "scroll": 254.4490721863104
   }
 }

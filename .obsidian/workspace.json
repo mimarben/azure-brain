@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "6cb60e38e3fa06ec",
+            "id": "d4471377e1bddf49",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -20,23 +20,8 @@
               "icon": "lucide-file",
               "title": "roadmap"
             }
-          },
-          {
-            "id": "720d1a4f996bd70b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "knowledge/az104-virtual-networks.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "az104-virtual-networks"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -176,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "knowledge/az104-virtual-networks.md",
+                "file": "notes/AZ-104/roadmap.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -245,53 +230,53 @@
       "smart-context:Smart Context: Copy current": false
     }
   },
-  "active": "720d1a4f996bd70b",
+  "active": "d4471377e1bddf49",
   "lastOpenFiles": [
+    "log.md.tmp.964950.1ee8ecac504c",
+    "labs/AZ-104/dns/Lab 05 - Implement Intersite Connectivity..md.tmp.964950.9ca437265aef",
+    "knowledge/az104-application-gateway.md.tmp.964950.acd9c903dcd4",
+    "knowledge/az104-application-gateway.md.tmp.964950.f3662a4f204e",
+    "knowledge/az104-application-gateway.md.tmp.964950.0b1c23d74d9a",
+    "knowledge/az104-application-gateway.md.tmp.964950.3f096d270950",
+    "knowledge/az104-application-gateway.md.tmp.964950.21aea48d4b9a",
+    "knowledge/az104-application-gateway.md.tmp.964950.d4117b06cb1f",
+    "knowledge/az104-application-gateway.md.tmp.964950.c7eae713f6f6",
+    "knowledge/az104-application-gateway.md.tmp.964950.9104bbffe40a",
+    "knowledge/az104-network-watcher.md.tmp.964950.2867928e2f29",
+    "assets/images/AZ-104/lab05-coreservicesvm-basics.png",
+    "assets/images/AZ-104/app-gateway-terminacion-tls-ssl.png",
+    "assets/images/AZ-104/app-gateway-enrutamiento-multisitio.png",
+    "assets/images/AZ-104/app-gateway-enrutamiento-rutas.png",
+    "assets/images/AZ-104/app-gateway-componentes.png",
+    "assets/images/AZ-104/app-gateway-topologia.png",
+    "assets/images/AZ-104/network-watcher-connection-monitor-topologia.png",
+    "assets/images/AZ-104/network-watcher-busqueda-portal.png",
+    "assets/images/AZ-104/network-watcher-herramientas.png",
+    "knowledge/az104-network-watcher.md",
     "notes/AZ-104/roadmap.md",
+    "knowledge/az104-application-gateway.md",
+    "knowledge/az104-load-balancer.md",
+    "labs/AZ-104/network/Enrutamiento NVA..md",
+    "knowledge/az104-user-defined-routes.md",
+    "labs/AZ-104/network/Creación de una NVA..md",
+    "assets/images/AZ-104/udr-puerta-enlace-virtual.svg",
+    "labs/AZ-104/network/Creación de rutas personalizadas.md",
+    "knowledge/az104-vnet-peering.md",
+    "labs/AZ-104/dns/Lab 05 - Implement Intersite Connectivity..md",
+    "knowledge/az104-azure-dns.md",
+    "labs/AZ-104/network/Implementación de redes virtuales..md",
+    "knowledge/az104-network-security-groups.md",
+    "labs/AZ-104/network/Create and configure network..md",
     "knowledge/az104-virtual-networks.md",
     "knowledge/az104-container-instances.md",
     "concepts/virtual-machines/Contenedores frente a máquinas virtuales.md",
     "labs/AZ-104/containers/Contenedor.md",
-    "log.md.tmp.672969.ea32a49ede54",
-    "labs/AZ-104/containers/Contenedor.md.tmp.672969.afe6d05e9bb6",
-    "assets/images/AZ-104/aci-lab09b-informacion-general.png",
-    "labs/AZ-104/containers/Contenedor.md.tmp.672969.9914c308eb03",
-    "labs/AZ-104/containers/Contenedor.md.tmp.672969.d97b77e40c40",
-    "knowledge/az104-container-instances.md.tmp.672969.b9836bfdb58c",
-    "knowledge/az104-container-instances.md.tmp.672969.221e8b8d10a7",
-    "concepts/virtual-machines",
-    "assets/images/AZ-104/aci-lab09b-tareas.png",
-    "assets/images/AZ-104/aci-launch-exercise.png",
-    "assets/images/AZ-104/aci-lab09b-arquitectura.png",
-    "assets/images/AZ-104/aci-grupo-contenedores.png",
-    "assets/images/AZ-104/aci-contenedor-en-vnet.png",
-    "labs/AZ-104/containers",
-    "log.md.tmp.672969.6a4a1187a7b2",
-    "labs/AZ-104/app-service/Lab09a-Implement-Web-Apps.md.tmp.672969.323e671134a2",
-    "assets/images/AZ-104/app-service-web-navegador.png",
-    "assets/images/AZ-104/app-service-panel-url.png",
-    "assets/images/AZ-104/app-service-creacion-portal.png",
-    "assets/images/AZ-104/app-service-lab09a-tareas.png",
     "knowledge/az104-app-service.md",
     "labs/AZ-104/app-service/Lab09a-Implement-Web-Apps.md",
     "labs/AZ-104/app-service/app-service..md",
     "knowledge/az104-app-service-plans.md",
     "knowledge/az104-vm-availability.md",
     "knowledge/az104-virtual-machines.md",
-    "labs/AZ-104/VM/Creación de una VM..md",
-    "labs/AZ-104/create-vm.md",
-    "labs/AZ-104/MicrosoftAzureAdministrator/AZ-104-MicrosoftAzureAdministrator..md",
-    "General Purpose v2.md",
-    "knowledge/az104-storage-accounts.md",
-    "knowledge/az104-sspr.md",
-    "labs/AZ-104/SSPR.md",
-    "knowledge/az104-azure-rbac.md",
-    "labs/AZ-104/RBAC/Role.md",
-    "knowledge/az104-azure-policy.md",
-    "knowledge/az900-azure-architecture.md",
-    "knowledge/az104-azure-architecture.md",
-    "knowledge/az104-identities.md",
-    "knowledge/entra-id.md",
-    "knowledge/az104-entra-id.md"
+    "labs/AZ-104/VM/Creación de una VM..md"
   ]
 }

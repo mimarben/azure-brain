@@ -2,7 +2,7 @@
 title: AI-200 — Desarrollo de soluciones en la nube de IA en Azure
 tags: [certification]
 certification: [AI-200]
-updated: 2026-07-07
+updated: 2026-10-02
 sources:
   - https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-200
 ---
@@ -77,6 +77,10 @@ Estado: **en curso**. Ver detalle y checkboxes por módulo en [notes/AI-200/road
 ## Laboratorios
 
 Ver [labs/AI-200/README.md](../../labs/AI-200/README.md).
+
+## Exámenes de prueba
+
+Simulacros estilo examen real en [test-exams/](test-exams/README.md): preguntas originales alineadas con la skills outline (temario calibrado también con fuentes externas tipo certlibrary, sin reproducir ítems reales bajo NDA). [Simulacro 1 mixto](test-exams/examen-1-mixto.md) de 40 ítems y 100 minutos, con soluciones comentadas que enlazan módulos de Learn y el backlog de conceptos. *(Excepción puntual a la regla "solo INDEX.md" de CLAUDE.md, como la creada para AZ-104.)*
 
 ## Conceptos relacionados
 

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "certifications/AZ-104/test-exams/examen-1-basico.md",
+                "file": "notes/AZ-104/roadmap.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "examen-1-basico"
+              "title": "roadmap"
             }
           },
           {
@@ -175,7 +175,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "certifications/AZ-104/test-exams/examen-1-basico.md",
+                "file": "notes/AZ-104/roadmap.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -246,24 +246,29 @@
   },
   "active": "d4471377e1bddf49",
   "lastOpenFiles": [
+    "certifications/AI-200/INDEX.md.tmp.1558835.7e7d3db33411",
+    "certifications/AI-200/test-exams/examen-1-mixto.md.tmp.1558835.7a6e1a932615",
+    "certifications/AI-200/test-exams/examen-1-soluciones.md",
+    "certifications/AI-200/test-exams/examen-1-soluciones.md.tmp.1558835.cadcaba92694",
+    "certifications/AI-200/test-exams/examen-1-mixto.md",
+    "certifications/AI-200/test-exams/examen-1-mixto.md.tmp.1558835.1dc4528883af",
+    "certifications/AI-200/test-exams/README.md",
+    "certifications/AI-200/test-exams/README.md.tmp.1558835.1e533ccc8108",
+    "certifications/AI-200/test-exams",
+    "certifications/AZ-104/test-exams/examen-4-soluciones.md.tmp.1558835.656ebaee81f4",
+    "certifications/AZ-104/test-exams/examen-4-soluciones.md",
+    "certifications/AZ-104/test-exams/examen-4-soluciones.md.tmp.1558835.5a12ab7426ab",
+    "certifications/AZ-104/test-exams/examen-4-mixto.md.tmp.1558835.7b3e38b07dd6",
+    "certifications/AZ-104/test-exams/examen-4-mixto.md",
+    "certifications/AZ-104/test-exams/examen-4-mixto.md.tmp.1558835.331b2755fc2a",
+    "certifications/AZ-104/test-exams/examen-1-basico.md",
     "certifications/AZ-104/test-exams/README.md.tmp.1418127.2e29f12225c2",
-    "certifications/AZ-104/test-exams/README.md.tmp.1418127.bf53d49cecb2",
-    "certifications/AZ-104/test-exams/examen-3-avanzado.md.tmp.1418127.784a702bc8af",
-    "certifications/AZ-104/test-exams/examen-2-intermedio.md.tmp.1418127.25d483e54c2e",
-    "certifications/AZ-104/test-exams/examen-1-basico.md.tmp.1418127.80d521fc88fd",
-    "certifications/AZ-104/test-exams/examen-3-avanzado.md.tmp.1418127.40c7ce490178",
-    "certifications/AZ-104/test-exams/examen-2-intermedio.md.tmp.1418127.311f4eb26951",
-    "certifications/AZ-104/test-exams/examen-1-basico.md.tmp.1418127.e0312089fbf7",
     "notes/AZ-104/roadmap.md",
-    "log.md.tmp.1418127.5442faadc32c",
-    "certifications/AZ-104/INDEX.md.tmp.1418127.9bd0e448a236",
-    "certifications/AZ-104/INDEX.md.tmp.1418127.362a9db61a0b",
     "certifications/AZ-104/test-exams/examen-3-soluciones.md",
     "certifications/AZ-104/test-exams/examen-3-avanzado.md",
     "certifications/AZ-104/test-exams/examen-2-soluciones.md",
     "certifications/AZ-104/test-exams/examen-2-intermedio.md",
     "certifications/AZ-104/test-exams/examen-1-soluciones.md",
-    "certifications/AZ-104/test-exams/examen-1-basico.md",
     "certifications/AZ-104/test-exams/README.md",
     "knowledge/az104-vm-monitoring.md",
     "knowledge/az104-vm-backup.md",
@@ -286,11 +291,6 @@
     "assets/images/AZ-104/udr-puerta-enlace-virtual.svg",
     "labs/AZ-104/network/Creación de rutas personalizadas.md",
     "knowledge/az104-vnet-peering.md",
-    "labs/AZ-104/dns/Lab 05 - Implement Intersite Connectivity..md",
-    "knowledge/az104-azure-dns.md",
-    "labs/AZ-104/network/Implementación de redes virtuales..md",
-    "knowledge/az104-network-security-groups.md",
-    "labs/AZ-104/network/Create and configure network..md",
-    "knowledge/az104-virtual-networks.md"
+    "labs/AZ-104/dns/Lab 05 - Implement Intersite Connectivity..md"
   ]
 }

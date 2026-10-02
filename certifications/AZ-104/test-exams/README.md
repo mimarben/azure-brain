@@ -40,8 +40,9 @@ Tres exámenes de práctica **originales** construidos sobre la [guía oficial d
 | [Simulacro 1](examen-1-basico.md) | Básico | 40 | Recordatorio directo de conceptos y configuraciones fundamentales |
 | [Simulacro 2](examen-2-intermedio.md) | Intermedio | 40 | Escenarios aplicados: "necesitas X, ¿qué haces?", menor privilegio, coste |
 | [Simulacro 3](examen-3-avanzado.md) | Avanzado | 40 | Incluye caso práctico, exhibits y trampas de redacto — nivel real o superior |
+| [Simulacro 4](examen-4-mixto.md) | Mixto estilo real | 40 | Dificultad mezclada sin avisar; temario calibrado con fuentes externas (Tutorials Dojo, repos de práctica) — preguntas originales |
 
-Soluciones (no abrir hasta terminar): [1](examen-1-soluciones.md) · [2](examen-2-soluciones.md) · [3](examen-3-soluciones.md).
+Soluciones (no abrir hasta terminar): [1](examen-1-soluciones.md) · [2](examen-2-soluciones.md) · [3](examen-3-soluciones.md) · [4](examen-4-soluciones.md).
 
 ## Flujo recomendado
 

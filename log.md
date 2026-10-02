@@ -211,3 +211,9 @@ Fuente: guía oficial de estudio (skills desde 17/04/2026, verificada en el INDE
 Páginas creadas: certifications/AZ-104/test-exams/ (README.md + examen-1-basico, examen-2-intermedio y examen-3-avanzado con caso práctico, 40 ítems cada uno, + sus 3 hojas de soluciones comentadas con enlaces a knowledge/)
 Páginas actualizadas: certifications/AZ-104/INDEX.md (sección "Exámenes de prueba", bullet en Repaso final, fecha de frontmatter)
 Nota: test-exams/ es una excepción puntual a la regla "certifications/<CERT>/ contiene únicamente INDEX.md" de CLAUDE.md, creada a petición del mantenedor.
+
+## [2026-10-02] ingest | Simulacro 4 de AZ-104 + primer simulacro de AI-200
+Fuente: AZ-104 — guía oficial + raw/AZ-104T00, con temario/estilo calibrado contra Tutorials Dojo y un repo externo de práctica; AI-200 — guía oficial + cobertura de certlibrary.com/exam/AI-200 (Cosmos, pgvector, Redis, RAG). En ambos casos preguntas ORIGINALES: los ítems reales están bajo NDA y no se reproducen volcados.
+Páginas creadas: certifications/AZ-104/test-exams/examen-4-mixto.md + examen-4-soluciones.md (40 ítems mixtos estilo real); certifications/AI-200/test-exams/ (README.md, examen-1-mixto.md, examen-1-soluciones.md — 40 ítems alineados con la skills outline 20-25/25-30/20-25/20-25).
+Páginas actualizadas: certifications/AZ-104/INDEX.md (sección Exámenes de prueba con el simulacro 4), certifications/AZ-104/test-exams/README.md (tabla con el 4), certifications/AI-200/INDEX.md (sección Exámenes de prueba + fecha).
+Nota: mismas mecánicas que el primer lote (marcado con [x], series Sí/No de 3 ítems, corrección pidiendo «corrige el examen N»).

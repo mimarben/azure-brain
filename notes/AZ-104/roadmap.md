@@ -212,7 +212,7 @@ Docs: [Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/) ([
 ---
 # Bloque 6- Test de exámenes.
 
-- [ ] Preparar el examen teoría: https://learn.microsoft.com/es-es/credentials/certifications/resources/study-guides/az-104. > 
+- [x] Preparar el examen teoría: https://learn.microsoft.com/es-es/credentials/certifications/resources/study-guides/az-104. > 
 - [ ]  Completar la [evaluación de práctica gratuita](https://learn.microsoft.com/en-us/credentials/certifications/exams/az-104/practice/assessment?assessment-type=practice&assessmentId=21) ([ES](https://learn.microsoft.com/es-es/credentials/certifications/exams/az-104/practice/assessment?assessment-type=practice&assessmentId=21)) (assessmentId 21) y repasar donde falle
 - [ ] Ver el [AZ-104 Study Cram v2](https://www.youtube.com/watch?v=0Knf9nub4-k) de Savill (~4 h) como repaso global
 - [ ] Ver entero el **[vídeo de preparación del examen](https://aka.ms/AZ104-ExamPrep)** (`aka.ms/AZ104-ExamPrep`, ~1–2 semanas antes)

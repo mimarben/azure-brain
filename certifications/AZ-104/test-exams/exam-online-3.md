@@ -137,7 +137,6 @@ Tiene un equilibrador de carga llamado LB1 que distribuye las solicitudes a las 
 
 Debe asegurarse de que los usuarios del sitio se conectan al mismo servidor web para todas las solicitudes realizadas a la aplicación.
 
-¿Qué dos acciones debe realizar? Cada respuesta correcta presenta parte de la solución.
 
 Seleccione todas las respuestas que procedan.
 

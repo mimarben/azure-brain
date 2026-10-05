@@ -50,7 +50,7 @@
         "ch": 116
       }
     },
-    "scroll": 198.70324081497395
+    "scroll": 197.60632991790771
   },
   "knowledge/az104-blob-storage.md": {
     "cursor": {
@@ -767,15 +767,15 @@
   "certifications/AZ-104/test-exams/exam-online-2.md": {
     "cursor": {
       "from": {
-        "line": 467,
-        "ch": 61
+        "line": 439,
+        "ch": 0
       },
       "to": {
-        "line": 467,
-        "ch": 61
+        "line": 439,
+        "ch": 0
       }
     },
-    "scroll": 441.47917970021564
+    "scroll": 243.35004250208536
   },
   "raw/azure-docs/articles/enclave/1-1-create-community.md": {
     "cursor": {
@@ -819,15 +819,15 @@
   "certifications/AZ-104/test-exams/exam-online-3.md": {
     "cursor": {
       "from": {
-        "line": 158,
+        "line": 139,
         "ch": 0
       },
       "to": {
-        "line": 158,
+        "line": 139,
         "ch": 0
       }
     },
-    "scroll": 150.38888549804688
+    "scroll": 134.37847518920898
   },
   "raw/AZ-140T00/Instructions/Labs_EntraID/05_LAB_41_02_Implement_autoscaling_of_session_hosts.md": {
     "cursor": {
@@ -883,14 +883,15 @@
   "certifications/AZ-104/test-exams/exam-online-1.md": {
     "cursor": {
       "from": {
-        "line": 10,
-        "ch": 30
+        "line": 1,
+        "ch": 0
       },
       "to": {
-        "line": 10,
-        "ch": 30
+        "line": 1,
+        "ch": 0
       }
-    }
+    },
+    "scroll": 1095.694008032481
   },
   "certifications/AZ-104/test-exams/examen-1-soluciones.md": {
     "cursor": {
@@ -921,15 +922,15 @@
   "certifications/AZ-104/test-exams/examen-3-avanzado.md": {
     "cursor": {
       "from": {
-        "line": 419,
-        "ch": 0
+        "line": 30,
+        "ch": 57
       },
       "to": {
-        "line": 419,
-        "ch": 0
+        "line": 25,
+        "ch": 7
       }
     },
-    "scroll": 28.798736890237667
+    "scroll": 23.03385305404663
   },
   "certifications/AZ-104/test-exams/examen-4-mixto.md": {
     "cursor": {
@@ -943,5 +944,18 @@
       }
     },
     "scroll": 0
+  },
+  "certifications/AZ-104/test-exams/exam-online-4.md": {
+    "scroll": 84.83333333333333,
+    "cursor": {
+      "from": {
+        "line": 124,
+        "ch": 0
+      },
+      "to": {
+        "line": 124,
+        "ch": 0
+      }
+    }
   }
 }

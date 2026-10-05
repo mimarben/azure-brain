@@ -23,34 +23,34 @@ sources:
 | 7 | B | 15 | A | 23 | B → C → D → A | 31 | B |
 | 8 | B | 16 | a Sí · b Sí · c No | 24 | A | 32 | B |
 
-**Puntuación:** ___ / 40. Aprobado ≥ 28 (70 %). Para convertir mentalmente a la escala real: tu % × 1000 ≈ tu puntuación en la escala del examen (700 = aprobado).
+**Puntuación:** 32 / 40 (80 %). Aprobado ≥ 28 (70 %). Para convertir mentalmente a la escala real: tu % × 1000 ≈ tu puntuación en la escala del examen (700 = aprobado).
 
 ## Autoevaluación por dominio
 
 | Dominio | Preguntas | Aciertos |
 |---|---|---|
-| Identidades y gobernanza (20–25 %) | 2, 5, 8, 11, 19, 23, 24 | ___ / 9 |
-| Almacenamiento (15–20 %) | 1, 6, 10, 13, 17, 21 | ___ / 8 |
-| Procesos (20–25 %) | 3, 7, 12, 14, 16, 20, 27, 31 | ___ / 10 |
-| Redes virtuales (15–20 %) | 4, 9, 18, 22, 25, 28 | ___ / 8 |
-| Supervisión y mantenimiento (10–15 %) | 15, 26, 29, 30, 32 | ___ / 5 |
+| Identidades y gobernanza (20–25 %) | 2, 5, 8, 11, 19, 23, 24 | 5 / 9 — fallos: 8, 11a, 19, 23 |
+| Almacenamiento (15–20 %) | 1, 6, 10, 13, 17, 21 | 8 / 8 |
+| Procesos (20–25 %) | 3, 7, 12, 14, 16, 20, 27, 31 | 9 / 10 — fallo: 14 |
+| Redes virtuales (15–20 %) | 4, 9, 18, 22, 25, 28 | 6 / 8 — fallos: 4, 22 |
+| Supervisión y mantenimiento (10–15 %) | 15, 26, 29, 30, 32 | 4 / 5 — fallo: 15 |
 
 ## Explicaciones
 
 1. **B — ZRS.** Réplica sincrónica en tres zonas de la región primaria. GRS/GZRS replican a una región secundaria (asíncrono); LRS solo dentro de un único centro de datos. Ver [cuentas de almacenamiento](../../../knowledge/az104-storage-accounts.md).
 2. **B.** Los grupos de administración organizan suscripciones en jerarquías para aplicar políticas y RBAC de forma centralizada; no agrupan recursos (eso son los resource groups).
 3. **B.** El conjunto de disponibilidad reparte las VM en dominios de error (hardware distinto) y de actualización (reinicios de mantenimiento escalonados) → SLA 99,95 %. No escala ni replica. Ver [disponibilidad de VMs](../../../knowledge/az104-vm-availability.md).
-4. **B — 251.** Azure reserva 5 direcciones por subred (las 4 primeras y la última) para servicios. 256 − 5 = 251.
+4. <font color="#ff0000">**B — 251</font>.** Azure reserva 5 direcciones por subred (las 4 primeras y la última) para servicios. 256 − 5 = 251.
 5. **C — Reader.** Lectura de todos los recursos sin permisos de modificación. Contributor ya permite cambios; Owner además gestiona accesos. Ver [RBAC](../../../knowledge/az104-azure-rbac.md).
 6. **D — RA-GRS.** El prefijo RA-* (read-access) habilita el endpoint de solo lectura de la región secundaria **sin** failover. GRS replica pero el secundario no es legible sin failover.
 7. **B.** VMs en ≥ 2 zonas de disponibilidad → 99,99 %. Conjunto de disponibilidad → 99,95 %. Una VM con Premium SSD → 99,9 %. Ver [disponibilidad de VMs](../../../knowledge/az104-vm-availability.md).
-8. **B — P1.** La pertenencia dinámica a grupos requiere Microsoft Entra ID P1 (nivel gratuito: solo seguridad estático). P2 añade PIM/Identity Protection.
+8. <font color="#ff0000"> **B — P1</font>.** La pertenencia dinámica a grupos requiere Microsoft Entra ID P1 (nivel gratuito: solo seguridad estático). P2 añade PIM/Identity Protection.
 9. **B.** Sin NSG se aplican las reglas por defecto: `AllowVnetInBound` (65000), `AllowAzureLoadBalancerInBound` (65001), `DenyAllInBound` (65500). El tráfico de internet entrante se **deniega**. Ver [NSGs](../../../knowledge/az104-network-security-groups.md).
 10. **D — Archive.** El más barato en almacenamiento; datos sin conexión y rehidratación que puede tardar horas. La consulta frecuente lo hace carísimo. Ver [Blob Storage](../../../knowledge/az104-blob-storage.md).
 11. **a Sí · b No · c Sí.** ReadOnly bloquea tanto escrituras como eliminaciones; los bloqueos prevalecen sobre RBAC para **todos**, incluidos los Owners (deben quitarse el lock primero); por eso existen: protegen contra borrados accidentales incluso de administradores.
 12. **B.** El scale set despliega VMs idénticas y escala horizontalmente (más/menos instancias) con reglas de autoescala por métrica o programación.
 13. **a Sí · b No · c Sí.** Las directivas de ciclo de vida mueven/eliminan blobs por antigüedad; el tier **sí** puede fijarse por blob (el de cuenta es solo el predeterminado); y también pueden purgar versiones y snapshots. Ver [Blob Storage](../../../knowledge/az104-blob-storage.md).
-14. **B — Azure Compute Gallery.** Imágenes versionadas, compartidas entre suscripciones/tenants y replicables a otras regiones. Las instantáneas e imágenes administradas no replican ni versionan.
+14. <font color="#ff0000">**B — Azure Compute Gallery.**</font> Imágenes versionadas, compartidas entre suscripciones/tenants y replicables a otras regiones. Las instantáneas e imágenes administradas no replican ni versionan.
 15. **A.** Metrics = series numéricas casi en tiempo real, 93 días de retención. Los registros KQL son Logs (30 días por defecto) y los eventos del plano de control son el Activity Log (90 días). Ver [monitorización de VMs](../../../knowledge/az104-vm-monitoring.md).
 16. **a Sí · b Sí · c No.** SSE siempre activo y no desactivable; ADE = BitLocker/dm-crypt con claves en Key Vault. El **disco temporal** no está en el servicio de almacenamiento gestionado: no lo protege SSE (para cubrirlo: cifrado en host o ADE). Ver [VMs](../../../knowledge/az104-virtual-machines.md).
 17. **C — SAS de delegación de usuario.** Se firma con credenciales de Entra ID en lugar de la clave de cuenta: es la opción recomendada cuando se prohíben claves de cuenta, y solo existe para Blob Storage. Ver [seguridad de Storage](../../../knowledge/az104-storage-security.md).
@@ -74,4 +74,4 @@ sources:
 
 | Fecha | Nota | Dominio más débil | Acción de repaso |
 |---|---|---|---|
-| | | | |
+| 2026-10-05 | 32/40 (80 %) | Identidades y gobernanza 5/9: efectos de Policy (Deny), flujo de Policy, bloqueos ReadOnly, licencias P1/P2 | [Azure Policy](../../../knowledge/az104-azure-policy.md), bloqueos y licencias en [az-104-identity-governance](../../../cheatsheets/az-104-identity-governance.md) |

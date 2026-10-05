@@ -2,7 +2,7 @@
 title: AZ-104 Simulacro 3 — Soluciones
 tags: [certification, exam-sim]
 certification: [AZ-104]
-updated: 2026-10-02
+updated: 2026-10-05
 sources:
   - https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-104
   - raw/AZ-104T00/
@@ -30,17 +30,17 @@ sources:
 | 35 | B |
 | 36 | A |
 
-**Puntuación:** ___ / 40. Aprobado ≥ 28 (70 %). Este nivel es igual o superior al real: no te castigues si la primera vez queda justo.
+**Puntuación:** 17 / 40 (42,5 %). Aprobado ≥ 28 (70 %) — **no superado**. Este nivel es igual o superior al real: no te castigues si la primera vez queda justo. Para convertir mentalmente a la escala real: tu % × 1000 ≈ tu puntuación en la escala del examen (700 = aprobado).
 
 ## Autoevaluación por dominio
 
 | Dominio | Preguntas | Aciertos |
 |---|---|---|
-| Identidades y gobernanza (20–25 %) | 1, 4, 11, 15, 20, 25, 32, 36 | ___ / 10 |
-| Almacenamiento (15–20 %) | 2, 7, 12, 16, 22, 26, 31 | ___ / 7 |
-| Procesos (20–25 %) | 3, 8, 13, 17, 21, 27, 30, 34 | ___ / 10 |
-| Redes virtuales (15–20 %) | 5, 9, 14, 18, 23, 29, 33 | ___ / 7 |
-| Supervisión y mantenimiento (10–15 %) | 6, 10, 19, 24, 28, 35 | ___ / 6 |
+| Identidades y gobernanza (20–25 %) | 1, 4, 11, 15, 20, 25, 32, 36 | 3 / 10 — fallos: 1, 4a, 4c, 11, 15, 20, 32 ⚠ |
+| Almacenamiento (15–20 %) | 2, 7, 12, 16, 22, 26, 31 | 2 / 7 — fallos: 2, 7, 12, 16, 26 ⚠ |
+| Procesos (20–25 %) | 3, 8, 13, 17, 21, 27, 30, 34 | 7 / 10 — fallos: 13, 27, 30 |
+| Redes virtuales (15–20 %) | 5, 9, 14, 18, 23, 29, 33 | 3 / 7 — fallos: 5, 9, 23, 29 |
+| Supervisión y mantenimiento (10–15 %) | 6, 10, 19, 24, 28, 35 | 2 / 6 — fallos: 6, 10, 19, 24 ⚠ |
 
 ## Explicaciones
 
@@ -88,4 +88,4 @@ sources:
 
 | Fecha | Nota | Dominio más débil | Acción de repaso |
 |---|---|---|---|
-| | | | |
+| 2026-10-05 | 17/40 (42,5 %) — nivel avanzado | Almacenamiento (2/7) e Identidades (3/10) | Herramientas de supervisión ([monitorización](../../../knowledge/az104-vm-monitoring.md): umbrales dinámicos, Event Hub como destino, consola serie, AMA+Dependency Agent, IP flow verify); Storage avanzado ([seguridad de Storage](../../../knowledge/az104-storage-security.md): decodificar SAS, CMK+purge protection; [Azure Files](../../../knowledge/az104-azure-files.md): cloud tiering y orden de File Sync); gotchas de identity (deny assignments, AssignableScopes, grupos dinámicos sin grupos, ReadOnly+List Keys) y repaso de PIM |

@@ -44,6 +44,7 @@ Referencia rápida por área — comandos y cifras, sin teoría.
 | [AZ-104 Compute](cheatsheets/az-104-compute.md) | VM/VMSS, App Service, ACI, Container Apps, ACR |
 | [AZ-104 Storage](cheatsheets/az-104-storage.md) | Cuentas, redundancia, tiers, SAS, red, azcopy |
 | [AZ-104 Identidad y gobernanza](cheatsheets/az-104-identity-governance.md) | `az ad`, RBAC, Policy, locks, presupuestos |
+| [AZ-104 Resumen por módulo](cheatsheets/az-104-resumen-modulos.md) | Tipos y taxonomías de los 28 módulos (imprimible), foco de examen |
 
 ## Certifications
 

@@ -4,38 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "482c33b6eeb104de",
+        "id": "f90fac0e160c5eb7",
         "type": "tabs",
         "children": [
           {
-            "id": "d4471377e1bddf49",
+            "id": "3be424c246f5a300",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/AZ-104/roadmap.md",
+                "file": "certifications/AZ-104/test-exams/examen-1-basico.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "roadmap"
+              "title": "examen-1-basico"
             }
           },
           {
-            "id": "c0df5a9a37e4a99d",
+            "id": "bdd5611233a34b0a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "knowledge/az104-vm-monitoring.md",
+                "file": "certifications/AZ-104/test-exams/examen-3-avanzado.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "az104-vm-monitoring"
+              "title": "examen-3-avanzado"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -69,7 +70,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "-path:\"raw/\" asignaciones de Denegación",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -175,10 +176,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/AZ-104/roadmap.md",
+                "file": "certifications/AZ-104/test-exams/examen-3-avanzado.md",
                 "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
+                "showSearch": true,
+                "searchQuery": "regla de procesamiento"
               },
               "icon": "lucide-list",
               "title": "Outline"
@@ -244,53 +245,53 @@
       "smart-context:Smart Context: Copy current": false
     }
   },
-  "active": "d4471377e1bddf49",
+  "active": "bdd5611233a34b0a",
   "lastOpenFiles": [
-    "certifications/AI-200/INDEX.md.tmp.1558835.7e7d3db33411",
-    "certifications/AI-200/test-exams/examen-1-mixto.md.tmp.1558835.7a6e1a932615",
-    "certifications/AI-200/test-exams/examen-1-soluciones.md",
-    "certifications/AI-200/test-exams/examen-1-soluciones.md.tmp.1558835.cadcaba92694",
-    "certifications/AI-200/test-exams/examen-1-mixto.md",
-    "certifications/AI-200/test-exams/examen-1-mixto.md.tmp.1558835.1dc4528883af",
-    "certifications/AI-200/test-exams/README.md",
-    "certifications/AI-200/test-exams/README.md.tmp.1558835.1e533ccc8108",
-    "certifications/AI-200/test-exams",
-    "certifications/AZ-104/test-exams/examen-4-soluciones.md.tmp.1558835.656ebaee81f4",
-    "certifications/AZ-104/test-exams/examen-4-soluciones.md",
-    "certifications/AZ-104/test-exams/examen-4-soluciones.md.tmp.1558835.5a12ab7426ab",
-    "certifications/AZ-104/test-exams/examen-4-mixto.md.tmp.1558835.7b3e38b07dd6",
-    "certifications/AZ-104/test-exams/examen-4-mixto.md",
-    "certifications/AZ-104/test-exams/examen-4-mixto.md.tmp.1558835.331b2755fc2a",
-    "certifications/AZ-104/test-exams/examen-1-basico.md",
-    "certifications/AZ-104/test-exams/README.md.tmp.1418127.2e29f12225c2",
-    "notes/AZ-104/roadmap.md",
-    "certifications/AZ-104/test-exams/examen-3-soluciones.md",
+    "knowledge/az104-azure-files.md",
     "certifications/AZ-104/test-exams/examen-3-avanzado.md",
-    "certifications/AZ-104/test-exams/examen-2-soluciones.md",
+    "certifications/AZ-104/test-exams/examen-3-soluciones.md.tmp.1058017.933c306535cf",
+    "certifications/AZ-104/test-exams/examen-3-soluciones.md.tmp.1058017.7767cd2fb6f7",
+    "certifications/AZ-104/test-exams/examen-3-soluciones.md.tmp.1058017.178595dec0fc",
+    "certifications/AZ-104/test-exams/examen-3-avanzado.md.tmp.1058017.2b84badce8c1",
+    "certifications/AZ-104/test-exams/examen-3-avanzado.md.tmp.1058017.45231a0ece05",
+    "certifications/AZ-104/test-exams/examen-3-avanzado.md.tmp.1058017.0720212964c2",
+    "certifications/AZ-104/test-exams/examen-1-basico.md.tmp.1058017.c8697a6f3cc6",
+    "certifications/AZ-104/test-exams/examen-1-basico.md",
     "certifications/AZ-104/test-exams/examen-2-intermedio.md",
+    "certifications/AZ-104/test-exams/examen-2-soluciones.md.tmp.1058017.62071b1a5a39",
+    "certifications/AZ-104/test-exams/examen-2-soluciones.md.tmp.1058017.d9d75dacb02c",
+    "certifications/AZ-104/test-exams/examen-2-intermedio.md.tmp.1058017.aa634564e406",
+    "assets/images/AZ-900/account-scope-levels.png",
+    "certifications/AZ-104/test-exams/examen-4-mixto.md",
     "certifications/AZ-104/test-exams/examen-1-soluciones.md",
-    "certifications/AZ-104/test-exams/README.md",
-    "knowledge/az104-vm-monitoring.md",
-    "knowledge/az104-vm-backup.md",
-    "knowledge/az104-azure-backup.md",
+    "certifications/AZ-104/test-exams/exam-online-1.md",
+    "certifications/AZ-104/test-exams/exam-online-3.md",
+    "certifications/AZ-104/test-exams/exam-online.md",
+    "certifications/AZ-104/test-exams/exam-online-2.md",
+    "Pasted image 20261005140959.png",
+    "notes/AZ-104/roadmap.md",
+    "knowledge/az104-entra-id.md",
+    "cheatsheets/az-104-identity-governance.md",
+    "raw/azure-docs/articles/active-directory-b2c/add-web-api-application.md",
+    "raw/AZ-140T00/Instructions/Labs_EntraID/05_LAB_41_02_Implement_autoscaling_of_session_hosts.md",
+    "cheatsheets/az-104-resumen-modulos.md",
+    "Pasted image 20261005132229.png",
+    "raw/azure-docs/articles/enclave/1-1-create-community.md",
+    "raw/azure-docs/articles/cyclecloud/release-notes/8-9-1.md",
+    "knowledge/az104-blob-storage.md",
+    "knowledge/az104-app-service.md",
+    "certifications/AZ-104/test-exams/examen-4-soluciones.md",
+    "labs/AZ-104/app-service/Lab09a-Implement-Web-Apps.md",
+    "knowledge/az104-container-instances.md",
+    "assets/images/AZ-104/Pasted image 20261005110704.png",
+    "Pasted image 20261005110704.png",
+    "raw/azure-docs/articles/synapse-analytics/migration-guides/netezza/1-design-performance-migration.md",
+    "cheatsheets/az-104-storage.md",
+    "Untitled.canvas",
     "assets/images/AZ-104/lab05-coreservicesvm-basics.png",
     "assets/images/AZ-104/app-gateway-terminacion-tls-ssl.png",
     "assets/images/AZ-104/app-gateway-enrutamiento-multisitio.png",
     "assets/images/AZ-104/app-gateway-enrutamiento-rutas.png",
-    "assets/images/AZ-104/app-gateway-componentes.png",
-    "assets/images/AZ-104/app-gateway-topologia.png",
-    "assets/images/AZ-104/network-watcher-connection-monitor-topologia.png",
-    "assets/images/AZ-104/network-watcher-busqueda-portal.png",
-    "assets/images/AZ-104/network-watcher-herramientas.png",
-    "knowledge/az104-network-watcher.md",
-    "knowledge/az104-application-gateway.md",
-    "knowledge/az104-load-balancer.md",
-    "labs/AZ-104/network/Enrutamiento NVA..md",
-    "knowledge/az104-user-defined-routes.md",
-    "labs/AZ-104/network/Creación de una NVA..md",
-    "assets/images/AZ-104/udr-puerta-enlace-virtual.svg",
-    "labs/AZ-104/network/Creación de rutas personalizadas.md",
-    "knowledge/az104-vnet-peering.md",
-    "labs/AZ-104/dns/Lab 05 - Implement Intersite Connectivity..md"
+    "assets/images/AZ-104/app-gateway-componentes.png"
   ]
 }

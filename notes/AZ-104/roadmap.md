@@ -213,7 +213,9 @@ Docs: [Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/) ([
 # Bloque 6- Test de exámenes.
 
 - [x] Preparar el examen teoría: https://learn.microsoft.com/es-es/credentials/certifications/resources/study-guides/az-104. > 
-- [ ]  Completar la [evaluación de práctica gratuita](https://learn.microsoft.com/en-us/credentials/certifications/exams/az-104/practice/assessment?assessment-type=practice&assessmentId=21) ([ES](https://learn.microsoft.com/es-es/credentials/certifications/exams/az-104/practice/assessment?assessment-type=practice&assessmentId=21)) (assessmentId 21) y repasar donde falle
+- [ ]  Completar la [evaluación de práctica gratuita](https://learn.microsoft.com/en-us/credentials/certifications/exams/az-104/practice/assessment?assessment-type=practice&assessmentId=21) ([ES](https://learn.microsoft.com/es-es/credentials/certifications/exams/az-104/practice/assessment?assessment-type=practice&assessmentId=21)) (assessmentId 21) y repasar donde falle.
+- [ ] [Exam Readiness Zone | Microsoft Learn](https://learn.microsoft.com/en-us/shows/exam-readiness-zone/?wt.mc_id=certnurture_eml8_email_wwl&terms=AZ-104 "https://learn.microsoft.com/en-us/shows/exam-readiness-zone/?wt.mc_id=certnurture_eml8_email_wwl&terms=az-104")
+- [ ] [Practice Assessments for Microsoft Certifications | Microsoft Learn](https://learn.microsoft.com/en-us/credentials/certifications/practice-assessments-for-microsoft-certifications?wt.mc_id=certnurture_eml8_email_wwl)
 - [ ] Ver el [AZ-104 Study Cram v2](https://www.youtube.com/watch?v=0Knf9nub4-k) de Savill (~4 h) como repaso global
 - [ ] Ver entero el **[vídeo de preparación del examen](https://aka.ms/AZ104-ExamPrep)** (`aka.ms/AZ104-ExamPrep`, ~1–2 semanas antes)
 - [ ] Revisar que la skills outline en [INDEX.md](../../certifications/AZ-104/INDEX.md) sigue vigente (Microsoft actualiza las guías periódicamente; nota de cambio vigente: 17/04/2026)

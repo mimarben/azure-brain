@@ -2,7 +2,7 @@
 title: AZ-104 Simulacro 2 — Soluciones
 tags: [certification, exam-sim]
 certification: [AZ-104]
-updated: 2026-10-02
+updated: 2026-10-05
 sources:
   - https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-104
   - raw/AZ-104T00/
@@ -23,17 +23,17 @@ sources:
 | 7 | B | 15 | B | 23 | B | 31 | A |
 | 8 | a Sí · b Sí · c No | 16 | B + C | 24 | B | 32 | A + B + C |
 
-**Puntuación:** ___ / 40. Aprobado ≥ 28 (70 %).
+**Puntuación:** 23 / 40 (57,5 %). Aprobado ≥ 28 (70 %) — **no superado**. Para convertir mentalmente a la escala real: tu % × 1000 ≈ tu puntuación en la escala del examen (700 = aprobado).
 
 ## Autoevaluación por dominio
 
 | Dominio | Preguntas | Aciertos |
 |---|---|---|
-| Identidades y gobernanza (20–25 %) | 1, 6, 8, 15, 20, 27, 30 | ___ / 9 |
-| Almacenamiento (15–20 %) | 2, 7, 12, 13, 18, 24 | ___ / 8 |
-| Procesos (20–25 %) | 3, 9, 14, 19, 21, 25, 31 | ___ / 9 |
-| Redes virtuales (15–20 %) | 4, 10, 16, 22, 26, 28 | ___ / 8 |
-| Supervisión y mantenimiento (10–15 %) | 5, 11, 17, 23, 29, 32 | ___ / 6 |
+| Identidades y gobernanza (20–25 %) | 1, 6, 8, 15, 20, 27, 30 | 7 / 9 — fallos: 8b, 27 |
+| Almacenamiento (15–20 %) | 2, 7, 12, 13, 18, 24 | 3 / 8 — fallos: 7, 12, 13a, 13b, 24 ⚠ |
+| Procesos (20–25 %) | 3, 9, 14, 19, 21, 25, 31 | 5 / 9 — fallos: 3, 9, 14, 25 |
+| Redes virtuales (15–20 %) | 4, 10, 16, 22, 26, 28 | 4 / 8 — fallos: 10, 16, 22, 28 |
+| Supervisión y mantenimiento (10–15 %) | 5, 11, 17, 23, 29, 32 | 4 / 6 — fallos: 5, 32 |
 
 ## Explicaciones
 
@@ -74,4 +74,4 @@ sources:
 
 | Fecha | Nota | Dominio más débil | Acción de repaso |
 |---|---|---|---|
-| | | | |
+| 2026-10-05 | 23/40 (57,5 %) | Almacenamiento (3/8) | Redundancia de storage (GRS/RA-GRS/GZRS/ZRS, [cuentas de almacenamiento](../../../knowledge/az104-storage-accounts.md)); SAS ([seguridad de Storage](../../../knowledge/az104-storage-security.md)); regla de multi-selección: tica **todas** las pedidas (10, 16, 27, 32); SLA mínimo vs coste ([disponibilidad de VMs](../../../knowledge/az104-vm-availability.md)) |

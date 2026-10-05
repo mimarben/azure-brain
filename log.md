@@ -217,3 +217,46 @@ Fuente: AZ-104 — guía oficial + raw/AZ-104T00, con temario/estilo calibrado c
 Páginas creadas: certifications/AZ-104/test-exams/examen-4-mixto.md + examen-4-soluciones.md (40 ítems mixtos estilo real); certifications/AI-200/test-exams/ (README.md, examen-1-mixto.md, examen-1-soluciones.md — 40 ítems alineados con la skills outline 20-25/25-30/20-25/20-25).
 Páginas actualizadas: certifications/AZ-104/INDEX.md (sección Exámenes de prueba con el simulacro 4), certifications/AZ-104/test-exams/README.md (tabla con el 4), certifications/AI-200/INDEX.md (sección Exámenes de prueba + fecha).
 Nota: mismas mecánicas que el primer lote (marcado con [x], series Sí/No de 3 ítems, corrección pidiendo «corrige el examen N»).
+
+## [2026-10-05] consulta | Practice assessment oficial AZ-104 anotado con referencias al brain
+Fuente: certifications/AZ-104/test-exams/exam-online.md (volcado del practice assessment de Microsoft Learn, 49 de 50 preguntas pegadas)
+Páginas actualizadas: certifications/AZ-104/test-exams/exam-online.md — un callout Obsidian bajo cada pregunta con la respuesta correcta y el enlace a la página de knowledge/cheatsheets/ que la cubre (47 success + 2 warning).
+Gaps detectados (candidatos a nueva página o ampliación): AKS (API server privado / IP autorizadas), Container Apps (KEDA y desencadenadores), límites de movimiento de recursos entre RGs, logging de diagnóstico de App Service, estados de alerta (Nuevo/Confirmado/Cerrado), redespliegue de VM, colaboración externa B2B, detalle no-solapamiento en vnet-peering, tipos soportados por AzCopy, cmdlets de cuota en Azure Files.
+
+## [2026-10-05] cheatsheet | Resumen AZ-104 por módulo — tablas de tipos
+Fuente: notes/AZ-104/roadmap.md (28 módulos) + foco calibrado con certifications/AZ-104/test-exams/ (practice assessment y simulacros)
+Páginas creadas: cheatsheets/az-104-resumen-modulos.md — un módulo por sección, tablas "tipo | qué es | nota de examen" de todos los bloques 0–5 + gaps (ACR/Container Apps), pensado para imprimir
+Páginas actualizadas: INDEX.md (fila en Cheatsheets)
+
+## [2026-10-05] consulta | Practice assessment oficial AZ-104 (2.ª parte) anotado con referencias al brain
+Fuente: certifications/AZ-104/test-exams/exam-online-2.md (segundo volcado del practice assessment, 15 preguntas + pantalla de resultados al 54 %)
+Páginas actualizadas: certifications/AZ-104/test-exams/exam-online-2.md — callout Obsidian bajo cada pregunta (15 success) con respuesta y enlaces a knowledge/cheatsheets/labs; callout [!warning] bajo la captura de resultados (54 %; más flojas: Supervisión ~15-20 % y Almacenamiento ~30 %) con prioridades de repaso.
+Gaps detectados: restricción de región NSG↔subred, -TemplateUri (solo la cheatsheet lo cubre), sintaxis de array inline en --parameters, fuente de cambios como requisito de la replicación de objetos, procedimiento completo de borrado de un almacén de Recovery Services.
+
+## [2026-10-05] cheatsheet | Resumen AZ-104 — ampliación con matrices de diferencias
+Fuente: misma sesión que la entrada anterior (petición del mantenedor: comparativas de planes/servicios)
+Páginas actualizadas: cheatsheets/az-104-resumen-modulos.md — añadidas matrices comparativas: Entra ID Free/P1/P2, Entra ID vs AD DS vs Entra DS, SPN vs MI (system/user), roles RBAC, tipos de cuenta y tiers de blob/Files, SAS, discos VM, AZ vs AS, VMSS uniform/flexible, tiers de App Service Plan, TLS de App Service, ACR SKUs, ACI vs Container Apps vs AKS, IP pública Basic/Standard, NSG subred/NIC, opciones de resolución DNS, peering vs V2V VPN, service vs private endpoint, LB Basic/Standard, LB vs AppGW, WAF modos, RSV vs Backup vault, restores, Backup vs ASR, Metrics vs Logs
+
+## [2026-10-05] consulta | Practice assessment oficial AZ-104 (3.er intento) anotado con referencias al brain
+Fuente: certifications/AZ-104/test-exams/exam-online-3.md (tercer volcado del practice assessment, 14 preguntas + pantalla de resultados al 66 %, sube del 54 %)
+Páginas actualizadas: certifications/AZ-104/test-exams/exam-online-3.md — callout Obsidian bajo cada pregunta (12 success + 2 warning) con respuesta y enlaces a knowledge/cheatsheets; callout [!warning] bajo la captura de resultados (66 %; más flojas: Proceso y Supervisión ~50-55 %) con prioridades de repaso.
+Gaps detectados: presupuestos con alertas + acción Runbook, reinstalación del cliente P2S tras emparejar, netstat -an (puertos en escucha en Windows), hoja Implementaciones como historial, factores de desalojo de instancias Spot, patrón sidecar de Container Apps, registro MARS con credenciales del almacén.
+
+## [2026-10-05] consulta | Corrección del simulacro 1 básico — 32/40 (80 %)
+Fuente: certifications/AZ-104/test-exams/examen-1-basico.md (marcas del mantenedor; fallos marcados en rojo)
+Páginas actualizadas: certifications/AZ-104/test-exams/examen-1-soluciones.md — puntuación 32/40, autoevaluación por dominio (Identidades y gobernanza 5/9 como más débil; Almacenamiento 8/8, recuperado desde el 30 % del practice assessment 2) y primera fila del registro de intentos.
+Fallores: 4, 8, 11a, 14, 15, 19, 22, 23 — patrón: 4 de 8 en gobernanza (efectos/flujo de Policy, bloqueos ReadOnly, licencias P1/P2), 2 de facts (5 IPs reservadas por subred, 93 días de Metrics) y 2 de elección de servicio (Compute Gallery, VPN vs ExpressRoute).
+
+## [2026-10-05] consulta | Corrección del simulacro 2 intermedio — 23/40 (57,5 %)
+Fuente: certifications/AZ-104/test-exams/examen-2-intermedio.md (marcas del mantenedor, corregidas contra examen-2-soluciones.md)
+Páginas actualizadas: certifications/AZ-104/test-exams/examen-2-intermedio.md — callout Obsidian bajo cada ítem (23 [!success] verdes con el porqué; 17 [!failure] rojos con por qué falla, cuál es la correcta y enlaces a knowledge/) y resumen de corrección al inicio (nota, dominios, patrón). certifications/AZ-104/test-exams/examen-2-soluciones.md — puntuación 23/40, autoevaluación por dominio (Almacenamiento 3/8 como más débil; Identidades 7/9 y Supervisión 4/6) y primera fila del registro de intentos.
+Fallos: 3, 5, 7, 8b, 9, 10, 12, 13a, 13b, 14, 16, 22, 24, 25, 27, 28, 32 — patrón: las 4 multi-selección incompletas (10, 16, 27, 32: se tica una opción cuando piden dos/tres), 3 de Storage (GZRS vs ZRS en 7, prefixMatch en 12, server-side copy de azcopy en 24) y 2 de SAS (firma por Entra ID en 13a, stored access policy en 13b); también autoescala con cooldown (3), SLA mínimo-coste (9) y Resource Mover (14).
+
+## [2026-10-05] consulta | Simulacro 1 básico — callouts de corrección bajo cada ítem (intento 32/40 ya registrado)
+Fuente: certifications/AZ-104/test-exams/examen-1-basico.md (marcas del intento ya corregido el mismo día; fallos conservados en rojo)
+Páginas actualizadas: certifications/AZ-104/test-exams/examen-1-basico.md — mismo formato que el simulacro 2: callout [!success] bajo cada acierto (32) y [!failure] bajo cada fallo (4, 8, 11a, 14, 15, 19, 22, 23) explicando la trampa y la correcta con enlaces a knowledge/; callout de resumen al inicio con nota, dominios y patrón de fallos. La puntuación y el registro de intentos ya constan en examen-1-soluciones.md (sesión anterior).
+
+## [2026-10-05] consulta | Corrección del simulacro 3 avanzado — 17/40 (42,5 %)
+Fuente: certifications/AZ-104/test-exams/examen-3-avanzado.md (marcas del mantenedor, corregidas contra examen-3-soluciones.md)
+Páginas actualizadas: certifications/AZ-104/test-exams/examen-3-avanzado.md — callout Obsidian bajo cada ítem (17 [!success] verdes; 20 [!failure] rojos con por qué falla, la correcta y enlaces a knowledge/) incluido el caso práctico Litware, y callout de resumen al inicio. certifications/AZ-104/test-exams/examen-3-soluciones.md — puntuación 17/40, autoevaluación por dominio (Almacenamiento 2/7 e Identidades 3/10 más débiles; caso práctico 5/6 y Procesos 7/10 como puntos fuertes) y primera fila del registro de intentos.
+Fallos: 1, 2, 4a, 4c, 5, 6, 7, 9, 10, 11, 12, 13, 15, 16, 19, 20, 23, 24, 26, 27, 29, 30, 32 — patrón: detalle de mecanismo por servicio, no arquitectura (caso Litware 5/6). Bloques: supervisión (6, 10, 19, 24, 29 — umbrales dinámicos, Event Hub, consola serie vs Bastion, Dependency Agent, IP flow verify), Storage avanzado (2, 7, 12, 16, 26 — decodificar SAS, failover→LRS, orden File Sync, cloud tiering, purge protection CMK) e identity gotchas (1, 11, 15, 20, 32 — deny assignments, AssignableScopes, ReadOnly+List Keys, grupos dinámicos sin grupos, PIM).

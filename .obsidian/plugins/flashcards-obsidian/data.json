@@ -1,0 +1,59 @@
+{
+  "syncScope": {
+    "includedFolders": [],
+    "excludedFolders": [],
+    "excludedNotes": []
+  },
+  "ankiConnectApiKeySecret": "",
+  "ankiLaunch": {
+    "enabled": true,
+    "command": "",
+    "waitSeconds": 60
+  },
+  "atomic": {
+    "enabled": true
+  },
+  "cloze": {
+    "enabled": true
+  },
+  "confirmBeforeDelete": true,
+  "contextSeparator": " > ",
+  "contextStrategy": "headings",
+  "defaultDeck": "Default",
+  "defaultTags": [
+    "obsidian"
+  ],
+  "explicitSyntax": "fenced",
+  "fenced": {
+    "enabled": true
+  },
+  "folderBasedDecks": true,
+  "folderBasedTags": false,
+  "folderDeckPrefix": "",
+  "hashtag": {
+    "enabled": true,
+    "basicTag": "card"
+  },
+  "highlightCloze": {
+    "enabled": true
+  },
+  "inline": {
+    "enabled": true
+  },
+  "inlineReverseSeparator": ":::",
+  "inlineSeparator": "::",
+  "logLevel": "info",
+  "logToFile": true,
+  "perfTracing": false,
+  "renderPreview": {
+    "enabled": true,
+    "features": {
+      "cloze": true,
+      "anchor": true,
+      "inlineSeparator": false,
+      "hashtag": true
+    }
+  },
+  "showRibbonIcon": true,
+  "v1MigrationDecisionMade": true
+}

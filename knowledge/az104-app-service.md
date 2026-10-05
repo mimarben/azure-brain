@@ -418,7 +418,6 @@ Application Insights es ideal para apoyar al equipo de desarrollo. Esta caracter
     
 
 > [!TIP] Sugerencia
-> 
 > Considere la posibilidad de ampliar el aprendizaje con las [_soluciones de solución de problemas mediante_](https://learn.microsoft.com/es-es/training/paths/az-204-instrument-solutions-support-monitoring-logging/) el módulo de entrenamiento de Application Insights.
 
 Ejercicio: [[Lab09a-Implement-Web-Apps]]

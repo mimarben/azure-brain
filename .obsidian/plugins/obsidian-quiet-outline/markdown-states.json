@@ -42,25 +42,25 @@
     ],
     "cursor": {
       "from": {
-        "line": 215,
-        "ch": 372
+        "line": 218,
+        "ch": 116
       },
       "to": {
-        "line": 215,
-        "ch": 372
+        "line": 218,
+        "ch": 116
       }
     },
-    "scroll": 187.11934810692637
+    "scroll": 198.70324081497395
   },
   "knowledge/az104-blob-storage.md": {
     "cursor": {
       "from": {
-        "line": 287,
-        "ch": 0
+        "line": 153,
+        "ch": 405
       },
       "to": {
-        "line": 287,
-        "ch": 0
+        "line": 153,
+        "ch": 405
       }
     },
     "expandedKeys": [
@@ -76,7 +76,7 @@
       "item-1-29",
       "item-1-31"
     ],
-    "scroll": 288.0260416666667
+    "scroll": 149.44500490132805
   },
   "labs/AZ-104/Blob-Storage/Secure-storage-for-Azure-Files-and-Azure-Blob-Storage..md": {
     "expandedKeys": [],
@@ -185,15 +185,15 @@
     ],
     "cursor": {
       "from": {
-        "line": 414,
-        "ch": 0
+        "line": 122,
+        "ch": 539
       },
       "to": {
-        "line": 414,
-        "ch": 0
+        "line": 122,
+        "ch": 539
       }
     },
-    "scroll": 261.3053385416667
+    "scroll": 283.5783524427421
   },
   "labs/AZ-104/README.md": {
     "expandedKeys": [],
@@ -307,15 +307,15 @@
   "knowledge/az104-app-service.md": {
     "cursor": {
       "from": {
-        "line": 426,
-        "ch": 1
+        "line": 424,
+        "ch": 14
       },
       "to": {
-        "line": 426,
-        "ch": 1
+        "line": 424,
+        "ch": 14
       }
     },
-    "scroll": 443.206293695707
+    "scroll": 396.5526666167488
   },
   "labs/AZ-104/app-service/Untitled.md": {
     "scroll": 0,
@@ -695,9 +695,64 @@
         "ch": 178
       }
     },
-    "scroll": 447.94054222106934
+    "scroll": 441.3571534947672
   },
   "certifications/AZ-104/test-exams/examen-1-basico.md": {
+    "cursor": {
+      "from": {
+        "line": 232,
+        "ch": 5
+      },
+      "to": {
+        "line": 232,
+        "ch": 5
+      }
+    },
+    "scroll": 28.730860113711817
+  },
+  "certifications/AZ-104/test-exams/Untitled.md": {
+    "scroll": 0
+  },
+  "certifications/AZ-104/test-exams/exam-online.md": {
+    "cursor": {
+      "from": {
+        "line": 1758,
+        "ch": 20
+      },
+      "to": {
+        "line": 1758,
+        "ch": 20
+      }
+    },
+    "scroll": 966.7504316965739
+  },
+  "cheatsheets/az-104-storage.md": {
+    "cursor": {
+      "from": {
+        "line": 73,
+        "ch": 7
+      },
+      "to": {
+        "line": 73,
+        "ch": 7
+      }
+    },
+    "scroll": 21.596725100562686
+  },
+  "raw/azure-docs/articles/synapse-analytics/migration-guides/netezza/1-design-performance-migration.md": {
+    "cursor": {
+      "from": {
+        "line": 11,
+        "ch": 0
+      },
+      "to": {
+        "line": 11,
+        "ch": 0
+      }
+    },
+    "scroll": 0
+  },
+  "certifications/AZ-104/test-exams/examen-4-soluciones.md": {
     "cursor": {
       "from": {
         "line": 9,
@@ -705,6 +760,185 @@
       },
       "to": {
         "line": 9,
+        "ch": 0
+      }
+    }
+  },
+  "certifications/AZ-104/test-exams/exam-online-2.md": {
+    "cursor": {
+      "from": {
+        "line": 467,
+        "ch": 61
+      },
+      "to": {
+        "line": 467,
+        "ch": 61
+      }
+    },
+    "scroll": 441.47917970021564
+  },
+  "raw/azure-docs/articles/enclave/1-1-create-community.md": {
+    "cursor": {
+      "from": {
+        "line": 286,
+        "ch": 22
+      },
+      "to": {
+        "line": 286,
+        "ch": 22
+      }
+    },
+    "scroll": 264.0386516777047
+  },
+  "raw/azure-docs/articles/cyclecloud/release-notes/8-9-1.md": {
+    "cursor": {
+      "from": {
+        "line": 18,
+        "ch": 54
+      },
+      "to": {
+        "line": 18,
+        "ch": 54
+      }
+    },
+    "scroll": 0.7194244329877895
+  },
+  "cheatsheets/az-104-resumen-modulos.md": {
+    "cursor": {
+      "from": {
+        "line": 150,
+        "ch": 34
+      },
+      "to": {
+        "line": 150,
+        "ch": 34
+      }
+    },
+    "scroll": 142.40285686785023
+  },
+  "certifications/AZ-104/test-exams/exam-online-3.md": {
+    "cursor": {
+      "from": {
+        "line": 158,
+        "ch": 0
+      },
+      "to": {
+        "line": 158,
+        "ch": 0
+      }
+    },
+    "scroll": 150.38888549804688
+  },
+  "raw/AZ-140T00/Instructions/Labs_EntraID/05_LAB_41_02_Implement_autoscaling_of_session_hosts.md": {
+    "cursor": {
+      "from": {
+        "line": 16,
+        "ch": 4
+      },
+      "to": {
+        "line": 16,
+        "ch": 4
+      }
+    }
+  },
+  "raw/azure-docs/articles/active-directory-b2c/add-web-api-application.md": {
+    "cursor": {
+      "from": {
+        "line": 30,
+        "ch": 70
+      },
+      "to": {
+        "line": 30,
+        "ch": 70
+      }
+    },
+    "scroll": 20.636284669240315
+  },
+  "cheatsheets/az-104-identity-governance.md": {
+    "cursor": {
+      "from": {
+        "line": 11,
+        "ch": 0
+      },
+      "to": {
+        "line": 11,
+        "ch": 0
+      }
+    },
+    "scroll": 23.914186386835006
+  },
+  "knowledge/az104-entra-id.md": {
+    "cursor": {
+      "from": {
+        "line": 108,
+        "ch": 2
+      },
+      "to": {
+        "line": 108,
+        "ch": 58
+      }
+    },
+    "scroll": 102.80031460322441
+  },
+  "certifications/AZ-104/test-exams/exam-online-1.md": {
+    "cursor": {
+      "from": {
+        "line": 10,
+        "ch": 30
+      },
+      "to": {
+        "line": 10,
+        "ch": 30
+      }
+    }
+  },
+  "certifications/AZ-104/test-exams/examen-1-soluciones.md": {
+    "cursor": {
+      "from": {
+        "line": 52,
+        "ch": 4
+      },
+      "to": {
+        "line": 52,
+        "ch": 63
+      }
+    },
+    "scroll": 43.91794044432481
+  },
+  "certifications/AZ-104/test-exams/examen-2-intermedio.md": {
+    "cursor": {
+      "from": {
+        "line": 9,
+        "ch": 0
+      },
+      "to": {
+        "line": 9,
+        "ch": 0
+      }
+    },
+    "scroll": 403.8184394836426
+  },
+  "certifications/AZ-104/test-exams/examen-3-avanzado.md": {
+    "cursor": {
+      "from": {
+        "line": 419,
+        "ch": 0
+      },
+      "to": {
+        "line": 419,
+        "ch": 0
+      }
+    },
+    "scroll": 28.798736890237667
+  },
+  "certifications/AZ-104/test-exams/examen-4-mixto.md": {
+    "cursor": {
+      "from": {
+        "line": 11,
+        "ch": 0
+      },
+      "to": {
+        "line": 11,
         "ch": 0
       }
     },

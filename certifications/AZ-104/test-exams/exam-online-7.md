@@ -80,4 +80,4 @@ Puede usar bloqueos de eliminación para bloquear la eliminación de máquinas v
 [Protege tus recursos de Azure con un bloqueo - Administrador de recursos de Azure | Microsoft Learn](https://learn.microsoft.com/azure/azure-resource-manager/management/lock-resources?tabs=json)
 
 
-![[Pasted image 20261006140113.png]]
+![Pantalla de resultados: 86 %](../../../assets/images/AZ-104/exam7-resultado-86.png)

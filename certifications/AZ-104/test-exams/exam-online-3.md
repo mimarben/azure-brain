@@ -524,7 +524,7 @@ Incorrecto: la configuración de una directiva de copia de seguridad, la habilit
 >
 > 📄 En mi documentación: [az104-azure-backup.md](../../../knowledge/az104-azure-backup.md) (agente MARS) · [az104-vm-backup.md](../../../knowledge/az104-vm-backup.md) — ⚠️ el registro con credenciales del almacén no está desarrollado (gap).
 
-![[Pasted image 20261005140959.png]]
+![Pantalla de resultados: 66 %](../../../assets/images/AZ-104/exam3-resultado-66.png)
 
 > [!warning] Brain — Pantalla de resultados: **66 %** (sube del 54 % del intento anterior) · más flojas: **Proceso** (~50-55 %) y **Supervisión** (~50-55 %) · Red (~60-65 %) · Identidad (~78 %) y Almacenamiento (~75-80 %) ya cerca del umbral
 >

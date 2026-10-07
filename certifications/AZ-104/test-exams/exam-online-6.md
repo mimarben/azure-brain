@@ -308,4 +308,4 @@ Deshabilitar la persistencia de sesión garantiza incluso la distribución del t
 [](https://aka.ms/yourcaliforniaprivacychoices)
 
 ___
-![[Pasted image 20261006120716.png]]
+![Pantalla de resultados: 78 %](../../../assets/images/AZ-104/exam6-resultado-78.png)

@@ -310,4 +310,4 @@ La comprobación de flujo de IP permite especificar una dirección IPv4 de orige
 
 [](https://aka.ms/yourcaliforniaprivacychoices)
 
-![[Pasted image 20261006110912.png]]
+![Pantalla de resultados: 82 %](../../../assets/images/AZ-104/exam5-resultado-82.png)

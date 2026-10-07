@@ -578,7 +578,7 @@ Los usuarios con el rol Colaborador pueden crear y administrar todos los tipos d
 
 ____
 
-![[Pasted image 20261005132229.png]]
+![Pantalla de resultados: 54 %](../../../assets/images/AZ-104/exam2-resultado-54.png)
 
 > [!warning] Brain — Pantalla de resultados: **54 %** · más flojas: **Supervisión** (~15-20 %) y **Almacenamiento** (~30 %) · Red (~45 %) · Proceso (~55 %) · Identidad la más fuerte (~80 %)
 >

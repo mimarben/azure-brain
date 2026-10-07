@@ -2,6 +2,10 @@
 
 Registro cronológico de ingestas, consultas y lints. Formato: `## [YYYY-MM-DD] tipo | Título`.
 
+## [2026-10-07] lint | Renombrado de imágenes "Pasted image" a nombres descriptivos
+Assets: 13 imágenes "Pasted image 2026…" renombradas en assets/images/AZ-104/ — pantallas de resultados de los assessments online (exam2-resultado-54, exam3-resultado-66, exam5-resultado-82, exam6-resultado-78, exam7-resultado-86, exam8-resultado-88), pregunta revisada del exam 1 (exam1-pregunta-lb-persistencia-sesion), pregunta fallada del exam 8 (exam8-pregunta-seguimiento-acceso-blob), diapositivas de curso (suscripciones-gestion-tradicional-vs-ea, storage-objetivos-modulo, storage-autorizacion-shared-key-sas-entra-id, vm-tamanos-series) y entra-connect-conectar-entra-id (huérfana, solo constaba en .obsidian/workspace.json). En labs/AZ-900/sitio-web/: storage-redundancia-comparativa (huérfana, diapositiva LRS/ZRS/GRS/GZRS).
+Páginas actualizadas: certifications/AZ-104/test-exams/exam-online-1.md, -2, -3, -5, -6, -7 y -8 y knowledge/az104-entra-id.md, az104-storage-accounts.md, az104-virtual-machines.md — cada wikilink de embed convertido a imagen Markdown con ruta relativa y alt descriptivo.
+
 ## [2026-10-07] exam | Simulacro 5 AZ-104 avanzado (50 ítems)
 Fuente: guía oficial de estudio AZ-104, raw/AZ-104T00 y verificación puntual contra Microsoft Learn (retirada de NSG flow logs → VNet flow logs, prerrequisitos de object replication, retención de snapshots de instant restore, P2S con auth Entra = OpenVPN)
 Páginas creadas: certifications/AZ-104/test-exams/examen-5-avanzado.md, certifications/AZ-104/test-exams/examen-5-soluciones.md

@@ -579,7 +579,7 @@ Copilot puede ayudarle a configurar soluciones de infraestructura de Azure. Copi
     
 - [Diseño e implementación de acceso privado en los servicios de Azure](https://learn.microsoft.com/es-es/training/modules/design-implement-private-access-to-azure-services/). Cómo diseñar e implementar acceso privado en los servicios de Azure con Azure Private Link y puntos de conexión de servicio de red virtual.
 
-![[Pasted image 20261006080033.png]]
+![Diapositiva: objetivos del módulo Implement and manage storage](../assets/images/AZ-104/storage-objetivos-modulo.png)
 
 
 
@@ -601,6 +601,6 @@ ____
 | Uso recomendado por Microsoft  | ✅                                                                      | ✅                              | ⚠️ Solo casos legacy                                 | ✅                                           |
 | Caso de uso típico             | Usuarios corporativos                                                  | Compartir acceso temporal      | Aplicaciones antiguas                                | Control de permisos                         |
 
-![[Pasted image 20261006083139.png]]
+![Diapositiva: autorización con Shared Key, SAS o Microsoft Entra ID](../assets/images/AZ-104/storage-autorizacion-shared-key-sas-entra-id.png)
 
 

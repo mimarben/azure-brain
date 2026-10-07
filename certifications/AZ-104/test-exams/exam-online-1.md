@@ -1813,4 +1813,4 @@ modos de distribución [Azure Load Balancer | Microsoft Learn](https://learn.mic
 >
 > 📄 En mi documentación: [az104-load-balancer.md](../../../knowledge/az104-load-balancer.md) — «Persistencia de la sesión».
 
-![[Pasted image 20261005110704.png]]
+![Pregunta del examen: persistencia de sesión en Azure Load Balancer](../../../assets/images/AZ-104/exam1-pregunta-lb-persistencia-sesion.png)

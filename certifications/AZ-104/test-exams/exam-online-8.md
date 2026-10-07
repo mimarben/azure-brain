@@ -125,7 +125,7 @@ La replicación de objetos se puede usar para replicar blobs entre cuentas de al
 [Configure Azure Blob Storage - Training | Microsoft Learn](https://learn.microsoft.com/training/modules/configure-blob-storage/)
 
 ___
-![[Pasted image 20261006142556.png]]
+![Pregunta fallada: habilitar el seguimiento de acceso para reglas de ciclo de vida](../../../assets/images/AZ-104/exam8-pregunta-seguimiento-acceso-blob.png)
 
 
-![[Pasted image 20261006142621.png]]
+![Pantalla de resultados: 88 %](../../../assets/images/AZ-104/exam8-resultado-88.png)

@@ -609,7 +609,7 @@ Por último, ha visto las extensiones y los servicios disponibles para administr
 > 
 > En los ejercicios opcionales de este módulo, ha creado recursos mediante su propia suscripción de Azure. Limpie estos recursos para que no se le siga cobrando por ellos.
 
-![[Pasted image 20261006090901.png]]
+![Diapositiva: tamaños y series de máquinas virtuales](../assets/images/AZ-104/vm-tamanos-series.png)
 ## Relacionado
 - [Índice AZ-104](../certifications/AZ-104/INDEX.md)
 - [[Servicios de proceso de Azure (AZ-900)]]

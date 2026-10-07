@@ -158,4 +158,4 @@ By using Microsoft Entra Domain Services, you can freely migrate applications th
 
 ![[2026-10-06_07h43_44.png]]
 
-![[Pasted image 20261006074734.png]]
+![Diapositiva: gestión de suscripciones tradicional vs contrato Enterprise](../assets/images/AZ-104/suscripciones-gestion-tradicional-vs-ea.png)

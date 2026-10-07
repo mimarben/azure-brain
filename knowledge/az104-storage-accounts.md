@@ -578,3 +578,29 @@ Copilot puede ayudarle a configurar soluciones de infraestructura de Azure. Copi
 - [Creación de una cuenta de almacenamiento de Azure](https://learn.microsoft.com/es-es/training/modules/create-azure-storage-account/). Cómo crear una cuenta de Azure Storage con las opciones correctas para sus necesidades empresariales.
     
 - [Diseño e implementación de acceso privado en los servicios de Azure](https://learn.microsoft.com/es-es/training/modules/design-implement-private-access-to-azure-services/). Cómo diseñar e implementar acceso privado en los servicios de Azure con Azure Private Link y puntos de conexión de servicio de red virtual.
+
+![[Pasted image 20261006080033.png]]
+
+
+
+____
+
+| Característica                 | Identity-Based Access (Autenticación basada en identidad)              | SAS (Shared Access Signature)  | Access Keys (Claves de acceso de la Storage Account) | IAM (Identity and Access Management / RBAC) |
+| ------------------------------ | ---------------------------------------------------------------------- | ------------------------------ | ---------------------------------------------------- | ------------------------------------------- |
+| ¿Usa Microsoft Entra ID?       | ✅                                                                      | ❌                              | ❌                                                    | ✅                                           |
+| ¿Qué autentica?                | Usuario, Grupo, Service Principal, Managed Identity                    | Token SAS                      | Cuenta de almacenamiento                             | No autentica                                |
+| ¿Qué autoriza?                 | Mediante RBAC (Role-Based Access Control) + ACLs (Access Control List) | Permisos incluidos en el token | Acceso completo según la clave                       | Roles RBAC(Role-Based Access Control)       |
+| Granularidad                   | Alta                                                                   | Muy alta                       | Baja                                                 | Alta                                        |
+| Acceso temporal                | ❌                                                                      | ✅                              | ❌                                                    | ❌                                           |
+| Acceso permanente              | ✅                                                                      | Opcional                       | ✅                                                    | ✅                                           |
+| Compatible con SMB             | ✅                                                                      | ❌                              | ✅                                                    | ✅ (junto con Identity-Based)                |
+| Compatible con API REST        | ✅                                                                      | ✅                              | ✅                                                    | ✅                                           |
+| Principio de mínimo privilegio | ✅                                                                      | ✅                              | ❌                                                    | ✅                                           |
+| Seguridad                      | Alta                                                                   | Alta                           | Baja                                                 | Alta                                        |
+| Gestión de usuarios            | ✅                                                                      | ❌                              | ❌                                                    | ✅                                           |
+| Uso recomendado por Microsoft  | ✅                                                                      | ✅                              | ⚠️ Solo casos legacy                                 | ✅                                           |
+| Caso de uso típico             | Usuarios corporativos                                                  | Compartir acceso temporal      | Aplicaciones antiguas                                | Control de permisos                         |
+
+![[Pasted image 20261006083139.png]]
+
+

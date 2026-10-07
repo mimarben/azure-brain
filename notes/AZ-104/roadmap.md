@@ -214,8 +214,13 @@ Docs: [Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/) ([
 
 - [x] Preparar el examen teoría: https://learn.microsoft.com/es-es/credentials/certifications/resources/study-guides/az-104. > 
 - [ ]  Completar la [evaluación de práctica gratuita](https://learn.microsoft.com/en-us/credentials/certifications/exams/az-104/practice/assessment?assessment-type=practice&assessmentId=21) ([ES](https://learn.microsoft.com/es-es/credentials/certifications/exams/az-104/practice/assessment?assessment-type=practice&assessmentId=21)) (assessmentId 21) y repasar donde falle.
-- [ ] [Exam Readiness Zone | Microsoft Learn](https://learn.microsoft.com/en-us/shows/exam-readiness-zone/?wt.mc_id=certnurture_eml8_email_wwl&terms=AZ-104 "https://learn.microsoft.com/en-us/shows/exam-readiness-zone/?wt.mc_id=certnurture_eml8_email_wwl&terms=az-104")
-- [ ] [Practice Assessments for Microsoft Certifications | Microsoft Learn](https://learn.microsoft.com/en-us/credentials/certifications/practice-assessments-for-microsoft-certifications?wt.mc_id=certnurture_eml8_email_wwl)
+- [x] [Exam Readiness Zone | Microsoft Learn](https://learn.microsoft.com/en-us/shows/exam-readiness-zone/?wt.mc_id=certnurture_eml8_email_wwl&terms=AZ-104 "https://learn.microsoft.com/en-us/shows/exam-readiness-zone/?wt.mc_id=certnurture_eml8_email_wwl&terms=az-104")
+	    https://learn.microsoft.com/en-us/shows/exam-readiness-zone/preparing-for-az-104-manage-azure-identities-and-governance-1-of-5/
+	    https://learn.microsoft.com/en-us/shows/exam-readiness-zone/preparing-for-az-104-implement-and-manage-storage-2-of-5/ 
+	    https://learn.microsoft.com/en-us/shows/exam-readiness-zone/preparing-for-az-104-deploy-and-manage-azure-compute-resources-3-of-5/
+	    https://learn.microsoft.com/en-us/shows/exam-readiness-zone/preparing-for-az-104-implement-and-manage-virtual-networking-4-of-5/
+	    https://learn.microsoft.com/en-us/shows/exam-readiness-zone/preparing-for-az-104-monitor-and-maintain-azure-resources-5-of-5/
+- [x] [Practice Assessments for Microsoft Certifications | Microsoft Learn](https://learn.microsoft.com/en-us/credentials/certifications/practice-assessments-for-microsoft-certifications?wt.mc_id=certnurture_eml8_email_wwl)
 - [ ] Ver el [AZ-104 Study Cram v2](https://www.youtube.com/watch?v=0Knf9nub4-k) de Savill (~4 h) como repaso global
 - [ ] Ver entero el **[vídeo de preparación del examen](https://aka.ms/AZ104-ExamPrep)** (`aka.ms/AZ104-ExamPrep`, ~1–2 semanas antes)
 - [ ] Revisar que la skills outline en [INDEX.md](../../certifications/AZ-104/INDEX.md) sigue vigente (Microsoft actualiza las guías periódicamente; nota de cambio vigente: 17/04/2026)
@@ -249,22 +254,27 @@ Microsoft publica los labs prácticos alineados con AZ-104 en **[MicrosoftLearni
 
 Distribución orientativa (la ruta oficial son ~4 días de instructor-led; en autoestudio, repartir en 2–3 semanas):
 
-| Sesión | Contenido | Bloque |
-|---|---|---|
-| 1 | Prerrequisitos (si hace falta) + Entra ID, identidades | 0–1 |
-| 2 | RBAC, Azure Policy, gobernanza, costes | 1 |
-| 3 | Storage accounts, Blob, seguridad, Files | 2 |
-| 4 | VMs, availability, VMSS + ARM/Bicep | 3 |
-| 5 | App Service, contenedores (ACR/ACI/Container Apps) | 3 |
-| 6 | VNets, NSG, peering, DNS, UDR | 4 |
-| 7 | Load Balancer, App Gateway, Bastion, private endpoints | 4 |
-| 8 | Azure Monitor, alertas, Network Watcher | 5 |
-| 9 | Backup, Site Recovery, failover | 5 |
-| 10 | Repaso de puntos débiles + evaluación de práctica | — |
-| 11 | Vídeo de estrategia de examen + huecos restantes | — |
-| 12 | Examen | — |
+| Sesión | Contenido                                              | Bloque |
+| ------ | ------------------------------------------------------ | ------ |
+| 1      | Prerrequisitos (si hace falta) + Entra ID, identidades | 0–1    |
+| 2      | RBAC, Azure Policy, gobernanza, costes                 | 1      |
+| 3      | Storage accounts, Blob, seguridad, Files               | 2      |
+| 4      | VMs, availability, VMSS + ARM/Bicep                    | 3      |
+| 5      | App Service, contenedores (ACR/ACI/Container Apps)     | 3      |
+| 6      | VNets, NSG, peering, DNS, UDR                          | 4      |
+| 7      | Load Balancer, App Gateway, Bastion, private endpoints | 4      |
+| 8      | Azure Monitor, alertas, Network Watcher                | 5      |
+| 9      | Backup, Site Recovery, failover                        | 5      |
+| 10     | Repaso de puntos débiles + evaluación de práctica      | —      |
+| 11     | Vídeo de estrategia de examen + huecos restantes       | —      |
+| 12     | Examen                                                 | —      |
 
 ---
+
+# Examen.
+
+https://learn.microsoft.com/es-es/credentials/certifications/azure-administrator/?practice-assessment-type=certification
+
 
 
 ## Relacionado

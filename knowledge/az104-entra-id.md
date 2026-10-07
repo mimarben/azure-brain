@@ -150,3 +150,12 @@ If you choose to implement Microsoft Entra Domain Services, you need to be aware
 
 By using Microsoft Entra Domain Services, you can freely migrate applications that use LDAP, NTLM, or the Kerberos protocols from your on-premises infrastructure to the cloud. You can also use applications such as Microsoft SQL Server or Microsoft SharePoint Server on VMs or deploy them in the Azure IaaS, without needing domain controllers in the cloud or a VPN to local infrastructure.
 
+![[2026-10-06_07h39_04.png]]
+
+
+![[2026-10-06_07h41_10.png]]
+
+
+![[2026-10-06_07h43_44.png]]
+
+![[Pasted image 20261006074734.png]]

@@ -106,7 +106,7 @@ Material de apoyo: [whiteboard de ámbito del examen](../../raw/savill-cert-mate
 
 ## Exámenes de prueba
 
-Simulacros estilo examen real en [test-exams/](test-exams/README.md): preguntas originales basadas en la guía oficial de estudio, `raw/AZ-104T00` y fuentes externas de temario (Tutorials Dojo, repos de práctica — sin reproducir ítems reales bajo NDA). Tres niveles — [básico](test-exams/examen-1-basico.md), [intermedio](test-exams/examen-2-intermedio.md) y [avanzado con caso práctico](test-exams/examen-3-avanzado.md) — más un [simulacro 4 mixto estilo real](test-exams/examen-4-mixto.md); 40 ítems y 100 minutos cada uno, con soluciones comentadas y enlaces a `knowledge/`. *(Excepción puntual a la regla "solo INDEX.md" de CLAUDE.md, creada a petición del mantenedor.)*
+Simulacros estilo examen real en [test-exams/](test-exams/README.md): preguntas originales basadas en la guía oficial de estudio, `raw/AZ-104T00` y fuentes externas de temario (Tutorials Dojo, repos de práctica — sin reproducir ítems reales bajo NDA). Tres niveles — [básico](test-exams/examen-1-basico.md), [intermedio](test-exams/examen-2-intermedio.md) y [avanzado con caso práctico](test-exams/examen-3-avanzado.md) — más un [simulacro 4 mixto estilo real](test-exams/examen-4-mixto.md) (40 ítems y 100 minutos cada uno) y un [simulacro 5 avanzado de 50 ítems](test-exams/examen-5-avanzado.md) (120 minutos), con soluciones comentadas y enlaces a `knowledge/`. *(Excepción puntual a la regla "solo INDEX.md" de CLAUDE.md, creada a petición del mantenedor.)*
 
 ## Conceptos relacionados
 

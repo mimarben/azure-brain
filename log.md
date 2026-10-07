@@ -2,6 +2,29 @@
 
 Registro cronológico de ingestas, consultas y lints. Formato: `## [YYYY-MM-DD] tipo | Título`.
 
+## [2026-10-07] exam | Simulacro 5 AZ-104 avanzado (50 ítems)
+Fuente: guía oficial de estudio AZ-104, raw/AZ-104T00 y verificación puntual contra Microsoft Learn (retirada de NSG flow logs → VNet flow logs, prerrequisitos de object replication, retención de snapshots de instant restore, P2S con auth Entra = OpenVPN)
+Páginas creadas: certifications/AZ-104/test-exams/examen-5-avanzado.md, certifications/AZ-104/test-exams/examen-5-soluciones.md
+Páginas actualizadas: certifications/AZ-104/test-exams/README.md, certifications/AZ-104/INDEX.md, log.md
+Notas: 50 ítems puntuables (36 preguntas con 4 series Sí/No ×3 + caso práctico de 6), 120 minutos, aprobado 35/50. Preguntas originales sin duplicar los temas de los simulacros 1–4 ni de los assessments online; refuerza los dominios débiles del usuario (herramientas de supervisión, Storage avanzado, gotchas de identidad). Datos volátiles verificados con fecha: NSG flow logs sin creación nueva desde 30/6/2025 y retirada 30/9/2027; instant RP 1–5 días (por defecto 2); métricas 93 días; Activity Log 90 días.
+
+## [2026-10-06] exam | Repaso acumulado de fallos AZ-104
+Fuente: assessments online 1–5 y simulacros AZ-104 1–3
+Páginas creadas: certifications/AZ-104/test-exams/examen-repaso-fallos.md
+Páginas actualizadas: certifications/AZ-104/test-exams/README.md, log.md
+Notas: consolidación de 106 preguntas falladas; se desmarcaron las opciones, se plegaron las soluciones y se unificaron preguntas idénticas repetidas. Incluye el fallo PIM del caso avanzado, recuperado del resumen porque su callout estaba etiquetado como correcto.
+
+## [2026-10-06] exam | Incorporación del assessment online 6 al repaso AZ-104
+Fuente: certifications/AZ-104/test-exams/exam-online-6.md
+Páginas actualizadas: certifications/AZ-104/test-exams/examen-repaso-fallos.md, certifications/AZ-104/test-exams/README.md, log.md
+Notas: se añadieron dos fallos nuevos (rol mínimo para etiquetar VMs y UDR para inspección de tráfico); las preguntas repetidas de SAS, Azure Backup, historial de implementaciones y Load Balancer ya estaban incluidas.
+
+## [2026-10-06] exam | Respuestas incorrectas de assessments online AZ-104
+Fuente: certifications/AZ-104/test-exams/exam-online-1.md a exam-online-8.md
+Páginas creadas: certifications/AZ-104/test-exams/respuestas-incorrectas-exam-online-1-8.md
+Páginas actualizadas: certifications/AZ-104/test-exams/README.md, log.md
+Notas: lista de 70 respuestas incorrectas únicas con contexto y explicación del error; se consolidaron preguntas repetidas entre los ocho assessments.
+
 ## [2026-10-02] lint | Imágenes locales y formato en Network Watcher y Application Gateway (AZ-104)
 Páginas actualizadas: knowledge/az104-network-watcher.md, knowledge/az104-application-gateway.md, labs/AZ-104/dns/Lab 05 - Implement Intersite Connectivity..md, log.md
 Notas: 8 imágenes remotas de learn.microsoft.com descargadas en assets/images/AZ-104/ (network-watcher-herramientas, network-watcher-busqueda-portal, network-watcher-connection-monitor-topologia, app-gateway-topologia, app-gateway-componentes, app-gateway-enrutamiento-rutas, app-gateway-enrutamiento-multisitio, app-gateway-terminacion-tls-ssl) y enlaces apuntando a rutas locales; "Pasted image 20261002095449.png" renombrada a lab05-coreservicesvm-basics.png (pestaña Basics de CoreServicesVM) con su wikilink convertido a embed Markdown relativo; wikilinks [[Azure Networking]]/[[Herramientas de supervisión de Azure (AZ-900)]]/[[Introducción a Azure Load Balancer (AZ-104)]] convertidos a enlaces relativos; enlaces de labs rotos corregidos (README.md inexistente → carpeta y Lab 05; create-vm.md mal referenciado); en az104-application-gateway.md eliminada sección "Cuándo usar/no usar" duplicada íntegramente, analogía round robin reformatada como callout [!info] (artefacto de bloque "text" roto eliminado) y restos de citas "[11]" del ejercicio limpiados.

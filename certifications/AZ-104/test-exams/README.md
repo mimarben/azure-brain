@@ -2,7 +2,7 @@
 title: AZ-104 — Simulacros de examen
 tags: [certification, exam-sim]
 certification: [AZ-104]
-updated: 2026-10-02
+updated: 2026-10-06
 sources:
   - https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-104
   - raw/AZ-104T00/
@@ -10,7 +10,7 @@ sources:
 
 # Simulacros de examen AZ-104
 
-Tres exámenes de práctica **originales** construidos sobre la [guía oficial de estudio](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-104) y el material de `raw/` (curso AZ-104T00). Reproducen el formato, los tipos de pregunta y los pesos del examen real. Los ítems reales están protegidos por NDA — estos son preguntas nuevas al estilo del examen, no dumps.
+Cinco exámenes de práctica **originales** construidos sobre la [guía oficial de estudio](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-104) y el material de `raw/` (curso AZ-104T00). Reproducen el formato, los tipos de pregunta y los pesos del examen real. Los ítems reales están protegidos por NDA — estos son preguntas nuevas al estilo del examen, no dumps.
 
 ## Cómo simular
 
@@ -41,8 +41,13 @@ Tres exámenes de práctica **originales** construidos sobre la [guía oficial d
 | [Simulacro 2](examen-2-intermedio.md) | Intermedio | 40 | Escenarios aplicados: "necesitas X, ¿qué haces?", menor privilegio, coste |
 | [Simulacro 3](examen-3-avanzado.md) | Avanzado | 40 | Incluye caso práctico, exhibits y trampas de redacto — nivel real o superior |
 | [Simulacro 4](examen-4-mixto.md) | Mixto estilo real | 40 | Dificultad mezclada sin avisar; temario calibrado con fuentes externas (Tutorials Dojo, repos de práctica) — preguntas originales |
+| [Simulacro 5](examen-5-avanzado.md) | Avanzado | 50 | 120 minutos. Gotchas de mecanismo y exhibits; 4 series Sí/No y caso práctico; refuerza los puntos débiles detectados (supervisión, Storage avanzado, identidad) |
 
-Soluciones (no abrir hasta terminar): [1](examen-1-soluciones.md) · [2](examen-2-soluciones.md) · [3](examen-3-soluciones.md) · [4](examen-4-soluciones.md).
+Soluciones (no abrir hasta terminar): [1](examen-1-soluciones.md) · [2](examen-2-soluciones.md) · [3](examen-3-soluciones.md) · [4](examen-4-soluciones.md) · [5](examen-5-soluciones.md).
+
+Repaso acumulado: [Examen de fallos (108 preguntas)](examen-repaso-fallos.md). Reúne preguntas falladas de los assessments online 1–6 y de los simulacros 1–3; las respuestas están plegadas.
+
+Lista compacta de fallos: [Respuestas incorrectas de assessments online 1–8](respuestas-incorrectas-exam-online-1-8.md). Incluye únicamente las opciones marcadas como incorrectas y la explicación de cada error.
 
 ## Flujo recomendado
 

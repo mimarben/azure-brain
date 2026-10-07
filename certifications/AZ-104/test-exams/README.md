@@ -2,7 +2,7 @@
 title: AZ-104 — Simulacros de examen
 tags: [certification, exam-sim]
 certification: [AZ-104]
-updated: 2026-10-06
+updated: 2026-10-07
 sources:
   - https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-104
   - raw/AZ-104T00/
@@ -45,7 +45,7 @@ Cinco exámenes de práctica **originales** construidos sobre la [guía oficial 
 
 Soluciones (no abrir hasta terminar): [1](examen-1-soluciones.md) · [2](examen-2-soluciones.md) · [3](examen-3-soluciones.md) · [4](examen-4-soluciones.md) · [5](examen-5-soluciones.md).
 
-Repaso acumulado: [Examen de fallos (108 preguntas)](examen-repaso-fallos.md). Reúne preguntas falladas de los assessments online 1–6 y de los simulacros 1–3; las respuestas están plegadas.
+Repaso por factores: [Factores de fallo — vísperas del examen](repaso-factores-fallo.md). Destila los 70 errores de los assessments online 1–8 y los 48 fallos de los simulacros 2, 3 y 5 en 15 factores ordenados por frecuencia (reglas de oro, trampa típica, técnica de examen y relámpago final).
 
 Lista compacta de fallos: [Respuestas incorrectas de assessments online 1–8](respuestas-incorrectas-exam-online-1-8.md). Incluye únicamente las opciones marcadas como incorrectas y la explicación de cada error.
 

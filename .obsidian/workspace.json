@@ -4,67 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "f90fac0e160c5eb7",
+        "id": "4b65a99c62309fe0",
         "type": "tabs",
         "children": [
           {
-            "id": "4f47c5e4e1df3de9",
+            "id": "2cfc455b1710de53",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "certifications/AZ-104/test-exams/exam-online-3.md",
+                "file": "certifications/AZ-104/test-exams/exam-online-10.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "exam-online-3"
-            }
-          },
-          {
-            "id": "52ec41983fda6613",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "certifications/AZ-104/test-exams/exam-online-1.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "exam-online-1"
-            }
-          },
-          {
-            "id": "b1e8bb66bdf00939",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "certifications/AZ-104/test-exams/exam-online-4.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "exam-online-4"
-            }
-          },
-          {
-            "id": "49ce956fe8342790",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "notes/AZ-104/roadmap.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "roadmap"
+              "title": "exam-online-10"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -204,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/AZ-104/roadmap.md",
+                "file": "certifications/AZ-104/test-exams/exam-online-10.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": "regla de procesamiento"
@@ -273,19 +230,30 @@
       "smart-context:Smart Context: Copy current": false
     }
   },
-  "active": "49ce956fe8342790",
+  "active": "2cfc455b1710de53",
   "lastOpenFiles": [
-    "log.md.tmp.6881.2b988dca5ae7",
-    "knowledge/az104-virtual-machines.md.tmp.6881.b74a186feedb",
-    "knowledge/az104-storage-accounts.md.tmp.6881.a8b3d7d18e56",
-    "knowledge/az104-storage-accounts.md.tmp.6881.b2b059e19b95",
-    "knowledge/az104-entra-id.md.tmp.6881.7c5483ee3fcd",
-    "certifications/AZ-104/test-exams/exam-online-8.md.tmp.6881.fa79328f6c2d",
-    "certifications/AZ-104/test-exams/exam-online-8.md.tmp.6881.3ca6a9f108e4",
-    "certifications/AZ-104/test-exams/exam-online-7.md.tmp.6881.268a2f4ba7d3",
-    "certifications/AZ-104/test-exams/exam-online-6.md.tmp.6881.fe7ae5988063",
-    "certifications/AZ-104/test-exams/exam-online-5.md.tmp.6881.d16153b62710",
-    "certifications/AZ-104/test-exams/exam-online-3.md.tmp.6881.0e37375d3951",
+    "assets/images/AZ-104/Pasted image 20261007133832.png",
+    "certifications/AZ-104/test-exams/exam-online-9.md",
+    "certifications/AZ-104/test-exams/exam-online-10.md",
+    "certifications/AZ-104/test-exams/exam-online-7.md",
+    "Pasted image 20261007133832.png",
+    "certifications/AZ-104/test-exams/repaso-factores-fallo.md",
+    "certifications/AZ-104/test-exams/examen-5-avanzado.md",
+    "log.md.tmp.597826.1eb99aac18b1",
+    "certifications/AZ-104/test-exams/README.md.tmp.597826.e8ee484dece3",
+    "certifications/AZ-104/test-exams/repaso-factores-fallo.md.tmp.597826.a5a8c01bdc59",
+    "knowledge/az104-virtual-machines.md",
+    "log.md.tmp.558356.5d57cfb7ee77",
+    "certifications/AZ-104/test-exams/examen-5-avanzado.md.tmp.558356.a9454eb0ca43",
+    "certifications/AZ-104/test-exams/examen-5-avanzado.md.tmp.558356.ab1ca60a6f10",
+    "certifications/AZ-104/test-exams/examen-5-avanzado.md.tmp.558356.a979f9d9f79d",
+    "certifications/AZ-104/test-exams/examen-5-avanzado.md.tmp.558356.b84ee8b0d50c",
+    "certifications/AZ-104/test-exams/examen-5-avanzado.md.tmp.558356.b8ee1329d8e7",
+    "certifications/AZ-104/test-exams/examen-5-avanzado.md.tmp.558356.ef24b39b9069",
+    "certifications/AZ-104/test-exams/examen-5-soluciones.md",
+    "certifications/AZ-104/test-exams/respuestas-incorrectas-exam-online-1-8.md",
+    "certifications/AZ-104/exam-doc.md",
+    "notes/AZ-104/roadmap.md",
     "labs/AZ-900/sitio-web/storage-redundancia-comparativa.png",
     "assets/images/AZ-104/exam8-resultado-88.png",
     "assets/images/AZ-104/exam8-pregunta-seguimiento-acceso-blob.png",
@@ -295,21 +263,14 @@
     "assets/images/AZ-104/vm-tamanos-series.png",
     "assets/images/AZ-104/storage-autorizacion-shared-key-sas-entra-id.png",
     "assets/images/AZ-104/storage-objetivos-modulo.png",
-    "assets/images/AZ-104/suscripciones-gestion-tradicional-vs-ea.png",
     "concepts/osi-model.md",
-    "certifications/AZ-104/test-exams/respuestas-incorrectas-exam-online-1-8.md",
-    "certifications/AZ-104/test-exams/examen-5-soluciones.md",
-    "certifications/AZ-104/test-exams/examen-5-avanzado.md",
     "certifications/AZ-104/test-exams/exam-online-8.md",
-    "certifications/AZ-104/test-exams/exam-online-7.md",
     "certifications/AZ-104/test-exams/exam-online-6.md",
     "certifications/AZ-104/test-exams/exam-online-5.md",
-    "certifications/AZ-104/exam-doc.md",
     "certifications/AZ-104/test-exams/exam-online-2.md",
     "certifications/AZ-104/test-exams/exam-online-3.md",
     "certifications/AZ-104/test-exams/exam-online-1.md",
     "certifications/AZ-104/test-exams/exam-online-4.md",
-    "notes/AZ-104/roadmap.md",
     "certifications/AZ-104/test-exams/examen-1-basico.md",
     "certifications/AZ-104/test-exams/examen-3-avanzado.md",
     "knowledge/az104-azure-files.md",
@@ -317,10 +278,6 @@
     "certifications/AZ-104/test-exams/examen-4-mixto.md",
     "certifications/AZ-104/test-exams/examen-1-soluciones.md",
     "certifications/AZ-104/test-exams/exam-online.md",
-    "knowledge/az104-entra-id.md",
-    "cheatsheets/az-104-identity-governance.md",
-    "raw/azure-docs/articles/active-directory-b2c/add-web-api-application.md",
-    "raw/AZ-140T00/Instructions/Labs_EntraID/05_LAB_41_02_Implement_autoscaling_of_session_hosts.md",
     "Untitled.canvas"
   ]
 }

@@ -50,7 +50,7 @@
         "ch": 116
       }
     },
-    "scroll": 176.40039514131644
+    "scroll": 262.3340346165707
   },
   "knowledge/az104-blob-storage.md": {
     "cursor": {
@@ -954,6 +954,85 @@
       },
       "to": {
         "line": 124,
+        "ch": 0
+      }
+    }
+  },
+  "certifications/AZ-104/test-exams/examen-5-avanzado.md": {
+    "cursor": {
+      "from": {
+        "line": 478,
+        "ch": 12
+      },
+      "to": {
+        "line": 478,
+        "ch": 19
+      }
+    },
+    "scroll": 576.2543524901072
+  },
+  "certifications/AZ-104/exam-doc.md": {
+    "scroll": 0
+  },
+  "certifications/AZ-104/test-exams/respuestas-incorrectas-exam-online-1-8.md": {
+    "cursor": {
+      "from": {
+        "line": 15,
+        "ch": 0
+      },
+      "to": {
+        "line": 15,
+        "ch": 0
+      }
+    }
+  },
+  "certifications/AZ-104/test-exams/examen-5-soluciones.md": {
+    "cursor": {
+      "from": {
+        "line": 9,
+        "ch": 0
+      },
+      "to": {
+        "line": 9,
+        "ch": 0
+      }
+    },
+    "scroll": 17.880350791529604
+  },
+  "certifications/AZ-104/test-exams/repaso-factores-fallo.md": {
+    "cursor": {
+      "from": {
+        "line": 45,
+        "ch": 0
+      },
+      "to": {
+        "line": 45,
+        "ch": 0
+      }
+    },
+    "scroll": 42.27676665612725
+  },
+  "certifications/AZ-104/test-exams/exam-online-9.md": {
+    "cursor": {
+      "from": {
+        "line": 124,
+        "ch": 0
+      },
+      "to": {
+        "line": 124,
+        "ch": 0
+      }
+    },
+    "scroll": 103.44026318741567
+  },
+  "certifications/AZ-104/test-exams/exam-online-10.md": {
+    "cursor": {
+      "from": {
+        "line": 1,
+        "ch": 0
+      },
+      "to": {
+        "line": 1,
         "ch": 0
       }
     }

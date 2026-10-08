@@ -42,15 +42,15 @@
     ],
     "cursor": {
       "from": {
-        "line": 218,
-        "ch": 116
+        "line": 229,
+        "ch": 19
       },
       "to": {
-        "line": 218,
-        "ch": 116
+        "line": 229,
+        "ch": 19
       }
     },
-    "scroll": 198.36187218183602
+    "scroll": 211.8763086795807
   },
   "knowledge/az104-blob-storage.md": {
     "cursor": {
@@ -917,20 +917,20 @@
         "ch": 0
       }
     },
-    "scroll": 403.8184394836426
+    "scroll": 297.8697837084737
   },
   "certifications/AZ-104/test-exams/examen-3-avanzado.md": {
     "cursor": {
       "from": {
-        "line": 252,
-        "ch": 20
+        "line": 203,
+        "ch": 0
       },
       "to": {
-        "line": 252,
-        "ch": 20
+        "line": 203,
+        "ch": 0
       }
     },
-    "scroll": 208.47513707438367
+    "scroll": 176.2872858979383
   },
   "certifications/AZ-104/test-exams/examen-4-mixto.md": {
     "cursor": {
@@ -1028,15 +1028,15 @@
   "certifications/AZ-104/test-exams/exam-online-10.md": {
     "cursor": {
       "from": {
-        "line": 1,
-        "ch": 0
+        "line": 10,
+        "ch": 1
       },
       "to": {
-        "line": 1,
-        "ch": 0
+        "line": 11,
+        "ch": 49
       }
     },
-    "scroll": 62.833333333333336
+    "scroll": 0.9733333587646484
   },
   "certifications/AZ-104/test-exams/online-exam-11.md": {
     "cursor": {
@@ -1062,20 +1062,20 @@
         "ch": 0
       }
     },
-    "scroll": 161.4895798365275
+    "scroll": 149.5
   },
   "certifications/AZ-104/test-exams/exam-online-12.md": {
     "cursor": {
       "from": {
-        "line": 105,
-        "ch": 56
+        "line": 106,
+        "ch": 0
       },
       "to": {
-        "line": 105,
-        "ch": 56
+        "line": 106,
+        "ch": 0
       }
     },
-    "scroll": 77.11762070655823
+    "scroll": 126.28124912579854
   },
   "certifications/AZ-104/test-exams/exam-online-13.md": {
     "cursor": {
@@ -1087,6 +1087,23 @@
         "line": 39,
         "ch": 314
       }
-    }
+    },
+    "scroll": 0
+  },
+  "certifications/AZ-104/test-exams/exam-online-6.md": {
+    "scroll": 0
+  },
+  "knowledge/az104-azure-cloud-shell.md": {
+    "cursor": {
+      "from": {
+        "line": 9,
+        "ch": 0
+      },
+      "to": {
+        "line": 9,
+        "ch": 0
+      }
+    },
+    "scroll": 67.62009857090707
   }
 }

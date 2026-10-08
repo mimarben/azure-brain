@@ -50,7 +50,7 @@
         "ch": 116
       }
     },
-    "scroll": 262.3340346165707
+    "scroll": 198.36187218183602
   },
   "knowledge/az104-blob-storage.md": {
     "cursor": {
@@ -922,15 +922,15 @@
   "certifications/AZ-104/test-exams/examen-3-avanzado.md": {
     "cursor": {
       "from": {
-        "line": 30,
-        "ch": 57
+        "line": 252,
+        "ch": 20
       },
       "to": {
-        "line": 25,
-        "ch": 7
+        "line": 252,
+        "ch": 20
       }
     },
-    "scroll": 23.03385305404663
+    "scroll": 208.47513707438367
   },
   "certifications/AZ-104/test-exams/examen-4-mixto.md": {
     "cursor": {
@@ -1002,15 +1002,15 @@
   "certifications/AZ-104/test-exams/repaso-factores-fallo.md": {
     "cursor": {
       "from": {
-        "line": 45,
-        "ch": 0
+        "line": 167,
+        "ch": 75
       },
       "to": {
-        "line": 45,
-        "ch": 0
+        "line": 167,
+        "ch": 75
       }
     },
-    "scroll": 42.27676665612725
+    "scroll": 142.35990173869982
   },
   "certifications/AZ-104/test-exams/exam-online-9.md": {
     "cursor": {
@@ -1034,6 +1034,58 @@
       "to": {
         "line": 1,
         "ch": 0
+      }
+    },
+    "scroll": 62.833333333333336
+  },
+  "certifications/AZ-104/test-exams/online-exam-11.md": {
+    "cursor": {
+      "from": {
+        "line": 162,
+        "ch": 36
+      },
+      "to": {
+        "line": 162,
+        "ch": 36
+      }
+    },
+    "scroll": 137.48524276415506
+  },
+  "certifications/AZ-104/test-exams/exam-online-11.md": {
+    "cursor": {
+      "from": {
+        "line": 174,
+        "ch": 0
+      },
+      "to": {
+        "line": 174,
+        "ch": 0
+      }
+    },
+    "scroll": 161.4895798365275
+  },
+  "certifications/AZ-104/test-exams/exam-online-12.md": {
+    "cursor": {
+      "from": {
+        "line": 105,
+        "ch": 56
+      },
+      "to": {
+        "line": 105,
+        "ch": 56
+      }
+    },
+    "scroll": 77.11762070655823
+  },
+  "certifications/AZ-104/test-exams/exam-online-13.md": {
+    "cursor": {
+      "from": {
+        "line": 39,
+        "ch": 314
+      },
+      "to": {
+        "line": 39,
+        "ch": 314
       }
     }
   }

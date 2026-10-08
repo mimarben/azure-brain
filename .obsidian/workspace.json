@@ -223,11 +223,7 @@
       "obsidian-excalidraw-plugin:New drawing": false,
       "smart-connections:Smart Connections: Open random connection": false,
       "smart-connections:Smart Connections: Open connections view": false,
-      "smart-connections:Toggle Footer Connections": false,
-      "smart-lookup:Smart Lookup: Open lookup view": false,
-      "smart-context:Smart Context: List Named Contexts": false,
-      "smart-context:Smart Context: Open Builder": false,
-      "smart-context:Smart Context: Copy current": false
+      "smart-connections:Toggle Footer Connections": false
     }
   },
   "active": "2cfc455b1710de53",

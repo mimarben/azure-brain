@@ -2,7 +2,7 @@
 title: AZ-104 — Administrador de Microsoft Azure
 tags: [certification]
 certification: [AZ-104]
-updated: 2026-10-02
+updated: 2026-10-15
 sources:
   - https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-104
   - https://learn.microsoft.com/en-us/training/courses/az-104t00
@@ -96,17 +96,17 @@ Los vídeos de Savill para AZ-104 no se listan módulo a módulo (a diferencia d
 
 ## Progreso
 
-Estado: **en curso — reiniciado el 28/09/2026**; empezar por el módulo 01, Introducción a Azure Cloud Shell. Se reinicia el seguimiento, no las notas ni los conceptos ya consolidados. Plan de estudio: [notes/AZ-104/roadmap.md](../../notes/AZ-104/roadmap.md) — autoestudio gratuito: 6 rutas oficiales de Microsoft Learn + labs oficiales + evaluación de práctica.
+Estado: **suspenso — 531/1000 el 08/10/2026 (corte 700) · reintento en preparación.** El material teórico está cubierto; el fallo fue de método: práctica de memoria (dumps y simulacros repetidos) en vez de escenarios aplicados, y labs oficiales sin completar. Diagnóstico completo y fases con criterios de salida: [notes/AZ-104/plan-reintento.md](../../notes/AZ-104/plan-reintento.md). **No reservar el reintento hasta cumplir las puertas de salida** ([simulacro 6](test-exams/examen-6-escenarios.md) ≥ 80 % y repetición del simulacro 3 ≥ 75 %).
 
 Material de apoyo: [whiteboard de ámbito del examen](../../raw/savill-cert-materials/whiteboards/AZ-104-Whiteboard-v2.png) de John Savill (MVP) — visión de conjunto para antes de cada bloque y repaso final.
 
 ## Laboratorios
 
-Índice y resultados en [`labs/AZ-104/`](create-vm.md) (carpeta de primer nivel). Labs oficiales: [MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator](https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator) — la mejor forma de cubrir lo que las rutas dejan corto.
+Índice y resultados en [`labs/AZ-104/`](../../labs/AZ-104/README.md) (carpeta de primer nivel), con tabla de seguimiento de los labs oficiales. Labs oficiales: [MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator](https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator) — la mejor forma de cubrir lo que las rutas dejan corto. Prioridad del reintento: **04, 05, 06, 08 y 11** (redes y disponibilidad).
 
 ## Exámenes de prueba
 
-Simulacros estilo examen real en [test-exams/](test-exams/README.md): preguntas originales basadas en la guía oficial de estudio, `raw/AZ-104T00` y fuentes externas de temario (Tutorials Dojo, repos de práctica — sin reproducir ítems reales bajo NDA). Tres niveles — [básico](test-exams/examen-1-basico.md), [intermedio](test-exams/examen-2-intermedio.md) y [avanzado con caso práctico](test-exams/examen-3-avanzado.md) — más un [simulacro 4 mixto estilo real](test-exams/examen-4-mixto.md) (40 ítems y 100 minutos cada uno) y un [simulacro 5 avanzado de 50 ítems](test-exams/examen-5-avanzado.md) (120 minutos), con soluciones comentadas y enlaces a `knowledge/`. *(Excepción puntual a la regla "solo INDEX.md" de CLAUDE.md, creada a petición del mantenedor.)*
+Simulacros estilo examen real en [test-exams/](test-exams/README.md): preguntas originales basadas en la guía oficial de estudio, `raw/AZ-104T00` y fuentes externas de temario (Tutorials Dojo, repos de práctica — sin reproducir ítems reales bajo NDA). Tres niveles — [básico](test-exams/examen-1-basico.md), [intermedio](test-exams/examen-2-intermedio.md) y [avanzado con caso práctico](test-exams/examen-3-avanzado.md) — más un [simulacro 4 mixto estilo real](test-exams/examen-4-mixto.md) (40 ítems y 100 minutos cada uno) y un [simulacro 5 avanzado de 50 ítems](test-exams/examen-5-avanzado.md) (120 minutos), con soluciones comentadas y enlaces a `knowledge/`. Tras el suspenso del 08/10/2026 se añadió el [simulacro 6 — escenarios de redes y cómputo](test-exams/examen-6-escenarios.md) (40 ítems, todo escenarios aplicados nivel examen real o superior): es la **puerta de salida** del [plan de reintento](../../notes/AZ-104/plan-reintento.md) — suspenderlo significa seguir en Fase 1–2, no reservar fecha. *(Excepción puntual a la regla "solo INDEX.md" de CLAUDE.md, creada a petición del mantenedor.)*
 
 ## Conceptos relacionados
 

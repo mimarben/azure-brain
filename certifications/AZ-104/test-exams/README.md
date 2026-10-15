@@ -2,7 +2,7 @@
 title: AZ-104 — Simulacros de examen
 tags: [certification, exam-sim]
 certification: [AZ-104]
-updated: 2026-10-07
+updated: 2026-10-15
 sources:
   - https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-104
   - raw/AZ-104T00/
@@ -10,7 +10,7 @@ sources:
 
 # Simulacros de examen AZ-104
 
-Cinco exámenes de práctica **originales** construidos sobre la [guía oficial de estudio](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-104) y el material de `raw/` (curso AZ-104T00). Reproducen el formato, los tipos de pregunta y los pesos del examen real. Los ítems reales están protegidos por NDA — estos son preguntas nuevas al estilo del examen, no dumps.
+Seis exámenes de práctica **originales** construidos sobre la [guía oficial de estudio](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-104) y el material de `raw/` (curso AZ-104T00). Reproducen el formato, los tipos de pregunta y los pesos del examen real — excepto el simulacro 6, que **desvía los pesos** deliberadamente hacia las áreas débiles detectadas tras el suspenso del 08/10/2026. Los ítems reales están protegidos por NDA — estos son preguntas nuevas al estilo del examen, no dumps.
 
 ## Cómo simular
 
@@ -42,6 +42,7 @@ Cinco exámenes de práctica **originales** construidos sobre la [guía oficial 
 | [Simulacro 3](examen-3-avanzado.md) | Avanzado | 40 | Incluye caso práctico, exhibits y trampas de redacto — nivel real o superior |
 | [Simulacro 4](examen-4-mixto.md) | Mixto estilo real | 40 | Dificultad mezclada sin avisar; temario calibrado con fuentes externas (Tutorials Dojo, repos de práctica) — preguntas originales |
 | [Simulacro 5](examen-5-avanzado.md) | Avanzado | 50 | 120 minutos. Gotchas de mecanismo y exhibits; 4 series Sí/No y caso práctico; refuerza los puntos débiles detectados (supervisión, Storage avanzado, identidad) |
+| [Simulacro 6](examen-6-escenarios.md) | Escenarios — redes y cómputo | 40 | **Puerta de salida del reintento** (≥ 80 %): todo escenarios aplicados nivel real o superior, con los pesos desviados a Redes (24) y Procesos (15) — las áreas del suspenso del 08/10/2026 |
 
 Soluciones (no abrir hasta terminar): [1](examen-1-soluciones.md) · [2](examen-2-soluciones.md) · [3](examen-3-soluciones.md) · [4](examen-4-soluciones.md) · [5](examen-5-soluciones.md).
 
@@ -57,7 +58,7 @@ Lista compacta de fallos: [Respuestas incorrectas de assessments online 1–8](r
 4. Repasa las páginas enlazadas de los fallos y actualiza el [roadmap](../../../notes/AZ-104/roadmap.md).
 5. Repite el examen días después para verificar consolidación.
 
-Objetivo antes del examen real: aprobar el simulacro 3 con margen y después la [evaluación de práctica oficial gratuita](https://learn.microsoft.com/en-us/credentials/certifications/exams/az-104/practice/assessment?assessment-type=practice&assessmentId=21).
+Objetivo antes del examen real: aprobar el simulacro 3 con margen y después la [evaluación de práctica oficial gratuita](https://learn.microsoft.com/en-us/credentials/certifications/exams/az-104/practice/assessment?assessment-type=practice&assessmentId=21). **Para el reintento** (tras el suspenso del 08/10/2026): simulacro 6 **≥ 80 %** y repetición del simulacro 3 **≥ 75 %** — criterios completos en el [plan de reintento](../../../notes/AZ-104/plan-reintento.md).
 
 ## Relacionado
 

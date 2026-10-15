@@ -2,7 +2,7 @@
 title: AZ-104 — Roadmap de estudio
 tags: [certification, roadmap]
 certification: [AZ-104]
-updated: 2026-09-28
+updated: 2026-10-15
 sources:
   - https://learn.microsoft.com/en-us/credentials/certifications/azure-administrator/
   - https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-104
@@ -31,15 +31,6 @@ Plan de estudio para AZ-104 por **autoestudio gratuito**: las 6 rutas de aprendi
 
 > **Nota sobre el clon local.** `raw/azure-docs/articles/` en este repo incluye carpetas para la mayoría de temas de AZ-104 (`storage/`, `virtual-network/`, `app-service/`, `application-gateway/`, `load-balancer/`, `dns/`, `backup/`, `site-recovery/`, `bastion/`, `container-apps/`, `containers/`, `azure-resource-manager/`, `role-based-access-control/`, `governance/`, `cost-management-billing/`). **No** incluye `active-directory` (Entra ID, solo b2c), `virtual-machines`, `azure-monitor` ni `network-watcher` — para esos los enlaces van directos a Microsoft Learn.
 
-Pruebas exámen.
-
-https://www.certlibrary.com/exam/AZ-104
-
-https://www.examtopics.com/exams/microsoft/az-104/view/
-
-https://github.com/Iamrushabhshahh/Microsoft-Azure-Administrator-AZ-104-Exam-Dump-Question-With-Solution
-
-https://github.com/Ditectrev/Microsoft-Azure-AZ-104-Microsoft-Azure-Administrator-Practice-Tests-Exams-Questions-Answers
 ## Progreso general
 
 - [x] Bloque 0 — Prerrequisitos (2 módulos)
@@ -48,9 +39,9 @@ https://github.com/Ditectrev/Microsoft-Azure-AZ-104-Microsoft-Azure-Administrato
 - [ ] Bloque 3 — Cómputo (20–25%)
 - [ ] Bloque 4 — Redes virtuales (15–20%)
 - [ ] Bloque 5 — Supervisión y backup (10–15%)
-- [ ] Evaluación de práctica gratuita superada
-- [ ] Examen AZ-104 programado
-- [ ] Examen AZ-104 aprobado (fecha: _pendiente_)
+- [ ] Evaluación de práctica gratuita superada *(puerta de salida del reintento)*
+- [x] Examen AZ-104 hecho — **suspenso 531/1000 el 08/10/2026 (corte 700)**
+- [ ] Examen AZ-104 aprobado — reintento según el [plan de reintento](plan-reintento.md) (no reservar sin las puertas de salida en verde)
 
 ---
 # [Curso](https://learn.microsoft.com/es-es/training/courses/az-104t00)
@@ -224,13 +215,20 @@ Docs: [Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/) ([
 - [ ] Ver el [AZ-104 Study Cram v2](https://www.youtube.com/watch?v=0Knf9nub4-k) de Savill (~4 h) como repaso global
 - [ ] Ver entero el **[vídeo de preparación del examen](https://aka.ms/AZ104-ExamPrep)** (`aka.ms/AZ104-ExamPrep`, ~1–2 semanas antes)
 - [ ] Revisar que la skills outline en [INDEX.md](../../certifications/AZ-104/INDEX.md) sigue vigente (Microsoft actualiza las guías periódicamente; nota de cambio vigente: 17/04/2026)
-- [ ] Repasar los stubs de `knowledge/` completados durante el estudio ([Entra ID](../../knowledge/entra-id.md), [Azure RBAC](../../knowledge/azure-rbac.md), [Azure Networking](../../knowledge/azure-networking.md), [Private Endpoints](../../knowledge/private-endpoints.md), [Terraform vs Bicep](../../knowledge/terraform-vs-bicep.md))
-- [ ] Programar el examen desde [tu perfil de Microsoft Learn](https://learn.microsoft.com/en-us/users) ([ES](https://learn.microsoft.com/es-es/users)) (usa una cuenta personal MSA para no perder los registros)
+- [ ] Repasar los stubs de `knowledge/` aún pendientes ([Entra ID](../../knowledge/entra-id.md), [Azure RBAC](../../knowledge/azure-rbac.md), [Azure Networking](../../knowledge/azure-networking.md), [Terraform vs Bicep](../../knowledge/terraform-vs-bicep.md)) — ✅ [Private Endpoints](../../knowledge/private-endpoints.md) y [Hub-Spoke](../../knowledge/hub-spoke.md) completados el 15/10/2026
+- [ ] **Superar el [simulacro 6 — escenarios de redes y cómputo](../../certifications/AZ-104/test-exams/examen-6-escenarios.md) ≥ 80 % y repetir el [simulacro 3](../../certifications/AZ-104/test-exams/examen-3-avanzado.md) ≥ 75 %** (puertas de salida — [plan de reintento](plan-reintento.md))
+- [ ] Programar el **reintento** desde [tu perfil de Microsoft Learn](https://learn.microsoft.com/en-us/users) ([ES](https://learn.microsoft.com/es-es/users)) — solo con las puertas de salida en verde y tras 24 h del suspenso (usa una cuenta personal MSA para no perder los registros)
 
-# Review the Microsoft Certification exam preparation resources before you retake the exam
+### Bancos de práctica (con cautela)
 
-<br>Thanks for taking the Microsoft Certification exam, Exam: Microsoft Azure Administrator. Although you didn't pass this time, you can try again. We offer many resources to help you prepare.<br><br>**Before you retake your certification exam**<br><br>- Refer to the [exam retake policies](https://nam.safelink.emails.azure.net/redirect/?destination=https%3A%2F%2Flearn.microsoft.com%2Fcertifications%2Fexam-retake-policy%3Fwt.mc_id%3Dcertnurture_eml8_email_wwl&p=bT00NmZjYTQ4NS03ZjYxLTQzZWUtOWRhMy04OGJiMGI4MzkxYjAmdT1hZW8mbD1leGFtLXJldGFrZS1wb2xpY3k%3D).<br>- Find self-paced online learning and other resources on [Microsoft Learn](https://nam.safelink.emails.azure.net/redirect/?destination=https%3A%2F%2Flearn.microsoft.com%2Flearn%2F%3Fwt.mc_id%3Dcertnurture_eml8_email_wwl&p=bT00NmZjYTQ4NS03ZjYxLTQzZWUtOWRhMy04OGJiMGI4MzkxYjAmdT1hZW8mbD1sZWFybg%3D%3D), and check out instructor-led training with [Microsoft Learning Partners](https://nam.safelink.emails.azure.net/redirect/?destination=https%3A%2F%2Flearn.microsoft.com%2Fcertifications%2Fpartners%3Fwt.mc_id%3Dcertnurture_eml8_email_wwl&p=bT00NmZjYTQ4NS03ZjYxLTQzZWUtOWRhMy04OGJiMGI4MzkxYjAmdT1hZW8mbD1wYXJ0bmVycw%3D%3D).<br>- Explore the [Exam Readiness Zone](https://nam.safelink.emails.azure.net/redirect/?destination=https%3A%2F%2Flearn.microsoft.com%2Fshows%2Fexam-readiness-zone%2F%3Fwt.mc_id%3Dcertnurture_eml8_email_wwl&p=bT00NmZjYTQ4NS03ZjYxLTQzZWUtOWRhMy04OGJiMGI4MzkxYjAmdT1hZW8mbD1leGFtLXJlYWRpbmVzcy16b25l) for exam preparation videos, an exam sandbox, and enhanced study guide on the individual [exam page on Microsoft Learn](https://nam.safelink.emails.azure.net/redirect/?destination=https%3A%2F%2Flearn.microsoft.com%2Fcertifications%2Fbrowse%2F%3Fresource_type%3Dexamination&p=bT00NmZjYTQ4NS03ZjYxLTQzZWUtOWRhMy04OGJiMGI4MzkxYjAmdT1hZW8mbD1icm93c2U%3D).<br>- Take a free [practice assessment](https://nam.safelink.emails.azure.net/redirect/?destination=https%3A%2F%2Faka.ms%2Fpracticeassessments%3Fwt.mc_id%3Dcertnurture_eml8_email_wwl&p=bT00NmZjYTQ4NS03ZjYxLTQzZWUtOWRhMy04OGJiMGI4MzkxYjAmdT1hZW8mbD1wcmFjdGljZWFzc2Vzc21lbnRz) to test your knowledge and to help you gauge your readiness for exam day.<br>- [Schedule your retake.](https://nam.safelink.emails.azure.net/redirect/?destination=https%3A%2F%2Flearn.microsoft.com%2Fcertifications%2Fregister-schedule-exam%3Fsource%3Drecommendations%3Fwt.mc_id%3Dcertnurture_eml14_email_wwl&p=bT00NmZjYTQ4NS03ZjYxLTQzZWUtOWRhMy04OGJiMGI4MzkxYjAmdT1hZW8mbD1yZWdpc3Rlci1zY2hlZHVsZS1leGFt)\|<br>
-<br>- Explore [Microsoft Learn](https://nam.safelink.emails.azure.net/redirect/?destination=https%3A%2F%2Faka.ms%2Fmicrosoftlearnnewsletter&p=bT00NmZjYTQ4NS03ZjYxLTQzZWUtOWRhMy04OGJiMGI4MzkxYjAmdT1hZW8mbD1taWNyb3NvZnRsZWFybm5ld3NsZXR0ZXI%3D)<br>- Get the latest news from [Microsoft Learn newsletter](https://nam.safelink.emails.azure.net/redirect/?destination=https%3A%2F%2Faka.ms%2Fcertnewsletter&p=bT00NmZjYTQ4NS03ZjYxLTQzZWUtOWRhMy04OGJiMGI4MzkxYjAmdT1hZW8mbD1jZXJ0bmV3c2xldHRlcg%3D%3D)<br>- Connect with [Microsoft Learn community](https://nam.safelink.emails.azure.net/redirect/?destination=https%3A%2F%2Faka.ms%2Fmicrosoftlearncommunity&p=bT00NmZjYTQ4NS03ZjYxLTQzZWUtOWRhMy04OGJiMGI4MzkxYjAmdT1hZW8mbD1taWNyb3NvZnRsZWFybmNvbW11bml0eQ%3D%3D)\|<br>
+Redactados tipo examen pero basados en ítems filtrados — útiles para leer escenarios, **nunca como métrica de preparación**: el bucle de memorización (misma pregunta fallada 4 veces en 4 bancos) fue una de las causas del suspenso. Regla anti-bucle en el [plan de reintento](plan-reintento.md).
+
+- [certlibrary — AZ-104](https://www.certlibrary.com/exam/AZ-104) · [examtopics — AZ-104](https://www.examtopics.com/exams/microsoft/az-104/view/)
+- [Ditectrev — practice tests](https://github.com/Ditectrev/Microsoft-Azure-AZ-104-Microsoft-Azure-Administrator-Practice-Tests-Exams-Questions-Answers) · [banco de práctica en GitHub](https://github.com/Iamrushabhshahh/Microsoft-Azure-Administrator-AZ-104-Exam-Dump-Question-With-Solution)
+
+# Reintento — tras el suspenso del 08/10/2026 (531/1000)
+
+Diagnóstico completo y fases con puertas de salida: [plan-reintento.md](plan-reintento.md). Resumen de la política de reintento ([fuente oficial](https://learn.microsoft.com/en-us/credentials/support/retake-policy)): el reintento **se paga de nuevo** (~152 €), se puede reservar tras **24 h** del suspenso, **14 días** de espera entre intentos posteriores, máximo **5 intentos/año**. Reservar solo con las puertas de salida en verde (simulacro 6 ≥ 80 % + simulacro 3 repetido ≥ 75 %).
 
 ---
 
@@ -243,7 +241,7 @@ Las rutas de Microsoft Learn son nivel *Beginner* y **no cubren todo lo que entr
 - [ ] **Application Gateway** — routing HTTP/S, WAF, listeners (la ruta es solo intro).
 - [ ] **Azure Site Recovery** — configurar, failover a región secundaria, informes.
 - [ ] **Network Watcher / Connection Monitor** — troubleshooting de conectividad, IP flow verify, next hop.
-- [ ] **Private endpoints** para PaaS — el examen los pide explícitamente; desarrollar la página [Private Endpoints](../../knowledge/private-endpoints.md).
+- [x] **Private endpoints** para PaaS — ✅ página [Private Endpoints](../../knowledge/private-endpoints.md) completada el 15/10/2026 (incluye tabla de decisión service vs private endpoint).
 
 Estos son además los mejores candidatos para desarrollar stubs de `knowledge/` y crear ejemplos en `examples/` mientras estudias.
 
@@ -276,13 +274,8 @@ Distribución orientativa (la ruta oficial son ~4 días de instructor-led; en au
 
 ---
 
-# Examen.
-
-https://learn.microsoft.com/es-es/credentials/certifications/azure-administrator/?practice-assessment-type=certification
-
-
-
 ## Relacionado
 
 - [Índice de la certificación](../../certifications/AZ-104/INDEX.md) — resumen y skills outline oficial
+- [Plan de reintento](plan-reintento.md) — diagnóstico y fases tras el suspenso del 08/10/2026
 - [Entra ID](../../knowledge/entra-id.md) · [Azure RBAC](../../knowledge/azure-rbac.md) · [Azure Networking](../../knowledge/azure-networking.md) · [Private Endpoints](../../knowledge/private-endpoints.md) · [Hub-Spoke](../../knowledge/hub-spoke.md) · [Terraform vs Bicep](../../knowledge/terraform-vs-bicep.md) · [ARM Templates](../../knowledge/az104-arm-templates.md) · [Managed Identities](../../knowledge/managed-identities.md) · [Key Vault](../../knowledge/key-vault.md) · [az104-Azure Cloud Shell](../../knowledge/az104-azure-cloud-shell.md)

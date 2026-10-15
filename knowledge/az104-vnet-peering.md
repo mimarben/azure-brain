@@ -261,5 +261,6 @@ Copilot puede ayudarle a diseñar soluciones de infraestructura de Azure. Copilo
 ## Relacionado
 
 - [Índice AZ-104](../certifications/AZ-104/INDEX.md)
-- [[Azure Networking]]
-- [[Hub-Spoke]]
+- [Azure Networking](azure-networking.md)
+- [Hub-Spoke](hub-spoke.md)
+- [Private Endpoints](private-endpoints.md)
